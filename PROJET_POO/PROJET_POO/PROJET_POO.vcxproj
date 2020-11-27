@@ -121,9 +121,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CLarticle.cpp" />
+    <ClCompile Include="CLclient.cpp" />
+    <ClCompile Include="CLcommande.cpp" />
+    <ClCompile Include="CLobjet.cpp" />
+    <ClCompile Include="CLpersonnel.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CLarticle.h" />
+    <ClInclude Include="CLclient.h" />
+    <ClInclude Include="CLcommande.h" />
+    <ClInclude Include="CLobjet.h" />
+    <ClInclude Include="CLpersonnel.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
