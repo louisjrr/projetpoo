@@ -17,4 +17,3 @@ private:
 	DataSet^ DS;
 	void setSQL(String^);
 };
-
