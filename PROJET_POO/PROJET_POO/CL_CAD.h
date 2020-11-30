@@ -11,6 +11,8 @@ ref class CL_CAD
 private:
 
 	String^ adresse_ip;
+	String^ utilisateur;
+	String^ MDP;
 
 	String^ connectionString;
 	MySqlConnection^ connectionBDD;
@@ -22,6 +24,9 @@ private:
 public :
 
 	void getIP(String^);
+	void getUtilisateur(String^);
+	void getMDP(String^);
+
 	void connect();
 
 };
