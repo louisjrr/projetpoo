@@ -5,17 +5,18 @@ CLobjet::CLobjet()
     throw gcnew System::NotImplementedException();
 }
 
-void CLobjet::creer()
+void CLobjet::setNom(String)
 {
     throw gcnew System::NotImplementedException();
 }
 
-void CLobjet::modifier()
+void CLobjet::setPrenom(String)
 {
     throw gcnew System::NotImplementedException();
 }
 
-void CLobjet::supprimer()
+void CLobjet::setAdresse(String)
 {
     throw gcnew System::NotImplementedException();
 }
+
