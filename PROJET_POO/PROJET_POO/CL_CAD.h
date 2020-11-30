@@ -12,15 +12,16 @@ private:
 
 	String^ adresse_ip;
 
-	String^ cnx;
+	String^ connectionString;
+	MySqlConnection^ connectionBDD;
 	String^ rq_sql;
-	SqlConnection^ CNX;
 	SqlCommand^ CMD;
 	SqlDataAdapter^ DA;
 	DataSet^ DS;
 
 public :
 
-	void setSQL(String^);
 	void getIP(String^);
+	void connect();
+
 };
