@@ -38,7 +38,10 @@ namespace PROJETPOO {
 			}
 		}
 	private: System::Windows::Forms::TextBox^ textBox1;
-	protected:
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
@@ -55,11 +58,10 @@ namespace PROJETPOO {
 	private: System::Windows::Forms::ToolStripMenuItem^ ajouterToolStripMenuItem2;
 	private: System::Windows::Forms::ToolStripMenuItem^ modifierToolStripMenuItem2;
 	private: System::Windows::Forms::ToolStripMenuItem^ supprimerToolStripMenuItem2;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::ToolStripMenuItem^ ajouterToolStripMenuItem3;
+	private: System::Windows::Forms::ToolStripMenuItem^ modifierToolStripMenuItem3;
+	private: System::Windows::Forms::ToolStripMenuItem^ supprimerToolStripMenuItem3;
 
 
 
@@ -91,6 +93,10 @@ namespace PROJETPOO {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
@@ -107,11 +113,10 @@ namespace PROJETPOO {
 			this->modifierToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->supprimerToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->commandeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->ajouterToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->modifierToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->supprimerToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
@@ -124,6 +129,43 @@ namespace PROJETPOO {
 			this->textBox1->Size = System::Drawing::Size(150, 20);
 			this->textBox1->TabIndex = 0;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(311, 331);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(150, 20);
+			this->textBox2->TabIndex = 4;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(311, 373);
+			this->textBox3->Margin = System::Windows::Forms::Padding(2);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(150, 20);
+			this->textBox3->TabIndex = 5;
+			this->textBox3->PasswordChar = '*';
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(254, 334);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(53, 13);
+			this->label2->TabIndex = 6;
+			this->label2->Text = L"Utilisateur";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(236, 376);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(71, 13);
+			this->label3->TabIndex = 7;
+			this->label3->Text = L"Mot de passe";
 			// 
 			// label1
 			// 
@@ -210,21 +252,21 @@ namespace PROJETPOO {
 			// ajouterToolStripMenuItem
 			// 
 			this->ajouterToolStripMenuItem->Name = L"ajouterToolStripMenuItem";
-			this->ajouterToolStripMenuItem->Size = System::Drawing::Size(129, 22);
+			this->ajouterToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->ajouterToolStripMenuItem->Text = L"Ajouter";
 			this->ajouterToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ajouterToolStripMenuItem_Click);
 			// 
 			// modifierToolStripMenuItem
 			// 
 			this->modifierToolStripMenuItem->Name = L"modifierToolStripMenuItem";
-			this->modifierToolStripMenuItem->Size = System::Drawing::Size(129, 22);
+			this->modifierToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->modifierToolStripMenuItem->Text = L"Modifier";
 			this->modifierToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::modifierToolStripMenuItem_Click);
 			// 
 			// supprimerToolStripMenuItem
 			// 
 			this->supprimerToolStripMenuItem->Name = L"supprimerToolStripMenuItem";
-			this->supprimerToolStripMenuItem->Size = System::Drawing::Size(129, 22);
+			this->supprimerToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->supprimerToolStripMenuItem->Text = L"Supprimer";
 			this->supprimerToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::supprimerToolStripMenuItem_Click);
 			// 
@@ -242,74 +284,60 @@ namespace PROJETPOO {
 			// ajouterToolStripMenuItem1
 			// 
 			this->ajouterToolStripMenuItem1->Name = L"ajouterToolStripMenuItem1";
-			this->ajouterToolStripMenuItem1->Size = System::Drawing::Size(129, 22);
+			this->ajouterToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->ajouterToolStripMenuItem1->Text = L"Ajouter";
 			this->ajouterToolStripMenuItem1->Click += gcnew System::EventHandler(this, &MyForm::ajouterToolStripMenuItem1_Click);
 			// 
 			// modifierToolStripMenuItem1
 			// 
 			this->modifierToolStripMenuItem1->Name = L"modifierToolStripMenuItem1";
-			this->modifierToolStripMenuItem1->Size = System::Drawing::Size(129, 22);
+			this->modifierToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->modifierToolStripMenuItem1->Text = L"Modifier";
 			this->modifierToolStripMenuItem1->Click += gcnew System::EventHandler(this, &MyForm::modifierToolStripMenuItem1_Click);
 			// 
 			// supprimerToolStripMenuItem1
 			// 
 			this->supprimerToolStripMenuItem1->Name = L"supprimerToolStripMenuItem1";
-			this->supprimerToolStripMenuItem1->Size = System::Drawing::Size(129, 22);
+			this->supprimerToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->supprimerToolStripMenuItem1->Text = L"Supprimer";
 			this->supprimerToolStripMenuItem1->Click += gcnew System::EventHandler(this, &MyForm::supprimerToolStripMenuItem1_Click);
 			// 
 			// commandeToolStripMenuItem
 			// 
+			this->commandeToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->ajouterToolStripMenuItem3,
+					this->modifierToolStripMenuItem3, this->supprimerToolStripMenuItem3
+			});
 			this->commandeToolStripMenuItem->Name = L"commandeToolStripMenuItem";
 			this->commandeToolStripMenuItem->Size = System::Drawing::Size(77, 19);
 			this->commandeToolStripMenuItem->Text = L"Commande";
-			// 
-			// textBox2
-			// 
-			this->textBox2->Location = System::Drawing::Point(311, 331);
-			this->textBox2->Margin = System::Windows::Forms::Padding(2);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(150, 20);
-			this->textBox2->TabIndex = 4;
-			// 
-			// textBox3
-			// 
-			this->textBox3->Location = System::Drawing::Point(311, 373);
-			this->textBox3->Margin = System::Windows::Forms::Padding(2);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(150, 20);
-			this->textBox3->TabIndex = 5;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(254, 334);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(53, 13);
-			this->label2->TabIndex = 6;
-			this->label2->Text = L"Utilisateur";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(236, 376);
-			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(71, 13);
-			this->label3->TabIndex = 7;
-			this->label3->Text = L"Mot de passe";
 			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(471, 353);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(445, 247);
+			this->pictureBox1->Size = System::Drawing::Size(445, 261);
 			this->pictureBox1->TabIndex = 8;
 			this->pictureBox1->TabStop = false;
+			// 
+			// ajouterToolStripMenuItem3
+			// 
+			this->ajouterToolStripMenuItem3->Name = L"ajouterToolStripMenuItem3";
+			this->ajouterToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
+			this->ajouterToolStripMenuItem3->Text = L"Ajouter";
+			// 
+			// modifierToolStripMenuItem3
+			// 
+			this->modifierToolStripMenuItem3->Name = L"modifierToolStripMenuItem3";
+			this->modifierToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
+			this->modifierToolStripMenuItem3->Text = L"Modifier";
+			// 
+			// supprimerToolStripMenuItem3
+			// 
+			this->supprimerToolStripMenuItem3->Name = L"supprimerToolStripMenuItem3";
+			this->supprimerToolStripMenuItem3->Size = System::Drawing::Size(180, 22);
+			this->supprimerToolStripMenuItem3->Text = L"Supprimer";
 			// 
 			// MyForm
 			// 
@@ -318,13 +346,13 @@ namespace PROJETPOO {
 			this->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->ClientSize = System::Drawing::Size(928, 655);
 			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->label1);
-			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->Margin = System::Windows::Forms::Padding(2);
@@ -364,6 +392,7 @@ namespace PROJETPOO {
 		this->label2->Hide();
 		this->label3->Hide();
 		this->button1->Hide();
+		this->pictureBox1->Hide();
 
 		this->menuStrip1->Show();
 		MessageBox::Show("Connexion réussi");
