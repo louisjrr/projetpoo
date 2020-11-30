@@ -1,4 +1,8 @@
 #pragma once
+#include <string>
+
+using namespace System;
+
 ref class CLobjet
 {
 public:
@@ -6,5 +10,9 @@ public:
 	virtual void creer();
 	virtual void modifier();
 	virtual void supprimer();
+protected:
+	String^ nom;
+	String^ prenom;
+	String^ adresse;
 };
 
