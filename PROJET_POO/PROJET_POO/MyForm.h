@@ -120,7 +120,8 @@ namespace PROJETPOO {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		conn1.getIP(textBox1->Text);
-		MessageBox::Show(textBox1->Text);
+		conn1.connect();
+		MessageBox::Show("Connexion réussi");
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
