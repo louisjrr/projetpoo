@@ -5,10 +5,8 @@ ref class CLarticle :
 {
 public:
     CLarticle(void);
-    void creer(int, String^, double, int, int, double, int);
+    void creer(String^, double, int, int, double);
 private:
-    static int reference;
-    static int IDcategorie;
     double prixHT;
     String^ designation;
     int stock;
