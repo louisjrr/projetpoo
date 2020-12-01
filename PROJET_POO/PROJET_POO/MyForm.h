@@ -1222,7 +1222,7 @@ private: System::Windows::Forms::Panel^ EcranVide;
 			connexion.connect();
 		}
 		catch (MySqlException^ e) {
-			MessageBox::Show("Connexion échouée gros naze");
+			MessageBox::Show("Connexion échouée >:(");
 		}
 
 		if (connexion.testConnect() == true) {
