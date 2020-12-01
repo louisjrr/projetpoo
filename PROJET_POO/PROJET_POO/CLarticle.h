@@ -1,7 +1,6 @@
 #pragma once
-#include "CLobjet.h"
-ref class CLarticle :
-    public CLobjet
+#include "CL_CAD.h"
+ref class CLarticle
 {
 public:
     CLarticle(void);

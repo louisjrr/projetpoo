@@ -1,7 +1,6 @@
 #pragma once
-#include "CLobjet.h"
-ref class CLpersonnel :
-    public CLobjet
+#include "CL_CAD.h"
+ref class CLpersonnel
 {
 public:
     CLpersonnel(void);

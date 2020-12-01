@@ -1,7 +1,7 @@
 #pragma once
-#include "CLobjet.h"
+#include "CL_CAD.h"
 
-ref class CLclient : public CLobjet
+ref class CLclient
 {
 public:
     CLclient(void);
