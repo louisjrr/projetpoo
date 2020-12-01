@@ -515,8 +515,8 @@ private: System::Windows::Forms::TextBox^ TextBoxVilleAdrLivClient;
 			// EcranIdle
 			// 
 			this->EcranIdle->AutoSize = true;
-			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
 			this->EcranIdle->Controls->Add(this->MenuOnglet);
+			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Name = L"EcranIdle";
 			this->EcranIdle->Size = System::Drawing::Size(1000, 600);
