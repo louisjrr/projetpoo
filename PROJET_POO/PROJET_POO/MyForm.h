@@ -331,7 +331,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem16;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(150, 20);
 			this->textBox1->TabIndex = 0;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -379,7 +378,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem16;
 			this->LabelIpConnexion->Size = System::Drawing::Size(17, 13);
 			this->LabelIpConnexion->TabIndex = 1;
 			this->LabelIpConnexion->Text = L"IP";
-			this->LabelIpConnexion->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
 			// ButtonConnexion
 			// 
@@ -970,11 +968,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem16;
 
 	/// 
 	
-
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		conn1.getIP(textBox1->Text);
 		conn1.getUtilisateur(textBox2->Text);
@@ -988,40 +981,5 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem16;
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-
-private: System::Void menuStrip1_ItemClicked(System::Object^ sender, System::Windows::Forms::ToolStripItemClickedEventArgs^ e) {
-}
-
-
-private: System::Void toolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-
-private: System::Void articleToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void clientToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void ajouterToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void modifierToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void supprimerToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-/// CLIENT AJOUTER
-private: System::Void ajouterToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
-
-
-}
-private: System::Void modifierToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void supprimerToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void ajouterToolStripMenuItem2_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void modifierToolStripMenuItem2_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void supprimerToolStripMenuItem2_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
-}
 };
 }
