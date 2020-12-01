@@ -17,6 +17,10 @@ void CLclient::creer(String^ _nom, String^ _prenom, String^ _birthDate, String^ 
     queryString = "INSERT INTO BDDProjet.Adresse(adresse, ville, cp, id_client) VALUES ('" + _adresse + "', '" + _ville + "', '" + _cp + "', '" + id_client + "');";
     obj.sendSQL(queryString);
 }
+void CLclient::afficher(String^, String^, String^, String^, String^, String^)
+{
+    
+}
 /*
 void CLclient::modifier()
 {
