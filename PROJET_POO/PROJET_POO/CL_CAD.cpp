@@ -26,4 +26,5 @@ void CL_CAD::connect()
 void CL_CAD::sendSQL(String^ requete)
 {
 	MySqlCommand^ command = gcnew MySqlCommand(requete, connectionBDD);
-}
+	MySqlDataReader^ reader;
+	command.ExecuteReader();
