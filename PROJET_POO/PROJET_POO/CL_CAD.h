@@ -28,6 +28,8 @@ public :
 	void getMDP(String^);
 
 	void connect();
+	bool testConnect();
+	void disconnect();
 	void sendSQL(String^);
 
 };

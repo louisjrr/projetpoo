@@ -279,6 +279,7 @@ private: System::Windows::Forms::TextBox^ textBox11;
 private: System::Windows::Forms::TextBox^ textBox12;
 private: System::Windows::Forms::TextBox^ textBox13;
 private: System::Windows::Forms::TextBox^ textBox14;
+private: System::Windows::Forms::Panel^ EcranVide;
 
 
 
@@ -378,30 +379,6 @@ private: System::Windows::Forms::TextBox^ textBox14;
 			this->OngletModifierCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->OngletSupprimerCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->OngletAfficherCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->EcranModifierClient = (gcnew System::Windows::Forms::Panel());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
 			this->EcranAjoutClient = (gcnew System::Windows::Forms::Panel());
 			this->ButtonAjoutClient = (gcnew System::Windows::Forms::Button());
 			this->LabelCpClient = (gcnew System::Windows::Forms::Label());
@@ -426,12 +403,37 @@ private: System::Windows::Forms::TextBox^ textBox14;
 			this->TextBoxCpAdrLivClient = (gcnew System::Windows::Forms::TextBox());
 			this->TextBoxAdrAdrLivClient = (gcnew System::Windows::Forms::TextBox());
 			this->TextBoxVilleAdrLivClient = (gcnew System::Windows::Forms::TextBox());
+			this->EcranModifierClient = (gcnew System::Windows::Forms::Panel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
+			this->EcranVide = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
 			this->EcranIdle->SuspendLayout();
 			this->MenuOnglet->SuspendLayout();
-			this->EcranModifierClient->SuspendLayout();
 			this->EcranAjoutClient->SuspendLayout();
+			this->EcranModifierClient->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -564,9 +566,10 @@ private: System::Windows::Forms::TextBox^ textBox14;
 			// EcranIdle
 			// 
 			this->EcranIdle->AutoSize = true;
+			this->EcranIdle->Controls->Add(this->EcranVide);
 			this->EcranIdle->Controls->Add(this->MenuOnglet);
-			this->EcranIdle->Controls->Add(this->EcranModifierClient);
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
+			this->EcranIdle->Controls->Add(this->EcranModifierClient);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Name = L"EcranIdle";
 			this->EcranIdle->Size = System::Drawing::Size(1000, 600);
@@ -671,12 +674,14 @@ private: System::Windows::Forms::TextBox^ textBox14;
 			this->OngletAjoutClient->Name = L"OngletAjoutClient";
 			this->OngletAjoutClient->Size = System::Drawing::Size(129, 22);
 			this->OngletAjoutClient->Text = L"Ajouter";
+			this->OngletAjoutClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutClient);
 			// 
 			// OngletModifierClient
 			// 
 			this->OngletModifierClient->Name = L"OngletModifierClient";
 			this->OngletModifierClient->Size = System::Drawing::Size(129, 22);
 			this->OngletModifierClient->Text = L"Modifier";
+			this->OngletModifierClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletModifierClient);
 			// 
 			// OngletSupprimerClient
 			// 
@@ -723,225 +728,6 @@ private: System::Windows::Forms::TextBox^ textBox14;
 			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
 			this->OngletAfficherCommande->Size = System::Drawing::Size(129, 22);
 			this->OngletAfficherCommande->Text = L"Afficher";
-			// 
-			// EcranModifierClient
-			// 
-			this->EcranModifierClient->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->EcranModifierClient->AutoSize = true;
-			this->EcranModifierClient->Controls->Add(this->button1);
-			this->EcranModifierClient->Controls->Add(this->label1);
-			this->EcranModifierClient->Controls->Add(this->label2);
-			this->EcranModifierClient->Controls->Add(this->label3);
-			this->EcranModifierClient->Controls->Add(this->label4);
-			this->EcranModifierClient->Controls->Add(this->label5);
-			this->EcranModifierClient->Controls->Add(this->label6);
-			this->EcranModifierClient->Controls->Add(this->textBox4);
-			this->EcranModifierClient->Controls->Add(this->textBox5);
-			this->EcranModifierClient->Controls->Add(this->label7);
-			this->EcranModifierClient->Controls->Add(this->label8);
-			this->EcranModifierClient->Controls->Add(this->label9);
-			this->EcranModifierClient->Controls->Add(this->label10);
-			this->EcranModifierClient->Controls->Add(this->label11);
-			this->EcranModifierClient->Controls->Add(this->textBox6);
-			this->EcranModifierClient->Controls->Add(this->textBox7);
-			this->EcranModifierClient->Controls->Add(this->textBox8);
-			this->EcranModifierClient->Controls->Add(this->textBox9);
-			this->EcranModifierClient->Controls->Add(this->textBox10);
-			this->EcranModifierClient->Controls->Add(this->textBox11);
-			this->EcranModifierClient->Controls->Add(this->textBox12);
-			this->EcranModifierClient->Controls->Add(this->textBox13);
-			this->EcranModifierClient->Controls->Add(this->textBox14);
-			this->EcranModifierClient->Location = System::Drawing::Point(0, 27);
-			this->EcranModifierClient->Name = L"EcranModifierClient";
-			this->EcranModifierClient->Size = System::Drawing::Size(989, 535);
-			this->EcranModifierClient->TabIndex = 34;
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(277, 299);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(118, 23);
-			this->button1->TabIndex = 31;
-			this->button1->Text = L"Ajouter le client";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(621, 211);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(21, 13);
-			this->label1->TabIndex = 30;
-			this->label1->Text = L"CP";
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(495, 211);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(26, 13);
-			this->label2->TabIndex = 29;
-			this->label2->Text = L"Ville";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(313, 211);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(45, 13);
-			this->label3->TabIndex = 28;
-			this->label3->Text = L"Adresse";
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(320, 150);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(38, 13);
-			this->label4->TabIndex = 27;
-			this->label4->Text = L"Année";
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(281, 150);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(29, 13);
-			this->label5->TabIndex = 26;
-			this->label5->Text = L"Mois";
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(242, 150);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(27, 13);
-			this->label6->TabIndex = 25;
-			this->label6->Text = L"Jour";
-			// 
-			// textBox4
-			// 
-			this->textBox4->Location = System::Drawing::Point(323, 169);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(52, 20);
-			this->textBox4->TabIndex = 24;
-			// 
-			// textBox5
-			// 
-			this->textBox5->Location = System::Drawing::Point(284, 169);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(33, 20);
-			this->textBox5->TabIndex = 23;
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(126, 258);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(113, 13);
-			this->label7->TabIndex = 22;
-			this->label7->Text = L"Adresse de facturation";
-			// 
-			// label8
-			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(138, 232);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(101, 13);
-			this->label8->TabIndex = 21;
-			this->label8->Text = L"Adresse de livraison";
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(140, 172);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(96, 13);
-			this->label9->TabIndex = 20;
-			this->label9->Text = L"Date de naissance";
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(196, 111);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(43, 13);
-			this->label10->TabIndex = 19;
-			this->label10->Text = L"Prénom";
-			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(210, 81);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(29, 13);
-			this->label11->TabIndex = 18;
-			this->label11->Text = L"Nom";
-			// 
-			// textBox6
-			// 
-			this->textBox6->Location = System::Drawing::Point(245, 255);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(187, 20);
-			this->textBox6->TabIndex = 15;
-			// 
-			// textBox7
-			// 
-			this->textBox7->Location = System::Drawing::Point(438, 255);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(150, 20);
-			this->textBox7->TabIndex = 16;
-			// 
-			// textBox8
-			// 
-			this->textBox8->Location = System::Drawing::Point(594, 255);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(70, 20);
-			this->textBox8->TabIndex = 17;
-			// 
-			// textBox9
-			// 
-			this->textBox9->Location = System::Drawing::Point(245, 104);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(150, 20);
-			this->textBox9->TabIndex = 10;
-			// 
-			// textBox10
-			// 
-			this->textBox10->Location = System::Drawing::Point(245, 78);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(150, 20);
-			this->textBox10->TabIndex = 9;
-			// 
-			// textBox11
-			// 
-			this->textBox11->Location = System::Drawing::Point(245, 169);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(33, 20);
-			this->textBox11->TabIndex = 11;
-			// 
-			// textBox12
-			// 
-			this->textBox12->Location = System::Drawing::Point(594, 229);
-			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(70, 20);
-			this->textBox12->TabIndex = 14;
-			// 
-			// textBox13
-			// 
-			this->textBox13->Location = System::Drawing::Point(245, 229);
-			this->textBox13->Name = L"textBox13";
-			this->textBox13->Size = System::Drawing::Size(187, 20);
-			this->textBox13->TabIndex = 12;
-			// 
-			// textBox14
-			// 
-			this->textBox14->Location = System::Drawing::Point(438, 229);
-			this->textBox14->Name = L"textBox14";
-			this->textBox14->Size = System::Drawing::Size(150, 20);
-			this->textBox14->TabIndex = 13;
 			// 
 			// EcranAjoutClient
 			// 
@@ -1163,6 +949,236 @@ private: System::Windows::Forms::TextBox^ textBox14;
 			this->TextBoxVilleAdrLivClient->Size = System::Drawing::Size(150, 20);
 			this->TextBoxVilleAdrLivClient->TabIndex = 13;
 			// 
+			// EcranModifierClient
+			// 
+			this->EcranModifierClient->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->EcranModifierClient->AutoSize = true;
+			this->EcranModifierClient->Controls->Add(this->button1);
+			this->EcranModifierClient->Controls->Add(this->label1);
+			this->EcranModifierClient->Controls->Add(this->label2);
+			this->EcranModifierClient->Controls->Add(this->label3);
+			this->EcranModifierClient->Controls->Add(this->label4);
+			this->EcranModifierClient->Controls->Add(this->label5);
+			this->EcranModifierClient->Controls->Add(this->label6);
+			this->EcranModifierClient->Controls->Add(this->textBox4);
+			this->EcranModifierClient->Controls->Add(this->textBox5);
+			this->EcranModifierClient->Controls->Add(this->label7);
+			this->EcranModifierClient->Controls->Add(this->label8);
+			this->EcranModifierClient->Controls->Add(this->label9);
+			this->EcranModifierClient->Controls->Add(this->label10);
+			this->EcranModifierClient->Controls->Add(this->label11);
+			this->EcranModifierClient->Controls->Add(this->textBox6);
+			this->EcranModifierClient->Controls->Add(this->textBox7);
+			this->EcranModifierClient->Controls->Add(this->textBox8);
+			this->EcranModifierClient->Controls->Add(this->textBox9);
+			this->EcranModifierClient->Controls->Add(this->textBox10);
+			this->EcranModifierClient->Controls->Add(this->textBox11);
+			this->EcranModifierClient->Controls->Add(this->textBox12);
+			this->EcranModifierClient->Controls->Add(this->textBox13);
+			this->EcranModifierClient->Controls->Add(this->textBox14);
+			this->EcranModifierClient->Location = System::Drawing::Point(0, 27);
+			this->EcranModifierClient->Name = L"EcranModifierClient";
+			this->EcranModifierClient->Size = System::Drawing::Size(989, 535);
+			this->EcranModifierClient->TabIndex = 34;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(277, 299);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(118, 23);
+			this->button1->TabIndex = 31;
+			this->button1->Text = L"Modifier le client";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(621, 211);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(21, 13);
+			this->label1->TabIndex = 30;
+			this->label1->Text = L"CP";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(495, 211);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(26, 13);
+			this->label2->TabIndex = 29;
+			this->label2->Text = L"Ville";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(313, 211);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(45, 13);
+			this->label3->TabIndex = 28;
+			this->label3->Text = L"Adresse";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(320, 150);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(38, 13);
+			this->label4->TabIndex = 27;
+			this->label4->Text = L"Année";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(281, 150);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(29, 13);
+			this->label5->TabIndex = 26;
+			this->label5->Text = L"Mois";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(242, 150);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(27, 13);
+			this->label6->TabIndex = 25;
+			this->label6->Text = L"Jour";
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(323, 169);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(52, 20);
+			this->textBox4->TabIndex = 24;
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(284, 169);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(33, 20);
+			this->textBox5->TabIndex = 23;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(126, 258);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(113, 13);
+			this->label7->TabIndex = 22;
+			this->label7->Text = L"Adresse de facturation";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(138, 232);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(101, 13);
+			this->label8->TabIndex = 21;
+			this->label8->Text = L"Adresse de livraison";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(140, 172);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(96, 13);
+			this->label9->TabIndex = 20;
+			this->label9->Text = L"Date de naissance";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(196, 111);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(43, 13);
+			this->label10->TabIndex = 19;
+			this->label10->Text = L"Prénom";
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(210, 81);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(29, 13);
+			this->label11->TabIndex = 18;
+			this->label11->Text = L"Nom";
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(245, 255);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(187, 20);
+			this->textBox6->TabIndex = 15;
+			// 
+			// textBox7
+			// 
+			this->textBox7->Location = System::Drawing::Point(438, 255);
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->Size = System::Drawing::Size(150, 20);
+			this->textBox7->TabIndex = 16;
+			// 
+			// textBox8
+			// 
+			this->textBox8->Location = System::Drawing::Point(594, 255);
+			this->textBox8->Name = L"textBox8";
+			this->textBox8->Size = System::Drawing::Size(70, 20);
+			this->textBox8->TabIndex = 17;
+			// 
+			// textBox9
+			// 
+			this->textBox9->Location = System::Drawing::Point(245, 104);
+			this->textBox9->Name = L"textBox9";
+			this->textBox9->Size = System::Drawing::Size(150, 20);
+			this->textBox9->TabIndex = 10;
+			// 
+			// textBox10
+			// 
+			this->textBox10->Location = System::Drawing::Point(245, 78);
+			this->textBox10->Name = L"textBox10";
+			this->textBox10->Size = System::Drawing::Size(150, 20);
+			this->textBox10->TabIndex = 9;
+			// 
+			// textBox11
+			// 
+			this->textBox11->Location = System::Drawing::Point(245, 169);
+			this->textBox11->Name = L"textBox11";
+			this->textBox11->Size = System::Drawing::Size(33, 20);
+			this->textBox11->TabIndex = 11;
+			// 
+			// textBox12
+			// 
+			this->textBox12->Location = System::Drawing::Point(594, 229);
+			this->textBox12->Name = L"textBox12";
+			this->textBox12->Size = System::Drawing::Size(70, 20);
+			this->textBox12->TabIndex = 14;
+			// 
+			// textBox13
+			// 
+			this->textBox13->Location = System::Drawing::Point(245, 229);
+			this->textBox13->Name = L"textBox13";
+			this->textBox13->Size = System::Drawing::Size(187, 20);
+			this->textBox13->TabIndex = 12;
+			// 
+			// textBox14
+			// 
+			this->textBox14->Location = System::Drawing::Point(438, 229);
+			this->textBox14->Name = L"textBox14";
+			this->textBox14->Size = System::Drawing::Size(150, 20);
+			this->textBox14->TabIndex = 13;
+			// 
+			// EcranVide
+			// 
+			this->EcranVide->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->EcranVide->AutoSize = true;
+			this->EcranVide->Location = System::Drawing::Point(0, 27);
+			this->EcranVide->Name = L"EcranVide";
+			this->EcranVide->Size = System::Drawing::Size(1000, 600);
+			this->EcranVide->TabIndex = 35;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1182,10 +1198,10 @@ private: System::Windows::Forms::TextBox^ textBox14;
 			this->EcranIdle->PerformLayout();
 			this->MenuOnglet->ResumeLayout(false);
 			this->MenuOnglet->PerformLayout();
-			this->EcranModifierClient->ResumeLayout(false);
-			this->EcranModifierClient->PerformLayout();
 			this->EcranAjoutClient->ResumeLayout(false);
 			this->EcranAjoutClient->PerformLayout();
+			this->EcranModifierClient->ResumeLayout(false);
+			this->EcranModifierClient->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1193,27 +1209,43 @@ private: System::Windows::Forms::TextBox^ textBox14;
 #pragma endregion
 	
 	/// variables venant des classes 
-	CL_CAD conn1;
+	CL_CAD connexion;
 	CLclient client1;
 	/// 
 	
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		conn1.getIP(textBox1->Text);
-		conn1.getUtilisateur(textBox2->Text);
-		conn1.getMDP(textBox3->Text);
+		connexion.getIP(textBox1->Text);
+		connexion.getUtilisateur(textBox2->Text);
+		connexion.getMDP(textBox3->Text);
 
-		conn1.connect();
+		try {
+			connexion.connect();
+		}
+		catch (MySqlException^ e) {
+			MessageBox::Show("Connexion échouée gros naze");
+		}
 
-		this->EcranConnexion->Hide();
-		this->EcranIdle->Show();
+		if (connexion.testConnect() == true) {
 
-		MessageBox::Show("Connexion réussi");
+			this->EcranIdle->BringToFront();
+			MessageBox::Show("Connexion réussi");
+			connexion.disconnect();
+		}
+
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void ButtonAjoutClient_Click(System::Object^ sender, System::EventArgs^ e) {
-		client1.creer(TextBoxNomClient->Text, TextBoxPrenomClient->Text, TexBoxJourNaissClient->Text + TextBoxMoisNaissClient->Text + TextBoxAnNaissClient->Text,"",TextBoxAdrAdrLivClient->Text, TextBoxAdrAdrLivClient->Text,Convert::ToInt16(TextBoxCpAdrLivClient->Text), TextBoxAdrAdrFactClient->Text, TextBoxAdrAdrFactClient->Text, Convert::ToInt16(TextBoxCpAdrFactClient->Text));
-
+		
+		client1.creer(TextBoxNomClient->Text, TextBoxPrenomClient->Text, TextBoxAnNaissClient->Text + "-" + TextBoxMoisNaissClient->Text + "-" + TexBoxJourNaissClient->Text, TextBoxAdrAdrLivClient->Text, TextBoxAdrAdrLivClient->Text,Convert::ToInt16(TextBoxCpAdrLivClient->Text), TextBoxAdrAdrFactClient->Text, TextBoxAdrAdrFactClient->Text, Convert::ToInt16(TextBoxCpAdrFactClient->Text));
+		
 }
+	private: System::Void ClickOngletAjoutClient(System::Object^ sender, System::EventArgs^ e) {
+		this->EcranAjoutClient->BringToFront();
+	}
+
+	private: System::Void ClickOngletModifierClient(System::Object^ sender, System::EventArgs^ e) {
+		this->EcranModifierClient->BringToFront();
+	}
 };
 }
