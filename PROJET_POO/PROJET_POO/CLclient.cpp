@@ -8,8 +8,8 @@ CLclient::CLclient()
     numClient++;
 }
 
-void CLclient::creer(String^, String^, String^, String^, String^)
+void CLclient::creer(int _numClient, String^ _nom, String^ _prenom, String^ _birthDate, String^ _firstDate, String^ _adresse, String^ _ville, int _cp)
 {
-    String^ queryString = "INSERT INTO BDDProjet.client"
+    String^ queryString = "INSERT INTO BDDProjet.Article(id_client, nom_client, prenom_client, birthDate, firstBuyDate) VALUES ( '" +_numClient+ "', '"+ _nom+ "', '" + _prenom+ "', '" + _birthDate+ "', '" + _firstDate+ "');";
 }
 

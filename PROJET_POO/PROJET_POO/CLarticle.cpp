@@ -7,7 +7,7 @@ CLarticle::CLarticle()
     reference++;
 }
 
-void CLarticle::creer(int, double, String^, int, int, double)
+void CLarticle::creer(int _reference, String^ _designation, double _prixHT, int _stock, int _seuil, double _tva, int _IDcategorie)
 {
-    String^ queryString = "INSERT INTO BDDProjet.Article(id_article, designation, prixHT, stock, seuil, tva) VALUES (" + ", " + ", " + ", " + ", " + ", "+");"; 
+    String^ queryString = "INSERT INTO BDDProjet.Article(id_article, designation, prixHT, stock, seuil, tva, id_categorie) VALUES (" + ", " + ", " + ", " + ", " + ", "+");"; 
 }

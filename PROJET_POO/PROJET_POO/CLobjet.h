@@ -14,5 +14,7 @@ protected:
 	String^ nom;
 	String^ prenom;
 	String^ adresse;
+	String^ ville;
+	String^ cp;
 };
 

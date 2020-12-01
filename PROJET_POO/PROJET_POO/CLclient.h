@@ -6,7 +6,7 @@ ref class CLclient :
 {
 public:
     CLclient(void);
-    void creer(String^, String^, String^, String^, String^);
+    void creer(int, String^, String^, String^, String^, String^, String^, int);
 private:
     static int numClient;
     String^ birthDate;
