@@ -22,3 +22,8 @@ void CL_CAD::connect()
 
 	connectionBDD->Open();
 }
+
+void CL_CAD::sendSQL(String^ requete)
+{
+	MySqlCommand^ command = gcnew MySqlCommand(requete, connectionBDD);
+}

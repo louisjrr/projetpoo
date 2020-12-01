@@ -6,9 +6,11 @@ ref class CLclient :
 {
 public:
     CLclient(void);
-    void creer(int, String^, String^, String^, String^, String^, String^, int);
+    void creer(String^, String^, String^, String^, String^, String^, int);
+    //void modifier();
+    //void supprimer();
+    //void afficher();
 private:
-    static int numClient;
     String^ birthDate;
     String^ firstDate;
 };
