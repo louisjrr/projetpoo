@@ -9,7 +9,11 @@ CLarticle::CLarticle()
 
 void CLarticle::creer(String^ _designation, double _prixHT, int _stock, int _seuil, double _tva, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
-    String^ queryString = "INSERT INTO BDDProjet.Article(id_article, designation, prixHT, stock, seuil, tva, id_categorie) VALUES (" + ", " + ", " + ", " + ", " + ", "+");"; 
+    CL_CAD obj2;
+    obj2.connect(adresse_ip, utilisateur, MDP);
+    obj2.disconnect();
+    String^ queryString = "INSERT INTO BDDProjet.Article(designation, prixHT, stock, seuil, tva,) VALUES ('"+_designation+ "', '" +_prixHT+ "', '" +_stock+ "', '" +_seuil+ "', '" +_tva+ "');";
+    obj2.sendSQL(queryString);
 }
 
 void CLarticle::modifier(String^, double, int, int, double, String^ adresse_ip, String^ utilisateur, String^ MDP)
