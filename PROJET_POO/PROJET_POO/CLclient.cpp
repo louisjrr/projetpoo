@@ -38,6 +38,7 @@ void CLclient::afficher(String^_nom, String^_prenom, String^_birthDate, String^ 
 
 }
 
+//}
 
 DataTable^ CLclient::modifier(String^ _nom, String^ _prenom, String^ _birthDate, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
