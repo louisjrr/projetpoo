@@ -60,16 +60,35 @@ DataTable^ CLclient::afficher(String^ _nom, String^ _prenom, String^ adresse_ip,
 
 }
 
+DataTable^ CLclient::afficherModifier(String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
 
-DataTable^ CLclient::modifier(String^ _nom, String^ _prenom, String^ _birthDate, String^ adresse_ip, String^ utilisateur, String^ MDP)
+    String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE Client.id_client = Adresse.id_client OR Client.id_Client = Adresse.id_client_ADR_LIVRAISON ; ";
+    return obj.receiveSQLTable(queryString);
+}
+
+DataTable^ CLclient::recherchmodifier(String^ _nom, String^ _prenom, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;
     obj.connect(adresse_ip, utilisateur, MDP);
     obj.disconnect();
 
-    String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND prenom_client = '" + _prenom + "' AND birthDate = '" + _birthDate + "' AND( Client.id_client = Adresse.id_client_ADR_LIVRAISON OR Client.id_client = Adresse.id_client); ";
-    //String^ queryString = "Select * from Client;";
+    String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND prenom_client = '" + _prenom + "' AND( Client.id_client = Adresse.id_client_ADR_LIVRAISON OR Client.id_client = Adresse.id_client); ";
     return obj.receiveSQLTable(queryString);
+
+}
+
+void CLclient::modifierNom(String^ id, String^ nom, String^ prenom, String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "UPDATE Client SET nom_client = '" + nom + "', prenom_client = '" + prenom + "' WHERE id_client = '" + id + "';  ";
+    obj.sendSQL(queryString);
 
 }
 
