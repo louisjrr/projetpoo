@@ -137,4 +137,5 @@ DataTable^ CLclient::recherchSupprimer(String^ _nom, String^ _prenom, String^ ip
     String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND prenom_client = '" + _prenom + "' AND( Client.id_client = Adresse.id_client_ADR_LIVRAISON OR Client.id_client = Adresse.id_client); ";
     return obj.receiveSQLTable(queryString);
 
+
 }

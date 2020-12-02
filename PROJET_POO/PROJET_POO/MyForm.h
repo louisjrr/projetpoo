@@ -468,6 +468,49 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->ButtonConnexion = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranConnexion = (gcnew System::Windows::Forms::Panel());
+			this->EcranAjoutPersonnel = (gcnew System::Windows::Forms::Panel());
+			this->buttonAjoutPersonnel = (gcnew System::Windows::Forms::Button());
+			this->textBoxSuperieur = (gcnew System::Windows::Forms::TextBox());
+			this->labelSuperieur = (gcnew System::Windows::Forms::Label());
+			this->labelCpPersonnel = (gcnew System::Windows::Forms::Label());
+			this->labelVillePersonnel = (gcnew System::Windows::Forms::Label());
+			this->labelAdressePersonnel = (gcnew System::Windows::Forms::Label());
+			this->labelAnneePersonnel = (gcnew System::Windows::Forms::Label());
+			this->labelMoisPersonnel = (gcnew System::Windows::Forms::Label());
+			this->labelJourPersonnel = (gcnew System::Windows::Forms::Label());
+			this->textBoxAnnePersonnel = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxMoisPersonnel = (gcnew System::Windows::Forms::TextBox());
+			this->labelAdresseGenPersonnel = (gcnew System::Windows::Forms::Label());
+			this->labelHireDate = (gcnew System::Windows::Forms::Label());
+			this->labelPrenomPersonnel = (gcnew System::Windows::Forms::Label());
+			this->labelNomPerosonnel = (gcnew System::Windows::Forms::Label());
+			this->textBoxPrenomPersonnel = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxNomPersonnel = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxJourPersonnel = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxCpPersonnel = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxAdressePersonnel = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxVillePersonnel = (gcnew System::Windows::Forms::TextBox());
+			this->MenuOnglet = (gcnew System::Windows::Forms::MenuStrip());
+			this->OngletArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAjoutArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletModifierArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletSupprimerArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAfficherArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAjoutPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletModifierPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletSupprimerPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAfficherPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAjoutClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletModifierClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletSupprimerClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAfficherClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAjoutCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletModifierCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletSupprimerCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAfficherCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->EcranModifierClient = (gcnew System::Windows::Forms::Panel());
 			this->ButtonAfficherModificationClient = (gcnew System::Windows::Forms::Button());
 			this->ButtonModifADRFacModificationClient = (gcnew System::Windows::Forms::Button());
@@ -520,27 +563,6 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->ContentPanel = (gcnew System::Windows::Forms::ToolStripContentPanel());
 			this->EcranIdle = (gcnew System::Windows::Forms::Panel());
 			this->EcranVide = (gcnew System::Windows::Forms::Panel());
-			this->MenuOnglet = (gcnew System::Windows::Forms::MenuStrip());
-			this->OngletArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAjoutArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletModifierArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletSupprimerArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAfficherArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAjoutPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletModifierPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletSupprimerPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAfficherPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAjoutClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletModifierClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletSupprimerClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAfficherClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAjoutCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletModifierCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletSupprimerCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAfficherCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->EcranAfficherClient = (gcnew System::Windows::Forms::Panel());
 			this->DataGridAfficherClient = (gcnew System::Windows::Forms::DataGridView());
 			this->TextBoxPrenomAfficherClient = (gcnew System::Windows::Forms::TextBox());
@@ -548,28 +570,6 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->LabelPrenomAfficherClient = (gcnew System::Windows::Forms::Label());
 			this->LabelNomAfficherClient = (gcnew System::Windows::Forms::Label());
 			this->buttonRechercherClient = (gcnew System::Windows::Forms::Button());
-			this->EcranAjoutPersonnel = (gcnew System::Windows::Forms::Panel());
-			this->buttonAjoutPersonnel = (gcnew System::Windows::Forms::Button());
-			this->textBoxSuperieur = (gcnew System::Windows::Forms::TextBox());
-			this->labelSuperieur = (gcnew System::Windows::Forms::Label());
-			this->labelCpPersonnel = (gcnew System::Windows::Forms::Label());
-			this->labelVillePersonnel = (gcnew System::Windows::Forms::Label());
-			this->labelAdressePersonnel = (gcnew System::Windows::Forms::Label());
-			this->labelAnneePersonnel = (gcnew System::Windows::Forms::Label());
-			this->labelMoisPersonnel = (gcnew System::Windows::Forms::Label());
-			this->labelJourPersonnel = (gcnew System::Windows::Forms::Label());
-			this->textBoxAnnePersonnel = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxMoisPersonnel = (gcnew System::Windows::Forms::TextBox());
-			this->labelAdresseGenPersonnel = (gcnew System::Windows::Forms::Label());
-			this->labelHireDate = (gcnew System::Windows::Forms::Label());
-			this->labelPrenomPersonnel = (gcnew System::Windows::Forms::Label());
-			this->labelNomPerosonnel = (gcnew System::Windows::Forms::Label());
-			this->textBoxPrenomPersonnel = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxNomPersonnel = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxJourPersonnel = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxCpPersonnel = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxAdressePersonnel = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxVillePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->EcranAjoutClient = (gcnew System::Windows::Forms::Panel());
 			this->ButtonAjoutClient = (gcnew System::Windows::Forms::Button());
 			this->LabelCpClient = (gcnew System::Windows::Forms::Label());
@@ -596,15 +596,15 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->TextBoxVilleAdrLivClient = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
+			this->EcranAjoutPersonnel->SuspendLayout();
+			this->MenuOnglet->SuspendLayout();
 			this->EcranModifierClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->BeginInit();
 			this->EcranSupprimerClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridSupprimerClient))->BeginInit();
 			this->EcranIdle->SuspendLayout();
-			this->MenuOnglet->SuspendLayout();
 			this->EcranAfficherClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAfficherClient))->BeginInit();
-			this->EcranAjoutPersonnel->SuspendLayout();
 			this->EcranAjoutClient->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -692,7 +692,6 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			// EcranConnexion
 			// 
 			this->EcranConnexion->AutoSize = true;
-			this->EcranConnexion->Controls->Add(this->EcranAjoutPersonnel);
 			this->EcranConnexion->Controls->Add(this->textBox1);
 			this->EcranConnexion->Controls->Add(this->textBox3);
 			this->EcranConnexion->Controls->Add(this->textBox2);
@@ -705,6 +704,370 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->EcranConnexion->Name = L"EcranConnexion";
 			this->EcranConnexion->Size = System::Drawing::Size(1016, 600);
 			this->EcranConnexion->TabIndex = 18;
+			// 
+			// EcranAjoutPersonnel
+			// 
+			this->EcranAjoutPersonnel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->EcranAjoutPersonnel->AutoSize = true;
+			this->EcranAjoutPersonnel->Controls->Add(this->buttonAjoutPersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->textBoxSuperieur);
+			this->EcranAjoutPersonnel->Controls->Add(this->labelSuperieur);
+			this->EcranAjoutPersonnel->Controls->Add(this->labelCpPersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->labelVillePersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->labelAdressePersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->labelAnneePersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->labelMoisPersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->labelJourPersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->textBoxAnnePersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->textBoxMoisPersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->labelAdresseGenPersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->labelHireDate);
+			this->EcranAjoutPersonnel->Controls->Add(this->labelPrenomPersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->labelNomPerosonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->textBoxPrenomPersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->textBoxNomPersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->textBoxJourPersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->textBoxCpPersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->textBoxAdressePersonnel);
+			this->EcranAjoutPersonnel->Controls->Add(this->textBoxVillePersonnel);
+			this->EcranAjoutPersonnel->Location = System::Drawing::Point(0, 27);
+			this->EcranAjoutPersonnel->Name = L"EcranAjoutPersonnel";
+			this->EcranAjoutPersonnel->Size = System::Drawing::Size(1000, 600);
+			this->EcranAjoutPersonnel->TabIndex = 27;
+			// 
+			// buttonAjoutPersonnel
+			// 
+			this->buttonAjoutPersonnel->Location = System::Drawing::Point(286, 318);
+			this->buttonAjoutPersonnel->Margin = System::Windows::Forms::Padding(2);
+			this->buttonAjoutPersonnel->Name = L"buttonAjoutPersonnel";
+			this->buttonAjoutPersonnel->Size = System::Drawing::Size(112, 19);
+			this->buttonAjoutPersonnel->TabIndex = 32;
+			this->buttonAjoutPersonnel->Text = L" Ajouter le personnel";
+			this->buttonAjoutPersonnel->UseVisualStyleBackColor = true;
+			this->buttonAjoutPersonnel->Click += gcnew System::EventHandler(this, &MyForm::buttonAjoutPersonnel_Click);
+			// 
+			// textBoxSuperieur
+			// 
+			this->textBoxSuperieur->Location = System::Drawing::Point(244, 132);
+			this->textBoxSuperieur->Margin = System::Windows::Forms::Padding(2);
+			this->textBoxSuperieur->Name = L"textBoxSuperieur";
+			this->textBoxSuperieur->Size = System::Drawing::Size(152, 20);
+			this->textBoxSuperieur->TabIndex = 31;
+			// 
+			// labelSuperieur
+			// 
+			this->labelSuperieur->AutoSize = true;
+			this->labelSuperieur->Location = System::Drawing::Point(188, 136);
+			this->labelSuperieur->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->labelSuperieur->Name = L"labelSuperieur";
+			this->labelSuperieur->Size = System::Drawing::Size(52, 13);
+			this->labelSuperieur->TabIndex = 28;
+			this->labelSuperieur->Text = L"Superieur";
+			// 
+			// labelCpPersonnel
+			// 
+			this->labelCpPersonnel->AutoSize = true;
+			this->labelCpPersonnel->Location = System::Drawing::Point(606, 219);
+			this->labelCpPersonnel->Name = L"labelCpPersonnel";
+			this->labelCpPersonnel->Size = System::Drawing::Size(21, 13);
+			this->labelCpPersonnel->TabIndex = 30;
+			this->labelCpPersonnel->Text = L"CP";
+			// 
+			// labelVillePersonnel
+			// 
+			this->labelVillePersonnel->AutoSize = true;
+			this->labelVillePersonnel->Location = System::Drawing::Point(473, 219);
+			this->labelVillePersonnel->Name = L"labelVillePersonnel";
+			this->labelVillePersonnel->Size = System::Drawing::Size(26, 13);
+			this->labelVillePersonnel->TabIndex = 29;
+			this->labelVillePersonnel->Text = L"Ville";
+			// 
+			// labelAdressePersonnel
+			// 
+			this->labelAdressePersonnel->AutoSize = true;
+			this->labelAdressePersonnel->Location = System::Drawing::Point(284, 219);
+			this->labelAdressePersonnel->Name = L"labelAdressePersonnel";
+			this->labelAdressePersonnel->Size = System::Drawing::Size(45, 13);
+			this->labelAdressePersonnel->TabIndex = 28;
+			this->labelAdressePersonnel->Text = L"Adresse";
+			// 
+			// labelAnneePersonnel
+			// 
+			this->labelAnneePersonnel->AutoSize = true;
+			this->labelAnneePersonnel->Location = System::Drawing::Point(330, 162);
+			this->labelAnneePersonnel->Name = L"labelAnneePersonnel";
+			this->labelAnneePersonnel->Size = System::Drawing::Size(38, 13);
+			this->labelAnneePersonnel->TabIndex = 27;
+			this->labelAnneePersonnel->Text = L"Année";
+			// 
+			// labelMoisPersonnel
+			// 
+			this->labelMoisPersonnel->AutoSize = true;
+			this->labelMoisPersonnel->Location = System::Drawing::Point(288, 162);
+			this->labelMoisPersonnel->Name = L"labelMoisPersonnel";
+			this->labelMoisPersonnel->Size = System::Drawing::Size(29, 13);
+			this->labelMoisPersonnel->TabIndex = 26;
+			this->labelMoisPersonnel->Text = L"Mois";
+			// 
+			// labelJourPersonnel
+			// 
+			this->labelJourPersonnel->AutoSize = true;
+			this->labelJourPersonnel->Location = System::Drawing::Point(250, 161);
+			this->labelJourPersonnel->Name = L"labelJourPersonnel";
+			this->labelJourPersonnel->Size = System::Drawing::Size(27, 13);
+			this->labelJourPersonnel->TabIndex = 25;
+			this->labelJourPersonnel->Text = L"Jour";
+			// 
+			// textBoxAnnePersonnel
+			// 
+			this->textBoxAnnePersonnel->Location = System::Drawing::Point(323, 179);
+			this->textBoxAnnePersonnel->Name = L"textBoxAnnePersonnel";
+			this->textBoxAnnePersonnel->Size = System::Drawing::Size(52, 20);
+			this->textBoxAnnePersonnel->TabIndex = 24;
+			// 
+			// textBoxMoisPersonnel
+			// 
+			this->textBoxMoisPersonnel->Location = System::Drawing::Point(284, 179);
+			this->textBoxMoisPersonnel->Name = L"textBoxMoisPersonnel";
+			this->textBoxMoisPersonnel->Size = System::Drawing::Size(33, 20);
+			this->textBoxMoisPersonnel->TabIndex = 23;
+			// 
+			// labelAdresseGenPersonnel
+			// 
+			this->labelAdresseGenPersonnel->AutoSize = true;
+			this->labelAdresseGenPersonnel->Location = System::Drawing::Point(138, 232);
+			this->labelAdresseGenPersonnel->Name = L"labelAdresseGenPersonnel";
+			this->labelAdresseGenPersonnel->Size = System::Drawing::Size(48, 13);
+			this->labelAdresseGenPersonnel->TabIndex = 21;
+			this->labelAdresseGenPersonnel->Text = L"Adresse ";
+			// 
+			// labelHireDate
+			// 
+			this->labelHireDate->AutoSize = true;
+			this->labelHireDate->Location = System::Drawing::Point(148, 180);
+			this->labelHireDate->Name = L"labelHireDate";
+			this->labelHireDate->Size = System::Drawing::Size(91, 13);
+			this->labelHireDate->TabIndex = 20;
+			this->labelHireDate->Text = L"Date d\'embauche";
+			// 
+			// labelPrenomPersonnel
+			// 
+			this->labelPrenomPersonnel->AutoSize = true;
+			this->labelPrenomPersonnel->Location = System::Drawing::Point(196, 102);
+			this->labelPrenomPersonnel->Name = L"labelPrenomPersonnel";
+			this->labelPrenomPersonnel->Size = System::Drawing::Size(43, 13);
+			this->labelPrenomPersonnel->TabIndex = 19;
+			this->labelPrenomPersonnel->Text = L"Prénom";
+			// 
+			// labelNomPerosonnel
+			// 
+			this->labelNomPerosonnel->AutoSize = true;
+			this->labelNomPerosonnel->Location = System::Drawing::Point(206, 63);
+			this->labelNomPerosonnel->Name = L"labelNomPerosonnel";
+			this->labelNomPerosonnel->Size = System::Drawing::Size(29, 13);
+			this->labelNomPerosonnel->TabIndex = 18;
+			this->labelNomPerosonnel->Text = L"Nom";
+			// 
+			// textBoxPrenomPersonnel
+			// 
+			this->textBoxPrenomPersonnel->Location = System::Drawing::Point(245, 98);
+			this->textBoxPrenomPersonnel->Name = L"textBoxPrenomPersonnel";
+			this->textBoxPrenomPersonnel->Size = System::Drawing::Size(150, 20);
+			this->textBoxPrenomPersonnel->TabIndex = 10;
+			// 
+			// textBoxNomPersonnel
+			// 
+			this->textBoxNomPersonnel->Location = System::Drawing::Point(245, 61);
+			this->textBoxNomPersonnel->Name = L"textBoxNomPersonnel";
+			this->textBoxNomPersonnel->Size = System::Drawing::Size(150, 20);
+			this->textBoxNomPersonnel->TabIndex = 9;
+			// 
+			// textBoxJourPersonnel
+			// 
+			this->textBoxJourPersonnel->Location = System::Drawing::Point(245, 179);
+			this->textBoxJourPersonnel->Name = L"textBoxJourPersonnel";
+			this->textBoxJourPersonnel->Size = System::Drawing::Size(33, 20);
+			this->textBoxJourPersonnel->TabIndex = 11;
+			// 
+			// textBoxCpPersonnel
+			// 
+			this->textBoxCpPersonnel->Location = System::Drawing::Point(582, 238);
+			this->textBoxCpPersonnel->Name = L"textBoxCpPersonnel";
+			this->textBoxCpPersonnel->Size = System::Drawing::Size(70, 20);
+			this->textBoxCpPersonnel->TabIndex = 14;
+			// 
+			// textBoxAdressePersonnel
+			// 
+			this->textBoxAdressePersonnel->Location = System::Drawing::Point(212, 238);
+			this->textBoxAdressePersonnel->Name = L"textBoxAdressePersonnel";
+			this->textBoxAdressePersonnel->Size = System::Drawing::Size(187, 20);
+			this->textBoxAdressePersonnel->TabIndex = 12;
+			// 
+			// textBoxVillePersonnel
+			// 
+			this->textBoxVillePersonnel->Location = System::Drawing::Point(414, 238);
+			this->textBoxVillePersonnel->Name = L"textBoxVillePersonnel";
+			this->textBoxVillePersonnel->Size = System::Drawing::Size(150, 20);
+			this->textBoxVillePersonnel->TabIndex = 13;
+			// 
+			// MenuOnglet
+			// 
+			this->MenuOnglet->BackColor = System::Drawing::SystemColors::ButtonShadow;
+			this->MenuOnglet->Dock = System::Windows::Forms::DockStyle::None;
+			this->MenuOnglet->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->MenuOnglet->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletArticle, this->OngletPersonnel,
+					this->OngletClient, this->OngletCommande
+			});
+			this->MenuOnglet->Location = System::Drawing::Point(0, 0);
+			this->MenuOnglet->Name = L"MenuOnglet";
+			this->MenuOnglet->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
+			this->MenuOnglet->Size = System::Drawing::Size(262, 24);
+			this->MenuOnglet->TabIndex = 33;
+			this->MenuOnglet->Text = L"menuStrip1";
+			// 
+			// OngletArticle
+			// 
+			this->OngletArticle->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletAjoutArticle,
+					this->OngletModifierArticle, this->OngletSupprimerArticle, this->OngletAfficherArticle
+			});
+			this->OngletArticle->Name = L"OngletArticle";
+			this->OngletArticle->Size = System::Drawing::Size(53, 20);
+			this->OngletArticle->Text = L"Article";
+			// 
+			// OngletAjoutArticle
+			// 
+			this->OngletAjoutArticle->Name = L"OngletAjoutArticle";
+			this->OngletAjoutArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutArticle->Text = L"Ajouter";
+			// 
+			// OngletModifierArticle
+			// 
+			this->OngletModifierArticle->Name = L"OngletModifierArticle";
+			this->OngletModifierArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierArticle->Text = L"Modifier";
+			// 
+			// OngletSupprimerArticle
+			// 
+			this->OngletSupprimerArticle->Name = L"OngletSupprimerArticle";
+			this->OngletSupprimerArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerArticle->Text = L"Supprimer";
+			// 
+			// OngletAfficherArticle
+			// 
+			this->OngletAfficherArticle->Name = L"OngletAfficherArticle";
+			this->OngletAfficherArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherArticle->Text = L"Afficher";
+			// 
+			// OngletPersonnel
+			// 
+			this->OngletPersonnel->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletAjoutPersonnel,
+					this->OngletModifierPersonnel, this->OngletSupprimerPersonnel, this->OngletAfficherPersonnel
+			});
+			this->OngletPersonnel->Name = L"OngletPersonnel";
+			this->OngletPersonnel->Size = System::Drawing::Size(71, 20);
+			this->OngletPersonnel->Text = L"Personnel";
+			// 
+			// OngletAjoutPersonnel
+			// 
+			this->OngletAjoutPersonnel->Name = L"OngletAjoutPersonnel";
+			this->OngletAjoutPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutPersonnel->Text = L"Ajouter";
+			this->OngletAjoutPersonnel->Click += gcnew System::EventHandler(this, &MyForm::OngletAjoutPersonnel_Click_1);
+			// 
+			// OngletModifierPersonnel
+			// 
+			this->OngletModifierPersonnel->Name = L"OngletModifierPersonnel";
+			this->OngletModifierPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierPersonnel->Text = L"Modifier";
+			// 
+			// OngletSupprimerPersonnel
+			// 
+			this->OngletSupprimerPersonnel->Name = L"OngletSupprimerPersonnel";
+			this->OngletSupprimerPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerPersonnel->Text = L"Supprimer";
+			// 
+			// OngletAfficherPersonnel
+			// 
+			this->OngletAfficherPersonnel->Name = L"OngletAfficherPersonnel";
+			this->OngletAfficherPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherPersonnel->Text = L"Afficher";
+			// 
+			// OngletClient
+			// 
+			this->OngletClient->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletAjoutClient,
+					this->OngletModifierClient, this->OngletSupprimerClient, this->OngletAfficherClient
+			});
+			this->OngletClient->Name = L"OngletClient";
+			this->OngletClient->Size = System::Drawing::Size(50, 20);
+			this->OngletClient->Text = L"Client";
+			// 
+			// OngletAjoutClient
+			// 
+			this->OngletAjoutClient->Name = L"OngletAjoutClient";
+			this->OngletAjoutClient->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutClient->Text = L"Ajouter";
+			this->OngletAjoutClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutClient);
+			// 
+			// OngletModifierClient
+			// 
+			this->OngletModifierClient->Name = L"OngletModifierClient";
+			this->OngletModifierClient->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierClient->Text = L"Modifier";
+			this->OngletModifierClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletModifierClient);
+			// 
+			// OngletSupprimerClient
+			// 
+			this->OngletSupprimerClient->Name = L"OngletSupprimerClient";
+			this->OngletSupprimerClient->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerClient->Text = L"Supprimer";
+			this->OngletSupprimerClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerClient);
+			// 
+			// OngletAfficherClient
+			// 
+			this->OngletAfficherClient->Name = L"OngletAfficherClient";
+			this->OngletAfficherClient->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherClient->Text = L"Afficher";
+			this->OngletAfficherClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAfficherClient);
+			// 
+			// OngletCommande
+			// 
+			this->OngletCommande->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletAjoutCommande,
+					this->OngletModifierCommande, this->OngletSupprimerCommande, this->OngletAfficherCommande
+			});
+			this->OngletCommande->Name = L"OngletCommande";
+			this->OngletCommande->Size = System::Drawing::Size(82, 20);
+			this->OngletCommande->Text = L"Commande";
+			// 
+			// OngletAjoutCommande
+			// 
+			this->OngletAjoutCommande->Name = L"OngletAjoutCommande";
+			this->OngletAjoutCommande->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutCommande->Text = L"Ajouter";
+			// 
+			// OngletModifierCommande
+			// 
+			this->OngletModifierCommande->Name = L"OngletModifierCommande";
+			this->OngletModifierCommande->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierCommande->Text = L"Modifier";
+			// 
+			// OngletSupprimerCommande
+			// 
+			this->OngletSupprimerCommande->Name = L"OngletSupprimerCommande";
+			this->OngletSupprimerCommande->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerCommande->Text = L"Supprimer";
+			// 
+			// OngletAfficherCommande
+			// 
+			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
+			this->OngletAfficherCommande->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherCommande->Text = L"Afficher";
 			// 
 			// EcranModifierClient
 			// 
@@ -1090,6 +1453,7 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->DataGridSupprimerClient->Location = System::Drawing::Point(255, 37);
 			this->DataGridSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->DataGridSupprimerClient->Name = L"DataGridSupprimerClient";
+			this->DataGridSupprimerClient->RowHeadersWidth = 51;
 			this->DataGridSupprimerClient->Size = System::Drawing::Size(466, 238);
 			this->DataGridSupprimerClient->TabIndex = 32;
 			// 
@@ -1185,6 +1549,7 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->EcranIdle->Controls->Add(this->EcranSupprimerClient);
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
 			this->EcranIdle->Controls->Add(this->EcranModifierClient);
+			this->EcranIdle->Controls->Add(this->EcranAjoutPersonnel);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Name = L"EcranIdle";
 			this->EcranIdle->Size = System::Drawing::Size(1000, 900);
@@ -1200,162 +1565,6 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->EcranVide->Name = L"EcranVide";
 			this->EcranVide->Size = System::Drawing::Size(1000, 900);
 			this->EcranVide->TabIndex = 35;
-			// 
-			// MenuOnglet
-			// 
-			this->MenuOnglet->BackColor = System::Drawing::SystemColors::ButtonShadow;
-			this->MenuOnglet->Dock = System::Windows::Forms::DockStyle::None;
-			this->MenuOnglet->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->MenuOnglet->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletArticle, this->OngletPersonnel,
-					this->OngletClient, this->OngletCommande
-			});
-			this->MenuOnglet->Location = System::Drawing::Point(0, 0);
-			this->MenuOnglet->Name = L"MenuOnglet";
-			this->MenuOnglet->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->MenuOnglet->Size = System::Drawing::Size(262, 24);
-			this->MenuOnglet->TabIndex = 33;
-			this->MenuOnglet->Text = L"menuStrip1";
-			// 
-			// OngletArticle
-			// 
-			this->OngletArticle->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletAjoutArticle,
-					this->OngletModifierArticle, this->OngletSupprimerArticle, this->OngletAfficherArticle
-			});
-			this->OngletArticle->Name = L"OngletArticle";
-			this->OngletArticle->Size = System::Drawing::Size(53, 20);
-			this->OngletArticle->Text = L"Article";
-			// 
-			// OngletAjoutArticle
-			// 
-			this->OngletAjoutArticle->Name = L"OngletAjoutArticle";
-			this->OngletAjoutArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletAjoutArticle->Text = L"Ajouter";
-			// 
-			// OngletModifierArticle
-			// 
-			this->OngletModifierArticle->Name = L"OngletModifierArticle";
-			this->OngletModifierArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletModifierArticle->Text = L"Modifier";
-			// 
-			// OngletSupprimerArticle
-			// 
-			this->OngletSupprimerArticle->Name = L"OngletSupprimerArticle";
-			this->OngletSupprimerArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletSupprimerArticle->Text = L"Supprimer";
-			// 
-			// OngletAfficherArticle
-			// 
-			this->OngletAfficherArticle->Name = L"OngletAfficherArticle";
-			this->OngletAfficherArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletAfficherArticle->Text = L"Afficher";
-			// 
-			// OngletPersonnel
-			// 
-			this->OngletPersonnel->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletAjoutPersonnel,
-					this->OngletModifierPersonnel, this->OngletSupprimerPersonnel, this->OngletAfficherPersonnel
-			});
-			this->OngletPersonnel->Name = L"OngletPersonnel";
-			this->OngletPersonnel->Size = System::Drawing::Size(71, 20);
-			this->OngletPersonnel->Text = L"Personnel";
-			// 
-			// OngletAjoutPersonnel
-			// 
-			this->OngletAjoutPersonnel->Name = L"OngletAjoutPersonnel";
-			this->OngletAjoutPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletAjoutPersonnel->Text = L"Ajouter";
-			// 
-			// OngletModifierPersonnel
-			// 
-			this->OngletModifierPersonnel->Name = L"OngletModifierPersonnel";
-			this->OngletModifierPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletModifierPersonnel->Text = L"Modifier";
-			// 
-			// OngletSupprimerPersonnel
-			// 
-			this->OngletSupprimerPersonnel->Name = L"OngletSupprimerPersonnel";
-			this->OngletSupprimerPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletSupprimerPersonnel->Text = L"Supprimer";
-			// 
-			// OngletAfficherPersonnel
-			// 
-			this->OngletAfficherPersonnel->Name = L"OngletAfficherPersonnel";
-			this->OngletAfficherPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletAfficherPersonnel->Text = L"Afficher";
-			// 
-			// OngletClient
-			// 
-			this->OngletClient->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletAjoutClient,
-					this->OngletModifierClient, this->OngletSupprimerClient, this->OngletAfficherClient
-			});
-			this->OngletClient->Name = L"OngletClient";
-			this->OngletClient->Size = System::Drawing::Size(50, 20);
-			this->OngletClient->Text = L"Client";
-			// 
-			// OngletAjoutClient
-			// 
-			this->OngletAjoutClient->Name = L"OngletAjoutClient";
-			this->OngletAjoutClient->Size = System::Drawing::Size(129, 22);
-			this->OngletAjoutClient->Text = L"Ajouter";
-			this->OngletAjoutClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutClient);
-			// 
-			// OngletModifierClient
-			// 
-			this->OngletModifierClient->Name = L"OngletModifierClient";
-			this->OngletModifierClient->Size = System::Drawing::Size(129, 22);
-			this->OngletModifierClient->Text = L"Modifier";
-			this->OngletModifierClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletModifierClient);
-			// 
-			// OngletSupprimerClient
-			// 
-			this->OngletSupprimerClient->Name = L"OngletSupprimerClient";
-			this->OngletSupprimerClient->Size = System::Drawing::Size(129, 22);
-			this->OngletSupprimerClient->Text = L"Supprimer";
-			this->OngletSupprimerClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerClient);
-			// 
-			// OngletAfficherClient
-			// 
-			this->OngletAfficherClient->Name = L"OngletAfficherClient";
-			this->OngletAfficherClient->Size = System::Drawing::Size(129, 22);
-			this->OngletAfficherClient->Text = L"Afficher";
-			this->OngletAfficherClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAfficherClient);
-			// 
-			// OngletCommande
-			// 
-			this->OngletCommande->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletAjoutCommande,
-					this->OngletModifierCommande, this->OngletSupprimerCommande, this->OngletAfficherCommande
-			});
-			this->OngletCommande->Name = L"OngletCommande";
-			this->OngletCommande->Size = System::Drawing::Size(82, 20);
-			this->OngletCommande->Text = L"Commande";
-			// 
-			// OngletAjoutCommande
-			// 
-			this->OngletAjoutCommande->Name = L"OngletAjoutCommande";
-			this->OngletAjoutCommande->Size = System::Drawing::Size(129, 22);
-			this->OngletAjoutCommande->Text = L"Ajouter";
-			// 
-			// OngletModifierCommande
-			// 
-			this->OngletModifierCommande->Name = L"OngletModifierCommande";
-			this->OngletModifierCommande->Size = System::Drawing::Size(129, 22);
-			this->OngletModifierCommande->Text = L"Modifier";
-			// 
-			// OngletSupprimerCommande
-			// 
-			this->OngletSupprimerCommande->Name = L"OngletSupprimerCommande";
-			this->OngletSupprimerCommande->Size = System::Drawing::Size(129, 22);
-			this->OngletSupprimerCommande->Text = L"Supprimer";
-			// 
-			// OngletAfficherCommande
-			// 
-			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
-			this->OngletAfficherCommande->Size = System::Drawing::Size(129, 22);
-			this->OngletAfficherCommande->Text = L"Afficher";
 			// 
 			// EcranAfficherClient
 			// 
@@ -1424,213 +1633,6 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->buttonRechercherClient->Text = L"Rechercher";
 			this->buttonRechercherClient->UseVisualStyleBackColor = true;
 			this->buttonRechercherClient->Click += gcnew System::EventHandler(this, &MyForm::buttonRechercherClient_Click);
-			// 
-			// EcranAjoutPersonnel
-			// 
-			this->EcranAjoutPersonnel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->EcranAjoutPersonnel->AutoSize = true;
-			this->EcranAjoutPersonnel->Controls->Add(this->buttonAjoutPersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->textBoxSuperieur);
-			this->EcranAjoutPersonnel->Controls->Add(this->labelSuperieur);
-			this->EcranAjoutPersonnel->Controls->Add(this->labelCpPersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->labelVillePersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->labelAdressePersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->labelAnneePersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->labelMoisPersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->labelJourPersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->textBoxAnnePersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->textBoxMoisPersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->labelAdresseGenPersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->labelHireDate);
-			this->EcranAjoutPersonnel->Controls->Add(this->labelPrenomPersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->labelNomPerosonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->textBoxPrenomPersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->textBoxNomPersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->textBoxJourPersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->textBoxCpPersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->textBoxAdressePersonnel);
-			this->EcranAjoutPersonnel->Controls->Add(this->textBoxVillePersonnel);
-			this->EcranAjoutPersonnel->Location = System::Drawing::Point(3, 0);
-			this->EcranAjoutPersonnel->Name = L"EcranAjoutPersonnel";
-			this->EcranAjoutPersonnel->Size = System::Drawing::Size(1000, 600);
-			this->EcranAjoutPersonnel->TabIndex = 27;
-			// 
-			// buttonAjoutPersonnel
-			// 
-			this->buttonAjoutPersonnel->Location = System::Drawing::Point(286, 318);
-			this->buttonAjoutPersonnel->Margin = System::Windows::Forms::Padding(2);
-			this->buttonAjoutPersonnel->Name = L"buttonAjoutPersonnel";
-			this->buttonAjoutPersonnel->Size = System::Drawing::Size(112, 19);
-			this->buttonAjoutPersonnel->TabIndex = 32;
-			this->buttonAjoutPersonnel->Text = L" Ajouter le personnel";
-			this->buttonAjoutPersonnel->UseVisualStyleBackColor = true;
-			this->buttonAjoutPersonnel->Click += gcnew System::EventHandler(this, &MyForm::buttonAjoutPersonnel_Click);
-			// 
-			// textBoxSuperieur
-			// 
-			this->textBoxSuperieur->Location = System::Drawing::Point(244, 132);
-			this->textBoxSuperieur->Margin = System::Windows::Forms::Padding(2);
-			this->textBoxSuperieur->Name = L"textBoxSuperieur";
-			this->textBoxSuperieur->Size = System::Drawing::Size(152, 20);
-			this->textBoxSuperieur->TabIndex = 31;
-			// 
-			// labelSuperieur
-			// 
-			this->labelSuperieur->AutoSize = true;
-			this->labelSuperieur->Location = System::Drawing::Point(188, 136);
-			this->labelSuperieur->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->labelSuperieur->Name = L"labelSuperieur";
-			this->labelSuperieur->Size = System::Drawing::Size(52, 13);
-			this->labelSuperieur->TabIndex = 28;
-			this->labelSuperieur->Text = L"Superieur";
-			// 
-			// labelCpPersonnel
-			// 
-			this->labelCpPersonnel->AutoSize = true;
-			this->labelCpPersonnel->Location = System::Drawing::Point(606, 219);
-			this->labelCpPersonnel->Name = L"labelCpPersonnel";
-			this->labelCpPersonnel->Size = System::Drawing::Size(21, 13);
-			this->labelCpPersonnel->TabIndex = 30;
-			this->labelCpPersonnel->Text = L"CP";
-			// 
-			// labelVillePersonnel
-			// 
-			this->labelVillePersonnel->AutoSize = true;
-			this->labelVillePersonnel->Location = System::Drawing::Point(473, 219);
-			this->labelVillePersonnel->Name = L"labelVillePersonnel";
-			this->labelVillePersonnel->Size = System::Drawing::Size(26, 13);
-			this->labelVillePersonnel->TabIndex = 29;
-			this->labelVillePersonnel->Text = L"Ville";
-			// 
-			// labelAdressePersonnel
-			// 
-			this->labelAdressePersonnel->AutoSize = true;
-			this->labelAdressePersonnel->Location = System::Drawing::Point(284, 219);
-			this->labelAdressePersonnel->Name = L"labelAdressePersonnel";
-			this->labelAdressePersonnel->Size = System::Drawing::Size(45, 13);
-			this->labelAdressePersonnel->TabIndex = 28;
-			this->labelAdressePersonnel->Text = L"Adresse";
-			// 
-			// labelAnneePersonnel
-			// 
-			this->labelAnneePersonnel->AutoSize = true;
-			this->labelAnneePersonnel->Location = System::Drawing::Point(330, 162);
-			this->labelAnneePersonnel->Name = L"labelAnneePersonnel";
-			this->labelAnneePersonnel->Size = System::Drawing::Size(38, 13);
-			this->labelAnneePersonnel->TabIndex = 27;
-			this->labelAnneePersonnel->Text = L"Année";
-			// 
-			// labelMoisPersonnel
-			// 
-			this->labelMoisPersonnel->AutoSize = true;
-			this->labelMoisPersonnel->Location = System::Drawing::Point(288, 162);
-			this->labelMoisPersonnel->Name = L"labelMoisPersonnel";
-			this->labelMoisPersonnel->Size = System::Drawing::Size(29, 13);
-			this->labelMoisPersonnel->TabIndex = 26;
-			this->labelMoisPersonnel->Text = L"Mois";
-			// 
-			// labelJourPersonnel
-			// 
-			this->labelJourPersonnel->AutoSize = true;
-			this->labelJourPersonnel->Location = System::Drawing::Point(250, 161);
-			this->labelJourPersonnel->Name = L"labelJourPersonnel";
-			this->labelJourPersonnel->Size = System::Drawing::Size(27, 13);
-			this->labelJourPersonnel->TabIndex = 25;
-			this->labelJourPersonnel->Text = L"Jour";
-			// 
-			// textBoxAnnePersonnel
-			// 
-			this->textBoxAnnePersonnel->Location = System::Drawing::Point(323, 179);
-			this->textBoxAnnePersonnel->Name = L"textBoxAnnePersonnel";
-			this->textBoxAnnePersonnel->Size = System::Drawing::Size(52, 20);
-			this->textBoxAnnePersonnel->TabIndex = 24;
-			// 
-			// textBoxMoisPersonnel
-			// 
-			this->textBoxMoisPersonnel->Location = System::Drawing::Point(284, 179);
-			this->textBoxMoisPersonnel->Name = L"textBoxMoisPersonnel";
-			this->textBoxMoisPersonnel->Size = System::Drawing::Size(33, 20);
-			this->textBoxMoisPersonnel->TabIndex = 23;
-			// 
-			// labelAdresseGenPersonnel
-			// 
-			this->labelAdresseGenPersonnel->AutoSize = true;
-			this->labelAdresseGenPersonnel->Location = System::Drawing::Point(138, 232);
-			this->labelAdresseGenPersonnel->Name = L"labelAdresseGenPersonnel";
-			this->labelAdresseGenPersonnel->Size = System::Drawing::Size(48, 13);
-			this->labelAdresseGenPersonnel->TabIndex = 21;
-			this->labelAdresseGenPersonnel->Text = L"Adresse ";
-			// 
-			// labelHireDate
-			// 
-			this->labelHireDate->AutoSize = true;
-			this->labelHireDate->Location = System::Drawing::Point(148, 180);
-			this->labelHireDate->Name = L"labelHireDate";
-			this->labelHireDate->Size = System::Drawing::Size(91, 13);
-			this->labelHireDate->TabIndex = 20;
-			this->labelHireDate->Text = L"Date d\'embauche";
-			// 
-			// labelPrenomPersonnel
-			// 
-			this->labelPrenomPersonnel->AutoSize = true;
-			this->labelPrenomPersonnel->Location = System::Drawing::Point(196, 102);
-			this->labelPrenomPersonnel->Name = L"labelPrenomPersonnel";
-			this->labelPrenomPersonnel->Size = System::Drawing::Size(43, 13);
-			this->labelPrenomPersonnel->TabIndex = 19;
-			this->labelPrenomPersonnel->Text = L"Prénom";
-			// 
-			// labelNomPerosonnel
-			// 
-			this->labelNomPerosonnel->AutoSize = true;
-			this->labelNomPerosonnel->Location = System::Drawing::Point(206, 63);
-			this->labelNomPerosonnel->Name = L"labelNomPerosonnel";
-			this->labelNomPerosonnel->Size = System::Drawing::Size(29, 13);
-			this->labelNomPerosonnel->TabIndex = 18;
-			this->labelNomPerosonnel->Text = L"Nom";
-			// 
-			// textBoxPrenomPersonnel
-			// 
-			this->textBoxPrenomPersonnel->Location = System::Drawing::Point(245, 98);
-			this->textBoxPrenomPersonnel->Name = L"textBoxPrenomPersonnel";
-			this->textBoxPrenomPersonnel->Size = System::Drawing::Size(150, 20);
-			this->textBoxPrenomPersonnel->TabIndex = 10;
-			// 
-			// textBoxNomPersonnel
-			// 
-			this->textBoxNomPersonnel->Location = System::Drawing::Point(245, 61);
-			this->textBoxNomPersonnel->Name = L"textBoxNomPersonnel";
-			this->textBoxNomPersonnel->Size = System::Drawing::Size(150, 20);
-			this->textBoxNomPersonnel->TabIndex = 9;
-			// 
-			// textBoxJourPersonnel
-			// 
-			this->textBoxJourPersonnel->Location = System::Drawing::Point(245, 179);
-			this->textBoxJourPersonnel->Name = L"textBoxJourPersonnel";
-			this->textBoxJourPersonnel->Size = System::Drawing::Size(33, 20);
-			this->textBoxJourPersonnel->TabIndex = 11;
-			// 
-			// textBoxCpPersonnel
-			// 
-			this->textBoxCpPersonnel->Location = System::Drawing::Point(582, 238);
-			this->textBoxCpPersonnel->Name = L"textBoxCpPersonnel";
-			this->textBoxCpPersonnel->Size = System::Drawing::Size(70, 20);
-			this->textBoxCpPersonnel->TabIndex = 14;
-			// 
-			// textBoxAdressePersonnel
-			// 
-			this->textBoxAdressePersonnel->Location = System::Drawing::Point(212, 238);
-			this->textBoxAdressePersonnel->Name = L"textBoxAdressePersonnel";
-			this->textBoxAdressePersonnel->Size = System::Drawing::Size(187, 20);
-			this->textBoxAdressePersonnel->TabIndex = 12;
-			// 
-			// textBoxVillePersonnel
-			// 
-			this->textBoxVillePersonnel->Location = System::Drawing::Point(414, 238);
-			this->textBoxVillePersonnel->Name = L"textBoxVillePersonnel";
-			this->textBoxVillePersonnel->Size = System::Drawing::Size(150, 20);
-			this->textBoxVillePersonnel->TabIndex = 13;
 			// 
 			// EcranAjoutClient
 			// 
@@ -1867,6 +1869,10 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->EcranConnexion->ResumeLayout(false);
 			this->EcranConnexion->PerformLayout();
+			this->EcranAjoutPersonnel->ResumeLayout(false);
+			this->EcranAjoutPersonnel->PerformLayout();
+			this->MenuOnglet->ResumeLayout(false);
+			this->MenuOnglet->PerformLayout();
 			this->EcranModifierClient->ResumeLayout(false);
 			this->EcranModifierClient->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->EndInit();
@@ -1875,13 +1881,9 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridSupprimerClient))->EndInit();
 			this->EcranIdle->ResumeLayout(false);
 			this->EcranIdle->PerformLayout();
-			this->MenuOnglet->ResumeLayout(false);
-			this->MenuOnglet->PerformLayout();
 			this->EcranAfficherClient->ResumeLayout(false);
 			this->EcranAfficherClient->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAfficherClient))->EndInit();
-			this->EcranAjoutPersonnel->ResumeLayout(false);
-			this->EcranAjoutPersonnel->PerformLayout();
 			this->EcranAjoutClient->ResumeLayout(false);
 			this->EcranAjoutClient->PerformLayout();
 			this->ResumeLayout(false);
@@ -1953,7 +1955,7 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 	private: System::Void ClickChercherSupprimerClient(System::Object^ sender, System::EventArgs^ e) {
 		DataGridSupprimerClient->DataSource = client1.recherchSupprimer(TextBoxNomSupprimerClient->Text, TextBoxPrenomSupprimerClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 	}
-	private: System::Void ClickOngletAjoutPersonnel(System::Object^ sender, System::EventArgs^ e){
+	private: System::Void OngletAjoutPersonnel_Click_1(System::Object^ sender, System::EventArgs^ e){
 		this->EcranAjoutPersonnel->BringToFront();
 	}
 
