@@ -12,6 +12,7 @@ void CLclient::creer(String^ _nom, String^ _prenom, String^ _birthDate, String^ 
     String^ queryString = "INSERT INTO BDDProjet.Client (nom_client, prenom_client, birthDate) VALUES (\"" + _nom + "\", \"" + _prenom + "\", \"" + _birthDate + "\");" ;
     obj.sendSQL(queryString);
 }
+
    /* queryString = "SELECT MAX(id_client) FROM Client;";
     obj.sendSQL(queryString);
     DataSet^ id_client;
@@ -20,20 +21,20 @@ void CLclient::creer(String^ _nom, String^ _prenom, String^ _birthDate, String^ 
     queryString = "INSERT INTO BDDProjet.Adresse(adresse, ville, cp, id_client) VALUES ('" + _adresseFac + "', '" + _villeFac + "', '" + _cpFac + "', '" + id_client + "');";
     obj.sendSQL(queryString);
 }*/
-void CLclient::afficher(String^, String^, String^, String^, String^, String^)
+void CLclient::afficher(String^_nom, String^_prenom, String^_birthDate, String^ _adresseLiv, String^ _villeLiv, int _cpLiv, String^ _adresseFac, String^ _villeFac, int _cpFac)
 {
     
 }
 
 //}
-/*
-void CLclient::modifier()
+
+void CLclient::modifier(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, int _cpLiv, String^ _adresseFac, String^ _villeFac, int _cpFac)
 {
     throw gcnew System::NotImplementedException();
 }
 
-void CLclient::supprimer()
+void CLclient::supprimer(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, int _cpLiv, String^ _adresseFac, String^ _villeFac, int _cpFac)
 {
     throw gcnew System::NotImplementedException();
 }
-*/
+
