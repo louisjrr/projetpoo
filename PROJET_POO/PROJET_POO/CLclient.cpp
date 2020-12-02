@@ -39,7 +39,8 @@ DataTable^ CLclient::modifier(String^ _nom, String^ _prenom, String^ _birthDate,
     obj.connect(adresse_ip, utilisateur, MDP);
     obj.disconnect();
 
-    String^ queryString = "SELECT nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND prenom_client = '" + _prenom + "' AND birthDate = '" + _birthDate + "' AND Client.id_client = Adresse.id_client;";
+    String^ queryString = "SELECT nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND prenom_client = '" + _prenom + "' AND birthDate = '" + _birthDate + "' AND( Client.id_client = Adresse.id_client_ADR_LIVRAISON OR Client.id_client = Adresse.id_client); ";
+    //String^ queryString = "Select * from Client;";
     return obj.receiveSQLTable(queryString);
 
 }

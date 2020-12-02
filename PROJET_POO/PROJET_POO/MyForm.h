@@ -540,12 +540,13 @@ namespace PROJETPOO {
 			// EcranConnexion
 			// 
 			this->EcranConnexion->AutoSize = true;
+			this->EcranConnexion->Controls->Add(this->EcranModifierClient);
 			this->EcranConnexion->Controls->Add(this->textBox1);
+			this->EcranConnexion->Controls->Add(this->textBox3);
+			this->EcranConnexion->Controls->Add(this->textBox2);
 			this->EcranConnexion->Controls->Add(this->LabelIpConnexion);
 			this->EcranConnexion->Controls->Add(this->LabelUserConnexion);
 			this->EcranConnexion->Controls->Add(this->LabelMdpConnexion);
-			this->EcranConnexion->Controls->Add(this->textBox3);
-			this->EcranConnexion->Controls->Add(this->textBox2);
 			this->EcranConnexion->Controls->Add(this->ButtonConnexion);
 			this->EcranConnexion->Controls->Add(this->pictureBox1);
 			this->EcranConnexion->Location = System::Drawing::Point(-3, 0);
@@ -580,14 +581,14 @@ namespace PROJETPOO {
 			// DataGridModifierClient
 			// 
 			this->DataGridModifierClient->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->DataGridModifierClient->Location = System::Drawing::Point(384, 78);
+			this->DataGridModifierClient->Location = System::Drawing::Point(340, 46);
 			this->DataGridModifierClient->Name = L"DataGridModifierClient";
-			this->DataGridModifierClient->Size = System::Drawing::Size(577, 261);
+			this->DataGridModifierClient->Size = System::Drawing::Size(621, 293);
 			this->DataGridModifierClient->TabIndex = 32;
 			// 
 			// ButtonModifierClient
 			// 
-			this->ButtonModifierClient->Location = System::Drawing::Point(161, 239);
+			this->ButtonModifierClient->Location = System::Drawing::Point(132, 188);
 			this->ButtonModifierClient->Name = L"ButtonModifierClient";
 			this->ButtonModifierClient->Size = System::Drawing::Size(169, 23);
 			this->ButtonModifierClient->TabIndex = 31;
@@ -598,7 +599,7 @@ namespace PROJETPOO {
 			// LabelAnModifierClient
 			// 
 			this->LabelAnModifierClient->AutoSize = true;
-			this->LabelAnModifierClient->Location = System::Drawing::Point(246, 150);
+			this->LabelAnModifierClient->Location = System::Drawing::Point(217, 132);
 			this->LabelAnModifierClient->Name = L"LabelAnModifierClient";
 			this->LabelAnModifierClient->Size = System::Drawing::Size(38, 13);
 			this->LabelAnModifierClient->TabIndex = 27;
@@ -607,7 +608,7 @@ namespace PROJETPOO {
 			// LabelMoisModifierClient
 			// 
 			this->LabelMoisModifierClient->AutoSize = true;
-			this->LabelMoisModifierClient->Location = System::Drawing::Point(207, 150);
+			this->LabelMoisModifierClient->Location = System::Drawing::Point(178, 132);
 			this->LabelMoisModifierClient->Name = L"LabelMoisModifierClient";
 			this->LabelMoisModifierClient->Size = System::Drawing::Size(29, 13);
 			this->LabelMoisModifierClient->TabIndex = 26;
@@ -616,7 +617,7 @@ namespace PROJETPOO {
 			// LabelJourModifierClient
 			// 
 			this->LabelJourModifierClient->AutoSize = true;
-			this->LabelJourModifierClient->Location = System::Drawing::Point(168, 150);
+			this->LabelJourModifierClient->Location = System::Drawing::Point(139, 132);
 			this->LabelJourModifierClient->Name = L"LabelJourModifierClient";
 			this->LabelJourModifierClient->Size = System::Drawing::Size(27, 13);
 			this->LabelJourModifierClient->TabIndex = 25;
@@ -624,14 +625,14 @@ namespace PROJETPOO {
 			// 
 			// TextBoxAnNaissModifierClient
 			// 
-			this->TextBoxAnNaissModifierClient->Location = System::Drawing::Point(249, 169);
+			this->TextBoxAnNaissModifierClient->Location = System::Drawing::Point(220, 151);
 			this->TextBoxAnNaissModifierClient->Name = L"TextBoxAnNaissModifierClient";
 			this->TextBoxAnNaissModifierClient->Size = System::Drawing::Size(52, 20);
 			this->TextBoxAnNaissModifierClient->TabIndex = 24;
 			// 
 			// TextBoxMoisNaissModifierClient
 			// 
-			this->TextBoxMoisNaissModifierClient->Location = System::Drawing::Point(210, 169);
+			this->TextBoxMoisNaissModifierClient->Location = System::Drawing::Point(181, 151);
 			this->TextBoxMoisNaissModifierClient->Name = L"TextBoxMoisNaissModifierClient";
 			this->TextBoxMoisNaissModifierClient->Size = System::Drawing::Size(33, 20);
 			this->TextBoxMoisNaissModifierClient->TabIndex = 23;
@@ -639,7 +640,7 @@ namespace PROJETPOO {
 			// LabelNaissModifierClient
 			// 
 			this->LabelNaissModifierClient->AutoSize = true;
-			this->LabelNaissModifierClient->Location = System::Drawing::Point(66, 172);
+			this->LabelNaissModifierClient->Location = System::Drawing::Point(37, 154);
 			this->LabelNaissModifierClient->Name = L"LabelNaissModifierClient";
 			this->LabelNaissModifierClient->Size = System::Drawing::Size(96, 13);
 			this->LabelNaissModifierClient->TabIndex = 20;
@@ -648,7 +649,7 @@ namespace PROJETPOO {
 			// LabelPrenomModifierClient
 			// 
 			this->LabelPrenomModifierClient->AutoSize = true;
-			this->LabelPrenomModifierClient->Location = System::Drawing::Point(122, 111);
+			this->LabelPrenomModifierClient->Location = System::Drawing::Point(93, 93);
 			this->LabelPrenomModifierClient->Name = L"LabelPrenomModifierClient";
 			this->LabelPrenomModifierClient->Size = System::Drawing::Size(43, 13);
 			this->LabelPrenomModifierClient->TabIndex = 19;
@@ -657,7 +658,7 @@ namespace PROJETPOO {
 			// LabelNomModifierClient
 			// 
 			this->LabelNomModifierClient->AutoSize = true;
-			this->LabelNomModifierClient->Location = System::Drawing::Point(136, 81);
+			this->LabelNomModifierClient->Location = System::Drawing::Point(107, 63);
 			this->LabelNomModifierClient->Name = L"LabelNomModifierClient";
 			this->LabelNomModifierClient->Size = System::Drawing::Size(29, 13);
 			this->LabelNomModifierClient->TabIndex = 18;
@@ -665,21 +666,21 @@ namespace PROJETPOO {
 			// 
 			// TextBoxPrenomModifierClient
 			// 
-			this->TextBoxPrenomModifierClient->Location = System::Drawing::Point(171, 104);
+			this->TextBoxPrenomModifierClient->Location = System::Drawing::Point(142, 86);
 			this->TextBoxPrenomModifierClient->Name = L"TextBoxPrenomModifierClient";
 			this->TextBoxPrenomModifierClient->Size = System::Drawing::Size(150, 20);
 			this->TextBoxPrenomModifierClient->TabIndex = 10;
 			// 
 			// TextBoxNomModifierClient
 			// 
-			this->TextBoxNomModifierClient->Location = System::Drawing::Point(171, 78);
+			this->TextBoxNomModifierClient->Location = System::Drawing::Point(142, 60);
 			this->TextBoxNomModifierClient->Name = L"TextBoxNomModifierClient";
 			this->TextBoxNomModifierClient->Size = System::Drawing::Size(150, 20);
 			this->TextBoxNomModifierClient->TabIndex = 9;
 			// 
 			// TextBoxJourNaissModifierClient
 			// 
-			this->TextBoxJourNaissModifierClient->Location = System::Drawing::Point(171, 169);
+			this->TextBoxJourNaissModifierClient->Location = System::Drawing::Point(142, 151);
 			this->TextBoxJourNaissModifierClient->Name = L"TextBoxJourNaissModifierClient";
 			this->TextBoxJourNaissModifierClient->Size = System::Drawing::Size(33, 20);
 			this->TextBoxJourNaissModifierClient->TabIndex = 11;
@@ -727,7 +728,6 @@ namespace PROJETPOO {
 			this->EcranIdle->Controls->Add(this->MenuOnglet);
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
 			this->EcranIdle->Controls->Add(this->EcranAfficherClient);
-			this->EcranIdle->Controls->Add(this->EcranModifierClient);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Name = L"EcranIdle";
 			this->EcranIdle->Size = System::Drawing::Size(1000, 600);
@@ -1253,7 +1253,7 @@ namespace PROJETPOO {
 	}
 	private: System::Void ClickChercherModifierClient(System::Object^ sender, System::EventArgs^ e) {
 
-		DataGridModifierClient->DataSource = client1.modifier(TextBoxNomClient->Text, TextBoxPrenomClient->Text, TextBoxAnNaissModifierClient->Text + "-" + TextBoxMoisNaissModifierClient->Text + "-" + TextBoxJourNaissModifierClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		DataGridModifierClient->DataSource = client1.modifier(TextBoxNomModifierClient->Text, TextBoxPrenomModifierClient->Text, TextBoxAnNaissModifierClient->Text + "-" + TextBoxMoisNaissModifierClient->Text + "-" + TextBoxJourNaissModifierClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	};
 }
