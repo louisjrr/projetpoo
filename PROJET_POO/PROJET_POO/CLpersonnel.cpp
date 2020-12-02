@@ -2,7 +2,6 @@
 
 CLpersonnel::CLpersonnel()
 {
-    throw gcnew System::NotImplementedException();
 }
 
 void CLpersonnel::creer(String^_nom, String^_prenom, String^_superieur, String^_hireDate, String^_adresse, String^ ville, int cp, String^ adresse_ip, String^ utilisateur, String^ MDP)
