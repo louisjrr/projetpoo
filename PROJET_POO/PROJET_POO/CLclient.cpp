@@ -1,16 +1,20 @@
 #include "CLclient.h"
 #include "CL_CAD.h"
+#include "MyForm.h"
 
 
 CLclient::CLclient()
 {
 }
 
-void CLclient::creer(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, int _cpLiv, String^ _adresseFac, String^ _villeFac, int _cpFac)
+void CLclient::creer(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, int _cpLiv, String^ _adresseFac, String^ _villeFac, int _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;
+    obj.connect(adresse_ip, utilisateur, MDP);
     String^ queryString = "INSERT INTO BDDProjet.Client (nom_client, prenom_client, birthDate) VALUES (\"" + _nom + "\", \"" + _prenom + "\", \"" + _birthDate + "\");" ;
     obj.sendSQL(queryString);
+    
+    
 }
 
    /* queryString = "SELECT MAX(id_client) FROM Client;";

@@ -23,13 +23,14 @@ private:
 
 public :
 
-	void getIP(String^);
-	void getUtilisateur(String^);
-	void getMDP(String^);
+	void setIP(String^);
+	void setUtilisateur(String^);
+	void setMDP(String^);
 
-	void connect();
+	void connect(String^ adresse_ip,String^,String^);
 	bool testConnect();
 	void disconnect();
 	void sendSQL(String^);
+
 
 };

@@ -1269,12 +1269,13 @@ private: System::Windows::Forms::Panel^ EcranVide;
 	/// 
 	
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		connexion.getIP(textBox1->Text);
-		connexion.getUtilisateur(textBox2->Text);
-		connexion.getMDP(textBox3->Text);
+		connexion.setIP(textBox1->Text);
+		connexion.setUtilisateur(textBox2->Text);
+		connexion.setMDP(textBox3->Text);
+		
 
 		try {
-			connexion.connect();
+			connexion.connect(textBox1->Text, textBox2->Text, textBox3->Text);
 		}
 		catch (MySqlException^ e) {
 			MessageBox::Show("Connexion échouée >:(");
@@ -1291,8 +1292,8 @@ private: System::Windows::Forms::Panel^ EcranVide;
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void ButtonAjoutClient_Click(System::Object^ sender, System::EventArgs^ e) {
-		
-		client1.creer(TextBoxNomClient->Text, TextBoxPrenomClient->Text, TextBoxAnNaissClient->Text + "-" + TextBoxMoisNaissClient->Text + "-" + TexBoxJourNaissClient->Text, TextBoxAdrAdrLivClient->Text, TextBoxAdrAdrLivClient->Text,Convert::ToInt16(TextBoxCpAdrLivClient->Text), TextBoxAdrAdrFactClient->Text, TextBoxAdrAdrFactClient->Text, Convert::ToInt16(TextBoxCpAdrFactClient->Text));
+
+		client1.creer(TextBoxNomClient->Text, TextBoxPrenomClient->Text, TextBoxAnNaissClient->Text + "-" + TextBoxMoisNaissClient->Text + "-" + TexBoxJourNaissClient->Text, TextBoxAdrAdrLivClient->Text, TextBoxAdrAdrLivClient->Text,Convert::ToInt16(TextBoxCpAdrLivClient->Text), TextBoxAdrAdrFactClient->Text, TextBoxAdrAdrFactClient->Text, Convert::ToInt16(TextBoxCpAdrFactClient->Text), textBox1->Text, textBox2->Text, textBox3->Text);
 		
 }
 	private: System::Void ClickOngletAjoutClient(System::Object^ sender, System::EventArgs^ e) {
