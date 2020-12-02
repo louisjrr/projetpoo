@@ -21,16 +21,17 @@ private:
 	SqlDataAdapter^ DA;
 	DataSet^ DS;
 
-public :
+public:
 
 	void setIP(String^);
 	void setUtilisateur(String^);
 	void setMDP(String^);
 
-	void connect(String^ adresse_ip,String^,String^);
+	void connect(String^ adresse_ip, String^, String^);
 	bool testConnect();
 	void disconnect();
 	void sendSQL(String^);
-	String^ receiveSQL(String^);
+	String^ receiveSQLString(String^);
+	DataTable^ receiveSQLTable(String^);
 
 };

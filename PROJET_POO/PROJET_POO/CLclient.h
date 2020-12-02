@@ -5,8 +5,8 @@ ref class CLclient
 {
 public:
     CLclient(void);
-    void creer(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^,String^);
-    void modifier(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
+    void creer(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
+    DataTable^ modifier(String^, String^, String^, String^, String^, String^);
     void supprimer(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
     void afficher(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
 private:
