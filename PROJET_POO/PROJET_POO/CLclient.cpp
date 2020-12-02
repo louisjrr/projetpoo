@@ -115,6 +115,17 @@ void CLclient::modifierADRLiv(String^ id, String^ adresse, String^ ville, String
 
 }
 
+void CLclient::modifierADRFact(String^ id, String^ adresse, String^ ville, String^ cp, String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "UPDATE Adresse SET adresse = '" + adresse + "', ville = '" + ville + "', cp = '" + cp + "' WHERE id_client = '" + id + "';  ";
+    obj.sendSQL(queryString);
+
+}
+
 void CLclient::supprimer(String^ id, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;
@@ -135,6 +146,16 @@ DataTable^ CLclient::recherchSupprimer(String^ _nom, String^ _prenom, String^ ip
     obj.disconnect();
 
     String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND prenom_client = '" + _prenom + "' AND( Client.id_client = Adresse.id_client_ADR_LIVRAISON OR Client.id_client = Adresse.id_client); ";
+    return obj.receiveSQLTable(queryString);
+}
+
+DataTable^ CLclient::afficherSupprimer(String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE Client.id_client = Adresse.id_client OR Client.id_Client = Adresse.id_client_ADR_LIVRAISON ; ";
     return obj.receiveSQLTable(queryString);
 
 
