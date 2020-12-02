@@ -7,7 +7,7 @@ CLclient::CLclient()
 {
 }
 
-void CLclient::creer(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, int _cpLiv, String^ _adresseFac, String^ _villeFac, int _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
+void CLclient::creer(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, String^ _cpLiv, String^ _adresseFac, String^ _villeFac, String^ _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;
     obj.connect(adresse_ip, utilisateur, MDP);
@@ -26,18 +26,19 @@ void CLclient::creer(String^ _nom, String^ _prenom, String^ _birthDate, String^ 
     queryString = "INSERT INTO BDDProjet.Adresse(adresse, ville, cp, id_client) VALUES ('" + _adresseFac + "', '" + _villeFac + "', '" + _cpFac + "', '" + id_client + "');";
     obj.sendSQL(queryString);
 }
-void CLclient::afficher(String^_nom, String^_prenom, String^_birthDate, String^ _adresseLiv, String^ _villeLiv, int _cpLiv, String^ _adresseFac, String^ _villeFac, int _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
+void CLclient::afficher(String^_nom, String^_prenom, String^_birthDate, String^ _adresseLiv, String^ _villeLiv, String^ _cpLiv, String^ _adresseFac, String^ _villeFac, String^ _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     
 }
 
+//}
 
-void CLclient::modifier(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, int _cpLiv, String^ _adresseFac, String^ _villeFac, int _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
+void CLclient::modifier(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, String^ _cpLiv, String^ _adresseFac, String^ _villeFac, String^ _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     throw gcnew System::NotImplementedException();
 }
 
-void CLclient::supprimer(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, int _cpLiv, String^ _adresseFac, String^ _villeFac, int _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
+void CLclient::supprimer(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, String^ _cpLiv, String^ _adresseFac, String^ _villeFac, String^ _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     throw gcnew System::NotImplementedException();
 }
