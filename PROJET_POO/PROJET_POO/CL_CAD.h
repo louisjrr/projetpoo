@@ -31,6 +31,6 @@ public :
 	bool testConnect();
 	void disconnect();
 	void sendSQL(String^);
-
+	String^ receiveSQL(String^);
 
 };

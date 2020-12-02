@@ -40,3 +40,20 @@ void CL_CAD::sendSQL(String^ requete)
 	command->ExecuteNonQuery();
 	connectionBDD->Close();
 }
+
+String^ CL_CAD::receiveSQL(String^ query)
+{
+	connectionBDD->Open();
+	MySqlCommand^ command = gcnew MySqlCommand(query, connectionBDD);
+	MySqlDataReader^ reader = command->ExecuteReader();
+	String^ result;
+
+	while (reader->Read() )
+	{
+		result = reader->GetString(0);
+	}
+
+	connectionBDD->Close();
+
+	return result;
+}

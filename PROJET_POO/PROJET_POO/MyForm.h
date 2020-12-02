@@ -1294,7 +1294,7 @@ private: System::Windows::Forms::Panel^ EcranVide;
 	private: System::Void ButtonAjoutClient_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		client1.creer(TextBoxNomClient->Text, TextBoxPrenomClient->Text, TextBoxAnNaissClient->Text + "-" + TextBoxMoisNaissClient->Text + "-" + TexBoxJourNaissClient->Text, TextBoxAdrAdrLivClient->Text, TextBoxAdrAdrLivClient->Text,Convert::ToInt16(TextBoxCpAdrLivClient->Text), TextBoxAdrAdrFactClient->Text, TextBoxAdrAdrFactClient->Text, Convert::ToInt16(TextBoxCpAdrFactClient->Text), textBox1->Text, textBox2->Text, textBox3->Text);
-		
+		MessageBox::Show("Client ajouté !");
 }
 	private: System::Void ClickOngletAjoutClient(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranAjoutClient->BringToFront();
