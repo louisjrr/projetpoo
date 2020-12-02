@@ -41,7 +41,7 @@ void CL_CAD::sendSQL(String^ requete)
 	connectionBDD->Close();
 }
 
-String^ CL_CAD::receiveSQL(String^ query)
+String^ CL_CAD::receiveSQLString(String^ query)
 {
 	connectionBDD->Open();
 	MySqlCommand^ command = gcnew MySqlCommand(query, connectionBDD);
@@ -56,4 +56,20 @@ String^ CL_CAD::receiveSQL(String^ query)
 	connectionBDD->Close();
 
 	return result;
+}
+
+DataTable^ CL_CAD::receiveSQLTable(String^ query)
+{
+	connectionBDD->Open();
+	MySqlCommand^ command = gcnew MySqlCommand(query, connectionBDD);
+	MySqlDataAdapter^ adapter = gcnew MySqlDataAdapter(command);
+	DataTable^ Table = gcnew DataTable();
+
+	adapter->Fill(Table);
+
+	connectionBDD->Close();
+
+	return Table;
+
+
 }
