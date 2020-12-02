@@ -28,7 +28,14 @@ void CLclient::creer(String^ _nom, String^ _prenom, String^ _birthDate, String^ 
 }
 void CLclient::afficher(String^_nom, String^_prenom, String^_birthDate, String^ _adresseLiv, String^ _villeLiv, String^ _cpLiv, String^ _adresseFac, String^ _villeFac, String^ _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
-    
+    CL_CAD obj;
+    obj.connect(adresse_ip, utilisateur, MDP);
+    obj.disconnect();
+
+    String^ queryString = "SELECT * FROM BDDProjet.Client;";
+    bindingSource1^ listeClient = obj.(queryString);
+    dataGridView->DataSource = listeClient;
+
 }
 
 
