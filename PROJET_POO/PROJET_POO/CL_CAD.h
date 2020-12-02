@@ -31,7 +31,6 @@ public :
 	bool testConnect();
 	void disconnect();
 	void sendSQL(String^);
-	String^ receiveSQLString(String^);
-	DataTable^ receiveSQLTable(String^);
+	String^ receiveSQL(String^);
 
 };

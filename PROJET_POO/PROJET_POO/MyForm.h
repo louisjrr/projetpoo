@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "CL_CAD.h"
 #include "CLclient.h"
 
@@ -13,7 +13,7 @@ namespace PROJETPOO {
 	using namespace MySql::Data::MySqlClient;
 
 	/// <summary>
-	/// Description résumée de MyForm
+	/// Description rï¿½sumï¿½e de MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -28,7 +28,7 @@ namespace PROJETPOO {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisï¿½es.
 		/// </summary>
 		~MyForm()
 		{
@@ -256,42 +256,29 @@ private: System::Windows::Forms::TextBox^ TextBoxCpAdrLivClient;
 private: System::Windows::Forms::TextBox^ TextBoxAdrAdrLivClient;
 private: System::Windows::Forms::TextBox^ TextBoxVilleAdrLivClient;
 private: System::Windows::Forms::Panel^ EcranModifierClient;
-private: System::Windows::Forms::Button^ ButtonModifierClient;
-private: System::Windows::Forms::Label^ LabelAnModifierClient;
-
-
-
-
-
-private: System::Windows::Forms::Label^ LabelMoisModifierClient;
-
-private: System::Windows::Forms::Label^ LabelJourModifierClient;
-
-private: System::Windows::Forms::TextBox^ TextBoxAnNaissModifierClient;
-
-private: System::Windows::Forms::TextBox^ TextBoxMoisNaissModifierClient;
-
-private: System::Windows::Forms::Label^ LabelNaissModifierClient;
-
-
-
-private: System::Windows::Forms::Label^ LabelPrenomModifierClient;
-
-private: System::Windows::Forms::Label^ LabelNomModifierClient;
-private: System::Windows::Forms::TextBox^ TextBoxPrenomModifierClient;
-
-
-
-
-
-
-private: System::Windows::Forms::TextBox^ TextBoxNomModifierClient;
-private: System::Windows::Forms::TextBox^ TextBoxJourNaissModifierClient;
-
-
-
-
-
+private: System::Windows::Forms::Button^ button1;
+private: System::Windows::Forms::Label^ label1;
+private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::Label^ label3;
+private: System::Windows::Forms::Label^ label4;
+private: System::Windows::Forms::Label^ label5;
+private: System::Windows::Forms::Label^ label6;
+private: System::Windows::Forms::TextBox^ textBox4;
+private: System::Windows::Forms::TextBox^ textBox5;
+private: System::Windows::Forms::Label^ label7;
+private: System::Windows::Forms::Label^ label8;
+private: System::Windows::Forms::Label^ label9;
+private: System::Windows::Forms::Label^ label10;
+private: System::Windows::Forms::Label^ label11;
+private: System::Windows::Forms::TextBox^ textBox6;
+private: System::Windows::Forms::TextBox^ textBox7;
+private: System::Windows::Forms::TextBox^ textBox8;
+private: System::Windows::Forms::TextBox^ textBox9;
+private: System::Windows::Forms::TextBox^ textBox10;
+private: System::Windows::Forms::TextBox^ textBox11;
+private: System::Windows::Forms::TextBox^ textBox12;
+private: System::Windows::Forms::TextBox^ textBox13;
+private: System::Windows::Forms::TextBox^ textBox14;
 private: System::Windows::Forms::Panel^ EcranVide;
 private: System::Windows::Forms::Panel^ EcranAfficherClient;
 private: System::Windows::Forms::DataGridView^ DataGridAfficherClient;
@@ -352,17 +339,16 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 
 
 
-
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nï¿½cessaire au concepteur.
 		/// </summary>
 
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// Mï¿½thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mï¿½thode avec l'ï¿½diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -377,20 +363,6 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->ButtonConnexion = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranConnexion = (gcnew System::Windows::Forms::Panel());
-			this->EcranModifierClient = (gcnew System::Windows::Forms::Panel());
-			this->DataGridModifierClient = (gcnew System::Windows::Forms::DataGridView());
-			this->ButtonModifierClient = (gcnew System::Windows::Forms::Button());
-			this->LabelAnModifierClient = (gcnew System::Windows::Forms::Label());
-			this->LabelMoisModifierClient = (gcnew System::Windows::Forms::Label());
-			this->LabelJourModifierClient = (gcnew System::Windows::Forms::Label());
-			this->TextBoxAnNaissModifierClient = (gcnew System::Windows::Forms::TextBox());
-			this->TextBoxMoisNaissModifierClient = (gcnew System::Windows::Forms::TextBox());
-			this->LabelNaissModifierClient = (gcnew System::Windows::Forms::Label());
-			this->LabelPrenomModifierClient = (gcnew System::Windows::Forms::Label());
-			this->LabelNomModifierClient = (gcnew System::Windows::Forms::Label());
-			this->TextBoxPrenomModifierClient = (gcnew System::Windows::Forms::TextBox());
-			this->TextBoxNomModifierClient = (gcnew System::Windows::Forms::TextBox());
-			this->TextBoxJourNaissModifierClient = (gcnew System::Windows::Forms::TextBox());
 			this->BottomToolStripPanel = (gcnew System::Windows::Forms::ToolStripPanel());
 			this->TopToolStripPanel = (gcnew System::Windows::Forms::ToolStripPanel());
 			this->RightToolStripPanel = (gcnew System::Windows::Forms::ToolStripPanel());
@@ -443,6 +415,30 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->TextBoxCpAdrLivClient = (gcnew System::Windows::Forms::TextBox());
 			this->TextBoxAdrAdrLivClient = (gcnew System::Windows::Forms::TextBox());
 			this->TextBoxVilleAdrLivClient = (gcnew System::Windows::Forms::TextBox());
+			this->EcranModifierClient = (gcnew System::Windows::Forms::Panel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox14 = (gcnew System::Windows::Forms::TextBox());
 			this->EcranAfficherClient = (gcnew System::Windows::Forms::Panel());
 			this->LabelNomAfficherClient = (gcnew System::Windows::Forms::Label());
 			this->LabelPrenomAfficherClient = (gcnew System::Windows::Forms::Label());
@@ -451,11 +447,10 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->DataGridAfficherClient = (gcnew System::Windows::Forms::DataGridView());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
-			this->EcranModifierClient->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->BeginInit();
 			this->EcranIdle->SuspendLayout();
 			this->MenuOnglet->SuspendLayout();
 			this->EcranAjoutClient->SuspendLayout();
+			this->EcranModifierClient->SuspendLayout();
 			this->EcranAfficherClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAfficherClient))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
@@ -522,7 +517,7 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			// ButtonConnexion
 			// 
 			this->ButtonConnexion->Location = System::Drawing::Point(313, 356);
-			this->ButtonConnexion->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ButtonConnexion->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonConnexion->Name = L"ButtonConnexion";
 			this->ButtonConnexion->Size = System::Drawing::Size(112, 46);
 			this->ButtonConnexion->TabIndex = 2;
@@ -596,7 +591,7 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->ButtonModifierClient->Name = L"ButtonModifierClient";
 			this->ButtonModifierClient->Size = System::Drawing::Size(169, 23);
 			this->ButtonModifierClient->TabIndex = 31;
-			this->ButtonModifierClient->Text = L"Chercher le client à modifier";
+			this->ButtonModifierClient->Text = L"Chercher le client Ã  modifier";
 			this->ButtonModifierClient->UseVisualStyleBackColor = true;
 			this->ButtonModifierClient->Click += gcnew System::EventHandler(this, &MyForm::ClickChercherModifierClient);
 			// 
@@ -607,7 +602,7 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->LabelAnModifierClient->Name = L"LabelAnModifierClient";
 			this->LabelAnModifierClient->Size = System::Drawing::Size(38, 13);
 			this->LabelAnModifierClient->TabIndex = 27;
-			this->LabelAnModifierClient->Text = L"Année";
+			this->LabelAnModifierClient->Text = L"AnnÃ©e";
 			// 
 			// LabelMoisModifierClient
 			// 
@@ -657,7 +652,7 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->LabelPrenomModifierClient->Name = L"LabelPrenomModifierClient";
 			this->LabelPrenomModifierClient->Size = System::Drawing::Size(43, 13);
 			this->LabelPrenomModifierClient->TabIndex = 19;
-			this->LabelPrenomModifierClient->Text = L"Prénom";
+			this->LabelPrenomModifierClient->Text = L"PrÃ©nom";
 			// 
 			// LabelNomModifierClient
 			// 
@@ -731,8 +726,8 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->EcranIdle->Controls->Add(this->EcranVide);
 			this->EcranIdle->Controls->Add(this->MenuOnglet);
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
-			this->EcranIdle->Controls->Add(this->EcranAfficherClient);
 			this->EcranIdle->Controls->Add(this->EcranModifierClient);
+			this->EcranIdle->Controls->Add(this->EcranAfficherClient);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->EcranIdle->Name = L"EcranIdle";
@@ -990,7 +985,7 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->LabelAnNaissClient->Name = L"LabelAnNaissClient";
 			this->LabelAnNaissClient->Size = System::Drawing::Size(49, 17);
 			this->LabelAnNaissClient->TabIndex = 27;
-			this->LabelAnNaissClient->Text = L"Année";
+			this->LabelAnNaissClient->Text = L"Annï¿½e";
 			// 
 			// LabelMoisNaissClient
 			// 
@@ -1066,7 +1061,7 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->LabelPrenomClient->Name = L"LabelPrenomClient";
 			this->LabelPrenomClient->Size = System::Drawing::Size(57, 17);
 			this->LabelPrenomClient->TabIndex = 19;
-			this->LabelPrenomClient->Text = L"Prénom";
+			this->LabelPrenomClient->Text = L"Prï¿½nom";
 			// 
 			// LabelNomClient
 			// 
@@ -1227,7 +1222,7 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(38, 13);
 			this->label4->TabIndex = 27;
-			this->label4->Text = L"Année";
+			this->label4->Text = L"Annï¿½e";
 			// 
 			// label5
 			// 
@@ -1295,7 +1290,7 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(43, 13);
 			this->label10->TabIndex = 19;
-			this->label10->Text = L"Prénom";
+			this->label10->Text = L"Prï¿½nom";
 			// 
 			// label11
 			// 
@@ -1396,14 +1391,14 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			this->LabelNomAfficherClient->TabIndex = 0;
 			this->LabelNomAfficherClient->Text = L"Nom";
 			// 
-			// TextBoxPrenomAfficherClient
+			// LabelPrenomAfficherClient
 			// 
 			this->LabelPrenomAfficherClient->AutoSize = true;
 			this->LabelPrenomAfficherClient->Location = System::Drawing::Point(80, 104);
 			this->LabelPrenomAfficherClient->Name = L"LabelPrenomAfficherClient";
 			this->LabelPrenomAfficherClient->Size = System::Drawing::Size(43, 13);
 			this->LabelPrenomAfficherClient->TabIndex = 1;
-			this->LabelPrenomAfficherClient->Text = L"Prénom";
+			this->LabelPrenomAfficherClient->Text = L"Prï¿½nom";
 			// 
 			// TextBoxNomAfficherClient
 			// 
@@ -1442,15 +1437,14 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->EcranConnexion->ResumeLayout(false);
 			this->EcranConnexion->PerformLayout();
-			this->EcranModifierClient->ResumeLayout(false);
-			this->EcranModifierClient->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->EndInit();
 			this->EcranIdle->ResumeLayout(false);
 			this->EcranIdle->PerformLayout();
 			this->MenuOnglet->ResumeLayout(false);
 			this->MenuOnglet->PerformLayout();
 			this->EcranAjoutClient->ResumeLayout(false);
 			this->EcranAjoutClient->PerformLayout();
+			this->EcranModifierClient->ResumeLayout(false);
+			this->EcranModifierClient->PerformLayout();
 			this->EcranAfficherClient->ResumeLayout(false);
 			this->EcranAfficherClient->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAfficherClient))->EndInit();
@@ -1476,13 +1470,13 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 			connexion.connect(textBox1->Text, textBox2->Text, textBox3->Text);
 		}
 		catch (MySqlException^ e) {
-			MessageBox::Show("Connexion échouée >:(");
+			MessageBox::Show("Connexion ï¿½chouï¿½e >:(");
 		}
 
 		if (connexion.testConnect() == true) {
 
 			this->EcranIdle->BringToFront();
-			MessageBox::Show("Connexion réussi");
+			MessageBox::Show("Connexion rï¿½ussi");
 			connexion.disconnect();
 		}
 
@@ -1492,7 +1486,7 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 	private: System::Void ButtonAjoutClient_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		client1.creer(TextBoxNomClient->Text, TextBoxPrenomClient->Text, TextBoxAnNaissClient->Text + "-" + TextBoxMoisNaissClient->Text + "-" + TexBoxJourNaissClient->Text, TextBoxAdrAdrLivClient->Text, TextBoxAdrAdrLivClient->Text,TextBoxCpAdrLivClient->Text, TextBoxAdrAdrFactClient->Text, TextBoxAdrAdrFactClient->Text, TextBoxCpAdrFactClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
-		MessageBox::Show("Client ajouté !");
+		MessageBox::Show("Client ajoutï¿½ !");
 }
 	private: System::Void ClickOngletAjoutClient(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranAjoutClient->BringToFront();
@@ -1503,10 +1497,6 @@ private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 	}
 	private: System::Void ClickOngletAfficherClient(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranAfficherClient->BringToFront();
-	}
-	private: System::Void ClickChercherModifierClient(System::Object^ sender, System::EventArgs^ e) {
-
-		DataGridModifierClient->DataSource = client1.modifier(TextBoxNomClient->Text, TextBoxPrenomClient->Text, TextBoxAnNaissModifierClient->Text + "-" + TextBoxMoisNaissModifierClient->Text + "-" + TextBoxJourNaissModifierClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 };
 }
