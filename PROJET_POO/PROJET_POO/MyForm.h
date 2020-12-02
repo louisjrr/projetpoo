@@ -692,6 +692,7 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			// EcranConnexion
 			// 
 			this->EcranConnexion->AutoSize = true;
+			this->EcranConnexion->Controls->Add(this->EcranAjoutPersonnel);
 			this->EcranConnexion->Controls->Add(this->textBox1);
 			this->EcranConnexion->Controls->Add(this->textBox3);
 			this->EcranConnexion->Controls->Add(this->textBox2);
@@ -777,6 +778,7 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->ButtonModifADRLivModificationClient->TabIndex = 60;
 			this->ButtonModifADRLivModificationClient->Text = L"Valider l\'adresse de livr";
 			this->ButtonModifADRLivModificationClient->UseVisualStyleBackColor = true;
+			this->ButtonModifADRLivModificationClient->Click += gcnew System::EventHandler(this, &MyForm::ClickModifADRLivModificationClient);
 			// 
 			// ButtonModifNaissModificationClient
 			// 
@@ -1180,7 +1182,6 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->EcranIdle->Controls->Add(this->EcranVide);
 			this->EcranIdle->Controls->Add(this->MenuOnglet);
 			this->EcranIdle->Controls->Add(this->EcranAfficherClient);
-			this->EcranIdle->Controls->Add(this->EcranAjoutPersonnel);
 			this->EcranIdle->Controls->Add(this->EcranSupprimerClient);
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
 			this->EcranIdle->Controls->Add(this->EcranModifierClient);
@@ -1953,6 +1954,7 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 		DataGridSupprimerClient->DataSource = client1.recherchSupprimer(TextBoxNomSupprimerClient->Text, TextBoxPrenomSupprimerClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickOngletAjoutPersonnel(System::Object^ sender, System::EventArgs^ e){
+		this->EcranAjoutPersonnel->BringToFront();
 	}
 
 	private: System::Void buttonAjoutPersonnel_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1975,6 +1977,9 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 		this->TextBoxModifAnModificationClient->Text = "";
 		this->TextBoxModifMoisModificationClient->Text = "";
 		this->TextBoxModifJourModificationClient->Text = "";
+	}
+	private: System::Void ClickModifADRLivModificationClient(System::Object^ sender, System::EventArgs^ e) {
+		//client1.modifierADRLiv(TextBoxIDModificationClient->Text, TextBox)
 	}
 };
 }

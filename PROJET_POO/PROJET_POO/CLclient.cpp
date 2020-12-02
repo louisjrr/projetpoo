@@ -104,6 +104,17 @@ void CLclient::modifierNaiss(String^ id, String^ Naiss, String^ ip, String^ user
 
 }
 
+void CLclient::modifierADRLiv(String^ id, String^ adresse, String^ ville, String^ cp, String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "UPDATE Adresse SET adresse = '" + adresse + "', ville = '" + ville + "', cp = '" + cp + "' WHERE id_client_ADR_LIVRAISON = '" + id + "';  ";
+    obj.sendSQL(queryString);
+
+}
+
 void CLclient::supprimer(String^ id, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;

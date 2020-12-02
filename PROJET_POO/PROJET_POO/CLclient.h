@@ -13,6 +13,7 @@ public:
     void modifierNom(String^ id, String^ nom, String^ prenom, String^ ip, String^ user, String^ mdp);
     DataTable^ afficherModifier(String^ ip, String^ user, String^ mdp);
     void modifierNaiss(String^ id, String^ Naiss, String^ ip, String^ user, String^ mdp);
+    void modifierADRLiv(String^ id, String^ adresse, String^ ville, String^ cp, String^ ip, String^ user, String^ mdp);
 private:
     String^ birthDate;
     String^ firstDate;
