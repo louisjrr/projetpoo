@@ -5,10 +5,11 @@ ref class CLclient
 {
 public:
     CLclient(void);
-    void creer(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
-    DataTable^ modifier(String^, String^, String^, String^, String^, String^);
-    void supprimer(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
-    DataTable^ afficher(String^, String^, String^, String^, String^);
+    void creer(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^ ip, String^ user, String^ mdp);
+    DataTable^ modifier(String^, String^, String^, String^ ip, String^ user, String^ mdp);
+    void supprimer(String^ id, String^ ip, String^ user , String^ mdp);
+    DataTable^ recherchSupprimer(String^ _nom, String^ _prenom, String^ ip, String^ user, String^ mdp);
+    DataTable^ afficher(String^, String^, String^ ip, String^ user, String^ mdp);
 private:
     String^ birthDate;
     String^ firstDate;
