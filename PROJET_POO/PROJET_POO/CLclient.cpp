@@ -92,6 +92,17 @@ void CLclient::modifierNom(String^ id, String^ nom, String^ prenom, String^ ip, 
 
 }
 
+void CLclient::modifierNaiss(String^ id, String^ Naiss, String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "UPDATE Client SET birthDate = '" + Naiss + "' WHERE id_client = '" + id + "';  ";
+    obj.sendSQL(queryString);
+
+
+}
 
 void CLclient::supprimer(String^ id, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {

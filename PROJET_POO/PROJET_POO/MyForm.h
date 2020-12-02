@@ -786,6 +786,7 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->ButtonModifNaissModificationClient->TabIndex = 59;
 			this->ButtonModifNaissModificationClient->Text = L"Valider date de naissance";
 			this->ButtonModifNaissModificationClient->UseVisualStyleBackColor = true;
+			this->ButtonModifNaissModificationClient->Click += gcnew System::EventHandler(this, &MyForm::ClickModifNaissModificationCLient);
 			// 
 			// ButtonModifNomModificationClient
 			// 
@@ -1966,6 +1967,14 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 	}
 	private: System::Void ClickAfficherModificationClient(System::Object^ sender, System::EventArgs^ e) {
 	DataGridModifierClient->DataSource = client1.afficherModifier(textBox1->Text, textBox2->Text, textBox3->Text);
+	}
+	private: System::Void ClickModifNaissModificationCLient(System::Object^ sender, System::EventArgs^ e) {
+		client1.modifierNaiss(TextBoxIDModificationClient->Text, TextBoxModifAnModificationClient->Text + "-" + TextBoxModifMoisModificationClient->Text + "-" + TextBoxModifJourModificationClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		MessageBox::Show("Date de naissance du client modifié !");
+
+		this->TextBoxModifAnModificationClient->Text = "";
+		this->TextBoxModifMoisModificationClient->Text = "";
+		this->TextBoxModifJourModificationClient->Text = "";
 	}
 };
 }
