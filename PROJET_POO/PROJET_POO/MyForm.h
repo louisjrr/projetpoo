@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "CL_CAD.h"
 #include "CLclient.h"
+#include "CLpersonnel.h"
 
 namespace PROJETPOO {
 
@@ -1717,6 +1718,7 @@ private: System::Windows::Forms::Button^ buttonAjoutPersonnel;
 		/// variables venant des classes 
 		CL_CAD connexion;
 		CLclient client1;
+		CLpersonnel personnel1;
 		/// 
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1775,6 +1777,9 @@ private: System::Windows::Forms::Button^ buttonAjoutPersonnel;
 	private: System::Void ClickChercherSupprimerClient(System::Object^ sender, System::EventArgs^ e) {
 		DataGridSupprimerClient->DataSource = client1.recherchSupprimer(TextBoxNomSupprimerClient->Text, TextBoxPrenomSupprimerClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 	}
+	private: System::Void ClickOngletAjoutPersonnel(System::Object^ sender, System::EventArgs^ e){
+	}
+
 private: System::Void buttonAjoutPersonnel_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
