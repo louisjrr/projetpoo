@@ -35,25 +35,25 @@ DataTable^ CLclient::afficher(String^ _nom, String^ _prenom, String^ adresse_ip,
 
     if( _nom == "" && _prenom == "")
     {
-        String^ queryString = "SELECT nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse; ";
+        String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE Client.id_client = Adresse.id_client OR Client.id_Client = Adresse.id_client_ADR_LIVRAISON ; ";
         DataTable^ listeClient = obj.receiveSQLTable(queryString);
         return listeClient;
     }
     else if(_prenom == "")
     {
-        String^ queryString = "SELECT nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "'; ";
+        String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND (Client.id_client = Adresse.id_client OR Client.id_Client = Adresse.id_client_ADR_LIVRAISON); ";
         DataTable^ listeClient = obj.receiveSQLTable(queryString);
         return listeClient;
     }
     else if (_nom == "")
     {
-        String^ queryString = "SELECT nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE prenom_client = '" + _prenom + "'; ";
+        String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE prenom_client = '" + _prenom + "' AND (Client.id_client = Adresse.id_client OR Client.id_Client = Adresse.id_client_ADR_LIVRAISON); ";
         DataTable^ listeClient = obj.receiveSQLTable(queryString);
         return listeClient;
     }
     else
     {
-        String^ queryString = "SELECT nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND prenom_client = '" + _prenom + "'; ";
+        String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND prenom_client = '" + _prenom + "'AND (Client.id_client = Adresse.id_client OR Client.id_Client = Adresse.id_client_ADR_LIVRAISON); ";
         DataTable^ listeClient = obj.receiveSQLTable(queryString);
         return listeClient;
     }
@@ -67,7 +67,7 @@ DataTable^ CLclient::modifier(String^ _nom, String^ _prenom, String^ _birthDate,
     obj.connect(adresse_ip, utilisateur, MDP);
     obj.disconnect();
 
-    String^ queryString = "SELECT nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND prenom_client = '" + _prenom + "' AND birthDate = '" + _birthDate + "' AND( Client.id_client = Adresse.id_client_ADR_LIVRAISON OR Client.id_client = Adresse.id_client); ";
+    String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND prenom_client = '" + _prenom + "' AND birthDate = '" + _birthDate + "' AND( Client.id_client = Adresse.id_client_ADR_LIVRAISON OR Client.id_client = Adresse.id_client); ";
     //String^ queryString = "Select * from Client;";
     return obj.receiveSQLTable(queryString);
 

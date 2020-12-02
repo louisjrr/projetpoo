@@ -300,7 +300,7 @@ namespace PROJETPOO {
 	private: System::Windows::Forms::Label^ LabelPrenomAfficherClient;
 	private: System::Windows::Forms::Label^ LabelNomAfficherClient;
 	private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
-private: System::Windows::Forms::Button^ buttonRechercherClient;
+	private: System::Windows::Forms::Button^ buttonRechercherClient;
 
 
 
@@ -443,11 +443,11 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->TextBoxVilleAdrLivClient = (gcnew System::Windows::Forms::TextBox());
 			this->EcranAfficherClient = (gcnew System::Windows::Forms::Panel());
 			this->DataGridAfficherClient = (gcnew System::Windows::Forms::DataGridView());
-			this->buttonRechercherClient = (gcnew System::Windows::Forms::Button());
 			this->TextBoxPrenomAfficherClient = (gcnew System::Windows::Forms::TextBox());
 			this->TextBoxNomAfficherClient = (gcnew System::Windows::Forms::TextBox());
 			this->LabelPrenomAfficherClient = (gcnew System::Windows::Forms::Label());
 			this->LabelNomAfficherClient = (gcnew System::Windows::Forms::Label());
+			this->buttonRechercherClient = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
 			this->EcranModifierClient->SuspendLayout();
@@ -470,7 +470,7 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->textBox1->Location = System::Drawing::Point(383, 282);
 			this->textBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(199, 22);
+			this->textBox1->Size = System::Drawing::Size(199, 20);
 			this->textBox1->TabIndex = 0;
 			// 
 			// textBox2
@@ -478,8 +478,9 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->textBox2->Location = System::Drawing::Point(383, 336);
 			this->textBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(199, 22);
+			this->textBox2->Size = System::Drawing::Size(199, 20);
 			this->textBox2->TabIndex = 4;
+			this->textBox2->Text = "user";
 			// 
 			// textBox3
 			// 
@@ -487,15 +488,16 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->textBox3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->PasswordChar = '*';
-			this->textBox3->Size = System::Drawing::Size(199, 22);
+			this->textBox3->Size = System::Drawing::Size(199, 20);
 			this->textBox3->TabIndex = 5;
+			this->textBox3->Text = "User@viacesi27";
 			// 
 			// LabelUserConnexion
 			// 
 			this->LabelUserConnexion->AutoSize = true;
 			this->LabelUserConnexion->Location = System::Drawing::Point(307, 340);
 			this->LabelUserConnexion->Name = L"LabelUserConnexion";
-			this->LabelUserConnexion->Size = System::Drawing::Size(71, 17);
+			this->LabelUserConnexion->Size = System::Drawing::Size(53, 13);
 			this->LabelUserConnexion->TabIndex = 6;
 			this->LabelUserConnexion->Text = L"Utilisateur";
 			// 
@@ -504,7 +506,7 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->LabelMdpConnexion->AutoSize = true;
 			this->LabelMdpConnexion->Location = System::Drawing::Point(283, 390);
 			this->LabelMdpConnexion->Name = L"LabelMdpConnexion";
-			this->LabelMdpConnexion->Size = System::Drawing::Size(93, 17);
+			this->LabelMdpConnexion->Size = System::Drawing::Size(71, 13);
 			this->LabelMdpConnexion->TabIndex = 7;
 			this->LabelMdpConnexion->Text = L"Mot de passe";
 			// 
@@ -513,7 +515,7 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->LabelIpConnexion->AutoSize = true;
 			this->LabelIpConnexion->Location = System::Drawing::Point(355, 286);
 			this->LabelIpConnexion->Name = L"LabelIpConnexion";
-			this->LabelIpConnexion->Size = System::Drawing::Size(20, 17);
+			this->LabelIpConnexion->Size = System::Drawing::Size(17, 13);
 			this->LabelIpConnexion->TabIndex = 1;
 			this->LabelIpConnexion->Text = L"IP";
 			// 
@@ -531,17 +533,16 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(613, 318);
+			this->pictureBox1->Location = System::Drawing::Point(541, 259);
 			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(588, 326);
+			this->pictureBox1->Size = System::Drawing::Size(468, 326);
 			this->pictureBox1->TabIndex = 8;
 			this->pictureBox1->TabStop = false;
 			// 
 			// EcranConnexion
 			// 
 			this->EcranConnexion->AutoSize = true;
-			this->EcranConnexion->Controls->Add(this->EcranModifierClient);
 			this->EcranConnexion->Controls->Add(this->textBox1);
 			this->EcranConnexion->Controls->Add(this->textBox3);
 			this->EcranConnexion->Controls->Add(this->textBox2);
@@ -552,7 +553,7 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->EcranConnexion->Controls->Add(this->pictureBox1);
 			this->EcranConnexion->Location = System::Drawing::Point(-3, 0);
 			this->EcranConnexion->Name = L"EcranConnexion";
-			this->EcranConnexion->Size = System::Drawing::Size(1000, 600);
+			this->EcranConnexion->Size = System::Drawing::Size(1013, 600);
 			this->EcranConnexion->TabIndex = 18;
 			// 
 			// EcranModifierClient
@@ -576,7 +577,7 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->EcranModifierClient->Controls->Add(this->TextBoxJourNaissModifierClient);
 			this->EcranModifierClient->Location = System::Drawing::Point(0, 27);
 			this->EcranModifierClient->Name = L"EcranModifierClient";
-			this->EcranModifierClient->Size = System::Drawing::Size(989, 535);
+			this->EcranModifierClient->Size = System::Drawing::Size(1000, 600);
 			this->EcranModifierClient->TabIndex = 34;
 			// 
 			// DataGridModifierClient
@@ -728,10 +729,11 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->EcranIdle->Controls->Add(this->EcranVide);
 			this->EcranIdle->Controls->Add(this->MenuOnglet);
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
+			this->EcranIdle->Controls->Add(this->EcranModifierClient);
 			this->EcranIdle->Controls->Add(this->EcranAfficherClient);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Name = L"EcranIdle";
-			this->EcranIdle->Size = System::Drawing::Size(1000, 600);
+			this->EcranIdle->Size = System::Drawing::Size(1000, 900);
 			this->EcranIdle->TabIndex = 24;
 			// 
 			// EcranVide
@@ -742,7 +744,7 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->EcranVide->AutoSize = true;
 			this->EcranVide->Location = System::Drawing::Point(0, 27);
 			this->EcranVide->Name = L"EcranVide";
-			this->EcranVide->Size = System::Drawing::Size(1000, 600);
+			this->EcranVide->Size = System::Drawing::Size(1000, 900);
 			this->EcranVide->TabIndex = 35;
 			// 
 			// MenuOnglet
@@ -931,7 +933,7 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->EcranAjoutClient->Controls->Add(this->TextBoxVilleAdrLivClient);
 			this->EcranAjoutClient->Location = System::Drawing::Point(0, 27);
 			this->EcranAjoutClient->Name = L"EcranAjoutClient";
-			this->EcranAjoutClient->Size = System::Drawing::Size(989, 535);
+			this->EcranAjoutClient->Size = System::Drawing::Size(1000, 600);
 			this->EcranAjoutClient->TabIndex = 26;
 			// 
 			// ButtonAjoutClient
@@ -1131,9 +1133,10 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->EcranAfficherClient->Controls->Add(this->TextBoxNomAfficherClient);
 			this->EcranAfficherClient->Controls->Add(this->LabelPrenomAfficherClient);
 			this->EcranAfficherClient->Controls->Add(this->LabelNomAfficherClient);
+			this->EcranAfficherClient->Controls->Add(this->buttonRechercherClient);
 			this->EcranAfficherClient->Location = System::Drawing::Point(6, 33);
 			this->EcranAfficherClient->Name = L"EcranAfficherClient";
-			this->EcranAfficherClient->Size = System::Drawing::Size(989, 535);
+			this->EcranAfficherClient->Size = System::Drawing::Size(1000, 600);
 			this->EcranAfficherClient->TabIndex = 36;
 			// 
 			// DataGridAfficherClient
@@ -1143,16 +1146,6 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->DataGridAfficherClient->Name = L"DataGridAfficherClient";
 			this->DataGridAfficherClient->Size = System::Drawing::Size(500, 304);
 			this->DataGridAfficherClient->TabIndex = 4;
-			// 
-			// buttonRechercherClient
-			// 
-			this->buttonRechercherClient->Location = System::Drawing::Point(341, 112);
-			this->buttonRechercherClient->Name = L"buttonRechercherClient";
-			this->buttonRechercherClient->Size = System::Drawing::Size(95, 38);
-			this->buttonRechercherClient->TabIndex = 26;
-			this->buttonRechercherClient->Text = L"Rechercher";
-			this->buttonRechercherClient->UseVisualStyleBackColor = true;
-			this->buttonRechercherClient->Click += gcnew System::EventHandler(this, &MyForm::buttonRechercherClient_Click);
 			// 
 			// TextBoxPrenomAfficherClient
 			// 
@@ -1185,6 +1178,16 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 			this->LabelNomAfficherClient->Size = System::Drawing::Size(29, 13);
 			this->LabelNomAfficherClient->TabIndex = 0;
 			this->LabelNomAfficherClient->Text = L"Nom";
+			// 
+			// buttonRechercherClient
+			// 
+			this->buttonRechercherClient->Location = System::Drawing::Point(129, 153);
+			this->buttonRechercherClient->Name = L"buttonRechercherClient";
+			this->buttonRechercherClient->Size = System::Drawing::Size(95, 38);
+			this->buttonRechercherClient->TabIndex = 26;
+			this->buttonRechercherClient->Text = L"Rechercher";
+			this->buttonRechercherClient->UseVisualStyleBackColor = true;
+			this->buttonRechercherClient->Click += gcnew System::EventHandler(this, &MyForm::buttonRechercherClient_Click);
 			// 
 			// MyForm
 			// 
@@ -1249,7 +1252,7 @@ private: System::Windows::Forms::Button^ buttonRechercherClient;
 	}
 	private: System::Void ButtonAjoutClient_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		client1.creer(TextBoxNomClient->Text, TextBoxPrenomClient->Text, TextBoxAnNaissClient->Text + "-" + TextBoxMoisNaissClient->Text + "-" + TexBoxJourNaissClient->Text, TextBoxAdrAdrLivClient->Text, TextBoxAdrAdrLivClient->Text, TextBoxCpAdrLivClient->Text, TextBoxAdrAdrFactClient->Text, TextBoxAdrAdrFactClient->Text, TextBoxCpAdrFactClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		client1.creer(TextBoxNomClient->Text, TextBoxPrenomClient->Text, TextBoxAnNaissClient->Text + "-" + TextBoxMoisNaissClient->Text + "-" + TexBoxJourNaissClient->Text, TextBoxAdrAdrLivClient->Text, TextBoxVilleAdrLivClient->Text, TextBoxCpAdrLivClient->Text, TextBoxAdrAdrFactClient->Text, TextBoxVilleAdrFactClient->Text, TextBoxCpAdrFactClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("Client ajouté !");
 	}
 	private: System::Void ClickOngletAjoutClient(System::Object^ sender, System::EventArgs^ e) {
