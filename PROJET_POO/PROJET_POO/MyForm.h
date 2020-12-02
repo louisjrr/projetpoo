@@ -300,6 +300,8 @@ namespace PROJETPOO {
 	private: System::Windows::Forms::Label^ LabelPrenomAfficherClient;
 	private: System::Windows::Forms::Label^ LabelNomAfficherClient;
 	private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
+private: System::Windows::Forms::Button^ buttonRechercherClient;
+
 
 
 
@@ -441,6 +443,7 @@ namespace PROJETPOO {
 			this->TextBoxVilleAdrLivClient = (gcnew System::Windows::Forms::TextBox());
 			this->EcranAfficherClient = (gcnew System::Windows::Forms::Panel());
 			this->DataGridAfficherClient = (gcnew System::Windows::Forms::DataGridView());
+			this->buttonRechercherClient = (gcnew System::Windows::Forms::Button());
 			this->TextBoxPrenomAfficherClient = (gcnew System::Windows::Forms::TextBox());
 			this->TextBoxNomAfficherClient = (gcnew System::Windows::Forms::TextBox());
 			this->LabelPrenomAfficherClient = (gcnew System::Windows::Forms::Label());
@@ -464,65 +467,62 @@ namespace PROJETPOO {
 			});
 			this->textBox1->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->textBox1->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::CustomSource;
-			this->textBox1->Location = System::Drawing::Point(287, 229);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2);
+			this->textBox1->Location = System::Drawing::Point(383, 282);
+			this->textBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(150, 20);
+			this->textBox1->Size = System::Drawing::Size(199, 22);
 			this->textBox1->TabIndex = 0;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(287, 273);
-			this->textBox2->Margin = System::Windows::Forms::Padding(2);
+			this->textBox2->Location = System::Drawing::Point(383, 336);
+			this->textBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(150, 20);
+			this->textBox2->Size = System::Drawing::Size(199, 22);
 			this->textBox2->TabIndex = 4;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(287, 314);
-			this->textBox3->Margin = System::Windows::Forms::Padding(2);
+			this->textBox3->Location = System::Drawing::Point(383, 386);
+			this->textBox3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->PasswordChar = '*';
-			this->textBox3->Size = System::Drawing::Size(150, 20);
+			this->textBox3->Size = System::Drawing::Size(199, 22);
 			this->textBox3->TabIndex = 5;
 			// 
 			// LabelUserConnexion
 			// 
 			this->LabelUserConnexion->AutoSize = true;
-			this->LabelUserConnexion->Location = System::Drawing::Point(230, 276);
-			this->LabelUserConnexion->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->LabelUserConnexion->Location = System::Drawing::Point(307, 340);
 			this->LabelUserConnexion->Name = L"LabelUserConnexion";
-			this->LabelUserConnexion->Size = System::Drawing::Size(53, 13);
+			this->LabelUserConnexion->Size = System::Drawing::Size(71, 17);
 			this->LabelUserConnexion->TabIndex = 6;
 			this->LabelUserConnexion->Text = L"Utilisateur";
 			// 
 			// LabelMdpConnexion
 			// 
 			this->LabelMdpConnexion->AutoSize = true;
-			this->LabelMdpConnexion->Location = System::Drawing::Point(212, 317);
-			this->LabelMdpConnexion->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->LabelMdpConnexion->Location = System::Drawing::Point(283, 390);
 			this->LabelMdpConnexion->Name = L"LabelMdpConnexion";
-			this->LabelMdpConnexion->Size = System::Drawing::Size(71, 13);
+			this->LabelMdpConnexion->Size = System::Drawing::Size(93, 17);
 			this->LabelMdpConnexion->TabIndex = 7;
 			this->LabelMdpConnexion->Text = L"Mot de passe";
 			// 
 			// LabelIpConnexion
 			// 
 			this->LabelIpConnexion->AutoSize = true;
-			this->LabelIpConnexion->Location = System::Drawing::Point(266, 232);
-			this->LabelIpConnexion->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->LabelIpConnexion->Location = System::Drawing::Point(355, 286);
 			this->LabelIpConnexion->Name = L"LabelIpConnexion";
-			this->LabelIpConnexion->Size = System::Drawing::Size(17, 13);
+			this->LabelIpConnexion->Size = System::Drawing::Size(20, 17);
 			this->LabelIpConnexion->TabIndex = 1;
 			this->LabelIpConnexion->Text = L"IP";
 			// 
 			// ButtonConnexion
 			// 
-			this->ButtonConnexion->Location = System::Drawing::Point(313, 356);
-			this->ButtonConnexion->Margin = System::Windows::Forms::Padding(2);
+			this->ButtonConnexion->Location = System::Drawing::Point(417, 438);
+			this->ButtonConnexion->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ButtonConnexion->Name = L"ButtonConnexion";
-			this->ButtonConnexion->Size = System::Drawing::Size(84, 37);
+			this->ButtonConnexion->Size = System::Drawing::Size(112, 46);
 			this->ButtonConnexion->TabIndex = 2;
 			this->ButtonConnexion->Text = L"connexion";
 			this->ButtonConnexion->UseVisualStyleBackColor = true;
@@ -531,9 +531,10 @@ namespace PROJETPOO {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(460, 258);
+			this->pictureBox1->Location = System::Drawing::Point(613, 318);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(441, 265);
+			this->pictureBox1->Size = System::Drawing::Size(588, 326);
 			this->pictureBox1->TabIndex = 8;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -1143,6 +1144,16 @@ namespace PROJETPOO {
 			this->DataGridAfficherClient->Size = System::Drawing::Size(500, 304);
 			this->DataGridAfficherClient->TabIndex = 4;
 			// 
+			// buttonRechercherClient
+			// 
+			this->buttonRechercherClient->Location = System::Drawing::Point(341, 112);
+			this->buttonRechercherClient->Name = L"buttonRechercherClient";
+			this->buttonRechercherClient->Size = System::Drawing::Size(95, 38);
+			this->buttonRechercherClient->TabIndex = 26;
+			this->buttonRechercherClient->Text = L"Rechercher";
+			this->buttonRechercherClient->UseVisualStyleBackColor = true;
+			this->buttonRechercherClient->Click += gcnew System::EventHandler(this, &MyForm::buttonRechercherClient_Click);
+			// 
 			// TextBoxPrenomAfficherClient
 			// 
 			this->TextBoxPrenomAfficherClient->Location = System::Drawing::Point(126, 101);
@@ -1250,10 +1261,14 @@ namespace PROJETPOO {
 	}
 	private: System::Void ClickOngletAfficherClient(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranAfficherClient->BringToFront();
+		DataGridAfficherClient->DataSource = client1.afficher( "", "", textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickChercherModifierClient(System::Object^ sender, System::EventArgs^ e) {
 
 		DataGridModifierClient->DataSource = client1.modifier(TextBoxNomModifierClient->Text, TextBoxPrenomModifierClient->Text, TextBoxAnNaissModifierClient->Text + "-" + TextBoxMoisNaissModifierClient->Text + "-" + TextBoxJourNaissModifierClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 	}
-	};
+	private: System::Void buttonRechercherClient_Click(System::Object^ sender, System::EventArgs^ e) {
+		DataGridAfficherClient->DataSource = client1.afficher(TextBoxNomAfficherClient->Text, TextBoxPrenomAfficherClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+	}
+};
 }

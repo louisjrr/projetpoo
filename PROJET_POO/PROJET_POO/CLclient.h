@@ -8,7 +8,7 @@ public:
     void creer(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
     DataTable^ modifier(String^, String^, String^, String^, String^, String^);
     void supprimer(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
-    void afficher(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
+    DataTable^ afficher(String^, String^, String^, String^, String^);
 private:
     String^ birthDate;
     String^ firstDate;
