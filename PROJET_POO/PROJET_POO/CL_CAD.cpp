@@ -48,7 +48,7 @@ String^ CL_CAD::receiveSQLString(String^ query)
 	MySqlDataReader^ reader = command->ExecuteReader();
 	String^ result;
 
-	while (reader->Read() )
+	while (reader->Read())
 	{
 		result = reader->GetString(0);
 	}
