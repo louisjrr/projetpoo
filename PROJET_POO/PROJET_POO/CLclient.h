@@ -12,5 +12,9 @@ public:
 private:
     String^ birthDate;
     String^ firstDate;
+    String^ nomClient;
+    String^ prenomClient;
+    String^ adresseLivClient;
+    String^ adresseFacClient;
 };
 

@@ -8,5 +8,8 @@ public:
 private:
     String^ superieur;
     String^ hireDate;
+    String^ nomPersonnel;
+    String^ prenomPersonnel;
+    String^ adressePersonnel;
 };
 
