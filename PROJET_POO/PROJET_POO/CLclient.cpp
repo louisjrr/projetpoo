@@ -74,8 +74,26 @@ DataTable^ CLclient::modifier(String^ _nom, String^ _prenom, String^ _birthDate,
 }
 
 
-void CLclient::supprimer(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, String^ _cpLiv, String^ _adresseFac, String^ _villeFac, String^ _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
+void CLclient::supprimer(String^ id, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
-    throw gcnew System::NotImplementedException();
+    CL_CAD obj;
+    obj.connect(adresse_ip, utilisateur, MDP);
+    obj.disconnect();
+
+    String^ queryString = "DELETE FROM Adresse WHERE '" + id + "' = id_Client OR '" + id + "' = id_client_ADR_LIVRAISON;";
+    obj.sendSQL(queryString);
+
+    queryString = "DELETE FROM Client WHERE '" + id + "' = id_Client;";
+    obj.sendSQL(queryString);
 }
 
+DataTable^ CLclient::recherchSupprimer(String^ _nom, String^ _prenom, String^ ip, String^ user, String^ mdp) {
+
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "SELECT Client.id_client, nom_client, prenom_client, birthDate, adresse, ville, cp FROM Client INNER JOIN Adresse WHERE nom_client = '" + _nom + "' AND prenom_client = '" + _prenom + "' AND( Client.id_client = Adresse.id_client_ADR_LIVRAISON OR Client.id_client = Adresse.id_client); ";
+    return obj.receiveSQLTable(queryString);
+
+}

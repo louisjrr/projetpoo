@@ -301,6 +301,22 @@ namespace PROJETPOO {
 	private: System::Windows::Forms::Label^ LabelNomAfficherClient;
 	private: System::Windows::Forms::DataGridView^ DataGridModifierClient;
 	private: System::Windows::Forms::Button^ buttonRechercherClient;
+private: System::Windows::Forms::Panel^ EcranSupprimerClient;
+private: System::Windows::Forms::Button^ ButtonSupprimerSupprimerClient;
+private: System::Windows::Forms::TextBox^ TextBoxSupprimerSupprimerClient;
+private: System::Windows::Forms::Label^ LabelSupprimerSupprimerClient;
+private: System::Windows::Forms::DataGridView^ DataGridSupprimerClient;
+
+private: System::Windows::Forms::Button^ ButtonChercherSupprimerClient;
+private: System::Windows::Forms::Label^ LabelPrenomSupprimerClient;
+
+
+private: System::Windows::Forms::Label^ LabelNomSupprimerClient;
+private: System::Windows::Forms::TextBox^ TextBoxPrenomSupprimerClient;
+
+
+private: System::Windows::Forms::TextBox^ TextBoxNomSupprimerClient;
+
 
 
 
@@ -375,6 +391,16 @@ namespace PROJETPOO {
 			this->ButtonConnexion = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranConnexion = (gcnew System::Windows::Forms::Panel());
+			this->EcranSupprimerClient = (gcnew System::Windows::Forms::Panel());
+			this->ButtonSupprimerSupprimerClient = (gcnew System::Windows::Forms::Button());
+			this->TextBoxSupprimerSupprimerClient = (gcnew System::Windows::Forms::TextBox());
+			this->LabelSupprimerSupprimerClient = (gcnew System::Windows::Forms::Label());
+			this->DataGridSupprimerClient = (gcnew System::Windows::Forms::DataGridView());
+			this->ButtonChercherSupprimerClient = (gcnew System::Windows::Forms::Button());
+			this->LabelPrenomSupprimerClient = (gcnew System::Windows::Forms::Label());
+			this->LabelNomSupprimerClient = (gcnew System::Windows::Forms::Label());
+			this->TextBoxPrenomSupprimerClient = (gcnew System::Windows::Forms::TextBox());
+			this->TextBoxNomSupprimerClient = (gcnew System::Windows::Forms::TextBox());
 			this->EcranModifierClient = (gcnew System::Windows::Forms::Panel());
 			this->DataGridModifierClient = (gcnew System::Windows::Forms::DataGridView());
 			this->ButtonModifierClient = (gcnew System::Windows::Forms::Button());
@@ -450,6 +476,8 @@ namespace PROJETPOO {
 			this->buttonRechercherClient = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
+			this->EcranSupprimerClient->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridSupprimerClient))->BeginInit();
 			this->EcranModifierClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->BeginInit();
 			this->EcranIdle->SuspendLayout();
@@ -467,7 +495,7 @@ namespace PROJETPOO {
 			});
 			this->textBox1->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->textBox1->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::CustomSource;
-			this->textBox1->Location = System::Drawing::Point(383, 282);
+			this->textBox1->Location = System::Drawing::Point(375, 227);
 			this->textBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(199, 20);
@@ -475,27 +503,27 @@ namespace PROJETPOO {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(383, 336);
+			this->textBox2->Location = System::Drawing::Point(375, 281);
 			this->textBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(199, 20);
 			this->textBox2->TabIndex = 4;
-			this->textBox2->Text = "user";
+			this->textBox2->Text = L"user";
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(383, 386);
+			this->textBox3->Location = System::Drawing::Point(375, 331);
 			this->textBox3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->PasswordChar = '*';
 			this->textBox3->Size = System::Drawing::Size(199, 20);
 			this->textBox3->TabIndex = 5;
-			this->textBox3->Text = "User@viacesi27";
+			this->textBox3->Text = L"User@viacesi27";
 			// 
 			// LabelUserConnexion
 			// 
 			this->LabelUserConnexion->AutoSize = true;
-			this->LabelUserConnexion->Location = System::Drawing::Point(307, 340);
+			this->LabelUserConnexion->Location = System::Drawing::Point(299, 285);
 			this->LabelUserConnexion->Name = L"LabelUserConnexion";
 			this->LabelUserConnexion->Size = System::Drawing::Size(53, 13);
 			this->LabelUserConnexion->TabIndex = 6;
@@ -504,7 +532,7 @@ namespace PROJETPOO {
 			// LabelMdpConnexion
 			// 
 			this->LabelMdpConnexion->AutoSize = true;
-			this->LabelMdpConnexion->Location = System::Drawing::Point(283, 390);
+			this->LabelMdpConnexion->Location = System::Drawing::Point(275, 335);
 			this->LabelMdpConnexion->Name = L"LabelMdpConnexion";
 			this->LabelMdpConnexion->Size = System::Drawing::Size(71, 13);
 			this->LabelMdpConnexion->TabIndex = 7;
@@ -513,7 +541,7 @@ namespace PROJETPOO {
 			// LabelIpConnexion
 			// 
 			this->LabelIpConnexion->AutoSize = true;
-			this->LabelIpConnexion->Location = System::Drawing::Point(355, 286);
+			this->LabelIpConnexion->Location = System::Drawing::Point(347, 231);
 			this->LabelIpConnexion->Name = L"LabelIpConnexion";
 			this->LabelIpConnexion->Size = System::Drawing::Size(17, 13);
 			this->LabelIpConnexion->TabIndex = 1;
@@ -521,7 +549,7 @@ namespace PROJETPOO {
 			// 
 			// ButtonConnexion
 			// 
-			this->ButtonConnexion->Location = System::Drawing::Point(417, 438);
+			this->ButtonConnexion->Location = System::Drawing::Point(409, 383);
 			this->ButtonConnexion->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ButtonConnexion->Name = L"ButtonConnexion";
 			this->ButtonConnexion->Size = System::Drawing::Size(112, 46);
@@ -533,7 +561,7 @@ namespace PROJETPOO {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(541, 259);
+			this->pictureBox1->Location = System::Drawing::Point(533, 204);
 			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(468, 326);
@@ -551,10 +579,106 @@ namespace PROJETPOO {
 			this->EcranConnexion->Controls->Add(this->LabelMdpConnexion);
 			this->EcranConnexion->Controls->Add(this->ButtonConnexion);
 			this->EcranConnexion->Controls->Add(this->pictureBox1);
-			this->EcranConnexion->Location = System::Drawing::Point(-3, 0);
+			this->EcranConnexion->Location = System::Drawing::Point(0, 0);
 			this->EcranConnexion->Name = L"EcranConnexion";
 			this->EcranConnexion->Size = System::Drawing::Size(1013, 600);
 			this->EcranConnexion->TabIndex = 18;
+			// 
+			// EcranSupprimerClient
+			// 
+			this->EcranSupprimerClient->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->EcranSupprimerClient->AutoSize = true;
+			this->EcranSupprimerClient->Controls->Add(this->ButtonSupprimerSupprimerClient);
+			this->EcranSupprimerClient->Controls->Add(this->TextBoxSupprimerSupprimerClient);
+			this->EcranSupprimerClient->Controls->Add(this->LabelSupprimerSupprimerClient);
+			this->EcranSupprimerClient->Controls->Add(this->DataGridSupprimerClient);
+			this->EcranSupprimerClient->Controls->Add(this->ButtonChercherSupprimerClient);
+			this->EcranSupprimerClient->Controls->Add(this->LabelPrenomSupprimerClient);
+			this->EcranSupprimerClient->Controls->Add(this->LabelNomSupprimerClient);
+			this->EcranSupprimerClient->Controls->Add(this->TextBoxPrenomSupprimerClient);
+			this->EcranSupprimerClient->Controls->Add(this->TextBoxNomSupprimerClient);
+			this->EcranSupprimerClient->Location = System::Drawing::Point(0, 27);
+			this->EcranSupprimerClient->Name = L"EcranSupprimerClient";
+			this->EcranSupprimerClient->Size = System::Drawing::Size(1000, 600);
+			this->EcranSupprimerClient->TabIndex = 35;
+			// 
+			// ButtonSupprimerSupprimerClient
+			// 
+			this->ButtonSupprimerSupprimerClient->Location = System::Drawing::Point(522, 459);
+			this->ButtonSupprimerSupprimerClient->Name = L"ButtonSupprimerSupprimerClient";
+			this->ButtonSupprimerSupprimerClient->Size = System::Drawing::Size(117, 41);
+			this->ButtonSupprimerSupprimerClient->TabIndex = 35;
+			this->ButtonSupprimerSupprimerClient->Text = L"Supprimer le client";
+			this->ButtonSupprimerSupprimerClient->UseVisualStyleBackColor = true;
+			this->ButtonSupprimerSupprimerClient->Click += gcnew System::EventHandler(this, &MyForm::ClickSupprimerSupprimerClient);
+			// 
+			// TextBoxSupprimerSupprimerClient
+			// 
+			this->TextBoxSupprimerSupprimerClient->Location = System::Drawing::Point(529, 420);
+			this->TextBoxSupprimerSupprimerClient->Name = L"TextBoxSupprimerSupprimerClient";
+			this->TextBoxSupprimerSupprimerClient->Size = System::Drawing::Size(100, 20);
+			this->TextBoxSupprimerSupprimerClient->TabIndex = 34;
+			// 
+			// LabelSupprimerSupprimerClient
+			// 
+			this->LabelSupprimerSupprimerClient->AutoSize = true;
+			this->LabelSupprimerSupprimerClient->Location = System::Drawing::Point(521, 404);
+			this->LabelSupprimerSupprimerClient->Name = L"LabelSupprimerSupprimerClient";
+			this->LabelSupprimerSupprimerClient->Size = System::Drawing::Size(118, 13);
+			this->LabelSupprimerSupprimerClient->TabIndex = 33;
+			this->LabelSupprimerSupprimerClient->Text = L"ID du client à supprimer";
+			// 
+			// DataGridSupprimerClient
+			// 
+			this->DataGridSupprimerClient->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DataGridSupprimerClient->Location = System::Drawing::Point(340, 46);
+			this->DataGridSupprimerClient->Name = L"DataGridSupprimerClient";
+			this->DataGridSupprimerClient->Size = System::Drawing::Size(621, 293);
+			this->DataGridSupprimerClient->TabIndex = 32;
+			// 
+			// ButtonChercherSupprimerClient
+			// 
+			this->ButtonChercherSupprimerClient->Location = System::Drawing::Point(120, 127);
+			this->ButtonChercherSupprimerClient->Name = L"ButtonChercherSupprimerClient";
+			this->ButtonChercherSupprimerClient->Size = System::Drawing::Size(169, 23);
+			this->ButtonChercherSupprimerClient->TabIndex = 31;
+			this->ButtonChercherSupprimerClient->Text = L"Chercher le client à supprimer";
+			this->ButtonChercherSupprimerClient->UseVisualStyleBackColor = true;
+			this->ButtonChercherSupprimerClient->Click += gcnew System::EventHandler(this, &MyForm::ClickChercherSupprimerClient);
+			// 
+			// LabelPrenomSupprimerClient
+			// 
+			this->LabelPrenomSupprimerClient->AutoSize = true;
+			this->LabelPrenomSupprimerClient->Location = System::Drawing::Point(81, 93);
+			this->LabelPrenomSupprimerClient->Name = L"LabelPrenomSupprimerClient";
+			this->LabelPrenomSupprimerClient->Size = System::Drawing::Size(43, 13);
+			this->LabelPrenomSupprimerClient->TabIndex = 19;
+			this->LabelPrenomSupprimerClient->Text = L"Prénom";
+			// 
+			// LabelNomSupprimerClient
+			// 
+			this->LabelNomSupprimerClient->AutoSize = true;
+			this->LabelNomSupprimerClient->Location = System::Drawing::Point(95, 63);
+			this->LabelNomSupprimerClient->Name = L"LabelNomSupprimerClient";
+			this->LabelNomSupprimerClient->Size = System::Drawing::Size(29, 13);
+			this->LabelNomSupprimerClient->TabIndex = 18;
+			this->LabelNomSupprimerClient->Text = L"Nom";
+			// 
+			// TextBoxPrenomSupprimerClient
+			// 
+			this->TextBoxPrenomSupprimerClient->Location = System::Drawing::Point(130, 86);
+			this->TextBoxPrenomSupprimerClient->Name = L"TextBoxPrenomSupprimerClient";
+			this->TextBoxPrenomSupprimerClient->Size = System::Drawing::Size(150, 20);
+			this->TextBoxPrenomSupprimerClient->TabIndex = 10;
+			// 
+			// TextBoxNomSupprimerClient
+			// 
+			this->TextBoxNomSupprimerClient->Location = System::Drawing::Point(130, 60);
+			this->TextBoxNomSupprimerClient->Name = L"TextBoxNomSupprimerClient";
+			this->TextBoxNomSupprimerClient->Size = System::Drawing::Size(150, 20);
+			this->TextBoxNomSupprimerClient->TabIndex = 9;
 			// 
 			// EcranModifierClient
 			// 
@@ -731,6 +855,7 @@ namespace PROJETPOO {
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
 			this->EcranIdle->Controls->Add(this->EcranModifierClient);
 			this->EcranIdle->Controls->Add(this->EcranAfficherClient);
+			this->EcranIdle->Controls->Add(this->EcranSupprimerClient);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Name = L"EcranIdle";
 			this->EcranIdle->Size = System::Drawing::Size(1000, 900);
@@ -860,6 +985,7 @@ namespace PROJETPOO {
 			this->OngletSupprimerClient->Name = L"OngletSupprimerClient";
 			this->OngletSupprimerClient->Size = System::Drawing::Size(129, 22);
 			this->OngletSupprimerClient->Text = L"Supprimer";
+			this->OngletSupprimerClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerClient);
 			// 
 			// OngletAfficherClient
 			// 
@@ -1204,6 +1330,9 @@ namespace PROJETPOO {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->EcranConnexion->ResumeLayout(false);
 			this->EcranConnexion->PerformLayout();
+			this->EcranSupprimerClient->ResumeLayout(false);
+			this->EcranSupprimerClient->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridSupprimerClient))->EndInit();
 			this->EcranModifierClient->ResumeLayout(false);
 			this->EcranModifierClient->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->EndInit();
@@ -1272,6 +1401,16 @@ namespace PROJETPOO {
 	}
 	private: System::Void buttonRechercherClient_Click(System::Object^ sender, System::EventArgs^ e) {
 		DataGridAfficherClient->DataSource = client1.afficher(TextBoxNomAfficherClient->Text, TextBoxPrenomAfficherClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+	}
+	private: System::Void ClickSupprimerSupprimerClient(System::Object^ sender, System::EventArgs^ e) {
+		client1.supprimer(TextBoxSupprimerSupprimerClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		MessageBox::Show("Client supprimé !");
+	}
+	private: System::Void ClickOngletSupprimerClient(System::Object^ sender, System::EventArgs^ e) {
+		this->EcranSupprimerClient->BringToFront();
+	}
+	private: System::Void ClickChercherSupprimerClient(System::Object^ sender, System::EventArgs^ e) {
+		DataGridSupprimerClient->DataSource = client1.recherchSupprimer(TextBoxNomSupprimerClient->Text, TextBoxPrenomSupprimerClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 };
 }
