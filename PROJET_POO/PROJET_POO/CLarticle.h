@@ -4,10 +4,10 @@ ref class CLarticle
 {
 public:
     CLarticle(void);
-    void creer(String^, double, int, int, double);
-    void modifier(String^, double, int, int, double);
-    void suprimer(String^, double, int, int, double);
-    void afficher(String^, double, int, int, double);
+    void creer(String^, double, int, int, double, String^, String^, String^);
+    void modifier(String^, double, int, int, double, String^, String^, String^);
+    void suprimer(String^, double, int, int, double, String^, String^, String^);
+    void afficher(String^, double, int, int, double, String^, String^, String^);
 private:
     double prixHT;
     String^ designation;

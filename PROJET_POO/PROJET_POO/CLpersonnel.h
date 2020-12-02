@@ -4,10 +4,10 @@ ref class CLpersonnel
 {
 public:
     CLpersonnel(void);
-    void creer(String^, String^, String^, String^, String^, String^, int);
-    void modifier(String^, String^, String^, String^, String^, String^, int);
-    void supprimer(String^, String^, String^, String^, String^, String^, int);
-    void afficher(String^, String^, String^, String^, String^, String^, int);
+    void creer(String^, String^, String^, String^, String^, String^, int, String^, String^, String^);
+    void modifier(String^, String^, String^, String^, String^, String^, int, String^, String^, String^);
+    void supprimer(String^, String^, String^, String^, String^, String^, int, String^, String^, String^);
+    void afficher(String^, String^, String^, String^, String^, String^, int, String^, String^, String^);
 private:
     String^ superieur;
     String^ hireDate;

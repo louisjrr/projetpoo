@@ -7,22 +7,22 @@ CLarticle::CLarticle()
     reference++;
 }
 
-void CLarticle::creer(String^ _designation, double _prixHT, int _stock, int _seuil, double _tva)
+void CLarticle::creer(String^ _designation, double _prixHT, int _stock, int _seuil, double _tva, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     String^ queryString = "INSERT INTO BDDProjet.Article(id_article, designation, prixHT, stock, seuil, tva, id_categorie) VALUES (" + ", " + ", " + ", " + ", " + ", "+");"; 
 }
 
-void CLarticle::modifier(String^, double, int, int, double)
+void CLarticle::modifier(String^, double, int, int, double, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     throw gcnew System::NotImplementedException();
 }
 
-void CLarticle::suprimer(String^, double, int, int, double)
+void CLarticle::suprimer(String^, double, int, int, double, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     throw gcnew System::NotImplementedException();
 }
 
-void CLarticle::afficher(String^, double, int, int, double)
+void CLarticle::afficher(String^, double, int, int, double, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     throw gcnew System::NotImplementedException();
 }
