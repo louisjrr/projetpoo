@@ -35,7 +35,8 @@ void CL_CAD::disconnect() {
 
 void CL_CAD::sendSQL(String^ requete)
 {
+	connectionBDD->Open();
 	MySqlCommand^ command = gcnew MySqlCommand(requete, connectionBDD);
 	command->ExecuteNonQuery();
-
+	connectionBDD->Close();
 }

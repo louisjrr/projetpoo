@@ -11,6 +11,7 @@ void CLclient::creer(String^ _nom, String^ _prenom, String^ _birthDate, String^ 
 {
     CL_CAD obj;
     obj.connect(adresse_ip, utilisateur, MDP);
+    obj.disconnect();
     String^ queryString = "INSERT INTO BDDProjet.Client (nom_client, prenom_client, birthDate) VALUES (\"" + _nom + "\", \"" + _prenom + "\", \"" + _birthDate + "\");" ;
     obj.sendSQL(queryString);
     
