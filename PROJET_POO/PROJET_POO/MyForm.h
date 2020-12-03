@@ -1358,6 +1358,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->ButtonStockModifierArticle->TabIndex = 61;
 			this->ButtonStockModifierArticle->Text = L"Valider stock et seuil";
 			this->ButtonStockModifierArticle->UseVisualStyleBackColor = true;
+			this->ButtonStockModifierArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickModifStockModifierArticle);
 			// 
 			// ButtonPrixModifierArticle
 			// 
@@ -2940,11 +2941,21 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 		article1.modifierDesignation(TextBoxIDModifierArticle->Text, TextBoxModifNomModifierArticle->Text, TextBoxModifCategModifierArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("Désignation et catégorie modifiés !");
 		DataGridModifierArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
+
+		TextBoxIDModifierArticle->Text = "";
+		TextBoxModifNomModifierArticle->Text = "";
+		TextBoxModifCategModifierArticle->Text = "";
 	}
 	private: System::Void ClickPrixModifierArticle(System::Object^ sender, System::EventArgs^ e) {
 		article1.modifierPrix(TextBoxIDModifierArticle->Text, TextBoxModifPrixModifierArticle->Text, TextBoxModifTVAModifierArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("Prix et TVA modifiés !");
+		DataGridModifierArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
+
+		TextBoxIDModifierArticle->Text = "";
+		TextBoxModifPrixModifierArticle->Text = "";
+		TextBoxModifTVAModifierArticle->Text = "";
 	}
+
 	private: System::Void ClickModifADRLivModifierCLient(System::Object^ sender, System::EventArgs^ e) {
 		client1.modifierADRLiv(TextBoxIDModificationClient->Text, TextBoxModifAdrADRLivClient->Text, TextBoxModifVilleADRLivClient->Text, TextBoxModifCpADRLivClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("Adresse de livraison modifiée !");
@@ -2974,7 +2985,16 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 		TextBoxModifAnModificationClient->Text = "";
 		TextBoxModifMoisModificationClient->Text = "";
 		TextBoxModifJourModificationClient->Text = "";
+	}
 
+	private: System::Void ClickModifStockModifierArticle(System::Object^ sender, System::EventArgs^ e) {
+		article1.modifierStockSeuil(TextBoxIDModifierArticle->Text, TextBoxModifStockModifierArticle->Text, TextBoxModifSeuilModifierArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		MessageBox::Show("Stock et seuil modifiés !");
+		DataGridModifierArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
+
+		TextBoxIDModifierArticle->Text = "";
+		TextBoxModifStockModifierArticle->Text = "";
+		TextBoxModifSeuilModifierArticle->Text = "";
 	}
 };
 }

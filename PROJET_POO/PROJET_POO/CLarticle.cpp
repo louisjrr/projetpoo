@@ -72,6 +72,17 @@ void CLarticle::modifierPrix(String^ id, String^ prix, String^ TVA, String^ ip, 
 
 }
 
+void CLarticle::modifierStockSeuil(String^ id, String^ stock, String^ seuil, String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "UPDATE Article SET stock = '" + stock + "', seuil = '" + seuil + "' WHERE id_article = '" + id + "';  ";
+    obj.sendSQL(queryString);
+
+}
+
 DataTable^ CLarticle::recherchmodifier(String^ nom, String^ ip, String^ user, String^ mdp)
 {
     CL_CAD obj;

@@ -19,7 +19,7 @@ public:
 
     void modifierDesignation(String^ id, String^ designation, String^ id_categorie, String^ ip, String^ user, String^ mdp);
     void modifierPrix(String^ id, String^ prix, String^ TVA, String^ ip, String^ user, String^ mdp);
-    //void modifierStockSeuil(String^ id, String^ stock, String^ seuil, String^ ip, String^ user, String^ mdp);
+    void modifierStockSeuil(String^ id, String^ stock, String^ seuil, String^ ip, String^ user, String^ mdp);
     
     void supprimer(String^ id, String^ ip, String^ user, String^ mdp);
     
