@@ -737,12 +737,6 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranVide = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranPasserCommande = (gcnew System::Windows::Forms::Panel());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->textBox2LettrePrenom = (gcnew System::Windows::Forms::TextBox());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->MenuOnglet = (gcnew System::Windows::Forms::MenuStrip());
 			this->OngletArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->OngletAjoutArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -832,6 +826,12 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->ButtonRecherchSupprimerArticle = (gcnew System::Windows::Forms::Button());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->TextBoxRecherchSupprimerArticle = (gcnew System::Windows::Forms::TextBox());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->textBox2LettrePrenom = (gcnew System::Windows::Forms::TextBox());
+			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
 			this->EcranAfficherArticle->SuspendLayout();
@@ -848,8 +848,6 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranIdle->SuspendLayout();
 			this->EcranVide->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-			this->EcranPasserCommande->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->MenuOnglet->SuspendLayout();
 			this->EcranAfficherClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAfficherClient))->BeginInit();
@@ -859,6 +857,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranAjoutClient->SuspendLayout();
 			this->EcranSuprimerArticle->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridSupprimerArticle))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -970,7 +969,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranAfficherArticle->Controls->Add(this->ButtonRecherchAfficherArticle);
 			this->EcranAfficherArticle->Location = System::Drawing::Point(0, 27);
 			this->EcranAfficherArticle->Name = L"EcranAfficherArticle";
-			this->EcranAfficherArticle->Size = System::Drawing::Size(1000, 600);
+			this->EcranAfficherArticle->Size = System::Drawing::Size(1003, 600);
 			this->EcranAfficherArticle->TabIndex = 41;
 			// 
 			// DataGridAfficherArticle
@@ -1050,7 +1049,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranModifierClient->Controls->Add(this->TextBoxNomModifierClient);
 			this->EcranModifierClient->Location = System::Drawing::Point(0, 27);
 			this->EcranModifierClient->Name = L"EcranModifierClient";
-			this->EcranModifierClient->Size = System::Drawing::Size(1000, 600);
+			this->EcranModifierClient->Size = System::Drawing::Size(1003, 600);
 			this->EcranModifierClient->TabIndex = 34;
 			// 
 			// ButtonAfficherModificationClient
@@ -1367,7 +1366,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranModifierArticle->Controls->Add(this->TextBoxRecherchModifierArticle);
 			this->EcranModifierArticle->Location = System::Drawing::Point(0, 27);
 			this->EcranModifierArticle->Name = L"EcranModifierArticle";
-			this->EcranModifierArticle->Size = System::Drawing::Size(1000, 600);
+			this->EcranModifierArticle->Size = System::Drawing::Size(1003, 600);
 			this->EcranModifierArticle->TabIndex = 40;
 			// 
 			// label14
@@ -1761,7 +1760,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranSupprimerClient->Location = System::Drawing::Point(0, 27);
 			this->EcranSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->EcranSupprimerClient->Name = L"EcranSupprimerClient";
-			this->EcranSupprimerClient->Size = System::Drawing::Size(1000, 600);
+			this->EcranSupprimerClient->Size = System::Drawing::Size(1003, 600);
 			this->EcranSupprimerClient->TabIndex = 35;
 			// 
 			// ButtonSupprimerSupprimerClient
@@ -1903,7 +1902,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranIdle->Controls->Add(this->EcranAfficherArticle);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Name = L"EcranIdle";
-			this->EcranIdle->Size = System::Drawing::Size(1000, 900);
+			this->EcranIdle->Size = System::Drawing::Size(1003, 900);
 			this->EcranIdle->TabIndex = 24;
 			// 
 			// EcranVide
@@ -1916,7 +1915,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranVide->Location = System::Drawing::Point(0, 22);
 			this->EcranVide->Margin = System::Windows::Forms::Padding(2);
 			this->EcranVide->Name = L"EcranVide";
-			this->EcranVide->Size = System::Drawing::Size(1000, 600);
+			this->EcranVide->Size = System::Drawing::Size(1003, 600);
 			this->EcranVide->TabIndex = 35;
 			// 
 			// pictureBox2
@@ -1927,6 +1926,13 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->pictureBox2->Size = System::Drawing::Size(882, 369);
 			this->pictureBox2->TabIndex = 0;
 			this->pictureBox2->TabStop = false;
+			// 
+			// EcranPasserCommande
+			// 
+			this->EcranPasserCommande->Location = System::Drawing::Point(0, 27);
+			this->EcranPasserCommande->Name = L"EcranPasserCommande";
+			this->EcranPasserCommande->Size = System::Drawing::Size(1000, 600);
+			this->EcranPasserCommande->TabIndex = 36;
 			// 
 			// MenuOnglet
 			// 
@@ -1940,7 +1946,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->MenuOnglet->Location = System::Drawing::Point(0, 0);
 			this->MenuOnglet->Name = L"MenuOnglet";
 			this->MenuOnglet->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
-			this->MenuOnglet->Size = System::Drawing::Size(320, 28);
+			this->MenuOnglet->Size = System::Drawing::Size(263, 24);
 			this->MenuOnglet->TabIndex = 33;
 			this->MenuOnglet->Text = L"menuStrip1";
 			// 
@@ -2069,26 +2075,26 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			// OngletPasserCommande
 			// 
 			this->OngletPasserCommande->Name = L"OngletPasserCommande";
-			this->OngletPasserCommande->Size = System::Drawing::Size(211, 26);
+			this->OngletPasserCommande->Size = System::Drawing::Size(171, 22);
 			this->OngletPasserCommande->Text = L"Passer commande";
 			this->OngletPasserCommande->Click += gcnew System::EventHandler(this, &MyForm::OngletPasserCommande_Click);
 			// 
 			// OngletModifierCommande
 			// 
 			this->OngletModifierCommande->Name = L"OngletModifierCommande";
-			this->OngletModifierCommande->Size = System::Drawing::Size(211, 26);
+			this->OngletModifierCommande->Size = System::Drawing::Size(171, 22);
 			this->OngletModifierCommande->Text = L"Modifier";
 			// 
 			// OngletSupprimerCommande
 			// 
 			this->OngletSupprimerCommande->Name = L"OngletSupprimerCommande";
-			this->OngletSupprimerCommande->Size = System::Drawing::Size(211, 26);
+			this->OngletSupprimerCommande->Size = System::Drawing::Size(171, 22);
 			this->OngletSupprimerCommande->Text = L"Supprimer";
 			// 
 			// OngletAfficherCommande
 			// 
 			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
-			this->OngletAfficherCommande->Size = System::Drawing::Size(211, 26);
+			this->OngletAfficherCommande->Size = System::Drawing::Size(171, 22);
 			this->OngletAfficherCommande->Text = L"Afficher";
 			// 
 			// EcranAfficherClient
@@ -2105,7 +2111,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranAfficherClient->Controls->Add(this->buttonRechercherClient);
 			this->EcranAfficherClient->Location = System::Drawing::Point(0, 27);
 			this->EcranAfficherClient->Name = L"EcranAfficherClient";
-			this->EcranAfficherClient->Size = System::Drawing::Size(1000, 600);
+			this->EcranAfficherClient->Size = System::Drawing::Size(1003, 600);
 			this->EcranAfficherClient->TabIndex = 36;
 			// 
 			// DataGridAfficherClient
@@ -2173,7 +2179,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranAfficherPersonnel->Controls->Add(this->buttonRechercherAfficherPersonnel);
 			this->EcranAfficherPersonnel->Location = System::Drawing::Point(0, 27);
 			this->EcranAfficherPersonnel->Name = L"EcranAfficherPersonnel";
-			this->EcranAfficherPersonnel->Size = System::Drawing::Size(1000, 600);
+			this->EcranAfficherPersonnel->Size = System::Drawing::Size(1003, 600);
 			this->EcranAfficherPersonnel->TabIndex = 37;
 			// 
 			// dataGridViewAfficherPersonnel
@@ -2256,7 +2262,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranAjoutPersonnel->Controls->Add(this->textBoxVillePersonnel1);
 			this->EcranAjoutPersonnel->Location = System::Drawing::Point(0, 27);
 			this->EcranAjoutPersonnel->Name = L"EcranAjoutPersonnel";
-			this->EcranAjoutPersonnel->Size = System::Drawing::Size(1000, 600);
+			this->EcranAjoutPersonnel->Size = System::Drawing::Size(1003, 600);
 			this->EcranAjoutPersonnel->TabIndex = 27;
 			// 
 			// buttonAjoutPersonnel1
@@ -2465,7 +2471,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranAjoutClient->Controls->Add(this->TextBoxVilleAdrLivClient);
 			this->EcranAjoutClient->Location = System::Drawing::Point(0, 27);
 			this->EcranAjoutClient->Name = L"EcranAjoutClient";
-			this->EcranAjoutClient->Size = System::Drawing::Size(1000, 600);
+			this->EcranAjoutClient->Size = System::Drawing::Size(1003, 600);
 			this->EcranAjoutClient->TabIndex = 26;
 			// 
 			// ButtonAjoutClient
@@ -2670,7 +2676,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranSuprimerArticle->Location = System::Drawing::Point(0, 27);
 			this->EcranSuprimerArticle->Margin = System::Windows::Forms::Padding(2);
 			this->EcranSuprimerArticle->Name = L"EcranSuprimerArticle";
-			this->EcranSuprimerArticle->Size = System::Drawing::Size(1000, 600);
+			this->EcranSuprimerArticle->Size = System::Drawing::Size(1003, 600);
 			this->EcranSuprimerArticle->TabIndex = 38;
 			// 
 			// ButtonIDSupprimerArticle
@@ -2741,6 +2747,48 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->TextBoxRecherchSupprimerArticle->Size = System::Drawing::Size(114, 20);
 			this->TextBoxRecherchSupprimerArticle->TabIndex = 9;
 			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->Location = System::Drawing::Point(0, 0);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(240, 150);
+			this->dataGridView1->TabIndex = 0;
+			// 
+			// textBox2LettrePrenom
+			// 
+			this->textBox2LettrePrenom->Location = System::Drawing::Point(0, 0);
+			this->textBox2LettrePrenom->Name = L"textBox2LettrePrenom";
+			this->textBox2LettrePrenom->Size = System::Drawing::Size(100, 20);
+			this->textBox2LettrePrenom->TabIndex = 0;
+			// 
+			// textBox11
+			// 
+			this->textBox11->Location = System::Drawing::Point(0, 0);
+			this->textBox11->Name = L"textBox11";
+			this->textBox11->Size = System::Drawing::Size(100, 20);
+			this->textBox11->TabIndex = 0;
+			// 
+			// label10
+			// 
+			this->label10->Location = System::Drawing::Point(0, 0);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(100, 23);
+			this->label10->TabIndex = 0;
+			// 
+			// label12
+			// 
+			this->label12->Location = System::Drawing::Point(0, 0);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(100, 23);
+			this->label12->TabIndex = 0;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(0, 0);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 0;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -2777,9 +2825,6 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranIdle->PerformLayout();
 			this->EcranVide->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-			this->EcranPasserCommande->ResumeLayout(false);
-			this->EcranPasserCommande->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->MenuOnglet->ResumeLayout(false);
 			this->MenuOnglet->PerformLayout();
 			this->EcranAfficherClient->ResumeLayout(false);
@@ -2795,6 +2840,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranSuprimerArticle->ResumeLayout(false);
 			this->EcranSuprimerArticle->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridSupprimerArticle))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
