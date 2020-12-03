@@ -37,7 +37,7 @@ String^ CLcommande::reference(String^ id_commande, String^ adresse_ip, String^ u
     return ref;
 }
 
-void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String^ designation, int qte, String^ dateLivraison, String^ dateEmission, String^ datePaiement, String^ dateSolde, String^ adresse_ip, String^ utilisateur, String^ MDP)
+void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String^ designation, int qte, String^ dateLivraison, String^ dateEmission, String^ datePaiement, String^ dateSolde, String^ MoyenDePaiement, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;
     obj.connect(adresse_ip, utilisateur, MDP);
@@ -61,11 +61,21 @@ void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String
 
     double totalTTC = totalHT / totalTVA;
 
-    queryString = "INSERT INTO BBDProjet.Commande(dateLivraison, dateEmission, datePaiement, dateSolde, totalHT, totalTVA, totalTTC) VALUES (\"" + dateLivraison + "\", \"" + dateEmission + "\", \"" + datePaiement + "\", \"" + dateSolde + "\", \"" + totalHT + "\", \"" + totalTVA + "\", \"" +totalTTC+"\"); ";
+    queryString = "INSERT INTO BBDProjet.Commande(dateLivraison, dateEmission, datePaiement, dateSolde, totalHT, totalTVA, totalTTC, id_client) VALUES ('"+ dateLivraison + "', '" + dateEmission + "', '" + datePaiement + "', '" + dateSolde + "', '" + totalHT + "', '" + totalTVA + "', '" +totalTTC+"', '"+id_client+"'); ";
     obj.sendSQL(queryString);
 
     queryString = "SELECT MAX(id_commande) FROM Commande;";
     String^ id_commande = obj.receiveSQLString(queryString);
 
-    queryString = "INSERT INTO BDDProjet.COMPOSER(id_article, id_commande, quantite) VALUES (\"" + id_article + "\", \"" + id_commande + "\", \"" + qte + "\");";
+    queryString = "INSERT INTO BDDProjet.COMPOSER(id_article, id_commande, quantite) VALUES ('" + id_article + "', '" + id_commande + "', '" + qte + "');";
+    obj.sendSQL(queryString);
+
+    queryString = "INSERT INTO BDDProjet.MoyenDePaiement(nom_mdp) VALUE ('" + MoyenDePaiement + "');";
+    obj.sendSQL(queryString);
+
+    queryString = "SELECT MAX(id_mdp) FROM MoyenDePaiement;";
+    String^ id_MoyenDePaiement = obj.receiveSQLString(queryString);
+
+    queryString = "INSERT INTO BDDProjet.Paiement(montant, id_commande, id_mdp) VALUES ('" + totalTTC + "', '" + id_commande + "', '" + id_MoyenDePaiement + "');";
+    obj.sendSQL(queryString);
 }
