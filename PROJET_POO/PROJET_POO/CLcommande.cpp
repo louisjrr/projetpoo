@@ -79,3 +79,21 @@ void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String
     queryString = "INSERT INTO BDDProjet.Paiement(montant, id_commande, id_mdp) VALUES ('" + totalTTC + "', '" + id_commande + "', '" + id_MoyenDePaiement + "');";
     obj.sendSQL(queryString);
 }
+
+DataTable^ CLcommande::afficherCommande(String^ id_commande, String^ adresse_ip, String^ utilisateur, String^ MDP)
+{
+    CL_CAD obj;
+    obj.connect(adresse_ip, utilisateur, MDP);
+    obj.disconnect();
+
+    // if (id_commande == "")
+    // {
+    String^ queryString = "SELECT * FROM Commande INNER JOIN Paiement WHERE Paiement.id_commande = Commande.id_commande;";
+    DataTable^ listeCommande = obj.receiveSQLTable(queryString);
+    return listeCommande;
+    //}
+}
+
+
+
+
