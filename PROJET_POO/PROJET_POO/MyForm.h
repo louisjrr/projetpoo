@@ -2691,7 +2691,7 @@ private: System::Windows::Forms::Button^ button1;
 	}
     private: System::Void OngletPasserCommande_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranPasserCommande->BringToFront();
-		textBox2LettrePrenom->Text = commande1.reference("louis", "", "", "");
+		textBox2LettrePrenom->Text = commande1.reference("louis", "aert", "2010", "val de reuil");
     }
 };
 }

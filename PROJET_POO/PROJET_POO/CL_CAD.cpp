@@ -73,3 +73,4 @@ DataTable^ CL_CAD::receiveSQLTable(String^ query)
 
 
 }
+
