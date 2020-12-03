@@ -3318,12 +3318,21 @@ private: System::Windows::Forms::DataGridView^ DataGridAccueil;
 	private: System::Void ClickAjoutCategAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
 		article1.creerCateg(TextBoxAjoutCategAjoutArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("Catégorie ajoutée !");
-		DataGridCategAjoutArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
+		DataGridCategAjoutArticle->DataSource = article1.afficherCategAjout(textBox1->Text, textBox2->Text, textBox3->Text);
+
+		TextBoxAjoutCategAjoutArticle->Text = "";
 	}
 	private: System::Void ClickAjoutArticleAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
 		article1.creer(TextBoxNomAjoutArticle->Text, TextBoxCategAjoutArticle->Text, TextBoxPrixAjoutArticle->Text, TextBoxStockAjoutArticle->Text, TextBoxSeuilAjoutArticle->Text, TextBoxTVAAjoutArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("Article ajouté !");
 		DataGridArticleAjoutArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
+
+		TextBoxNomAjoutArticle->Text = "";
+		TextBoxCategAjoutArticle->Text = "";
+		TextBoxPrixAjoutArticle->Text = "";
+		TextBoxStockAjoutArticle->Text = "";
+		TextBoxSeuilAjoutArticle->Text = "";
+		TextBoxTVAAjoutArticle->Text = "";
 	}
 	private: System::Void ClickOngletSupprimerArticle(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranSuprimerArticle->BringToFront();
