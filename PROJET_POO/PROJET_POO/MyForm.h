@@ -4,6 +4,7 @@
 #include "CLpersonnel.h"
 #include "CLarticle.h"
 #include "CLcommande.h"
+#include "Stats.h"
 
 namespace PROJETPOO {
 
@@ -547,7 +548,7 @@ namespace PROJETPOO {
 	private: System::Windows::Forms::TextBox^ TextBoxModifSeuilModifierArticle;
 
 	private: System::Windows::Forms::TextBox^ TextBoxModifStockModifierArticle;
-	private: System::Windows::Forms::PictureBox^ pictureBox2;
+
 	private: System::Windows::Forms::Panel^ EcranAfficherArticle;
 	private: System::Windows::Forms::DataGridView^ DataGridAfficherArticle;
 	private: System::Windows::Forms::TextBox^ TextBoxNomAfficherArticle;
@@ -590,6 +591,9 @@ namespace PROJETPOO {
 	private: System::Windows::Forms::Label^ labelDatePaiementPasserCommande;
 
 	private: System::Windows::Forms::Label^ labelDateEmissionPasserCommande;
+private: System::Windows::Forms::ToolStripMenuItem^ accueilToolStripMenuItem;
+private: System::Windows::Forms::Button^ ButtonStockSeuilAccueil;
+private: System::Windows::Forms::DataGridView^ DataGridAccueil;
 
 
 
@@ -681,6 +685,31 @@ namespace PROJETPOO {
 			this->ButtonConnexion = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranConnexion = (gcnew System::Windows::Forms::Panel());
+			this->EcranVide = (gcnew System::Windows::Forms::Panel());
+			this->DataGridAccueil = (gcnew System::Windows::Forms::DataGridView());
+			this->ButtonStockSeuilAccueil = (gcnew System::Windows::Forms::Button());
+			this->MenuOnglet = (gcnew System::Windows::Forms::MenuStrip());
+			this->accueilToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAjoutArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletModifierArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletSupprimerArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAfficherArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAjoutPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletModifierPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletSupprimerPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAfficherPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAjoutClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletModifierClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletSupprimerClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAfficherClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletPasserCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletModifierCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletSupprimerCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->OngletAfficherCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->EcranPasserCommande = (gcnew System::Windows::Forms::Panel());
 			this->labelDateSoldePasserCommande = (gcnew System::Windows::Forms::Label());
 			this->labelDatePaiementPasserCommande = (gcnew System::Windows::Forms::Label());
@@ -808,29 +837,6 @@ namespace PROJETPOO {
 			this->LeftToolStripPanel = (gcnew System::Windows::Forms::ToolStripPanel());
 			this->ContentPanel = (gcnew System::Windows::Forms::ToolStripContentPanel());
 			this->EcranIdle = (gcnew System::Windows::Forms::Panel());
-			this->EcranVide = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-			this->MenuOnglet = (gcnew System::Windows::Forms::MenuStrip());
-			this->OngletArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAjoutArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletModifierArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletSupprimerArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAfficherArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAjoutPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletModifierPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletSupprimerPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAfficherPersonnel = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAjoutClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletModifierClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletSupprimerClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAfficherClient = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletPasserCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletModifierCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletSupprimerCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAfficherCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->EcranAfficherClient = (gcnew System::Windows::Forms::Panel());
 			this->DataGridAfficherClient = (gcnew System::Windows::Forms::DataGridView());
 			this->TextBoxPrenomAfficherClient = (gcnew System::Windows::Forms::TextBox());
@@ -901,6 +907,9 @@ namespace PROJETPOO {
 			this->TextBoxRecherchSupprimerArticle = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
+			this->EcranVide->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAccueil))->BeginInit();
+			this->MenuOnglet->SuspendLayout();
 			this->EcranPasserCommande->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->EcranAfficherArticle->SuspendLayout();
@@ -915,9 +924,6 @@ namespace PROJETPOO {
 			this->EcranSupprimerClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridSupprimerClient))->BeginInit();
 			this->EcranIdle->SuspendLayout();
-			this->EcranVide->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-			this->MenuOnglet->SuspendLayout();
 			this->EcranAfficherClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAfficherClient))->BeginInit();
 			this->EcranAfficherPersonnel->SuspendLayout();
@@ -937,7 +943,7 @@ namespace PROJETPOO {
 			this->textBox1->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->textBox1->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::CustomSource;
 			this->textBox1->Location = System::Drawing::Point(281, 184);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(199, 20);
 			this->textBox1->TabIndex = 0;
@@ -945,7 +951,7 @@ namespace PROJETPOO {
 			// textBox2
 			// 
 			this->textBox2->Location = System::Drawing::Point(281, 228);
-			this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(199, 20);
 			this->textBox2->TabIndex = 4;
@@ -954,7 +960,7 @@ namespace PROJETPOO {
 			// textBox3
 			// 
 			this->textBox3->Location = System::Drawing::Point(281, 269);
-			this->textBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox3->Margin = System::Windows::Forms::Padding(2);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->PasswordChar = '*';
 			this->textBox3->Size = System::Drawing::Size(199, 20);
@@ -1003,7 +1009,7 @@ namespace PROJETPOO {
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(541, 259);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(468, 326);
 			this->pictureBox1->TabIndex = 8;
@@ -1024,6 +1030,208 @@ namespace PROJETPOO {
 			this->EcranConnexion->Name = L"EcranConnexion";
 			this->EcranConnexion->Size = System::Drawing::Size(1013, 600);
 			this->EcranConnexion->TabIndex = 18;
+			// 
+			// EcranVide
+			// 
+			this->EcranVide->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->EcranVide->AutoSize = true;
+			this->EcranVide->Controls->Add(this->DataGridAccueil);
+			this->EcranVide->Controls->Add(this->ButtonStockSeuilAccueil);
+			this->EcranVide->Location = System::Drawing::Point(0, 22);
+			this->EcranVide->Margin = System::Windows::Forms::Padding(2);
+			this->EcranVide->Name = L"EcranVide";
+			this->EcranVide->Size = System::Drawing::Size(1000, 600);
+			this->EcranVide->TabIndex = 35;
+			// 
+			// DataGridAccueil
+			// 
+			this->DataGridAccueil->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DataGridAccueil->Location = System::Drawing::Point(37, 42);
+			this->DataGridAccueil->Name = L"DataGridAccueil";
+			this->DataGridAccueil->Size = System::Drawing::Size(481, 428);
+			this->DataGridAccueil->TabIndex = 1;
+			// 
+			// ButtonStockSeuilAccueil
+			// 
+			this->ButtonStockSeuilAccueil->Location = System::Drawing::Point(573, 61);
+			this->ButtonStockSeuilAccueil->Name = L"ButtonStockSeuilAccueil";
+			this->ButtonStockSeuilAccueil->Size = System::Drawing::Size(131, 61);
+			this->ButtonStockSeuilAccueil->TabIndex = 0;
+			this->ButtonStockSeuilAccueil->Text = L"Afficher les articles sous le seuil de stock";
+			this->ButtonStockSeuilAccueil->UseVisualStyleBackColor = true;
+			this->ButtonStockSeuilAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickStockSeuilAccueil);
+			// 
+			// MenuOnglet
+			// 
+			this->MenuOnglet->BackColor = System::Drawing::SystemColors::ButtonShadow;
+			this->MenuOnglet->Dock = System::Windows::Forms::DockStyle::None;
+			this->MenuOnglet->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->MenuOnglet->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
+				this->accueilToolStripMenuItem,
+					this->OngletArticle, this->OngletPersonnel, this->OngletClient, this->OngletCommande
+			});
+			this->MenuOnglet->Location = System::Drawing::Point(0, 0);
+			this->MenuOnglet->Name = L"MenuOnglet";
+			this->MenuOnglet->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
+			this->MenuOnglet->Size = System::Drawing::Size(320, 24);
+			this->MenuOnglet->TabIndex = 33;
+			this->MenuOnglet->Text = L"menuStrip1";
+			// 
+			// accueilToolStripMenuItem
+			// 
+			this->accueilToolStripMenuItem->Name = L"accueilToolStripMenuItem";
+			this->accueilToolStripMenuItem->Size = System::Drawing::Size(58, 20);
+			this->accueilToolStripMenuItem->Text = L"Accueil";
+			this->accueilToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ClickAccueil);
+			// 
+			// OngletArticle
+			// 
+			this->OngletArticle->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletAjoutArticle,
+					this->OngletModifierArticle, this->OngletSupprimerArticle, this->OngletAfficherArticle
+			});
+			this->OngletArticle->Name = L"OngletArticle";
+			this->OngletArticle->Size = System::Drawing::Size(53, 20);
+			this->OngletArticle->Text = L"Article";
+			// 
+			// OngletAjoutArticle
+			// 
+			this->OngletAjoutArticle->Name = L"OngletAjoutArticle";
+			this->OngletAjoutArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutArticle->Text = L"Ajouter";
+			this->OngletAjoutArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutArticle);
+			// 
+			// OngletModifierArticle
+			// 
+			this->OngletModifierArticle->Name = L"OngletModifierArticle";
+			this->OngletModifierArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierArticle->Text = L"Modifier";
+			this->OngletModifierArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletModifierArticle);
+			// 
+			// OngletSupprimerArticle
+			// 
+			this->OngletSupprimerArticle->Name = L"OngletSupprimerArticle";
+			this->OngletSupprimerArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerArticle->Text = L"Supprimer";
+			this->OngletSupprimerArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerArticle);
+			// 
+			// OngletAfficherArticle
+			// 
+			this->OngletAfficherArticle->Name = L"OngletAfficherArticle";
+			this->OngletAfficherArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherArticle->Text = L"Afficher";
+			this->OngletAfficherArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAfficherArticle);
+			// 
+			// OngletPersonnel
+			// 
+			this->OngletPersonnel->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletAjoutPersonnel,
+					this->OngletModifierPersonnel, this->OngletSupprimerPersonnel, this->OngletAfficherPersonnel
+			});
+			this->OngletPersonnel->Name = L"OngletPersonnel";
+			this->OngletPersonnel->Size = System::Drawing::Size(71, 20);
+			this->OngletPersonnel->Text = L"Personnel";
+			// 
+			// OngletAjoutPersonnel
+			// 
+			this->OngletAjoutPersonnel->Name = L"OngletAjoutPersonnel";
+			this->OngletAjoutPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutPersonnel->Text = L"Ajouter";
+			this->OngletAjoutPersonnel->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutPersonnel);
+			// 
+			// OngletModifierPersonnel
+			// 
+			this->OngletModifierPersonnel->Name = L"OngletModifierPersonnel";
+			this->OngletModifierPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierPersonnel->Text = L"Modifier";
+			// 
+			// OngletSupprimerPersonnel
+			// 
+			this->OngletSupprimerPersonnel->Name = L"OngletSupprimerPersonnel";
+			this->OngletSupprimerPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerPersonnel->Text = L"Supprimer";
+			// 
+			// OngletAfficherPersonnel
+			// 
+			this->OngletAfficherPersonnel->Name = L"OngletAfficherPersonnel";
+			this->OngletAfficherPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherPersonnel->Text = L"Afficher";
+			this->OngletAfficherPersonnel->Click += gcnew System::EventHandler(this, &MyForm::OngletAfficherPersonnel_Click);
+			// 
+			// OngletClient
+			// 
+			this->OngletClient->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletAjoutClient,
+					this->OngletModifierClient, this->OngletSupprimerClient, this->OngletAfficherClient
+			});
+			this->OngletClient->Name = L"OngletClient";
+			this->OngletClient->Size = System::Drawing::Size(50, 20);
+			this->OngletClient->Text = L"Client";
+			// 
+			// OngletAjoutClient
+			// 
+			this->OngletAjoutClient->Name = L"OngletAjoutClient";
+			this->OngletAjoutClient->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutClient->Text = L"Ajouter";
+			this->OngletAjoutClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutClient);
+			// 
+			// OngletModifierClient
+			// 
+			this->OngletModifierClient->Name = L"OngletModifierClient";
+			this->OngletModifierClient->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierClient->Text = L"Modifier";
+			this->OngletModifierClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletModifierClient);
+			// 
+			// OngletSupprimerClient
+			// 
+			this->OngletSupprimerClient->Name = L"OngletSupprimerClient";
+			this->OngletSupprimerClient->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerClient->Text = L"Supprimer";
+			this->OngletSupprimerClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerClient);
+			// 
+			// OngletAfficherClient
+			// 
+			this->OngletAfficherClient->Name = L"OngletAfficherClient";
+			this->OngletAfficherClient->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherClient->Text = L"Afficher";
+			this->OngletAfficherClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAfficherClient);
+			// 
+			// OngletCommande
+			// 
+			this->OngletCommande->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletPasserCommande,
+					this->OngletModifierCommande, this->OngletSupprimerCommande, this->OngletAfficherCommande
+			});
+			this->OngletCommande->Name = L"OngletCommande";
+			this->OngletCommande->Size = System::Drawing::Size(82, 20);
+			this->OngletCommande->Text = L"Commande";
+			// 
+			// OngletPasserCommande
+			// 
+			this->OngletPasserCommande->Name = L"OngletPasserCommande";
+			this->OngletPasserCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletPasserCommande->Text = L"Passer commande";
+			this->OngletPasserCommande->Click += gcnew System::EventHandler(this, &MyForm::OngletPasserCommande_Click);
+			// 
+			// OngletModifierCommande
+			// 
+			this->OngletModifierCommande->Name = L"OngletModifierCommande";
+			this->OngletModifierCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletModifierCommande->Text = L"Modifier";
+			// 
+			// OngletSupprimerCommande
+			// 
+			this->OngletSupprimerCommande->Name = L"OngletSupprimerCommande";
+			this->OngletSupprimerCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletSupprimerCommande->Text = L"Supprimer";
+			// 
+			// OngletAfficherCommande
+			// 
+			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
+			this->OngletAfficherCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletAfficherCommande->Text = L"Afficher";
 			// 
 			// EcranPasserCommande
 			// 
@@ -1098,7 +1306,7 @@ namespace PROJETPOO {
 			// textBoxAnneeDateSoldePasserCommande
 			// 
 			this->textBoxAnneeDateSoldePasserCommande->Location = System::Drawing::Point(220, 279);
-			this->textBoxAnneeDateSoldePasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxAnneeDateSoldePasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxAnneeDateSoldePasserCommande->Name = L"textBoxAnneeDateSoldePasserCommande";
 			this->textBoxAnneeDateSoldePasserCommande->Size = System::Drawing::Size(56, 20);
 			this->textBoxAnneeDateSoldePasserCommande->TabIndex = 46;
@@ -1106,7 +1314,7 @@ namespace PROJETPOO {
 			// textBoxAnneeDatePaiementPasserCommande
 			// 
 			this->textBoxAnneeDatePaiementPasserCommande->Location = System::Drawing::Point(220, 247);
-			this->textBoxAnneeDatePaiementPasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxAnneeDatePaiementPasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxAnneeDatePaiementPasserCommande->Name = L"textBoxAnneeDatePaiementPasserCommande";
 			this->textBoxAnneeDatePaiementPasserCommande->Size = System::Drawing::Size(56, 20);
 			this->textBoxAnneeDatePaiementPasserCommande->TabIndex = 45;
@@ -1114,7 +1322,7 @@ namespace PROJETPOO {
 			// textBoxAnneDateEmissionPasserCommande
 			// 
 			this->textBoxAnneDateEmissionPasserCommande->Location = System::Drawing::Point(220, 216);
-			this->textBoxAnneDateEmissionPasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxAnneDateEmissionPasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxAnneDateEmissionPasserCommande->Name = L"textBoxAnneDateEmissionPasserCommande";
 			this->textBoxAnneDateEmissionPasserCommande->Size = System::Drawing::Size(56, 20);
 			this->textBoxAnneDateEmissionPasserCommande->TabIndex = 44;
@@ -1127,7 +1335,7 @@ namespace PROJETPOO {
 			});
 			this->textBoxMoisDateSoldePasserCommande->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->textBoxMoisDateSoldePasserCommande->Location = System::Drawing::Point(175, 279);
-			this->textBoxMoisDateSoldePasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxMoisDateSoldePasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxMoisDateSoldePasserCommande->Name = L"textBoxMoisDateSoldePasserCommande";
 			this->textBoxMoisDateSoldePasserCommande->Size = System::Drawing::Size(26, 20);
 			this->textBoxMoisDateSoldePasserCommande->TabIndex = 43;
@@ -1140,7 +1348,7 @@ namespace PROJETPOO {
 			});
 			this->textBoxMoisDatePaiementPasserCommande->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->textBoxMoisDatePaiementPasserCommande->Location = System::Drawing::Point(175, 247);
-			this->textBoxMoisDatePaiementPasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxMoisDatePaiementPasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxMoisDatePaiementPasserCommande->Name = L"textBoxMoisDatePaiementPasserCommande";
 			this->textBoxMoisDatePaiementPasserCommande->Size = System::Drawing::Size(26, 20);
 			this->textBoxMoisDatePaiementPasserCommande->TabIndex = 42;
@@ -1153,7 +1361,7 @@ namespace PROJETPOO {
 			});
 			this->textBoxMoisDateEmissionPasserCommande->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->textBoxMoisDateEmissionPasserCommande->Location = System::Drawing::Point(175, 216);
-			this->textBoxMoisDateEmissionPasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxMoisDateEmissionPasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxMoisDateEmissionPasserCommande->Name = L"textBoxMoisDateEmissionPasserCommande";
 			this->textBoxMoisDateEmissionPasserCommande->Size = System::Drawing::Size(26, 20);
 			this->textBoxMoisDateEmissionPasserCommande->TabIndex = 41;
@@ -1161,7 +1369,7 @@ namespace PROJETPOO {
 			// textBoxJourDateSoldePasserCommande
 			// 
 			this->textBoxJourDateSoldePasserCommande->Location = System::Drawing::Point(126, 279);
-			this->textBoxJourDateSoldePasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxJourDateSoldePasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxJourDateSoldePasserCommande->Name = L"textBoxJourDateSoldePasserCommande";
 			this->textBoxJourDateSoldePasserCommande->Size = System::Drawing::Size(32, 20);
 			this->textBoxJourDateSoldePasserCommande->TabIndex = 40;
@@ -1169,7 +1377,7 @@ namespace PROJETPOO {
 			// textBoxJourDatePaiementPasserCommande
 			// 
 			this->textBoxJourDatePaiementPasserCommande->Location = System::Drawing::Point(126, 247);
-			this->textBoxJourDatePaiementPasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxJourDatePaiementPasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxJourDatePaiementPasserCommande->Name = L"textBoxJourDatePaiementPasserCommande";
 			this->textBoxJourDatePaiementPasserCommande->Size = System::Drawing::Size(32, 20);
 			this->textBoxJourDatePaiementPasserCommande->TabIndex = 39;
@@ -1177,7 +1385,7 @@ namespace PROJETPOO {
 			// textBoxJourDateEmissionPasserCommande
 			// 
 			this->textBoxJourDateEmissionPasserCommande->Location = System::Drawing::Point(126, 216);
-			this->textBoxJourDateEmissionPasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxJourDateEmissionPasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxJourDateEmissionPasserCommande->Name = L"textBoxJourDateEmissionPasserCommande";
 			this->textBoxJourDateEmissionPasserCommande->Size = System::Drawing::Size(32, 20);
 			this->textBoxJourDateEmissionPasserCommande->TabIndex = 38;
@@ -1230,7 +1438,7 @@ namespace PROJETPOO {
 			});
 			this->textBoxMoisLivraisonPasserCommande->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->textBoxMoisLivraisonPasserCommande->Location = System::Drawing::Point(175, 186);
-			this->textBoxMoisLivraisonPasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxMoisLivraisonPasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxMoisLivraisonPasserCommande->Name = L"textBoxMoisLivraisonPasserCommande";
 			this->textBoxMoisLivraisonPasserCommande->Size = System::Drawing::Size(26, 20);
 			this->textBoxMoisLivraisonPasserCommande->TabIndex = 33;
@@ -1238,7 +1446,7 @@ namespace PROJETPOO {
 			// textBoxJourLivraisonPasserCommande
 			// 
 			this->textBoxJourLivraisonPasserCommande->Location = System::Drawing::Point(126, 186);
-			this->textBoxJourLivraisonPasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxJourLivraisonPasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxJourLivraisonPasserCommande->Name = L"textBoxJourLivraisonPasserCommande";
 			this->textBoxJourLivraisonPasserCommande->Size = System::Drawing::Size(32, 20);
 			this->textBoxJourLivraisonPasserCommande->TabIndex = 32;
@@ -1246,7 +1454,7 @@ namespace PROJETPOO {
 			// textBoxAnneLivraisonPasserCommande
 			// 
 			this->textBoxAnneLivraisonPasserCommande->Location = System::Drawing::Point(220, 186);
-			this->textBoxAnneLivraisonPasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxAnneLivraisonPasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxAnneLivraisonPasserCommande->Name = L"textBoxAnneLivraisonPasserCommande";
 			this->textBoxAnneLivraisonPasserCommande->Size = System::Drawing::Size(56, 20);
 			this->textBoxAnneLivraisonPasserCommande->TabIndex = 31;
@@ -1275,7 +1483,7 @@ namespace PROJETPOO {
 			this->textBoxQtePasserCommande->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->textBoxQtePasserCommande->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::CustomSource;
 			this->textBoxQtePasserCommande->Location = System::Drawing::Point(290, 136);
-			this->textBoxQtePasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxQtePasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxQtePasserCommande->Name = L"textBoxQtePasserCommande";
 			this->textBoxQtePasserCommande->Size = System::Drawing::Size(35, 20);
 			this->textBoxQtePasserCommande->TabIndex = 29;
@@ -1293,7 +1501,7 @@ namespace PROJETPOO {
 			// textBoxDesignationPasserCommande
 			// 
 			this->textBoxDesignationPasserCommande->Location = System::Drawing::Point(126, 136);
-			this->textBoxDesignationPasserCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxDesignationPasserCommande->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxDesignationPasserCommande->Name = L"textBoxDesignationPasserCommande";
 			this->textBoxDesignationPasserCommande->Size = System::Drawing::Size(100, 20);
 			this->textBoxDesignationPasserCommande->TabIndex = 27;
@@ -1972,7 +2180,7 @@ namespace PROJETPOO {
 			this->EcranAjoutArticle->Controls->Add(this->TextBoxNomAjoutArticle);
 			this->EcranAjoutArticle->Controls->Add(this->TextBoxCategAjoutArticle);
 			this->EcranAjoutArticle->Location = System::Drawing::Point(0, 27);
-			this->EcranAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->EcranAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->EcranAjoutArticle->Name = L"EcranAjoutArticle";
 			this->EcranAjoutArticle->Size = System::Drawing::Size(1000, 600);
 			this->EcranAjoutArticle->TabIndex = 37;
@@ -1990,7 +2198,7 @@ namespace PROJETPOO {
 			// 
 			this->DataGridArticleAjoutArticle->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->DataGridArticleAjoutArticle->Location = System::Drawing::Point(34, 152);
-			this->DataGridArticleAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->DataGridArticleAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->DataGridArticleAjoutArticle->Name = L"DataGridArticleAjoutArticle";
 			this->DataGridArticleAjoutArticle->RowHeadersWidth = 51;
 			this->DataGridArticleAjoutArticle->Size = System::Drawing::Size(598, 292);
@@ -1999,7 +2207,7 @@ namespace PROJETPOO {
 			// ButtonAjoutCategAjoutClient
 			// 
 			this->ButtonAjoutCategAjoutClient->Location = System::Drawing::Point(787, 468);
-			this->ButtonAjoutCategAjoutClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ButtonAjoutCategAjoutClient->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonAjoutCategAjoutClient->Name = L"ButtonAjoutCategAjoutClient";
 			this->ButtonAjoutCategAjoutClient->Size = System::Drawing::Size(108, 19);
 			this->ButtonAjoutCategAjoutClient->TabIndex = 39;
@@ -2010,7 +2218,7 @@ namespace PROJETPOO {
 			// TextBoxAjoutCategAjoutArticle
 			// 
 			this->TextBoxAjoutCategAjoutArticle->Location = System::Drawing::Point(773, 444);
-			this->TextBoxAjoutCategAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxAjoutCategAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxAjoutCategAjoutArticle->Name = L"TextBoxAjoutCategAjoutArticle";
 			this->TextBoxAjoutCategAjoutArticle->Size = System::Drawing::Size(135, 20);
 			this->TextBoxAjoutCategAjoutArticle->TabIndex = 38;
@@ -2028,7 +2236,7 @@ namespace PROJETPOO {
 			// TextBoxTVAAjoutArticle
 			// 
 			this->TextBoxTVAAjoutArticle->Location = System::Drawing::Point(458, 82);
-			this->TextBoxTVAAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxTVAAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxTVAAjoutArticle->Name = L"TextBoxTVAAjoutArticle";
 			this->TextBoxTVAAjoutArticle->Size = System::Drawing::Size(38, 20);
 			this->TextBoxTVAAjoutArticle->TabIndex = 36;
@@ -2056,7 +2264,7 @@ namespace PROJETPOO {
 			// TextBoxPrixAjoutArticle
 			// 
 			this->TextBoxPrixAjoutArticle->Location = System::Drawing::Point(318, 82);
-			this->TextBoxPrixAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxPrixAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxPrixAjoutArticle->Name = L"TextBoxPrixAjoutArticle";
 			this->TextBoxPrixAjoutArticle->Size = System::Drawing::Size(41, 20);
 			this->TextBoxPrixAjoutArticle->TabIndex = 33;
@@ -2064,7 +2272,7 @@ namespace PROJETPOO {
 			// TextBoxSeuilAjoutArticle
 			// 
 			this->TextBoxSeuilAjoutArticle->Location = System::Drawing::Point(413, 82);
-			this->TextBoxSeuilAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxSeuilAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxSeuilAjoutArticle->Name = L"TextBoxSeuilAjoutArticle";
 			this->TextBoxSeuilAjoutArticle->Size = System::Drawing::Size(38, 20);
 			this->TextBoxSeuilAjoutArticle->TabIndex = 32;
@@ -2072,7 +2280,7 @@ namespace PROJETPOO {
 			// ButtonAjoutArticle
 			// 
 			this->ButtonAjoutArticle->Location = System::Drawing::Point(541, 79);
-			this->ButtonAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ButtonAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonAjoutArticle->Name = L"ButtonAjoutArticle";
 			this->ButtonAjoutArticle->Size = System::Drawing::Size(88, 23);
 			this->ButtonAjoutArticle->TabIndex = 31;
@@ -2113,7 +2321,7 @@ namespace PROJETPOO {
 			// TextBoxStockAjoutArticle
 			// 
 			this->TextBoxStockAjoutArticle->Location = System::Drawing::Point(366, 82);
-			this->TextBoxStockAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxStockAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxStockAjoutArticle->Name = L"TextBoxStockAjoutArticle";
 			this->TextBoxStockAjoutArticle->Size = System::Drawing::Size(38, 20);
 			this->TextBoxStockAjoutArticle->TabIndex = 14;
@@ -2121,7 +2329,7 @@ namespace PROJETPOO {
 			// TextBoxNomAjoutArticle
 			// 
 			this->TextBoxNomAjoutArticle->Location = System::Drawing::Point(93, 82);
-			this->TextBoxNomAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxNomAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxNomAjoutArticle->Name = L"TextBoxNomAjoutArticle";
 			this->TextBoxNomAjoutArticle->Size = System::Drawing::Size(98, 20);
 			this->TextBoxNomAjoutArticle->TabIndex = 12;
@@ -2129,7 +2337,7 @@ namespace PROJETPOO {
 			// TextBoxCategAjoutArticle
 			// 
 			this->TextBoxCategAjoutArticle->Location = System::Drawing::Point(203, 82);
-			this->TextBoxCategAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxCategAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxCategAjoutArticle->Name = L"TextBoxCategAjoutArticle";
 			this->TextBoxCategAjoutArticle->Size = System::Drawing::Size(92, 20);
 			this->TextBoxCategAjoutArticle->TabIndex = 13;
@@ -2150,7 +2358,7 @@ namespace PROJETPOO {
 			this->EcranSupprimerClient->Controls->Add(this->TextBoxPrenomSupprimerClient);
 			this->EcranSupprimerClient->Controls->Add(this->TextBoxNomSupprimerClient);
 			this->EcranSupprimerClient->Location = System::Drawing::Point(0, 27);
-			this->EcranSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->EcranSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->EcranSupprimerClient->Name = L"EcranSupprimerClient";
 			this->EcranSupprimerClient->Size = System::Drawing::Size(1000, 600);
 			this->EcranSupprimerClient->TabIndex = 35;
@@ -2158,7 +2366,7 @@ namespace PROJETPOO {
 			// ButtonSupprimerSupprimerClient
 			// 
 			this->ButtonSupprimerSupprimerClient->Location = System::Drawing::Point(392, 373);
-			this->ButtonSupprimerSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ButtonSupprimerSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonSupprimerSupprimerClient->Name = L"ButtonSupprimerSupprimerClient";
 			this->ButtonSupprimerSupprimerClient->Size = System::Drawing::Size(88, 33);
 			this->ButtonSupprimerSupprimerClient->TabIndex = 35;
@@ -2169,7 +2377,7 @@ namespace PROJETPOO {
 			// TextBoxSupprimerSupprimerClient
 			// 
 			this->TextBoxSupprimerSupprimerClient->Location = System::Drawing::Point(397, 341);
-			this->TextBoxSupprimerSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxSupprimerSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxSupprimerSupprimerClient->Name = L"TextBoxSupprimerSupprimerClient";
 			this->TextBoxSupprimerSupprimerClient->Size = System::Drawing::Size(76, 20);
 			this->TextBoxSupprimerSupprimerClient->TabIndex = 34;
@@ -2188,7 +2396,7 @@ namespace PROJETPOO {
 			// 
 			this->DataGridSupprimerClient->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->DataGridSupprimerClient->Location = System::Drawing::Point(255, 37);
-			this->DataGridSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->DataGridSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->DataGridSupprimerClient->Name = L"DataGridSupprimerClient";
 			this->DataGridSupprimerClient->RowHeadersWidth = 51;
 			this->DataGridSupprimerClient->Size = System::Drawing::Size(466, 238);
@@ -2197,7 +2405,7 @@ namespace PROJETPOO {
 			// ButtonChercherSupprimerClient
 			// 
 			this->ButtonChercherSupprimerClient->Location = System::Drawing::Point(90, 103);
-			this->ButtonChercherSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ButtonChercherSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonChercherSupprimerClient->Name = L"ButtonChercherSupprimerClient";
 			this->ButtonChercherSupprimerClient->Size = System::Drawing::Size(127, 19);
 			this->ButtonChercherSupprimerClient->TabIndex = 31;
@@ -2228,7 +2436,7 @@ namespace PROJETPOO {
 			// TextBoxPrenomSupprimerClient
 			// 
 			this->TextBoxPrenomSupprimerClient->Location = System::Drawing::Point(98, 70);
-			this->TextBoxPrenomSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxPrenomSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxPrenomSupprimerClient->Name = L"TextBoxPrenomSupprimerClient";
 			this->TextBoxPrenomSupprimerClient->Size = System::Drawing::Size(114, 20);
 			this->TextBoxPrenomSupprimerClient->TabIndex = 10;
@@ -2236,7 +2444,7 @@ namespace PROJETPOO {
 			// TextBoxNomSupprimerClient
 			// 
 			this->TextBoxNomSupprimerClient->Location = System::Drawing::Point(98, 49);
-			this->TextBoxNomSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxNomSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxNomSupprimerClient->Name = L"TextBoxNomSupprimerClient";
 			this->TextBoxNomSupprimerClient->Size = System::Drawing::Size(114, 20);
 			this->TextBoxNomSupprimerClient->TabIndex = 9;
@@ -2297,191 +2505,6 @@ namespace PROJETPOO {
 			this->EcranIdle->Name = L"EcranIdle";
 			this->EcranIdle->Size = System::Drawing::Size(1000, 900);
 			this->EcranIdle->TabIndex = 24;
-			// 
-			// EcranVide
-			// 
-			this->EcranVide->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->EcranVide->AutoSize = true;
-			this->EcranVide->Controls->Add(this->pictureBox2);
-			this->EcranVide->Location = System::Drawing::Point(0, 22);
-			this->EcranVide->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
-			this->EcranVide->Name = L"EcranVide";
-			this->EcranVide->Size = System::Drawing::Size(1000, 600);
-			this->EcranVide->TabIndex = 35;
-			// 
-			// pictureBox2
-			// 
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(58, 24);
-			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(882, 369);
-			this->pictureBox2->TabIndex = 0;
-			this->pictureBox2->TabStop = false;
-			// 
-			// MenuOnglet
-			// 
-			this->MenuOnglet->BackColor = System::Drawing::SystemColors::ButtonShadow;
-			this->MenuOnglet->Dock = System::Windows::Forms::DockStyle::None;
-			this->MenuOnglet->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->MenuOnglet->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletArticle, this->OngletPersonnel,
-					this->OngletClient, this->OngletCommande
-			});
-			this->MenuOnglet->Location = System::Drawing::Point(0, 0);
-			this->MenuOnglet->Name = L"MenuOnglet";
-			this->MenuOnglet->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->MenuOnglet->Size = System::Drawing::Size(262, 24);
-			this->MenuOnglet->TabIndex = 33;
-			this->MenuOnglet->Text = L"menuStrip1";
-			// 
-			// OngletArticle
-			// 
-			this->OngletArticle->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletAjoutArticle,
-					this->OngletModifierArticle, this->OngletSupprimerArticle, this->OngletAfficherArticle
-			});
-			this->OngletArticle->Name = L"OngletArticle";
-			this->OngletArticle->Size = System::Drawing::Size(53, 20);
-			this->OngletArticle->Text = L"Article";
-			// 
-			// OngletAjoutArticle
-			// 
-			this->OngletAjoutArticle->Name = L"OngletAjoutArticle";
-			this->OngletAjoutArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletAjoutArticle->Text = L"Ajouter";
-			this->OngletAjoutArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutArticle);
-			// 
-			// OngletModifierArticle
-			// 
-			this->OngletModifierArticle->Name = L"OngletModifierArticle";
-			this->OngletModifierArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletModifierArticle->Text = L"Modifier";
-			this->OngletModifierArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletModifierArticle);
-			// 
-			// OngletSupprimerArticle
-			// 
-			this->OngletSupprimerArticle->Name = L"OngletSupprimerArticle";
-			this->OngletSupprimerArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletSupprimerArticle->Text = L"Supprimer";
-			this->OngletSupprimerArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerArticle);
-			// 
-			// OngletAfficherArticle
-			// 
-			this->OngletAfficherArticle->Name = L"OngletAfficherArticle";
-			this->OngletAfficherArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletAfficherArticle->Text = L"Afficher";
-			this->OngletAfficherArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAfficherArticle);
-			// 
-			// OngletPersonnel
-			// 
-			this->OngletPersonnel->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletAjoutPersonnel,
-					this->OngletModifierPersonnel, this->OngletSupprimerPersonnel, this->OngletAfficherPersonnel
-			});
-			this->OngletPersonnel->Name = L"OngletPersonnel";
-			this->OngletPersonnel->Size = System::Drawing::Size(71, 20);
-			this->OngletPersonnel->Text = L"Personnel";
-			// 
-			// OngletAjoutPersonnel
-			// 
-			this->OngletAjoutPersonnel->Name = L"OngletAjoutPersonnel";
-			this->OngletAjoutPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletAjoutPersonnel->Text = L"Ajouter";
-			this->OngletAjoutPersonnel->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutPersonnel);
-			// 
-			// OngletModifierPersonnel
-			// 
-			this->OngletModifierPersonnel->Name = L"OngletModifierPersonnel";
-			this->OngletModifierPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletModifierPersonnel->Text = L"Modifier";
-			// 
-			// OngletSupprimerPersonnel
-			// 
-			this->OngletSupprimerPersonnel->Name = L"OngletSupprimerPersonnel";
-			this->OngletSupprimerPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletSupprimerPersonnel->Text = L"Supprimer";
-			// 
-			// OngletAfficherPersonnel
-			// 
-			this->OngletAfficherPersonnel->Name = L"OngletAfficherPersonnel";
-			this->OngletAfficherPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletAfficherPersonnel->Text = L"Afficher";
-			this->OngletAfficherPersonnel->Click += gcnew System::EventHandler(this, &MyForm::OngletAfficherPersonnel_Click);
-			// 
-			// OngletClient
-			// 
-			this->OngletClient->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletAjoutClient,
-					this->OngletModifierClient, this->OngletSupprimerClient, this->OngletAfficherClient
-			});
-			this->OngletClient->Name = L"OngletClient";
-			this->OngletClient->Size = System::Drawing::Size(50, 20);
-			this->OngletClient->Text = L"Client";
-			// 
-			// OngletAjoutClient
-			// 
-			this->OngletAjoutClient->Name = L"OngletAjoutClient";
-			this->OngletAjoutClient->Size = System::Drawing::Size(129, 22);
-			this->OngletAjoutClient->Text = L"Ajouter";
-			this->OngletAjoutClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutClient);
-			// 
-			// OngletModifierClient
-			// 
-			this->OngletModifierClient->Name = L"OngletModifierClient";
-			this->OngletModifierClient->Size = System::Drawing::Size(129, 22);
-			this->OngletModifierClient->Text = L"Modifier";
-			this->OngletModifierClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletModifierClient);
-			// 
-			// OngletSupprimerClient
-			// 
-			this->OngletSupprimerClient->Name = L"OngletSupprimerClient";
-			this->OngletSupprimerClient->Size = System::Drawing::Size(129, 22);
-			this->OngletSupprimerClient->Text = L"Supprimer";
-			this->OngletSupprimerClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerClient);
-			// 
-			// OngletAfficherClient
-			// 
-			this->OngletAfficherClient->Name = L"OngletAfficherClient";
-			this->OngletAfficherClient->Size = System::Drawing::Size(129, 22);
-			this->OngletAfficherClient->Text = L"Afficher";
-			this->OngletAfficherClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAfficherClient);
-			// 
-			// OngletCommande
-			// 
-			this->OngletCommande->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletPasserCommande,
-					this->OngletModifierCommande, this->OngletSupprimerCommande, this->OngletAfficherCommande
-			});
-			this->OngletCommande->Name = L"OngletCommande";
-			this->OngletCommande->Size = System::Drawing::Size(82, 20);
-			this->OngletCommande->Text = L"Commande";
-			// 
-			// OngletPasserCommande
-			// 
-			this->OngletPasserCommande->Name = L"OngletPasserCommande";
-			this->OngletPasserCommande->Size = System::Drawing::Size(171, 22);
-			this->OngletPasserCommande->Text = L"Passer commande";
-			this->OngletPasserCommande->Click += gcnew System::EventHandler(this, &MyForm::OngletPasserCommande_Click);
-			// 
-			// OngletModifierCommande
-			// 
-			this->OngletModifierCommande->Name = L"OngletModifierCommande";
-			this->OngletModifierCommande->Size = System::Drawing::Size(171, 22);
-			this->OngletModifierCommande->Text = L"Modifier";
-			// 
-			// OngletSupprimerCommande
-			// 
-			this->OngletSupprimerCommande->Name = L"OngletSupprimerCommande";
-			this->OngletSupprimerCommande->Size = System::Drawing::Size(171, 22);
-			this->OngletSupprimerCommande->Text = L"Supprimer";
-			// 
-			// OngletAfficherCommande
-			// 
-			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
-			this->OngletAfficherCommande->Size = System::Drawing::Size(171, 22);
-			this->OngletAfficherCommande->Text = L"Afficher";
 			// 
 			// EcranAfficherClient
 			// 
@@ -2654,7 +2677,7 @@ namespace PROJETPOO {
 			// buttonAjoutPersonnel1
 			// 
 			this->buttonAjoutPersonnel1->Location = System::Drawing::Point(262, 343);
-			this->buttonAjoutPersonnel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->buttonAjoutPersonnel1->Margin = System::Windows::Forms::Padding(2);
 			this->buttonAjoutPersonnel1->Name = L"buttonAjoutPersonnel1";
 			this->buttonAjoutPersonnel1->Size = System::Drawing::Size(112, 24);
 			this->buttonAjoutPersonnel1->TabIndex = 32;
@@ -2665,7 +2688,7 @@ namespace PROJETPOO {
 			// textBoxSuperieur1
 			// 
 			this->textBoxSuperieur1->Location = System::Drawing::Point(221, 173);
-			this->textBoxSuperieur1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxSuperieur1->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxSuperieur1->Name = L"textBoxSuperieur1";
 			this->textBoxSuperieur1->Size = System::Drawing::Size(152, 20);
 			this->textBoxSuperieur1->TabIndex = 31;
@@ -3060,7 +3083,7 @@ namespace PROJETPOO {
 			this->EcranSuprimerArticle->Controls->Add(this->label11);
 			this->EcranSuprimerArticle->Controls->Add(this->TextBoxRecherchSupprimerArticle);
 			this->EcranSuprimerArticle->Location = System::Drawing::Point(0, 27);
-			this->EcranSuprimerArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->EcranSuprimerArticle->Margin = System::Windows::Forms::Padding(2);
 			this->EcranSuprimerArticle->Name = L"EcranSuprimerArticle";
 			this->EcranSuprimerArticle->Size = System::Drawing::Size(1000, 600);
 			this->EcranSuprimerArticle->TabIndex = 38;
@@ -3068,7 +3091,7 @@ namespace PROJETPOO {
 			// ButtonIDSupprimerArticle
 			// 
 			this->ButtonIDSupprimerArticle->Location = System::Drawing::Point(554, 468);
-			this->ButtonIDSupprimerArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ButtonIDSupprimerArticle->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonIDSupprimerArticle->Name = L"ButtonIDSupprimerArticle";
 			this->ButtonIDSupprimerArticle->Size = System::Drawing::Size(114, 47);
 			this->ButtonIDSupprimerArticle->TabIndex = 35;
@@ -3079,7 +3102,7 @@ namespace PROJETPOO {
 			// TextBoxIDSupprimerArticle
 			// 
 			this->TextBoxIDSupprimerArticle->Location = System::Drawing::Point(575, 437);
-			this->TextBoxIDSupprimerArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxIDSupprimerArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxIDSupprimerArticle->Name = L"TextBoxIDSupprimerArticle";
 			this->TextBoxIDSupprimerArticle->Size = System::Drawing::Size(76, 20);
 			this->TextBoxIDSupprimerArticle->TabIndex = 34;
@@ -3098,7 +3121,7 @@ namespace PROJETPOO {
 			// 
 			this->DataGridSupprimerArticle->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->DataGridSupprimerArticle->Location = System::Drawing::Point(241, 37);
-			this->DataGridSupprimerArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->DataGridSupprimerArticle->Margin = System::Windows::Forms::Padding(2);
 			this->DataGridSupprimerArticle->Name = L"DataGridSupprimerArticle";
 			this->DataGridSupprimerArticle->RowHeadersWidth = 51;
 			this->DataGridSupprimerArticle->Size = System::Drawing::Size(709, 364);
@@ -3107,7 +3130,7 @@ namespace PROJETPOO {
 			// ButtonRecherchSupprimerArticle
 			// 
 			this->ButtonRecherchSupprimerArticle->Location = System::Drawing::Point(58, 106);
-			this->ButtonRecherchSupprimerArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ButtonRecherchSupprimerArticle->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonRecherchSupprimerArticle->Name = L"ButtonRecherchSupprimerArticle";
 			this->ButtonRecherchSupprimerArticle->Size = System::Drawing::Size(134, 35);
 			this->ButtonRecherchSupprimerArticle->TabIndex = 31;
@@ -3128,7 +3151,7 @@ namespace PROJETPOO {
 			// TextBoxRecherchSupprimerArticle
 			// 
 			this->TextBoxRecherchSupprimerArticle->Location = System::Drawing::Point(66, 79);
-			this->TextBoxRecherchSupprimerArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxRecherchSupprimerArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxRecherchSupprimerArticle->Name = L"TextBoxRecherchSupprimerArticle";
 			this->TextBoxRecherchSupprimerArticle->Size = System::Drawing::Size(114, 20);
 			this->TextBoxRecherchSupprimerArticle->TabIndex = 9;
@@ -3141,7 +3164,7 @@ namespace PROJETPOO {
 			this->ClientSize = System::Drawing::Size(984, 561);
 			this->Controls->Add(this->EcranConnexion);
 			this->Controls->Add(this->EcranIdle);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Gestionnaire BDD";
@@ -3149,6 +3172,10 @@ namespace PROJETPOO {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->EcranConnexion->ResumeLayout(false);
 			this->EcranConnexion->PerformLayout();
+			this->EcranVide->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAccueil))->EndInit();
+			this->MenuOnglet->ResumeLayout(false);
+			this->MenuOnglet->PerformLayout();
 			this->EcranPasserCommande->ResumeLayout(false);
 			this->EcranPasserCommande->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
@@ -3170,10 +3197,6 @@ namespace PROJETPOO {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridSupprimerClient))->EndInit();
 			this->EcranIdle->ResumeLayout(false);
 			this->EcranIdle->PerformLayout();
-			this->EcranVide->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-			this->MenuOnglet->ResumeLayout(false);
-			this->MenuOnglet->PerformLayout();
 			this->EcranAfficherClient->ResumeLayout(false);
 			this->EcranAfficherClient->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAfficherClient))->EndInit();
@@ -3199,6 +3222,7 @@ namespace PROJETPOO {
 		CLpersonnel personnel1;
 		CLarticle article1;
 		CLcommande commande1;
+		Stats stat1;
 		/// 
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3309,6 +3333,8 @@ namespace PROJETPOO {
 		article1.supprimer(TextBoxIDSupprimerArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("Article supprimé !");
 		DataGridSupprimerArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
+
+		TextBoxIDSupprimerArticle->Text = "";
 	}
 	private: System::Void ClickRecherchSupprimerArticle(System::Object^ sender, System::EventArgs^ e) {
 		article1.recherch(TextBoxRecherchSupprimerArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
@@ -3397,5 +3423,11 @@ namespace PROJETPOO {
 	private: System::Void buttonValiderPasserCommande_Click(System::Object^ sender, System::EventArgs^ e) {
 		commande1.passerCommande(textBoxNomPasserCommande->Text, textBoxPrenomPasserCommande->Text, textBoxDesignationPasserCommande->Text, Convert::ToInt16(textBoxQtePasserCommande->Text), textBoxAnneLivraisonPasserCommande->Text + "-" + textBoxMoisLivraisonPasserCommande->Text + "-" + textBoxJourLivraisonPasserCommande->Text, textBoxAnneDateEmissionPasserCommande->Text + "-" + textBoxMoisDateEmissionPasserCommande->Text + "-" + textBoxJourDateEmissionPasserCommande->Text, textBoxAnneeDatePaiementPasserCommande->Text + "-" + textBoxMoisDatePaiementPasserCommande->Text + "-" + textBoxJourDatePaiementPasserCommande->Text, textBoxAnneeDateSoldePasserCommande->Text + "-" + textBoxMoisDateSoldePasserCommande->Text + "-" + textBoxJourDateSoldePasserCommande->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 	}
-	};
+	private: System::Void ClickAccueil(System::Object^ sender, System::EventArgs^ e) {
+		EcranVide->BringToFront();
+	}
+	private: System::Void ClickStockSeuilAccueil(System::Object^ sender, System::EventArgs^ e) {
+		DataGridAccueil->DataSource = stat1.underSeuil(textBox1->Text, textBox2->Text, textBox3->Text);
+	}
+};
 }
