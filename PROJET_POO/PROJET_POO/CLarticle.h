@@ -10,11 +10,7 @@ public:
     DataTable^ afficherCategAjout(String^ ip, String^ user, String^ mdp);
     DataTable^ afficherArticle(String^ ip, String^ user, String^ mdp);
 
-    DataTable^ recherchSupprimer(String^ nom, String^ ip, String^ user, String^ mdp);
-
-    DataTable^ recherchmodifier(String^, String^ ip, String^ user, String^ mdp);
-    //DataTable^ afficher(String^, String^, String^ ip, String^ user, String^ mdp);
-    //DataTable^ afficherModifier(String^ ip, String^ user, String^ mdp);
+    DataTable^ recherch(String^, String^ ip, String^ user, String^ mdp);
 
 
     void modifierDesignation(String^ id, String^ designation, String^ id_categorie, String^ ip, String^ user, String^ mdp);

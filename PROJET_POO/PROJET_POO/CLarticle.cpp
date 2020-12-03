@@ -83,16 +83,6 @@ void CLarticle::modifierStockSeuil(String^ id, String^ stock, String^ seuil, Str
 
 }
 
-DataTable^ CLarticle::recherchmodifier(String^ nom, String^ ip, String^ user, String^ mdp)
-{
-    CL_CAD obj;
-    obj.connect(ip, user, mdp);
-    obj.disconnect();
-
-    String^ queryString = "SELECT id_article, designation, id_categorie, prixHT, stock, seuil, tva FROM Article WHERE designation = '" + nom + "';";
-    return obj.receiveSQLTable(queryString);
-
-}
 
 
 void CLarticle::supprimer(String^ id, String^ adresse_ip, String^ utilisateur, String^ MDP)
@@ -106,19 +96,20 @@ void CLarticle::supprimer(String^ id, String^ adresse_ip, String^ utilisateur, S
 
 }
 
-DataTable^ CLarticle::recherchSupprimer(String^ nom, String^ ip, String^ user, String^ mdp)
+DataTable^ CLarticle::recherch(String^ nom, String^ ip, String^ user, String^ mdp)
 {
     CL_CAD obj;
     obj.connect(ip, user, mdp);
     obj.disconnect();
 
-    String^ queryString = "SELECT * from Article WHERE designation = '" + nom + "';";
-    return obj.receiveSQLTable(queryString);
-}
+    if (nom != "") {
+        String^ queryString = "SELECT id_article, designation, nom_categorie, prixHT, stock, seuil, TVA from Article INNER JOIN Categorie WHERE Article.id_categorie = Categorie.id_categorie AND designation = '" + nom + "'; ";
+        return obj.receiveSQLTable(queryString);
+    }
 
-/*
-void CLarticle::afficher(String^, double, int, int, double, String^ adresse_ip, String^ utilisateur, String^ MDP)
-{
-    throw gcnew System::NotImplementedException();
+    else
+    {
+        String^ queryString = "SELECT id_article, designation, nom_categorie, prixHT, stock, seuil, TVA from Article INNER JOIN Categorie WHERE Article.id_categorie = Categorie.id_categorie; ";
+        return obj.receiveSQLTable(queryString);
+    }
 }
-*/

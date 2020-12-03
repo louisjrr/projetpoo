@@ -543,6 +543,11 @@ private: System::Windows::Forms::TextBox^ TextBoxModifSeuilModifierArticle;
 
 private: System::Windows::Forms::TextBox^ TextBoxModifStockModifierArticle;
 private: System::Windows::Forms::PictureBox^ pictureBox2;
+private: System::Windows::Forms::Panel^ EcranAfficherArticle;
+private: System::Windows::Forms::DataGridView^ DataGridAfficherArticle;
+private: System::Windows::Forms::TextBox^ TextBoxNomAfficherArticle;
+private: System::Windows::Forms::Label^ label17;
+private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 
 
 
@@ -632,6 +637,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->ButtonConnexion = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranConnexion = (gcnew System::Windows::Forms::Panel());
+			this->EcranAfficherArticle = (gcnew System::Windows::Forms::Panel());
+			this->DataGridAfficherArticle = (gcnew System::Windows::Forms::DataGridView());
+			this->TextBoxNomAfficherArticle = (gcnew System::Windows::Forms::TextBox());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->ButtonRecherchAfficherArticle = (gcnew System::Windows::Forms::Button());
 			this->EcranModifierClient = (gcnew System::Windows::Forms::Panel());
 			this->ButtonAfficherModificationClient = (gcnew System::Windows::Forms::Button());
 			this->ButtonModifADRFacModificationClient = (gcnew System::Windows::Forms::Button());
@@ -824,6 +834,8 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->TextBoxRecherchSupprimerArticle = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
+			this->EcranAfficherArticle->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAfficherArticle))->BeginInit();
 			this->EcranModifierClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->BeginInit();
 			this->EcranModifierArticle->SuspendLayout();
@@ -945,6 +957,56 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->EcranConnexion->Name = L"EcranConnexion";
 			this->EcranConnexion->Size = System::Drawing::Size(1013, 600);
 			this->EcranConnexion->TabIndex = 18;
+			// 
+			// EcranAfficherArticle
+			// 
+			this->EcranAfficherArticle->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->EcranAfficherArticle->AutoSize = true;
+			this->EcranAfficherArticle->Controls->Add(this->DataGridAfficherArticle);
+			this->EcranAfficherArticle->Controls->Add(this->TextBoxNomAfficherArticle);
+			this->EcranAfficherArticle->Controls->Add(this->label17);
+			this->EcranAfficherArticle->Controls->Add(this->ButtonRecherchAfficherArticle);
+			this->EcranAfficherArticle->Location = System::Drawing::Point(0, 27);
+			this->EcranAfficherArticle->Name = L"EcranAfficherArticle";
+			this->EcranAfficherArticle->Size = System::Drawing::Size(1000, 600);
+			this->EcranAfficherArticle->TabIndex = 41;
+			// 
+			// DataGridAfficherArticle
+			// 
+			this->DataGridAfficherArticle->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DataGridAfficherArticle->Location = System::Drawing::Point(268, 46);
+			this->DataGridAfficherArticle->Name = L"DataGridAfficherArticle";
+			this->DataGridAfficherArticle->RowHeadersWidth = 51;
+			this->DataGridAfficherArticle->Size = System::Drawing::Size(672, 398);
+			this->DataGridAfficherArticle->TabIndex = 4;
+			// 
+			// TextBoxNomAfficherArticle
+			// 
+			this->TextBoxNomAfficherArticle->Location = System::Drawing::Point(93, 140);
+			this->TextBoxNomAfficherArticle->Name = L"TextBoxNomAfficherArticle";
+			this->TextBoxNomAfficherArticle->Size = System::Drawing::Size(100, 20);
+			this->TextBoxNomAfficherArticle->TabIndex = 2;
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(113, 117);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(63, 13);
+			this->label17->TabIndex = 0;
+			this->label17->Text = L"Désignation";
+			// 
+			// ButtonRecherchAfficherArticle
+			// 
+			this->ButtonRecherchAfficherArticle->Location = System::Drawing::Point(96, 176);
+			this->ButtonRecherchAfficherArticle->Name = L"ButtonRecherchAfficherArticle";
+			this->ButtonRecherchAfficherArticle->Size = System::Drawing::Size(95, 38);
+			this->ButtonRecherchAfficherArticle->TabIndex = 26;
+			this->ButtonRecherchAfficherArticle->Text = L"Rechercher";
+			this->ButtonRecherchAfficherArticle->UseVisualStyleBackColor = true;
+			this->ButtonRecherchAfficherArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickRecherchAfficherArticle);
 			// 
 			// EcranModifierClient
 			// 
@@ -1839,6 +1901,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->EcranIdle->Controls->Add(this->EcranSupprimerClient);
 			this->EcranIdle->Controls->Add(this->EcranModifierArticle);
 			this->EcranIdle->Controls->Add(this->EcranModifierClient);
+			this->EcranIdle->Controls->Add(this->EcranAfficherArticle);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Name = L"EcranIdle";
 			this->EcranIdle->Size = System::Drawing::Size(1000, 900);
@@ -1985,6 +2048,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->OngletAfficherArticle->Name = L"OngletAfficherArticle";
 			this->OngletAfficherArticle->Size = System::Drawing::Size(129, 22);
 			this->OngletAfficherArticle->Text = L"Afficher";
+			this->OngletAfficherArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAfficherArticle);
 			// 
 			// OngletPersonnel
 			// 
@@ -2761,6 +2825,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->EcranConnexion->ResumeLayout(false);
 			this->EcranConnexion->PerformLayout();
+			this->EcranAfficherArticle->ResumeLayout(false);
+			this->EcranAfficherArticle->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAfficherArticle))->EndInit();
 			this->EcranModifierClient->ResumeLayout(false);
 			this->EcranModifierClient->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->EndInit();
@@ -2920,8 +2987,8 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 		DataGridSupprimerArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickRecherchSupprimerArticle(System::Object^ sender, System::EventArgs^ e) {
-		article1.recherchSupprimer(TextBoxRecherchSupprimerArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
-		DataGridSupprimerArticle->DataSource = article1.recherchSupprimer(TextBoxRecherchSupprimerArticle->Text ,textBox1->Text, textBox2->Text, textBox3->Text);
+		article1.recherch(TextBoxRecherchSupprimerArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		DataGridSupprimerArticle->DataSource = article1.recherch(TextBoxRecherchSupprimerArticle->Text ,textBox1->Text, textBox2->Text, textBox3->Text);
 	}
     private: System::Void OngletPasserCommande_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranPasserCommande->BringToFront();
@@ -2932,7 +2999,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 		DataGridModifierArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickRecherchModifierArticle(System::Object^ sender, System::EventArgs^ e) {
-		DataGridModifierArticle->DataSource = article1.recherchmodifier(TextBoxRecherchModifierArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		DataGridModifierArticle->DataSource = article1.recherch(TextBoxRecherchModifierArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickAfficherModifierArticle(System::Object^ sender, System::EventArgs^ e) {
 		DataGridModifierArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
@@ -2995,6 +3062,14 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 		TextBoxIDModifierArticle->Text = "";
 		TextBoxModifStockModifierArticle->Text = "";
 		TextBoxModifSeuilModifierArticle->Text = "";
+	}
+	private: System::Void ClickOngletAfficherArticle(System::Object^ sender, System::EventArgs^ e) {
+		EcranAfficherArticle->BringToFront();
+		DataGridAfficherArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
+	}
+	private: System::Void ClickRecherchAfficherArticle(System::Object^ sender, System::EventArgs^ e) {
+		DataGridAfficherArticle->DataSource = article1.recherch(TextBoxNomAfficherArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+
 	}
 };
 }
