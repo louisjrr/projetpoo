@@ -614,6 +614,13 @@ private: System::Windows::Forms::Label^ label12;
 private: System::Windows::Forms::TextBox^ TextBoxTVAAccueil;
 
 private: System::Windows::Forms::Label^ label10;
+private: System::Windows::Forms::TextBox^ textBoxIDCommandePasserCommande;
+private: System::Windows::Forms::Label^ labelIDCommandePasserCommande;
+private: System::Windows::Forms::TextBox^ textBoxReferencePasserCommande;
+private: System::Windows::Forms::Label^ labelReferencePasserCommande;
+private: System::Windows::Forms::Button^ button1;
+
+
 
 
 
@@ -705,6 +712,43 @@ private: System::Windows::Forms::Label^ label10;
 			this->ButtonConnexion = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranConnexion = (gcnew System::Windows::Forms::Panel());
+			this->EcranPasserCommande = (gcnew System::Windows::Forms::Panel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->labelReferencePasserCommande = (gcnew System::Windows::Forms::Label());
+			this->textBoxReferencePasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->labelIDCommandePasserCommande = (gcnew System::Windows::Forms::Label());
+			this->textBoxIDCommandePasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->labelMoyenDePaiementPasserCommande = (gcnew System::Windows::Forms::Label());
+			this->textBoxMoyenDePaiementPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->labelDateSoldePasserCommande = (gcnew System::Windows::Forms::Label());
+			this->labelDatePaiementPasserCommande = (gcnew System::Windows::Forms::Label());
+			this->labelDateEmissionPasserCommande = (gcnew System::Windows::Forms::Label());
+			this->textBoxAnneeDateSoldePasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxAnneeDatePaiementPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxAnneDateEmissionPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxMoisDateSoldePasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxMoisDatePaiementPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxMoisDateEmissionPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxJourDateSoldePasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxJourDatePaiementPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxJourDateEmissionPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->labelAnneePasserCommande = (gcnew System::Windows::Forms::Label());
+			this->labelMoisPasserCommande = (gcnew System::Windows::Forms::Label());
+			this->labelJourPasserCommande = (gcnew System::Windows::Forms::Label());
+			this->labelDateLivraisonPasserCommande = (gcnew System::Windows::Forms::Label());
+			this->textBoxMoisLivraisonPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxJourLivraisonPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxAnneLivraisonPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->labelQtePasserCommande = (gcnew System::Windows::Forms::Label());
+			this->textBoxQtePasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->labelDesignationPasserCommande = (gcnew System::Windows::Forms::Label());
+			this->textBoxDesignationPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->textBoxPrenomPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxNomPasserCommande = (gcnew System::Windows::Forms::TextBox());
+			this->labelPrenomPasserCommande = (gcnew System::Windows::Forms::Label());
+			this->labelNomPasserCommande = (gcnew System::Windows::Forms::Label());
+			this->buttonValiderPasserCommande = (gcnew System::Windows::Forms::Button());
 			this->EcranVide = (gcnew System::Windows::Forms::Panel());
 			this->ButtonSimulTVAAccueil = (gcnew System::Windows::Forms::Button());
 			this->ButtonSimulComAccueil = (gcnew System::Windows::Forms::Button());
@@ -738,38 +782,6 @@ private: System::Windows::Forms::Label^ label10;
 			this->OngletModifierCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->OngletSupprimerCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->OngletAfficherCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->EcranPasserCommande = (gcnew System::Windows::Forms::Panel());
-			this->labelMoyenDePaiementPasserCommande = (gcnew System::Windows::Forms::Label());
-			this->textBoxMoyenDePaiementPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->labelDateSoldePasserCommande = (gcnew System::Windows::Forms::Label());
-			this->labelDatePaiementPasserCommande = (gcnew System::Windows::Forms::Label());
-			this->labelDateEmissionPasserCommande = (gcnew System::Windows::Forms::Label());
-			this->textBoxAnneeDateSoldePasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxAnneeDatePaiementPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxAnneDateEmissionPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxMoisDateSoldePasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxMoisDatePaiementPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxMoisDateEmissionPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxJourDateSoldePasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxJourDatePaiementPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxJourDateEmissionPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->labelAnneePasserCommande = (gcnew System::Windows::Forms::Label());
-			this->labelMoisPasserCommande = (gcnew System::Windows::Forms::Label());
-			this->labelJourPasserCommande = (gcnew System::Windows::Forms::Label());
-			this->labelDateLivraisonPasserCommande = (gcnew System::Windows::Forms::Label());
-			this->textBoxMoisLivraisonPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxJourLivraisonPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxAnneLivraisonPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->labelQtePasserCommande = (gcnew System::Windows::Forms::Label());
-			this->textBoxQtePasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->labelDesignationPasserCommande = (gcnew System::Windows::Forms::Label());
-			this->textBoxDesignationPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->textBoxPrenomPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxNomPasserCommande = (gcnew System::Windows::Forms::TextBox());
-			this->labelPrenomPasserCommande = (gcnew System::Windows::Forms::Label());
-			this->labelNomPasserCommande = (gcnew System::Windows::Forms::Label());
-			this->buttonValiderPasserCommande = (gcnew System::Windows::Forms::Button());
 			this->EcranAfficherArticle = (gcnew System::Windows::Forms::Panel());
 			this->DataGridAfficherArticle = (gcnew System::Windows::Forms::DataGridView());
 			this->TextBoxNomAfficherArticle = (gcnew System::Windows::Forms::TextBox());
@@ -937,11 +949,11 @@ private: System::Windows::Forms::Label^ label10;
 			this->TextBoxRecherchSupprimerArticle = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
+			this->EcranPasserCommande->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->EcranVide->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAccueil))->BeginInit();
 			this->MenuOnglet->SuspendLayout();
-			this->EcranPasserCommande->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->EcranAfficherArticle->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAfficherArticle))->BeginInit();
 			this->EcranModifierClient->SuspendLayout();
@@ -1061,295 +1073,17 @@ private: System::Windows::Forms::Label^ label10;
 			this->EcranConnexion->Size = System::Drawing::Size(1013, 600);
 			this->EcranConnexion->TabIndex = 18;
 			// 
-			// EcranVide
-			// 
-			this->EcranVide->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->EcranVide->AutoSize = true;
-			this->EcranVide->Controls->Add(this->ButtonSimulTVAAccueil);
-			this->EcranVide->Controls->Add(this->ButtonSimulComAccueil);
-			this->EcranVide->Controls->Add(this->TextBoxMargeAccueil);
-			this->EcranVide->Controls->Add(this->label12);
-			this->EcranVide->Controls->Add(this->TextBoxTVAAccueil);
-			this->EcranVide->Controls->Add(this->label10);
-			this->EcranVide->Controls->Add(this->ButtonValAchatAccueil);
-			this->EcranVide->Controls->Add(this->ButtonValComAccueil);
-			this->EcranVide->Controls->Add(this->DataGridAccueil);
-			this->EcranVide->Controls->Add(this->ButtonStockSeuilAccueil);
-			this->EcranVide->Location = System::Drawing::Point(0, 22);
-			this->EcranVide->Margin = System::Windows::Forms::Padding(2);
-			this->EcranVide->Name = L"EcranVide";
-			this->EcranVide->Size = System::Drawing::Size(1000, 600);
-			this->EcranVide->TabIndex = 35;
-			// 
-			// ButtonSimulTVAAccueil
-			// 
-			this->ButtonSimulTVAAccueil->Location = System::Drawing::Point(793, 152);
-			this->ButtonSimulTVAAccueil->Name = L"ButtonSimulTVAAccueil";
-			this->ButtonSimulTVAAccueil->Size = System::Drawing::Size(102, 60);
-			this->ButtonSimulTVAAccueil->TabIndex = 15;
-			this->ButtonSimulTVAAccueil->Text = L"Simuler la valeur d\'achat avec des paramètres";
-			this->ButtonSimulTVAAccueil->UseVisualStyleBackColor = true;
-			this->ButtonSimulTVAAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickSimulTVAAccueil);
-			// 
-			// ButtonSimulComAccueil
-			// 
-			this->ButtonSimulComAccueil->Location = System::Drawing::Point(678, 152);
-			this->ButtonSimulComAccueil->Name = L"ButtonSimulComAccueil";
-			this->ButtonSimulComAccueil->Size = System::Drawing::Size(102, 60);
-			this->ButtonSimulComAccueil->TabIndex = 14;
-			this->ButtonSimulComAccueil->Text = L"Simuler la valeur commérciale avec des paramètres";
-			this->ButtonSimulComAccueil->UseVisualStyleBackColor = true;
-			this->ButtonSimulComAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickSimulMargeAccueil);
-			// 
-			// TextBoxMargeAccueil
-			// 
-			this->TextBoxMargeAccueil->Location = System::Drawing::Point(578, 192);
-			this->TextBoxMargeAccueil->Name = L"TextBoxMargeAccueil";
-			this->TextBoxMargeAccueil->Size = System::Drawing::Size(64, 20);
-			this->TextBoxMargeAccueil->TabIndex = 13;
-			// 
-			// label12
-			// 
-			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(581, 177);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(66, 13);
-			this->label12->TabIndex = 12;
-			this->label12->Text = L"MargeCom%";
-			// 
-			// TextBoxTVAAccueil
-			// 
-			this->TextBoxTVAAccueil->Location = System::Drawing::Point(578, 152);
-			this->TextBoxTVAAccueil->Name = L"TextBoxTVAAccueil";
-			this->TextBoxTVAAccueil->Size = System::Drawing::Size(64, 20);
-			this->TextBoxTVAAccueil->TabIndex = 11;
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(581, 136);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(36, 13);
-			this->label10->TabIndex = 10;
-			this->label10->Text = L"TVA%";
-			// 
-			// ButtonValAchatAccueil
-			// 
-			this->ButtonValAchatAccueil->Location = System::Drawing::Point(764, 66);
-			this->ButtonValAchatAccueil->Name = L"ButtonValAchatAccueil";
-			this->ButtonValAchatAccueil->Size = System::Drawing::Size(131, 61);
-			this->ButtonValAchatAccueil->TabIndex = 3;
-			this->ButtonValAchatAccueil->Text = L"Afficher la valeur d\'achat du stock";
-			this->ButtonValAchatAccueil->UseVisualStyleBackColor = true;
-			this->ButtonValAchatAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickValAchatAccueil);
-			// 
-			// ButtonValComAccueil
-			// 
-			this->ButtonValComAccueil->Location = System::Drawing::Point(575, 64);
-			this->ButtonValComAccueil->Name = L"ButtonValComAccueil";
-			this->ButtonValComAccueil->Size = System::Drawing::Size(131, 61);
-			this->ButtonValComAccueil->TabIndex = 2;
-			this->ButtonValComAccueil->Text = L"Afficher la valeur commerciale du stock";
-			this->ButtonValComAccueil->UseVisualStyleBackColor = true;
-			this->ButtonValComAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickValComAccueil);
-			// 
-			// DataGridAccueil
-			// 
-			this->DataGridAccueil->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->DataGridAccueil->Location = System::Drawing::Point(37, 42);
-			this->DataGridAccueil->Name = L"DataGridAccueil";
-			this->DataGridAccueil->RowHeadersWidth = 51;
-			this->DataGridAccueil->Size = System::Drawing::Size(481, 428);
-			this->DataGridAccueil->TabIndex = 1;
-			// 
-			// ButtonStockSeuilAccueil
-			// 
-			this->ButtonStockSeuilAccueil->Location = System::Drawing::Point(578, 389);
-			this->ButtonStockSeuilAccueil->Name = L"ButtonStockSeuilAccueil";
-			this->ButtonStockSeuilAccueil->Size = System::Drawing::Size(131, 61);
-			this->ButtonStockSeuilAccueil->TabIndex = 0;
-			this->ButtonStockSeuilAccueil->Text = L"Afficher les articles sous le seuil de stock";
-			this->ButtonStockSeuilAccueil->UseVisualStyleBackColor = true;
-			this->ButtonStockSeuilAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickStockSeuilAccueil);
-			// 
-			// MenuOnglet
-			// 
-			this->MenuOnglet->BackColor = System::Drawing::SystemColors::ButtonShadow;
-			this->MenuOnglet->Dock = System::Windows::Forms::DockStyle::None;
-			this->MenuOnglet->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->MenuOnglet->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
-				this->accueilToolStripMenuItem,
-					this->OngletArticle, this->OngletPersonnel, this->OngletClient, this->OngletCommande
-			});
-			this->MenuOnglet->Location = System::Drawing::Point(0, 0);
-			this->MenuOnglet->Name = L"MenuOnglet";
-			this->MenuOnglet->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->MenuOnglet->Size = System::Drawing::Size(320, 24);
-			this->MenuOnglet->TabIndex = 33;
-			this->MenuOnglet->Text = L"menuStrip1";
-			// 
-			// accueilToolStripMenuItem
-			// 
-			this->accueilToolStripMenuItem->Name = L"accueilToolStripMenuItem";
-			this->accueilToolStripMenuItem->Size = System::Drawing::Size(58, 20);
-			this->accueilToolStripMenuItem->Text = L"Accueil";
-			this->accueilToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ClickAccueil);
-			// 
-			// OngletArticle
-			// 
-			this->OngletArticle->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletAjoutArticle,
-					this->OngletModifierArticle, this->OngletSupprimerArticle, this->OngletAfficherArticle
-			});
-			this->OngletArticle->Name = L"OngletArticle";
-			this->OngletArticle->Size = System::Drawing::Size(53, 20);
-			this->OngletArticle->Text = L"Article";
-			// 
-			// OngletAjoutArticle
-			// 
-			this->OngletAjoutArticle->Name = L"OngletAjoutArticle";
-			this->OngletAjoutArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletAjoutArticle->Text = L"Ajouter";
-			this->OngletAjoutArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutArticle);
-			// 
-			// OngletModifierArticle
-			// 
-			this->OngletModifierArticle->Name = L"OngletModifierArticle";
-			this->OngletModifierArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletModifierArticle->Text = L"Modifier";
-			this->OngletModifierArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletModifierArticle);
-			// 
-			// OngletSupprimerArticle
-			// 
-			this->OngletSupprimerArticle->Name = L"OngletSupprimerArticle";
-			this->OngletSupprimerArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletSupprimerArticle->Text = L"Supprimer";
-			this->OngletSupprimerArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerArticle);
-			// 
-			// OngletAfficherArticle
-			// 
-			this->OngletAfficherArticle->Name = L"OngletAfficherArticle";
-			this->OngletAfficherArticle->Size = System::Drawing::Size(129, 22);
-			this->OngletAfficherArticle->Text = L"Afficher";
-			this->OngletAfficherArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAfficherArticle);
-			// 
-			// OngletPersonnel
-			// 
-			this->OngletPersonnel->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletAjoutPersonnel,
-					this->OngletModifierPersonnel, this->OngletSupprimerPersonnel, this->OngletAfficherPersonnel
-			});
-			this->OngletPersonnel->Name = L"OngletPersonnel";
-			this->OngletPersonnel->Size = System::Drawing::Size(71, 20);
-			this->OngletPersonnel->Text = L"Personnel";
-			// 
-			// OngletAjoutPersonnel
-			// 
-			this->OngletAjoutPersonnel->Name = L"OngletAjoutPersonnel";
-			this->OngletAjoutPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletAjoutPersonnel->Text = L"Ajouter";
-			this->OngletAjoutPersonnel->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutPersonnel);
-			// 
-			// OngletModifierPersonnel
-			// 
-			this->OngletModifierPersonnel->Name = L"OngletModifierPersonnel";
-			this->OngletModifierPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletModifierPersonnel->Text = L"Modifier";
-			// 
-			// OngletSupprimerPersonnel
-			// 
-			this->OngletSupprimerPersonnel->Name = L"OngletSupprimerPersonnel";
-			this->OngletSupprimerPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletSupprimerPersonnel->Text = L"Supprimer";
-			// 
-			// OngletAfficherPersonnel
-			// 
-			this->OngletAfficherPersonnel->Name = L"OngletAfficherPersonnel";
-			this->OngletAfficherPersonnel->Size = System::Drawing::Size(129, 22);
-			this->OngletAfficherPersonnel->Text = L"Afficher";
-			this->OngletAfficherPersonnel->Click += gcnew System::EventHandler(this, &MyForm::OngletAfficherPersonnel_Click);
-			// 
-			// OngletClient
-			// 
-			this->OngletClient->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletAjoutClient,
-					this->OngletModifierClient, this->OngletSupprimerClient, this->OngletAfficherClient
-			});
-			this->OngletClient->Name = L"OngletClient";
-			this->OngletClient->Size = System::Drawing::Size(50, 20);
-			this->OngletClient->Text = L"Client";
-			// 
-			// OngletAjoutClient
-			// 
-			this->OngletAjoutClient->Name = L"OngletAjoutClient";
-			this->OngletAjoutClient->Size = System::Drawing::Size(129, 22);
-			this->OngletAjoutClient->Text = L"Ajouter";
-			this->OngletAjoutClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutClient);
-			// 
-			// OngletModifierClient
-			// 
-			this->OngletModifierClient->Name = L"OngletModifierClient";
-			this->OngletModifierClient->Size = System::Drawing::Size(129, 22);
-			this->OngletModifierClient->Text = L"Modifier";
-			this->OngletModifierClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletModifierClient);
-			// 
-			// OngletSupprimerClient
-			// 
-			this->OngletSupprimerClient->Name = L"OngletSupprimerClient";
-			this->OngletSupprimerClient->Size = System::Drawing::Size(129, 22);
-			this->OngletSupprimerClient->Text = L"Supprimer";
-			this->OngletSupprimerClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerClient);
-			// 
-			// OngletAfficherClient
-			// 
-			this->OngletAfficherClient->Name = L"OngletAfficherClient";
-			this->OngletAfficherClient->Size = System::Drawing::Size(129, 22);
-			this->OngletAfficherClient->Text = L"Afficher";
-			this->OngletAfficherClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAfficherClient);
-			// 
-			// OngletCommande
-			// 
-			this->OngletCommande->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->OngletPasserCommande,
-					this->OngletModifierCommande, this->OngletSupprimerCommande, this->OngletAfficherCommande
-			});
-			this->OngletCommande->Name = L"OngletCommande";
-			this->OngletCommande->Size = System::Drawing::Size(82, 20);
-			this->OngletCommande->Text = L"Commande";
-			// 
-			// OngletPasserCommande
-			// 
-			this->OngletPasserCommande->Name = L"OngletPasserCommande";
-			this->OngletPasserCommande->Size = System::Drawing::Size(171, 22);
-			this->OngletPasserCommande->Text = L"Passer commande";
-			this->OngletPasserCommande->Click += gcnew System::EventHandler(this, &MyForm::OngletPasserCommande_Click);
-			// 
-			// OngletModifierCommande
-			// 
-			this->OngletModifierCommande->Name = L"OngletModifierCommande";
-			this->OngletModifierCommande->Size = System::Drawing::Size(171, 22);
-			this->OngletModifierCommande->Text = L"Modifier";
-			// 
-			// OngletSupprimerCommande
-			// 
-			this->OngletSupprimerCommande->Name = L"OngletSupprimerCommande";
-			this->OngletSupprimerCommande->Size = System::Drawing::Size(171, 22);
-			this->OngletSupprimerCommande->Text = L"Supprimer";
-			// 
-			// OngletAfficherCommande
-			// 
-			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
-			this->OngletAfficherCommande->Size = System::Drawing::Size(171, 22);
-			this->OngletAfficherCommande->Text = L"Afficher";
-			// 
 			// EcranPasserCommande
 			// 
 			this->EcranPasserCommande->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->EcranPasserCommande->AutoSize = true;
+			this->EcranPasserCommande->Controls->Add(this->button1);
+			this->EcranPasserCommande->Controls->Add(this->labelReferencePasserCommande);
+			this->EcranPasserCommande->Controls->Add(this->textBoxReferencePasserCommande);
+			this->EcranPasserCommande->Controls->Add(this->labelIDCommandePasserCommande);
+			this->EcranPasserCommande->Controls->Add(this->textBoxIDCommandePasserCommande);
 			this->EcranPasserCommande->Controls->Add(this->labelMoyenDePaiementPasserCommande);
 			this->EcranPasserCommande->Controls->Add(this->textBoxMoyenDePaiementPasserCommande);
 			this->EcranPasserCommande->Controls->Add(this->labelDateSoldePasserCommande);
@@ -1385,6 +1119,49 @@ private: System::Windows::Forms::Label^ label10;
 			this->EcranPasserCommande->Name = L"EcranPasserCommande";
 			this->EcranPasserCommande->Size = System::Drawing::Size(1000, 600);
 			this->EcranPasserCommande->TabIndex = 39;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(448, 465);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(114, 23);
+			this->button1->TabIndex = 56;
+			this->button1->Text = L"Générer la référence ";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_1);
+			// 
+			// labelReferencePasserCommande
+			// 
+			this->labelReferencePasserCommande->AutoSize = true;
+			this->labelReferencePasserCommande->Location = System::Drawing::Point(590, 398);
+			this->labelReferencePasserCommande->Name = L"labelReferencePasserCommande";
+			this->labelReferencePasserCommande->Size = System::Drawing::Size(57, 13);
+			this->labelReferencePasserCommande->TabIndex = 55;
+			this->labelReferencePasserCommande->Text = L"Référence";
+			// 
+			// textBoxReferencePasserCommande
+			// 
+			this->textBoxReferencePasserCommande->Location = System::Drawing::Point(572, 417);
+			this->textBoxReferencePasserCommande->Name = L"textBoxReferencePasserCommande";
+			this->textBoxReferencePasserCommande->Size = System::Drawing::Size(100, 20);
+			this->textBoxReferencePasserCommande->TabIndex = 54;
+			// 
+			// labelIDCommandePasserCommande
+			// 
+			this->labelIDCommandePasserCommande->AutoSize = true;
+			this->labelIDCommandePasserCommande->Location = System::Drawing::Point(354, 420);
+			this->labelIDCommandePasserCommande->Name = L"labelIDCommandePasserCommande";
+			this->labelIDCommandePasserCommande->Size = System::Drawing::Size(99, 13);
+			this->labelIDCommandePasserCommande->TabIndex = 53;
+			this->labelIDCommandePasserCommande->Text = L"ID de la commande";
+			// 
+			// textBoxIDCommandePasserCommande
+			// 
+			this->textBoxIDCommandePasserCommande->Location = System::Drawing::Point(460, 417);
+			this->textBoxIDCommandePasserCommande->Margin = System::Windows::Forms::Padding(2);
+			this->textBoxIDCommandePasserCommande->Name = L"textBoxIDCommandePasserCommande";
+			this->textBoxIDCommandePasserCommande->Size = System::Drawing::Size(76, 20);
+			this->textBoxIDCommandePasserCommande->TabIndex = 52;
 			// 
 			// labelMoyenDePaiementPasserCommande
 			// 
@@ -1695,6 +1472,289 @@ private: System::Windows::Forms::Label^ label10;
 			this->buttonValiderPasserCommande->Text = L"Valider la commande";
 			this->buttonValiderPasserCommande->UseVisualStyleBackColor = true;
 			this->buttonValiderPasserCommande->Click += gcnew System::EventHandler(this, &MyForm::buttonValiderPasserCommande_Click);
+			// 
+			// EcranVide
+			// 
+			this->EcranVide->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->EcranVide->AutoSize = true;
+			this->EcranVide->Controls->Add(this->ButtonSimulTVAAccueil);
+			this->EcranVide->Controls->Add(this->ButtonSimulComAccueil);
+			this->EcranVide->Controls->Add(this->TextBoxMargeAccueil);
+			this->EcranVide->Controls->Add(this->label12);
+			this->EcranVide->Controls->Add(this->TextBoxTVAAccueil);
+			this->EcranVide->Controls->Add(this->label10);
+			this->EcranVide->Controls->Add(this->ButtonValAchatAccueil);
+			this->EcranVide->Controls->Add(this->ButtonValComAccueil);
+			this->EcranVide->Controls->Add(this->DataGridAccueil);
+			this->EcranVide->Controls->Add(this->ButtonStockSeuilAccueil);
+			this->EcranVide->Location = System::Drawing::Point(0, 22);
+			this->EcranVide->Margin = System::Windows::Forms::Padding(2);
+			this->EcranVide->Name = L"EcranVide";
+			this->EcranVide->Size = System::Drawing::Size(1000, 600);
+			this->EcranVide->TabIndex = 35;
+			// 
+			// ButtonSimulTVAAccueil
+			// 
+			this->ButtonSimulTVAAccueil->Location = System::Drawing::Point(793, 152);
+			this->ButtonSimulTVAAccueil->Name = L"ButtonSimulTVAAccueil";
+			this->ButtonSimulTVAAccueil->Size = System::Drawing::Size(102, 60);
+			this->ButtonSimulTVAAccueil->TabIndex = 15;
+			this->ButtonSimulTVAAccueil->Text = L"Simuler la valeur d\'achat avec des paramètres";
+			this->ButtonSimulTVAAccueil->UseVisualStyleBackColor = true;
+			this->ButtonSimulTVAAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickSimulTVAAccueil);
+			// 
+			// ButtonSimulComAccueil
+			// 
+			this->ButtonSimulComAccueil->Location = System::Drawing::Point(678, 152);
+			this->ButtonSimulComAccueil->Name = L"ButtonSimulComAccueil";
+			this->ButtonSimulComAccueil->Size = System::Drawing::Size(102, 60);
+			this->ButtonSimulComAccueil->TabIndex = 14;
+			this->ButtonSimulComAccueil->Text = L"Simuler la valeur commérciale avec des paramètres";
+			this->ButtonSimulComAccueil->UseVisualStyleBackColor = true;
+			this->ButtonSimulComAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickSimulMargeAccueil);
+			// 
+			// TextBoxMargeAccueil
+			// 
+			this->TextBoxMargeAccueil->Location = System::Drawing::Point(578, 192);
+			this->TextBoxMargeAccueil->Name = L"TextBoxMargeAccueil";
+			this->TextBoxMargeAccueil->Size = System::Drawing::Size(64, 20);
+			this->TextBoxMargeAccueil->TabIndex = 13;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(581, 177);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(66, 13);
+			this->label12->TabIndex = 12;
+			this->label12->Text = L"MargeCom%";
+			// 
+			// TextBoxTVAAccueil
+			// 
+			this->TextBoxTVAAccueil->Location = System::Drawing::Point(578, 152);
+			this->TextBoxTVAAccueil->Name = L"TextBoxTVAAccueil";
+			this->TextBoxTVAAccueil->Size = System::Drawing::Size(64, 20);
+			this->TextBoxTVAAccueil->TabIndex = 11;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(581, 136);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(36, 13);
+			this->label10->TabIndex = 10;
+			this->label10->Text = L"TVA%";
+			// 
+			// ButtonValAchatAccueil
+			// 
+			this->ButtonValAchatAccueil->Location = System::Drawing::Point(764, 66);
+			this->ButtonValAchatAccueil->Name = L"ButtonValAchatAccueil";
+			this->ButtonValAchatAccueil->Size = System::Drawing::Size(131, 61);
+			this->ButtonValAchatAccueil->TabIndex = 3;
+			this->ButtonValAchatAccueil->Text = L"Afficher la valeur d\'achat du stock";
+			this->ButtonValAchatAccueil->UseVisualStyleBackColor = true;
+			this->ButtonValAchatAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickValAchatAccueil);
+			// 
+			// ButtonValComAccueil
+			// 
+			this->ButtonValComAccueil->Location = System::Drawing::Point(575, 64);
+			this->ButtonValComAccueil->Name = L"ButtonValComAccueil";
+			this->ButtonValComAccueil->Size = System::Drawing::Size(131, 61);
+			this->ButtonValComAccueil->TabIndex = 2;
+			this->ButtonValComAccueil->Text = L"Afficher la valeur commerciale du stock";
+			this->ButtonValComAccueil->UseVisualStyleBackColor = true;
+			this->ButtonValComAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickValComAccueil);
+			// 
+			// DataGridAccueil
+			// 
+			this->DataGridAccueil->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DataGridAccueil->Location = System::Drawing::Point(37, 42);
+			this->DataGridAccueil->Name = L"DataGridAccueil";
+			this->DataGridAccueil->RowHeadersWidth = 51;
+			this->DataGridAccueil->Size = System::Drawing::Size(481, 428);
+			this->DataGridAccueil->TabIndex = 1;
+			// 
+			// ButtonStockSeuilAccueil
+			// 
+			this->ButtonStockSeuilAccueil->Location = System::Drawing::Point(578, 389);
+			this->ButtonStockSeuilAccueil->Name = L"ButtonStockSeuilAccueil";
+			this->ButtonStockSeuilAccueil->Size = System::Drawing::Size(131, 61);
+			this->ButtonStockSeuilAccueil->TabIndex = 0;
+			this->ButtonStockSeuilAccueil->Text = L"Afficher les articles sous le seuil de stock";
+			this->ButtonStockSeuilAccueil->UseVisualStyleBackColor = true;
+			this->ButtonStockSeuilAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickStockSeuilAccueil);
+			// 
+			// MenuOnglet
+			// 
+			this->MenuOnglet->BackColor = System::Drawing::SystemColors::ButtonShadow;
+			this->MenuOnglet->Dock = System::Windows::Forms::DockStyle::None;
+			this->MenuOnglet->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->MenuOnglet->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
+				this->accueilToolStripMenuItem,
+					this->OngletArticle, this->OngletPersonnel, this->OngletClient, this->OngletCommande
+			});
+			this->MenuOnglet->Location = System::Drawing::Point(0, 0);
+			this->MenuOnglet->Name = L"MenuOnglet";
+			this->MenuOnglet->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
+			this->MenuOnglet->Size = System::Drawing::Size(320, 24);
+			this->MenuOnglet->TabIndex = 33;
+			this->MenuOnglet->Text = L"menuStrip1";
+			// 
+			// accueilToolStripMenuItem
+			// 
+			this->accueilToolStripMenuItem->Name = L"accueilToolStripMenuItem";
+			this->accueilToolStripMenuItem->Size = System::Drawing::Size(58, 20);
+			this->accueilToolStripMenuItem->Text = L"Accueil";
+			this->accueilToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ClickAccueil);
+			// 
+			// OngletArticle
+			// 
+			this->OngletArticle->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletAjoutArticle,
+					this->OngletModifierArticle, this->OngletSupprimerArticle, this->OngletAfficherArticle
+			});
+			this->OngletArticle->Name = L"OngletArticle";
+			this->OngletArticle->Size = System::Drawing::Size(53, 20);
+			this->OngletArticle->Text = L"Article";
+			// 
+			// OngletAjoutArticle
+			// 
+			this->OngletAjoutArticle->Name = L"OngletAjoutArticle";
+			this->OngletAjoutArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutArticle->Text = L"Ajouter";
+			this->OngletAjoutArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutArticle);
+			// 
+			// OngletModifierArticle
+			// 
+			this->OngletModifierArticle->Name = L"OngletModifierArticle";
+			this->OngletModifierArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierArticle->Text = L"Modifier";
+			this->OngletModifierArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletModifierArticle);
+			// 
+			// OngletSupprimerArticle
+			// 
+			this->OngletSupprimerArticle->Name = L"OngletSupprimerArticle";
+			this->OngletSupprimerArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerArticle->Text = L"Supprimer";
+			this->OngletSupprimerArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerArticle);
+			// 
+			// OngletAfficherArticle
+			// 
+			this->OngletAfficherArticle->Name = L"OngletAfficherArticle";
+			this->OngletAfficherArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherArticle->Text = L"Afficher";
+			this->OngletAfficherArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAfficherArticle);
+			// 
+			// OngletPersonnel
+			// 
+			this->OngletPersonnel->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletAjoutPersonnel,
+					this->OngletModifierPersonnel, this->OngletSupprimerPersonnel, this->OngletAfficherPersonnel
+			});
+			this->OngletPersonnel->Name = L"OngletPersonnel";
+			this->OngletPersonnel->Size = System::Drawing::Size(71, 20);
+			this->OngletPersonnel->Text = L"Personnel";
+			// 
+			// OngletAjoutPersonnel
+			// 
+			this->OngletAjoutPersonnel->Name = L"OngletAjoutPersonnel";
+			this->OngletAjoutPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutPersonnel->Text = L"Ajouter";
+			this->OngletAjoutPersonnel->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutPersonnel);
+			// 
+			// OngletModifierPersonnel
+			// 
+			this->OngletModifierPersonnel->Name = L"OngletModifierPersonnel";
+			this->OngletModifierPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierPersonnel->Text = L"Modifier";
+			// 
+			// OngletSupprimerPersonnel
+			// 
+			this->OngletSupprimerPersonnel->Name = L"OngletSupprimerPersonnel";
+			this->OngletSupprimerPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerPersonnel->Text = L"Supprimer";
+			// 
+			// OngletAfficherPersonnel
+			// 
+			this->OngletAfficherPersonnel->Name = L"OngletAfficherPersonnel";
+			this->OngletAfficherPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherPersonnel->Text = L"Afficher";
+			this->OngletAfficherPersonnel->Click += gcnew System::EventHandler(this, &MyForm::OngletAfficherPersonnel_Click);
+			// 
+			// OngletClient
+			// 
+			this->OngletClient->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletAjoutClient,
+					this->OngletModifierClient, this->OngletSupprimerClient, this->OngletAfficherClient
+			});
+			this->OngletClient->Name = L"OngletClient";
+			this->OngletClient->Size = System::Drawing::Size(50, 20);
+			this->OngletClient->Text = L"Client";
+			// 
+			// OngletAjoutClient
+			// 
+			this->OngletAjoutClient->Name = L"OngletAjoutClient";
+			this->OngletAjoutClient->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutClient->Text = L"Ajouter";
+			this->OngletAjoutClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutClient);
+			// 
+			// OngletModifierClient
+			// 
+			this->OngletModifierClient->Name = L"OngletModifierClient";
+			this->OngletModifierClient->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierClient->Text = L"Modifier";
+			this->OngletModifierClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletModifierClient);
+			// 
+			// OngletSupprimerClient
+			// 
+			this->OngletSupprimerClient->Name = L"OngletSupprimerClient";
+			this->OngletSupprimerClient->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerClient->Text = L"Supprimer";
+			this->OngletSupprimerClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerClient);
+			// 
+			// OngletAfficherClient
+			// 
+			this->OngletAfficherClient->Name = L"OngletAfficherClient";
+			this->OngletAfficherClient->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherClient->Text = L"Afficher";
+			this->OngletAfficherClient->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAfficherClient);
+			// 
+			// OngletCommande
+			// 
+			this->OngletCommande->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->OngletPasserCommande,
+					this->OngletModifierCommande, this->OngletSupprimerCommande, this->OngletAfficherCommande
+			});
+			this->OngletCommande->Name = L"OngletCommande";
+			this->OngletCommande->Size = System::Drawing::Size(82, 20);
+			this->OngletCommande->Text = L"Commande";
+			// 
+			// OngletPasserCommande
+			// 
+			this->OngletPasserCommande->Name = L"OngletPasserCommande";
+			this->OngletPasserCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletPasserCommande->Text = L"Passer commande";
+			this->OngletPasserCommande->Click += gcnew System::EventHandler(this, &MyForm::OngletPasserCommande_Click);
+			// 
+			// OngletModifierCommande
+			// 
+			this->OngletModifierCommande->Name = L"OngletModifierCommande";
+			this->OngletModifierCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletModifierCommande->Text = L"Modifier";
+			// 
+			// OngletSupprimerCommande
+			// 
+			this->OngletSupprimerCommande->Name = L"OngletSupprimerCommande";
+			this->OngletSupprimerCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletSupprimerCommande->Text = L"Supprimer";
+			// 
+			// OngletAfficherCommande
+			// 
+			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
+			this->OngletAfficherCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletAfficherCommande->Text = L"Afficher";
 			// 
 			// EcranAfficherArticle
 			// 
@@ -2631,8 +2691,8 @@ private: System::Windows::Forms::Label^ label10;
 			this->EcranIdle->Controls->Add(this->MenuOnglet);
 			this->EcranIdle->Controls->Add(this->EcranAfficherClient);
 			this->EcranIdle->Controls->Add(this->EcranAfficherPersonnel);
-			this->EcranIdle->Controls->Add(this->EcranPasserCommande);
 			this->EcranIdle->Controls->Add(this->EcranAjoutPersonnel);
+			this->EcranIdle->Controls->Add(this->EcranPasserCommande);
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
 			this->EcranIdle->Controls->Add(this->EcranAjoutArticle);
 			this->EcranIdle->Controls->Add(this->EcranSuprimerArticle);
@@ -3311,14 +3371,14 @@ private: System::Windows::Forms::Label^ label10;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->EcranConnexion->ResumeLayout(false);
 			this->EcranConnexion->PerformLayout();
+			this->EcranPasserCommande->ResumeLayout(false);
+			this->EcranPasserCommande->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->EcranVide->ResumeLayout(false);
 			this->EcranVide->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAccueil))->EndInit();
 			this->MenuOnglet->ResumeLayout(false);
 			this->MenuOnglet->PerformLayout();
-			this->EcranPasserCommande->ResumeLayout(false);
-			this->EcranPasserCommande->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->EcranAfficherArticle->ResumeLayout(false);
 			this->EcranAfficherArticle->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAfficherArticle))->EndInit();
@@ -3491,6 +3551,8 @@ private: System::Windows::Forms::Label^ label10;
 	}
 	private: System::Void OngletPasserCommande_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranPasserCommande->BringToFront();
+		this->labelReferencePasserCommande->Hide();
+		this->textBoxReferencePasserCommande->Hide();
 		dataGridView1->DataSource = commande1.afficherCommande("", textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickOngletModifierArticle(System::Object^ sender, System::EventArgs^ e) {
@@ -3596,5 +3658,11 @@ private: System::Windows::Forms::Label^ label10;
 		TextBoxMargeAccueil->Text = "";
 		TextBoxTVAAccueil->Text = "";
 	}
+    private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+		this->labelReferencePasserCommande->Show();
+		this->textBoxReferencePasserCommande->Show();
+		String^ reference = commande1.reference(textBoxIDCommandePasserCommande->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		textBoxReferencePasserCommande->Text = reference;
+    }
 };
 }
