@@ -604,6 +604,22 @@ private: System::Windows::Forms::Button^ ButtonValComAccueil;
 
 
 
+private: System::Windows::Forms::Button^ ButtonSimulTVAAccueil;
+
+private: System::Windows::Forms::Button^ ButtonSimulComAccueil;
+
+private: System::Windows::Forms::TextBox^ TextBoxMargeAccueil;
+
+private: System::Windows::Forms::Label^ label12;
+private: System::Windows::Forms::TextBox^ TextBoxTVAAccueil;
+
+private: System::Windows::Forms::Label^ label10;
+
+
+
+
+
+
 
 
 
@@ -690,6 +706,12 @@ private: System::Windows::Forms::Button^ ButtonValComAccueil;
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranConnexion = (gcnew System::Windows::Forms::Panel());
 			this->EcranVide = (gcnew System::Windows::Forms::Panel());
+			this->ButtonSimulTVAAccueil = (gcnew System::Windows::Forms::Button());
+			this->ButtonSimulComAccueil = (gcnew System::Windows::Forms::Button());
+			this->TextBoxMargeAccueil = (gcnew System::Windows::Forms::TextBox());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->TextBoxTVAAccueil = (gcnew System::Windows::Forms::TextBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->ButtonValAchatAccueil = (gcnew System::Windows::Forms::Button());
 			this->ButtonValComAccueil = (gcnew System::Windows::Forms::Button());
 			this->DataGridAccueil = (gcnew System::Windows::Forms::DataGridView());
@@ -1045,6 +1067,12 @@ private: System::Windows::Forms::Button^ ButtonValComAccueil;
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->EcranVide->AutoSize = true;
+			this->EcranVide->Controls->Add(this->ButtonSimulTVAAccueil);
+			this->EcranVide->Controls->Add(this->ButtonSimulComAccueil);
+			this->EcranVide->Controls->Add(this->TextBoxMargeAccueil);
+			this->EcranVide->Controls->Add(this->label12);
+			this->EcranVide->Controls->Add(this->TextBoxTVAAccueil);
+			this->EcranVide->Controls->Add(this->label10);
 			this->EcranVide->Controls->Add(this->ButtonValAchatAccueil);
 			this->EcranVide->Controls->Add(this->ButtonValComAccueil);
 			this->EcranVide->Controls->Add(this->DataGridAccueil);
@@ -1055,9 +1083,61 @@ private: System::Windows::Forms::Button^ ButtonValComAccueil;
 			this->EcranVide->Size = System::Drawing::Size(1000, 600);
 			this->EcranVide->TabIndex = 35;
 			// 
+			// ButtonSimulTVAAccueil
+			// 
+			this->ButtonSimulTVAAccueil->Location = System::Drawing::Point(793, 152);
+			this->ButtonSimulTVAAccueil->Name = L"ButtonSimulTVAAccueil";
+			this->ButtonSimulTVAAccueil->Size = System::Drawing::Size(102, 60);
+			this->ButtonSimulTVAAccueil->TabIndex = 15;
+			this->ButtonSimulTVAAccueil->Text = L"Simuler la valeur d\'achat avec des paramètres";
+			this->ButtonSimulTVAAccueil->UseVisualStyleBackColor = true;
+			this->ButtonSimulTVAAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickSimulTVAAccueil);
+			// 
+			// ButtonSimulComAccueil
+			// 
+			this->ButtonSimulComAccueil->Location = System::Drawing::Point(678, 152);
+			this->ButtonSimulComAccueil->Name = L"ButtonSimulComAccueil";
+			this->ButtonSimulComAccueil->Size = System::Drawing::Size(102, 60);
+			this->ButtonSimulComAccueil->TabIndex = 14;
+			this->ButtonSimulComAccueil->Text = L"Simuler la valeur commérciale avec des paramètres";
+			this->ButtonSimulComAccueil->UseVisualStyleBackColor = true;
+			this->ButtonSimulComAccueil->Click += gcnew System::EventHandler(this, &MyForm::ClickSimulMargeAccueil);
+			// 
+			// TextBoxMargeAccueil
+			// 
+			this->TextBoxMargeAccueil->Location = System::Drawing::Point(578, 192);
+			this->TextBoxMargeAccueil->Name = L"TextBoxMargeAccueil";
+			this->TextBoxMargeAccueil->Size = System::Drawing::Size(64, 20);
+			this->TextBoxMargeAccueil->TabIndex = 13;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(581, 177);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(66, 13);
+			this->label12->TabIndex = 12;
+			this->label12->Text = L"MargeCom%";
+			// 
+			// TextBoxTVAAccueil
+			// 
+			this->TextBoxTVAAccueil->Location = System::Drawing::Point(578, 152);
+			this->TextBoxTVAAccueil->Name = L"TextBoxTVAAccueil";
+			this->TextBoxTVAAccueil->Size = System::Drawing::Size(64, 20);
+			this->TextBoxTVAAccueil->TabIndex = 11;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(581, 136);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(36, 13);
+			this->label10->TabIndex = 10;
+			this->label10->Text = L"TVA%";
+			// 
 			// ButtonValAchatAccueil
 			// 
-			this->ButtonValAchatAccueil->Location = System::Drawing::Point(754, 65);
+			this->ButtonValAchatAccueil->Location = System::Drawing::Point(764, 66);
 			this->ButtonValAchatAccueil->Name = L"ButtonValAchatAccueil";
 			this->ButtonValAchatAccueil->Size = System::Drawing::Size(131, 61);
 			this->ButtonValAchatAccueil->TabIndex = 3;
@@ -1086,7 +1166,7 @@ private: System::Windows::Forms::Button^ ButtonValComAccueil;
 			// 
 			// ButtonStockSeuilAccueil
 			// 
-			this->ButtonStockSeuilAccueil->Location = System::Drawing::Point(575, 149);
+			this->ButtonStockSeuilAccueil->Location = System::Drawing::Point(578, 389);
 			this->ButtonStockSeuilAccueil->Name = L"ButtonStockSeuilAccueil";
 			this->ButtonStockSeuilAccueil->Size = System::Drawing::Size(131, 61);
 			this->ButtonStockSeuilAccueil->TabIndex = 0;
@@ -3232,6 +3312,7 @@ private: System::Windows::Forms::Button^ ButtonValComAccueil;
 			this->EcranConnexion->ResumeLayout(false);
 			this->EcranConnexion->PerformLayout();
 			this->EcranVide->ResumeLayout(false);
+			this->EcranVide->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridAccueil))->EndInit();
 			this->MenuOnglet->ResumeLayout(false);
 			this->MenuOnglet->PerformLayout();
@@ -3503,6 +3584,16 @@ private: System::Windows::Forms::Button^ ButtonValComAccueil;
 
 	private: System::Void ClickValAchatAccueil(System::Object^ sender, System::EventArgs^ e) {
 		MessageBox::Show("La valeur commerciale de l'intégralité du stock est : " + Convert::ToSingle(stat1.sommeStockAchat(textBox1->Text, textBox2->Text, textBox3->Text)) + "€");
+	}
+	private: System::Void ClickSimulMargeAccueil(System::Object^ sender, System::EventArgs^ e) {
+		MessageBox::Show("La valeur commerciale du stock serait de : " + stat1.simulCom(TextBoxMargeAccueil->Text, textBox1->Text, textBox2->Text, textBox3->Text) + " €");
+		TextBoxMargeAccueil->Text = "";
+		TextBoxTVAAccueil->Text = "";
+	}
+	private: System::Void ClickSimulTVAAccueil(System::Object^ sender, System::EventArgs^ e) {
+		MessageBox::Show("La valeur d'achat du stock serait de : " + stat1.simulAchat(TextBoxMargeAccueil->Text,TextBoxTVAAccueil->Text, textBox1->Text, textBox2->Text, textBox3->Text) + " €");
+		TextBoxMargeAccueil->Text = "";
+		TextBoxTVAAccueil->Text = "";
 	}
 };
 }

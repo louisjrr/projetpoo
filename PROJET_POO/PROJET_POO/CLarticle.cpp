@@ -34,7 +34,7 @@ DataTable^ CLarticle::afficherArticle(String^ ip, String^ user, String^ mdp)
     obj.connect(ip, user, mdp);
     obj.disconnect();
 
-    String^ queryString = "SELECT id_article, designation, nom_categorie, prixHT, stock, seuil, TVA from Article INNER JOIN Categorie WHERE Article.id_categorie = Categorie.id_categorie; ";
+    String^ queryString = "SELECT id_article, designation, nom_categorie, prixHT, stock, seuil, tva as 'TVA%' from Article INNER JOIN Categorie WHERE Article.id_categorie = Categorie.id_categorie; ";
     return obj.receiveSQLTable(queryString);
 
 }
