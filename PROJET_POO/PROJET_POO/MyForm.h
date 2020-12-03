@@ -2330,7 +2330,6 @@ namespace PROJETPOO {
 			this->EcranIdle->Controls->Add(this->EcranAfficherPersonnel);
 			this->EcranIdle->Controls->Add(this->EcranAjoutPersonnel);
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
-			this->EcranIdle->Controls->Add(this->EcranAjoutArticle);
 			this->EcranIdle->Controls->Add(this->EcranSuprimerArticle);
 			this->EcranIdle->Controls->Add(this->EcranSupprimerClient);
 			this->EcranIdle->Controls->Add(this->EcranModifierArticle);
@@ -2378,7 +2377,7 @@ namespace PROJETPOO {
 			this->MenuOnglet->Location = System::Drawing::Point(0, 0);
 			this->MenuOnglet->Name = L"MenuOnglet";
 			this->MenuOnglet->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
-			this->MenuOnglet->Size = System::Drawing::Size(400, 38);
+			this->MenuOnglet->Size = System::Drawing::Size(320, 28);
 			this->MenuOnglet->TabIndex = 33;
 			this->MenuOnglet->Text = L"menuStrip1";
 			// 
@@ -2389,7 +2388,7 @@ namespace PROJETPOO {
 					this->OngletModifierArticle, this->OngletSupprimerArticle, this->OngletAfficherArticle
 			});
 			this->OngletArticle->Name = L"OngletArticle";
-			this->OngletArticle->Size = System::Drawing::Size(66, 34);
+			this->OngletArticle->Size = System::Drawing::Size(66, 24);
 			this->OngletArticle->Text = L"Article";
 			// 
 			// OngletAjoutArticle
@@ -2427,7 +2426,7 @@ namespace PROJETPOO {
 					this->OngletModifierPersonnel, this->OngletSupprimerPersonnel, this->OngletAfficherPersonnel
 			});
 			this->OngletPersonnel->Name = L"OngletPersonnel";
-			this->OngletPersonnel->Size = System::Drawing::Size(86, 34);
+			this->OngletPersonnel->Size = System::Drawing::Size(86, 24);
 			this->OngletPersonnel->Text = L"Personnel";
 			// 
 			// OngletAjoutPersonnel
@@ -2463,7 +2462,7 @@ namespace PROJETPOO {
 					this->OngletModifierClient, this->OngletSupprimerClient, this->OngletAfficherClient
 			});
 			this->OngletClient->Name = L"OngletClient";
-			this->OngletClient->Size = System::Drawing::Size(61, 34);
+			this->OngletClient->Size = System::Drawing::Size(61, 24);
 			this->OngletClient->Text = L"Client";
 			// 
 			// OngletAjoutClient
@@ -2501,7 +2500,7 @@ namespace PROJETPOO {
 					this->OngletModifierCommande, this->OngletSupprimerCommande, this->OngletAfficherCommande
 			});
 			this->OngletCommande->Name = L"OngletCommande";
-			this->OngletCommande->Size = System::Drawing::Size(100, 34);
+			this->OngletCommande->Size = System::Drawing::Size(100, 24);
 			this->OngletCommande->Text = L"Commande";
 			// 
 			// OngletPasserCommande
