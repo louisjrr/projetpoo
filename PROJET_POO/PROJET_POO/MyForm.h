@@ -1941,7 +1941,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranPasserCommande->Controls->Add(this->label10);
 			this->EcranPasserCommande->Controls->Add(this->label12);
 			this->EcranPasserCommande->Controls->Add(this->button1);
-			this->EcranPasserCommande->Location = System::Drawing::Point(0, 188);
+			this->EcranPasserCommande->Location = System::Drawing::Point(0, 27);
 			this->EcranPasserCommande->Name = L"EcranPasserCommande";
 			this->EcranPasserCommande->Size = System::Drawing::Size(1000, 600);
 			this->EcranPasserCommande->TabIndex = 39;
@@ -2008,7 +2008,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->MenuOnglet->Location = System::Drawing::Point(0, 0);
 			this->MenuOnglet->Name = L"MenuOnglet";
 			this->MenuOnglet->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->MenuOnglet->Size = System::Drawing::Size(262, 24);
+			this->MenuOnglet->Size = System::Drawing::Size(382, 24);
 			this->MenuOnglet->TabIndex = 33;
 			this->MenuOnglet->Text = L"menuStrip1";
 			// 
@@ -2137,26 +2137,26 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			// OngletPasserCommande
 			// 
 			this->OngletPasserCommande->Name = L"OngletPasserCommande";
-			this->OngletPasserCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletPasserCommande->Size = System::Drawing::Size(180, 22);
 			this->OngletPasserCommande->Text = L"Passer commande";
 			this->OngletPasserCommande->Click += gcnew System::EventHandler(this, &MyForm::OngletPasserCommande_Click);
 			// 
 			// OngletModifierCommande
 			// 
 			this->OngletModifierCommande->Name = L"OngletModifierCommande";
-			this->OngletModifierCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletModifierCommande->Size = System::Drawing::Size(180, 22);
 			this->OngletModifierCommande->Text = L"Modifier";
 			// 
 			// OngletSupprimerCommande
 			// 
 			this->OngletSupprimerCommande->Name = L"OngletSupprimerCommande";
-			this->OngletSupprimerCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletSupprimerCommande->Size = System::Drawing::Size(180, 22);
 			this->OngletSupprimerCommande->Text = L"Supprimer";
 			// 
 			// OngletAfficherCommande
 			// 
 			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
-			this->OngletAfficherCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletAfficherCommande->Size = System::Drawing::Size(180, 22);
 			this->OngletAfficherCommande->Text = L"Afficher";
 			// 
 			// EcranAfficherClient
@@ -2930,6 +2930,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 	}
 	private: System::Void ClickOngletSupprimerClient(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranSupprimerClient->BringToFront();
+		DataGridSupprimerClient->DataSource = client1.afficherModifier(textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickChercherSupprimerClient(System::Object^ sender, System::EventArgs^ e) {
 		DataGridSupprimerClient->DataSource = client1.recherchSupprimer(TextBoxNomSupprimerClient->Text, TextBoxPrenomSupprimerClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
@@ -2992,7 +2993,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 	}
     private: System::Void OngletPasserCommande_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranPasserCommande->BringToFront();
-		textBox2LettrePrenom->Text = commande1.reference("louis", "aert", "2010", "val de reuil");
+		textBox2LettrePrenom->Text = commande1.reference("louis", textBox1->Text, textBox2->Text, textBox3->Text);
     }
 	private: System::Void ClickOngletModifierArticle(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranModifierArticle->BringToFront();
@@ -3041,7 +3042,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 		TextBoxIDModificationClient->Text = "";
 		TextBoxModifAdrADRFacClient->Text = "";
 		TextBoxModifVilleADRFacClient->Text = "";
-		TextBoxModifCpADRLivClient->Text = "";
+		TextBoxModifCpADRFacClient->Text = "";
 	}
 	private: System::Void ClickModifNaissModifierClient(System::Object^ sender, System::EventArgs^ e) {
 		client1.modifierNaiss(TextBoxIDModificationClient->Text, TextBoxModifAnModificationClient->Text + "-" + TextBoxModifMoisModificationClient->Text + "-" + TextBoxModifJourModificationClient->Text, textBox1->Text, textBox2->Text, textBox3->Text);
