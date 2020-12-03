@@ -46,7 +46,7 @@ DataTable^ CLarticle::afficherCategAjout(String^ ip, String^ user, String^ mdp)
     obj.connect(ip, user, mdp);
     obj.disconnect();
 
-    String^ queryString = "SELECT nom_categorie from Categorie; ";
+    String^ queryString = "SELECT id_categorie, nom_categorie from Categorie; ";
     return obj.receiveSQLTable(queryString);
 
 }

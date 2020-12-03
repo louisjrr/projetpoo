@@ -845,15 +845,15 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			this->EcranAjoutArticle->Location = System::Drawing::Point(0, 27);
 			this->EcranAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->EcranAjoutArticle->Name = L"EcranAjoutArticle";
-			this->EcranAjoutArticle->Size = System::Drawing::Size(1090, 600);
+			this->EcranAjoutArticle->Size = System::Drawing::Size(1000, 600);
 			this->EcranAjoutArticle->TabIndex = 37;
 			// 
 			// DataGridCategAjoutArticle
 			// 
 			this->DataGridCategAjoutArticle->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->DataGridCategAjoutArticle->Location = System::Drawing::Point(792, 157);
+			this->DataGridCategAjoutArticle->Location = System::Drawing::Point(689, 157);
 			this->DataGridCategAjoutArticle->Name = L"DataGridCategAjoutArticle";
-			this->DataGridCategAjoutArticle->Size = System::Drawing::Size(135, 259);
+			this->DataGridCategAjoutArticle->Size = System::Drawing::Size(283, 259);
 			this->DataGridCategAjoutArticle->TabIndex = 41;
 			// 
 			// DataGridArticleAjoutArticle
@@ -862,15 +862,15 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			this->DataGridArticleAjoutArticle->Location = System::Drawing::Point(34, 152);
 			this->DataGridArticleAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->DataGridArticleAjoutArticle->Name = L"DataGridArticleAjoutArticle";
-			this->DataGridArticleAjoutArticle->Size = System::Drawing::Size(690, 292);
+			this->DataGridArticleAjoutArticle->Size = System::Drawing::Size(598, 292);
 			this->DataGridArticleAjoutArticle->TabIndex = 40;
 			// 
 			// ButtonAjoutCategAjoutClient
 			// 
-			this->ButtonAjoutCategAjoutClient->Location = System::Drawing::Point(819, 465);
+			this->ButtonAjoutCategAjoutClient->Location = System::Drawing::Point(787, 468);
 			this->ButtonAjoutCategAjoutClient->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonAjoutCategAjoutClient->Name = L"ButtonAjoutCategAjoutClient";
-			this->ButtonAjoutCategAjoutClient->Size = System::Drawing::Size(88, 19);
+			this->ButtonAjoutCategAjoutClient->Size = System::Drawing::Size(108, 19);
 			this->ButtonAjoutCategAjoutClient->TabIndex = 39;
 			this->ButtonAjoutCategAjoutClient->Text = L"Ajouter la catégorie";
 			this->ButtonAjoutCategAjoutClient->UseVisualStyleBackColor = true;
@@ -878,7 +878,7 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			// 
 			// TextBoxAjoutCategAjoutArticle
 			// 
-			this->TextBoxAjoutCategAjoutArticle->Location = System::Drawing::Point(792, 441);
+			this->TextBoxAjoutCategAjoutArticle->Location = System::Drawing::Point(773, 444);
 			this->TextBoxAjoutCategAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxAjoutCategAjoutArticle->Name = L"TextBoxAjoutCategAjoutArticle";
 			this->TextBoxAjoutCategAjoutArticle->Size = System::Drawing::Size(135, 20);
@@ -947,6 +947,7 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			this->ButtonAjoutArticle->TabIndex = 31;
 			this->ButtonAjoutArticle->Text = L"Ajouter l\'article";
 			this->ButtonAjoutArticle->UseVisualStyleBackColor = true;
+			this->ButtonAjoutArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickAjoutArticleAjoutArticle);
 			// 
 			// PrixHTC
 			// 
@@ -964,9 +965,9 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			this->LabelCategAjoutArticle->Location = System::Drawing::Point(213, 67);
 			this->LabelCategAjoutArticle->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LabelCategAjoutArticle->Name = L"LabelCategAjoutArticle";
-			this->LabelCategAjoutArticle->Size = System::Drawing::Size(52, 13);
+			this->LabelCategAjoutArticle->Size = System::Drawing::Size(66, 13);
 			this->LabelCategAjoutArticle->TabIndex = 29;
-			this->LabelCategAjoutArticle->Text = L"Catégorie";
+			this->LabelCategAjoutArticle->Text = L"ID Catégorie";
 			// 
 			// LabelNomAjoutArticle
 			// 
@@ -1480,9 +1481,9 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			this->EcranIdle->Controls->Add(this->EcranAfficherPersonnel);
 			this->EcranIdle->Controls->Add(this->EcranAjoutPersonnel);
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
+			this->EcranIdle->Controls->Add(this->EcranAjoutArticle);
 			this->EcranIdle->Controls->Add(this->EcranModifierClient);
 			this->EcranIdle->Controls->Add(this->EcranSupprimerClient);
-			this->EcranIdle->Controls->Add(this->EcranAjoutArticle);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Name = L"EcranIdle";
 			this->EcranIdle->Size = System::Drawing::Size(1000, 900);
@@ -2232,6 +2233,7 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			this->Controls->Add(this->EcranIdle);
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MyForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Gestionnaire BDD";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
@@ -2367,6 +2369,10 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 	private: System::Void ClickAjoutCategAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
 		article1.creerCateg(TextBoxAjoutCategAjoutArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("Catégorie ajoutée !");
+	}
+	private: System::Void ClickAjoutArticleAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
+		article1.creer(TextBoxNomAjoutArticle->Text, TextBoxCategAjoutArticle->Text, TextBoxPrixAjoutArticle->Text, TextBoxStockAjoutArticle->Text, TextBoxSeuilAjoutArticle->Text, TextBoxTVAAjoutArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		MessageBox::Show("Article ajouté !");
 	}
 };
 }
