@@ -456,6 +456,7 @@ private: System::Windows::Forms::DataGridView^ DataGridArticleAjoutArticle;
 
 private: System::Windows::Forms::Button^ ButtonAjoutCategAjoutClient;
 private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
+private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 
 
 
@@ -545,6 +546,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranConnexion = (gcnew System::Windows::Forms::Panel());
 			this->EcranAjoutArticle = (gcnew System::Windows::Forms::Panel());
+			this->DataGridCategAjoutArticle = (gcnew System::Windows::Forms::DataGridView());
 			this->DataGridArticleAjoutArticle = (gcnew System::Windows::Forms::DataGridView());
 			this->ButtonAjoutCategAjoutClient = (gcnew System::Windows::Forms::Button());
 			this->TextBoxAjoutCategAjoutArticle = (gcnew System::Windows::Forms::TextBox());
@@ -690,6 +692,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
 			this->EcranAjoutArticle->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridCategAjoutArticle))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridArticleAjoutArticle))->BeginInit();
 			this->EcranModifierClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->BeginInit();
@@ -806,6 +809,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->EcranAjoutArticle->AutoSize = true;
+			this->EcranAjoutArticle->Controls->Add(this->DataGridCategAjoutArticle);
 			this->EcranAjoutArticle->Controls->Add(this->DataGridArticleAjoutArticle);
 			this->EcranAjoutArticle->Controls->Add(this->ButtonAjoutCategAjoutClient);
 			this->EcranAjoutArticle->Controls->Add(this->TextBoxAjoutCategAjoutArticle);
@@ -827,12 +831,20 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			this->EcranAjoutArticle->Size = System::Drawing::Size(1000, 600);
 			this->EcranAjoutArticle->TabIndex = 37;
 			// 
+			// DataGridCategAjoutArticle
+			// 
+			this->DataGridCategAjoutArticle->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DataGridCategAjoutArticle->Location = System::Drawing::Point(809, 187);
+			this->DataGridCategAjoutArticle->Name = L"DataGridCategAjoutArticle";
+			this->DataGridCategAjoutArticle->Size = System::Drawing::Size(155, 226);
+			this->DataGridCategAjoutArticle->TabIndex = 41;
+			// 
 			// DataGridArticleAjoutArticle
 			// 
 			this->DataGridArticleAjoutArticle->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->DataGridArticleAjoutArticle->Location = System::Drawing::Point(45, 187);
 			this->DataGridArticleAjoutArticle->Name = L"DataGridArticleAjoutArticle";
-			this->DataGridArticleAjoutArticle->Size = System::Drawing::Size(679, 197);
+			this->DataGridArticleAjoutArticle->Size = System::Drawing::Size(679, 288);
 			this->DataGridArticleAjoutArticle->TabIndex = 40;
 			// 
 			// ButtonAjoutCategAjoutClient
@@ -2123,6 +2135,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			this->EcranConnexion->PerformLayout();
 			this->EcranAjoutArticle->ResumeLayout(false);
 			this->EcranAjoutArticle->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridCategAjoutArticle))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridArticleAjoutArticle))->EndInit();
 			this->EcranModifierClient->ResumeLayout(false);
 			this->EcranModifierClient->PerformLayout();
@@ -2225,13 +2238,15 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 		this->TextBoxModifPrenomModificationClient->Text = "";
 	}
 	private: System::Void ClickAfficherModificationClient(System::Object^ sender, System::EventArgs^ e) {
-	DataGridModifierClient->DataSource = client1.afficherModifier(textBox1->Text, textBox2->Text, textBox3->Text);
+		DataGridModifierClient->DataSource = client1.afficherModifier(textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickOngletAjoutPersonnel(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranAjoutPersonnel->BringToFront();
 	}
 	private: System::Void ClickOngletAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranAjoutArticle->BringToFront();
+		DataGridCategAjoutArticle->DataSource = article1.afficherCategAjout(textBox1->Text, textBox2->Text, textBox3->Text);
+		DataGridArticleAjoutArticle->DataSource = article1.afficherArticleAjout(textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickAjoutCategAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
 		article1.creerCateg(TextBoxAjoutCategAjoutArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);

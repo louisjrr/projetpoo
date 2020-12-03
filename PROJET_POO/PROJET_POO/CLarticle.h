@@ -7,6 +7,8 @@ public:
     void creer(String^ nom, String^ categorie, String^ prix, String^ stock, String^ seuil, String^ tva, String^ ip, String^ user, String^ mdp);
     void creerCateg(String^ categorie, String^ ip, String^ user, String^ mdp);
 
+    DataTable^ afficherCategAjout(String^ ip, String^ user, String^ mdp);
+    DataTable^ afficherArticleAjout(String^ ip, String^ user, String^ mdp);
     /*
     DataTable^ recherchmodifier(String^, String^, String^ ip, String^ user, String^ mdp);
     DataTable^ recherchSupprimer(String^ _nom, String^ _prenom, String^ ip, String^ user, String^ mdp);

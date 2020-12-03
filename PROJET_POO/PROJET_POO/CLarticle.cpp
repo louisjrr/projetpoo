@@ -12,7 +12,7 @@ void CLarticle::creer(String^ nom, String^ categorie, String^ prix, String^ stoc
     obj.connect(ip, user, mdp);
     obj.disconnect();
 
-    String^ queryString = "INSERT INTO BDDProjet.Article(designation, prixHT, stock, seuil, tva,) VALUES ('"+nom+ "', '" +prix+ "', '" +stock+ "', '" +seuil+ "', '" +tva+ "');";
+    String^ queryString = "INSERT INTO BDDProjet.Article(designation, prixHT, stock, seuil, tva) VALUES ('"+nom+ "', '" +prix+ "', '" +stock+ "', '" +seuil+ "', '" +tva+ "');";
     obj.sendSQL(queryString);
 
 }
@@ -28,6 +28,28 @@ void CLarticle::creerCateg(String^ nom, String^ ip, String^ user, String^ mdp)
 
 }
 
+DataTable^ CLarticle::afficherArticleAjout(String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "SELECT designation, nom_categorie, prixHT, stock, seuil, TVA from Article INNER JOIN Categorie WHERE Article.id_categorie = Categorie.id_categorie; ";
+    return obj.receiveSQLTable(queryString);
+
+}
+
+DataTable^ CLarticle::afficherCategAjout(String^ ip, String^ user, String^ mdp)
+{
+
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "SELECT nom_categorie from Categorie; ";
+    return obj.receiveSQLTable(queryString);
+
+}
 /*
 void CLarticle::modifier(String^, double, int, int, double, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
