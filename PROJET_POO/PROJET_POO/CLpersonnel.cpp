@@ -30,14 +30,14 @@ void CLpersonnel::supprimer(String^ id, String^ _nom, String^ _prenom, String^ _
     obj.connect(adresse_ip, utilisateur, MDP);
     obj.disconnect();
 
-    String^ queryString = "DELETE FROM Adresse WHERE '" + id + "' = id_Personnel OR '" + id + "' = id_client_ADR_LIVRAISON;";
-    obj.sendSQL(queryString);
+    //String^ queryString = "DELETE FROM Adresse WHERE '" + id + "' = id_Personnel OR '" + id + "' = id_client_ADR_LIVRAISON;";
+    //obj.sendSQL(queryString);
 
-    queryString = "DELETE FROM Client WHERE '" + id + "' = id_Client;";
-    obj.sendSQL(queryString);
+    //queryString = "DELETE FROM Client WHERE '" + id + "' = id_Client;";
+    //obj.sendSQL(queryString);
 }
 
-DataTable^ CLpersonnel::afficher(String^ _nom, String^ _prenom, String^ _superieur, String^ _hireDate, String^ _adresse, String^ ville, String^ cp, String^ adresse_ip, String^ utilisateur, String^ MDP)
+DataTable^ CLpersonnel::afficher(String^ _nom, String^ _prenom, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;
     obj.connect(adresse_ip, utilisateur, MDP);
@@ -50,13 +50,13 @@ DataTable^ CLpersonnel::afficher(String^ _nom, String^ _prenom, String^ _superie
         DataTable^ listePersonnel = obj.receiveSQLTable(queryString);
         return listePersonnel;
     }
-    else if (_prenom == "")
+    else if (_prenom == "")//sa marche pas pb SYNTAX
     {
         String^ queryString = "SELECT Personnel.id_personnel, nom_personnel, prenom_personnel, superieur, hireDate, adresse, ville, cp FROM Personnel INNER JOIN Adresse WHERE nom_personnel = '" + _nom + "' AND (Personnel.id_personnel = Adresse.id_personnel; ";
         DataTable^ listePersonnel = obj.receiveSQLTable(queryString);
         return listePersonnel;
     }
-    else if (_nom == "")
+    else if (_nom == "")//sa marche pas pb SYNTAX
     {
         String^ queryString = "SELECT Personnel.id_personnel, nom_personnel, prenom_personnel, superieur, hireDate, adresse, ville, cp FROM Personnel INNER JOIN Adresse WHERE prenom_personnel = '" + _prenom + "' AND(Personnel.id_personnel = Adresse.id_personnel; ";
         DataTable^ listePersonnel = obj.receiveSQLTable(queryString);
