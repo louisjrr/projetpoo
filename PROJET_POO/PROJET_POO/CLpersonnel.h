@@ -7,7 +7,7 @@ public:
     void creer(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
     void modifier(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
     void supprimer(String^ id, String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
-    DataTable^ afficher(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
+    DataTable^ afficher(String^, String^, String^, String^, String^);
 private:
     String^ superieur;
     String^ hireDate;
