@@ -2,6 +2,7 @@
 #include "CL_CAD.h"
 #include "CLclient.h"
 #include "CLpersonnel.h"
+#include "CLarticle.h"
 
 namespace PROJETPOO {
 
@@ -428,6 +429,36 @@ private: System::Windows::Forms::TextBox^ textBox8;
 private: System::Windows::Forms::TextBox^ textBox9;
 private: System::Windows::Forms::TextBox^ textBox10;
 private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
+private: System::Windows::Forms::Panel^ EcranAjoutArticle;
+private: System::Windows::Forms::Button^ ButtonAjoutArticle;
+
+private: System::Windows::Forms::Label^ PrixHTC;
+
+private: System::Windows::Forms::Label^ LabelCategAjoutArticle;
+
+private: System::Windows::Forms::Label^ LabelNomAjoutArticle;
+private: System::Windows::Forms::TextBox^ TextBoxStockAjoutArticle;
+
+
+
+private: System::Windows::Forms::TextBox^ TextBoxNomAjoutArticle;
+private: System::Windows::Forms::TextBox^ TextBoxCategAjoutArticle;
+private: System::Windows::Forms::TextBox^ TextBoxPrixAjoutArticle;
+private: System::Windows::Forms::TextBox^ TextBoxSeuilAjoutArticle;
+
+
+
+private: System::Windows::Forms::Label^ label7;
+private: System::Windows::Forms::Label^ label6;
+private: System::Windows::Forms::Label^ label8;
+private: System::Windows::Forms::TextBox^ TextBoxTVAAjoutArticle;
+private: System::Windows::Forms::DataGridView^ DataGridArticleAjoutArticle;
+
+private: System::Windows::Forms::Button^ ButtonAjoutCategAjoutClient;
+private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
+
+
+
 
 
 
@@ -513,6 +544,23 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->ButtonConnexion = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranConnexion = (gcnew System::Windows::Forms::Panel());
+			this->EcranAjoutArticle = (gcnew System::Windows::Forms::Panel());
+			this->DataGridArticleAjoutArticle = (gcnew System::Windows::Forms::DataGridView());
+			this->ButtonAjoutCategAjoutClient = (gcnew System::Windows::Forms::Button());
+			this->TextBoxAjoutCategAjoutArticle = (gcnew System::Windows::Forms::TextBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->TextBoxTVAAjoutArticle = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->TextBoxPrixAjoutArticle = (gcnew System::Windows::Forms::TextBox());
+			this->TextBoxSeuilAjoutArticle = (gcnew System::Windows::Forms::TextBox());
+			this->ButtonAjoutArticle = (gcnew System::Windows::Forms::Button());
+			this->PrixHTC = (gcnew System::Windows::Forms::Label());
+			this->LabelCategAjoutArticle = (gcnew System::Windows::Forms::Label());
+			this->LabelNomAjoutArticle = (gcnew System::Windows::Forms::Label());
+			this->TextBoxStockAjoutArticle = (gcnew System::Windows::Forms::TextBox());
+			this->TextBoxNomAjoutArticle = (gcnew System::Windows::Forms::TextBox());
+			this->TextBoxCategAjoutArticle = (gcnew System::Windows::Forms::TextBox());
 			this->EcranModifierClient = (gcnew System::Windows::Forms::Panel());
 			this->ButtonAfficherModificationClient = (gcnew System::Windows::Forms::Button());
 			this->ButtonModifADRFacModificationClient = (gcnew System::Windows::Forms::Button());
@@ -564,7 +612,6 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->LeftToolStripPanel = (gcnew System::Windows::Forms::ToolStripPanel());
 			this->ContentPanel = (gcnew System::Windows::Forms::ToolStripContentPanel());
 			this->EcranIdle = (gcnew System::Windows::Forms::Panel());
-			this->EcranVide = (gcnew System::Windows::Forms::Panel());
 			this->MenuOnglet = (gcnew System::Windows::Forms::MenuStrip());
 			this->OngletArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->OngletAjoutArticle = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -586,6 +633,7 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->OngletModifierCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->OngletSupprimerCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->OngletAfficherCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->EcranVide = (gcnew System::Windows::Forms::Panel());
 			this->EcranAfficherClient = (gcnew System::Windows::Forms::Panel());
 			this->DataGridAfficherClient = (gcnew System::Windows::Forms::DataGridView());
 			this->TextBoxPrenomAfficherClient = (gcnew System::Windows::Forms::TextBox());
@@ -641,6 +689,8 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->TextBoxVilleAdrLivClient = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
+			this->EcranAjoutArticle->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridArticleAjoutArticle))->BeginInit();
 			this->EcranModifierClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->BeginInit();
 			this->EcranSupprimerClient->SuspendLayout();
@@ -749,6 +799,163 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->EcranConnexion->Name = L"EcranConnexion";
 			this->EcranConnexion->Size = System::Drawing::Size(1016, 600);
 			this->EcranConnexion->TabIndex = 18;
+			// 
+			// EcranAjoutArticle
+			// 
+			this->EcranAjoutArticle->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->EcranAjoutArticle->AutoSize = true;
+			this->EcranAjoutArticle->Controls->Add(this->DataGridArticleAjoutArticle);
+			this->EcranAjoutArticle->Controls->Add(this->ButtonAjoutCategAjoutClient);
+			this->EcranAjoutArticle->Controls->Add(this->TextBoxAjoutCategAjoutArticle);
+			this->EcranAjoutArticle->Controls->Add(this->label8);
+			this->EcranAjoutArticle->Controls->Add(this->TextBoxTVAAjoutArticle);
+			this->EcranAjoutArticle->Controls->Add(this->label7);
+			this->EcranAjoutArticle->Controls->Add(this->label6);
+			this->EcranAjoutArticle->Controls->Add(this->TextBoxPrixAjoutArticle);
+			this->EcranAjoutArticle->Controls->Add(this->TextBoxSeuilAjoutArticle);
+			this->EcranAjoutArticle->Controls->Add(this->ButtonAjoutArticle);
+			this->EcranAjoutArticle->Controls->Add(this->PrixHTC);
+			this->EcranAjoutArticle->Controls->Add(this->LabelCategAjoutArticle);
+			this->EcranAjoutArticle->Controls->Add(this->LabelNomAjoutArticle);
+			this->EcranAjoutArticle->Controls->Add(this->TextBoxStockAjoutArticle);
+			this->EcranAjoutArticle->Controls->Add(this->TextBoxNomAjoutArticle);
+			this->EcranAjoutArticle->Controls->Add(this->TextBoxCategAjoutArticle);
+			this->EcranAjoutArticle->Location = System::Drawing::Point(0, 27);
+			this->EcranAjoutArticle->Name = L"EcranAjoutArticle";
+			this->EcranAjoutArticle->Size = System::Drawing::Size(1000, 600);
+			this->EcranAjoutArticle->TabIndex = 37;
+			// 
+			// DataGridArticleAjoutArticle
+			// 
+			this->DataGridArticleAjoutArticle->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DataGridArticleAjoutArticle->Location = System::Drawing::Point(45, 187);
+			this->DataGridArticleAjoutArticle->Name = L"DataGridArticleAjoutArticle";
+			this->DataGridArticleAjoutArticle->Size = System::Drawing::Size(679, 197);
+			this->DataGridArticleAjoutArticle->TabIndex = 40;
+			// 
+			// ButtonAjoutCategAjoutClient
+			// 
+			this->ButtonAjoutCategAjoutClient->Location = System::Drawing::Point(829, 465);
+			this->ButtonAjoutCategAjoutClient->Name = L"ButtonAjoutCategAjoutClient";
+			this->ButtonAjoutCategAjoutClient->Size = System::Drawing::Size(118, 23);
+			this->ButtonAjoutCategAjoutClient->TabIndex = 39;
+			this->ButtonAjoutCategAjoutClient->Text = L"Ajouter la catégorie";
+			this->ButtonAjoutCategAjoutClient->UseVisualStyleBackColor = true;
+			this->ButtonAjoutCategAjoutClient->Click += gcnew System::EventHandler(this, &MyForm::ClickAjoutCategAjoutArticle);
+			// 
+			// TextBoxAjoutCategAjoutArticle
+			// 
+			this->TextBoxAjoutCategAjoutArticle->Location = System::Drawing::Point(809, 435);
+			this->TextBoxAjoutCategAjoutArticle->Name = L"TextBoxAjoutCategAjoutArticle";
+			this->TextBoxAjoutCategAjoutArticle->Size = System::Drawing::Size(155, 20);
+			this->TextBoxAjoutCategAjoutArticle->TabIndex = 38;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(611, 82);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(28, 13);
+			this->label8->TabIndex = 37;
+			this->label8->Text = L"TVA";
+			// 
+			// TextBoxTVAAjoutArticle
+			// 
+			this->TextBoxTVAAjoutArticle->Location = System::Drawing::Point(611, 101);
+			this->TextBoxTVAAjoutArticle->Name = L"TextBoxTVAAjoutArticle";
+			this->TextBoxTVAAjoutArticle->Size = System::Drawing::Size(50, 20);
+			this->TextBoxTVAAjoutArticle->TabIndex = 36;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(555, 82);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(30, 13);
+			this->label7->TabIndex = 35;
+			this->label7->Text = L"Seuil";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(492, 82);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(35, 13);
+			this->label6->TabIndex = 34;
+			this->label6->Text = L"Stock";
+			// 
+			// TextBoxPrixAjoutArticle
+			// 
+			this->TextBoxPrixAjoutArticle->Location = System::Drawing::Point(424, 101);
+			this->TextBoxPrixAjoutArticle->Name = L"TextBoxPrixAjoutArticle";
+			this->TextBoxPrixAjoutArticle->Size = System::Drawing::Size(53, 20);
+			this->TextBoxPrixAjoutArticle->TabIndex = 33;
+			// 
+			// TextBoxSeuilAjoutArticle
+			// 
+			this->TextBoxSeuilAjoutArticle->Location = System::Drawing::Point(551, 101);
+			this->TextBoxSeuilAjoutArticle->Name = L"TextBoxSeuilAjoutArticle";
+			this->TextBoxSeuilAjoutArticle->Size = System::Drawing::Size(50, 20);
+			this->TextBoxSeuilAjoutArticle->TabIndex = 32;
+			// 
+			// ButtonAjoutArticle
+			// 
+			this->ButtonAjoutArticle->Location = System::Drawing::Point(337, 150);
+			this->ButtonAjoutArticle->Name = L"ButtonAjoutArticle";
+			this->ButtonAjoutArticle->Size = System::Drawing::Size(118, 23);
+			this->ButtonAjoutArticle->TabIndex = 31;
+			this->ButtonAjoutArticle->Text = L"Ajouter l\'article";
+			this->ButtonAjoutArticle->UseVisualStyleBackColor = true;
+			// 
+			// PrixHTC
+			// 
+			this->PrixHTC->AutoSize = true;
+			this->PrixHTC->Location = System::Drawing::Point(426, 82);
+			this->PrixHTC->Name = L"PrixHTC";
+			this->PrixHTC->Size = System::Drawing::Size(39, 13);
+			this->PrixHTC->TabIndex = 30;
+			this->PrixHTC->Text = L"PrixHT";
+			// 
+			// LabelCategAjoutArticle
+			// 
+			this->LabelCategAjoutArticle->AutoSize = true;
+			this->LabelCategAjoutArticle->Location = System::Drawing::Point(310, 82);
+			this->LabelCategAjoutArticle->Name = L"LabelCategAjoutArticle";
+			this->LabelCategAjoutArticle->Size = System::Drawing::Size(52, 13);
+			this->LabelCategAjoutArticle->TabIndex = 29;
+			this->LabelCategAjoutArticle->Text = L"Catégorie";
+			// 
+			// LabelNomAjoutArticle
+			// 
+			this->LabelNomAjoutArticle->AutoSize = true;
+			this->LabelNomAjoutArticle->Location = System::Drawing::Point(160, 80);
+			this->LabelNomAjoutArticle->Name = L"LabelNomAjoutArticle";
+			this->LabelNomAjoutArticle->Size = System::Drawing::Size(63, 13);
+			this->LabelNomAjoutArticle->TabIndex = 28;
+			this->LabelNomAjoutArticle->Text = L"Désignation";
+			// 
+			// TextBoxStockAjoutArticle
+			// 
+			this->TextBoxStockAjoutArticle->Location = System::Drawing::Point(488, 101);
+			this->TextBoxStockAjoutArticle->Name = L"TextBoxStockAjoutArticle";
+			this->TextBoxStockAjoutArticle->Size = System::Drawing::Size(50, 20);
+			this->TextBoxStockAjoutArticle->TabIndex = 14;
+			// 
+			// TextBoxNomAjoutArticle
+			// 
+			this->TextBoxNomAjoutArticle->Location = System::Drawing::Point(124, 101);
+			this->TextBoxNomAjoutArticle->Name = L"TextBoxNomAjoutArticle";
+			this->TextBoxNomAjoutArticle->Size = System::Drawing::Size(129, 20);
+			this->TextBoxNomAjoutArticle->TabIndex = 12;
+			// 
+			// TextBoxCategAjoutArticle
+			// 
+			this->TextBoxCategAjoutArticle->Location = System::Drawing::Point(271, 101);
+			this->TextBoxCategAjoutArticle->Name = L"TextBoxCategAjoutArticle";
+			this->TextBoxCategAjoutArticle->Size = System::Drawing::Size(121, 20);
+			this->TextBoxCategAjoutArticle->TabIndex = 13;
 			// 
 			// EcranModifierClient
 			// 
@@ -1229,21 +1436,11 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
 			this->EcranIdle->Controls->Add(this->EcranModifierClient);
 			this->EcranIdle->Controls->Add(this->EcranSupprimerClient);
+			this->EcranIdle->Controls->Add(this->EcranAjoutArticle);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Name = L"EcranIdle";
 			this->EcranIdle->Size = System::Drawing::Size(1000, 900);
 			this->EcranIdle->TabIndex = 24;
-			// 
-			// EcranVide
-			// 
-			this->EcranVide->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->EcranVide->AutoSize = true;
-			this->EcranVide->Location = System::Drawing::Point(0, 27);
-			this->EcranVide->Name = L"EcranVide";
-			this->EcranVide->Size = System::Drawing::Size(1000, 900);
-			this->EcranVide->TabIndex = 35;
 			// 
 			// MenuOnglet
 			// 
@@ -1276,6 +1473,7 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->OngletAjoutArticle->Name = L"OngletAjoutArticle";
 			this->OngletAjoutArticle->Size = System::Drawing::Size(129, 22);
 			this->OngletAjoutArticle->Text = L"Ajouter";
+			this->OngletAjoutArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutArticle);
 			// 
 			// OngletModifierArticle
 			// 
@@ -1308,7 +1506,7 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			// OngletAjoutPersonnel
 			// 
 			this->OngletAjoutPersonnel->Name = L"OngletAjoutPersonnel";
-			this->OngletAjoutPersonnel->Size = System::Drawing::Size(180, 22);
+			this->OngletAjoutPersonnel->Size = System::Drawing::Size(129, 22);
 			this->OngletAjoutPersonnel->Text = L"Ajouter";
 			this->OngletAjoutPersonnel->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutPersonnel);
 			// 
@@ -1401,6 +1599,17 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
 			this->OngletAfficherCommande->Size = System::Drawing::Size(129, 22);
 			this->OngletAfficherCommande->Text = L"Afficher";
+			// 
+			// EcranVide
+			// 
+			this->EcranVide->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->EcranVide->AutoSize = true;
+			this->EcranVide->Location = System::Drawing::Point(0, 27);
+			this->EcranVide->Name = L"EcranVide";
+			this->EcranVide->Size = System::Drawing::Size(1000, 900);
+			this->EcranVide->TabIndex = 35;
 			// 
 			// EcranAfficherClient
 			// 
@@ -1912,6 +2121,9 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->EcranConnexion->ResumeLayout(false);
 			this->EcranConnexion->PerformLayout();
+			this->EcranAjoutArticle->ResumeLayout(false);
+			this->EcranAjoutArticle->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridArticleAjoutArticle))->EndInit();
 			this->EcranModifierClient->ResumeLayout(false);
 			this->EcranModifierClient->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->EndInit();
@@ -1939,6 +2151,7 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 		CL_CAD connexion;
 		CLclient client1;
 		CLpersonnel personnel1;
+		CLarticle article1;
 		/// 
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2016,6 +2229,13 @@ private: System::Windows::Forms::Button^ ButtonAfficherModificationClient;
 	}
 	private: System::Void ClickOngletAjoutPersonnel(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranAjoutPersonnel->BringToFront();
+	}
+	private: System::Void ClickOngletAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
+		this->EcranAjoutArticle->BringToFront();
+	}
+	private: System::Void ClickAjoutCategAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
+		article1.creerCateg(TextBoxAjoutCategAjoutArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		MessageBox::Show("Catégorie ajoutée !");
 	}
 };
 }

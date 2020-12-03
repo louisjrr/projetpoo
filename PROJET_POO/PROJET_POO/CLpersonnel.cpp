@@ -24,7 +24,7 @@ void CLpersonnel::modifier(String^ _nom, String^ _prenom, String^ _superieur, St
     throw gcnew System::NotImplementedException();
 }
 
-void CLpersonnel::supprimer(String^ _nom, String^ _prenom, String^ _superieur, String^ _hireDate, String^ _adresse, String^ ville, String^ cp, String^ adresse_ip, String^ utilisateur, String^ MDP)
+void CLpersonnel::supprimer(String^ id, String^ _nom, String^ _prenom, String^ _superieur, String^ _hireDate, String^ _adresse, String^ ville, String^ cp, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;
     obj.connect(adresse_ip, utilisateur, MDP);
