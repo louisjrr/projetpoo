@@ -1551,27 +1551,27 @@ private: System::Windows::Forms::TextBox^ TextBoxRecherchSupprimerArticle;
 			// OngletAjoutArticle
 			// 
 			this->OngletAjoutArticle->Name = L"OngletAjoutArticle";
-			this->OngletAjoutArticle->Size = System::Drawing::Size(180, 22);
+			this->OngletAjoutArticle->Size = System::Drawing::Size(129, 22);
 			this->OngletAjoutArticle->Text = L"Ajouter";
 			this->OngletAjoutArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutArticle);
 			// 
 			// OngletModifierArticle
 			// 
 			this->OngletModifierArticle->Name = L"OngletModifierArticle";
-			this->OngletModifierArticle->Size = System::Drawing::Size(180, 22);
+			this->OngletModifierArticle->Size = System::Drawing::Size(129, 22);
 			this->OngletModifierArticle->Text = L"Modifier";
 			// 
 			// OngletSupprimerArticle
 			// 
 			this->OngletSupprimerArticle->Name = L"OngletSupprimerArticle";
-			this->OngletSupprimerArticle->Size = System::Drawing::Size(180, 22);
+			this->OngletSupprimerArticle->Size = System::Drawing::Size(129, 22);
 			this->OngletSupprimerArticle->Text = L"Supprimer";
 			this->OngletSupprimerArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerArticle);
 			// 
 			// OngletAfficherArticle
 			// 
 			this->OngletAfficherArticle->Name = L"OngletAfficherArticle";
-			this->OngletAfficherArticle->Size = System::Drawing::Size(180, 22);
+			this->OngletAfficherArticle->Size = System::Drawing::Size(129, 22);
 			this->OngletAfficherArticle->Text = L"Afficher";
 			// 
 			// OngletPersonnel
@@ -2312,6 +2312,7 @@ private: System::Windows::Forms::TextBox^ TextBoxRecherchSupprimerArticle;
 			this->ButtonRecherchSupprimerArticle->TabIndex = 31;
 			this->ButtonRecherchSupprimerArticle->Text = L"Chercher parmis les articles";
 			this->ButtonRecherchSupprimerArticle->UseVisualStyleBackColor = true;
+			this->ButtonRecherchSupprimerArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickRecherchSupprimerArticle);
 			// 
 			// label11
 			// 
@@ -2495,6 +2496,10 @@ private: System::Windows::Forms::TextBox^ TextBoxRecherchSupprimerArticle;
 		article1.supprimer(TextBoxIDSupprimerArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("Article supprimé !");
 		DataGridSupprimerArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
+	}
+	private: System::Void ClickRecherchSupprimerArticle(System::Object^ sender, System::EventArgs^ e) {
+		article1.afficherSupprimer(TextBoxRecherchSupprimerArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		DataGridSupprimerArticle->DataSource = article1.afficherSupprimer(TextBoxRecherchSupprimerArticle->Text ,textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 };
 }

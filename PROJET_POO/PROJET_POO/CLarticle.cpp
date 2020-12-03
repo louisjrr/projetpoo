@@ -66,6 +66,17 @@ void CLarticle::supprimer(String^ id, String^ adresse_ip, String^ utilisateur, S
     obj.sendSQL(queryString);
 
 }
+
+DataTable^ CLarticle::afficherSupprimer(String^ nom, String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "SELECT * from Article WHERE designation = '" + nom + "';";
+    return obj.receiveSQLTable(queryString);
+}
+
 /*
 void CLarticle::afficher(String^, double, int, int, double, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
