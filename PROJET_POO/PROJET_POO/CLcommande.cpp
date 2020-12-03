@@ -37,13 +37,19 @@ String^ CLcommande::reference(String^ id_commande, String^ adresse_ip, String^ u
     return ref;
 }
 
-void CLcommande::passerCommande(String^ id_client, String^ id_article, int qte, String^ dateLivraison, String^ dateEmission, String^ datePaiement, String^ dateSolde, String^ adresse_ip, String^ utilisateur, String^ MDP)
+void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String^ designation, int qte, String^ dateLivraison, String^ dateEmission, String^ datePaiement, String^ dateSolde, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;
     obj.connect(adresse_ip, utilisateur, MDP);
     obj.disconnect();
 
-    String^ queryString = "SELECT prixHT FROM Article WHERE id_article = '"+id_article+"'";
+    String^ queryString = "SELECT id_client FROM Client WHERE nom_client = '" + nom_client + "' AND prenom_client = '" + prenom_client + "';";
+    String^ id_client = obj.receiveSQLString(queryString);
+
+    queryString = "SELECT id_article FROM Article WHERE designation = '" + designation + "';";
+    String^ id_article = obj.receiveSQLString(queryString);
+
+    queryString = "SELECT prixHT FROM Article WHERE id_article = '"+id_article+"'";
     String^ prixHT = obj.receiveSQLString(queryString);
 
     double totalHT = Convert::ToDouble(prixHT) * qte;
