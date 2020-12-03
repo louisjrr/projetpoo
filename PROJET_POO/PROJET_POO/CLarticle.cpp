@@ -12,7 +12,7 @@ void CLarticle::creer(String^ nom, String^ categorie, String^ prix, String^ stoc
     obj.connect(ip, user, mdp);
     obj.disconnect();
 
-    String^ queryString = "INSERT INTO BDDProjet.Article(designation, prixHT, stock, seuil, tva) VALUES ('"+nom+ "', '" +prix+ "', '" +stock+ "', '" +seuil+ "', '" +tva+ "');";
+    String^ queryString = "INSERT INTO BDDProjet.Article(designation, id_categorie, prixHT, stock, seuil, tva) VALUES ('"+nom+ "', '"+categorie+"', '" +prix+ "', '" +stock+ "', '" +seuil+ "', '" +tva+ "');";
     obj.sendSQL(queryString);
 
 }

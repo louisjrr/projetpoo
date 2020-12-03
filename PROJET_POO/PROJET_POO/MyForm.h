@@ -463,6 +463,7 @@ private: System::Windows::Forms::DataGridView^ DataGridArticleAjoutArticle;
 
 private: System::Windows::Forms::Button^ ButtonAjoutCategAjoutClient;
 private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
+private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 
 
 
@@ -552,6 +553,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranConnexion = (gcnew System::Windows::Forms::Panel());
 			this->EcranAjoutArticle = (gcnew System::Windows::Forms::Panel());
+			this->DataGridCategAjoutArticle = (gcnew System::Windows::Forms::DataGridView());
 			this->DataGridArticleAjoutArticle = (gcnew System::Windows::Forms::DataGridView());
 			this->ButtonAjoutCategAjoutClient = (gcnew System::Windows::Forms::Button());
 			this->TextBoxAjoutCategAjoutArticle = (gcnew System::Windows::Forms::TextBox());
@@ -704,6 +706,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
 			this->EcranAjoutArticle->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridCategAjoutArticle))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridArticleAjoutArticle))->BeginInit();
 			this->EcranModifierClient->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridModifierClient))->BeginInit();
@@ -728,7 +731,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			this->textBox1->AutoCompleteMode = System::Windows::Forms::AutoCompleteMode::Suggest;
 			this->textBox1->AutoCompleteSource = System::Windows::Forms::AutoCompleteSource::CustomSource;
 			this->textBox1->Location = System::Drawing::Point(281, 184);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(199, 20);
 			this->textBox1->TabIndex = 0;
@@ -736,7 +739,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// textBox2
 			// 
 			this->textBox2->Location = System::Drawing::Point(281, 228);
-			this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(199, 20);
 			this->textBox2->TabIndex = 4;
@@ -745,7 +748,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// textBox3
 			// 
 			this->textBox3->Location = System::Drawing::Point(281, 269);
-			this->textBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox3->Margin = System::Windows::Forms::Padding(2);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->PasswordChar = '*';
 			this->textBox3->Size = System::Drawing::Size(199, 20);
@@ -794,7 +797,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(541, 259);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(468, 326);
 			this->pictureBox1->TabIndex = 8;
@@ -811,9 +814,9 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			this->EcranConnexion->Controls->Add(this->LabelMdpConnexion);
 			this->EcranConnexion->Controls->Add(this->ButtonConnexion);
 			this->EcranConnexion->Controls->Add(this->pictureBox1);
-			this->EcranConnexion->Location = System::Drawing::Point(-3, 0);
+			this->EcranConnexion->Location = System::Drawing::Point(0, 0);
 			this->EcranConnexion->Name = L"EcranConnexion";
-			this->EcranConnexion->Size = System::Drawing::Size(1016, 600);
+			this->EcranConnexion->Size = System::Drawing::Size(1013, 600);
 			this->EcranConnexion->TabIndex = 18;
 			// 
 			// EcranAjoutArticle
@@ -822,6 +825,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->EcranAjoutArticle->AutoSize = true;
+			this->EcranAjoutArticle->Controls->Add(this->DataGridCategAjoutArticle);
 			this->EcranAjoutArticle->Controls->Add(this->DataGridArticleAjoutArticle);
 			this->EcranAjoutArticle->Controls->Add(this->ButtonAjoutCategAjoutClient);
 			this->EcranAjoutArticle->Controls->Add(this->TextBoxAjoutCategAjoutArticle);
@@ -839,24 +843,32 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			this->EcranAjoutArticle->Controls->Add(this->TextBoxNomAjoutArticle);
 			this->EcranAjoutArticle->Controls->Add(this->TextBoxCategAjoutArticle);
 			this->EcranAjoutArticle->Location = System::Drawing::Point(0, 27);
-			this->EcranAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->EcranAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->EcranAjoutArticle->Name = L"EcranAjoutArticle";
-			this->EcranAjoutArticle->Size = System::Drawing::Size(1000, 600);
+			this->EcranAjoutArticle->Size = System::Drawing::Size(1090, 600);
 			this->EcranAjoutArticle->TabIndex = 37;
+			// 
+			// DataGridCategAjoutArticle
+			// 
+			this->DataGridCategAjoutArticle->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DataGridCategAjoutArticle->Location = System::Drawing::Point(792, 157);
+			this->DataGridCategAjoutArticle->Name = L"DataGridCategAjoutArticle";
+			this->DataGridCategAjoutArticle->Size = System::Drawing::Size(135, 259);
+			this->DataGridCategAjoutArticle->TabIndex = 41;
 			// 
 			// DataGridArticleAjoutArticle
 			// 
 			this->DataGridArticleAjoutArticle->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->DataGridArticleAjoutArticle->Location = System::Drawing::Point(34, 152);
-			this->DataGridArticleAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->DataGridArticleAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->DataGridArticleAjoutArticle->Name = L"DataGridArticleAjoutArticle";
-			this->DataGridArticleAjoutArticle->Size = System::Drawing::Size(509, 160);
+			this->DataGridArticleAjoutArticle->Size = System::Drawing::Size(690, 292);
 			this->DataGridArticleAjoutArticle->TabIndex = 40;
 			// 
 			// ButtonAjoutCategAjoutClient
 			// 
-			this->ButtonAjoutCategAjoutClient->Location = System::Drawing::Point(622, 378);
-			this->ButtonAjoutCategAjoutClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ButtonAjoutCategAjoutClient->Location = System::Drawing::Point(819, 465);
+			this->ButtonAjoutCategAjoutClient->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonAjoutCategAjoutClient->Name = L"ButtonAjoutCategAjoutClient";
 			this->ButtonAjoutCategAjoutClient->Size = System::Drawing::Size(88, 19);
 			this->ButtonAjoutCategAjoutClient->TabIndex = 39;
@@ -866,10 +878,10 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// 
 			// TextBoxAjoutCategAjoutArticle
 			// 
-			this->TextBoxAjoutCategAjoutArticle->Location = System::Drawing::Point(607, 353);
-			this->TextBoxAjoutCategAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxAjoutCategAjoutArticle->Location = System::Drawing::Point(792, 441);
+			this->TextBoxAjoutCategAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxAjoutCategAjoutArticle->Name = L"TextBoxAjoutCategAjoutArticle";
-			this->TextBoxAjoutCategAjoutArticle->Size = System::Drawing::Size(117, 20);
+			this->TextBoxAjoutCategAjoutArticle->Size = System::Drawing::Size(135, 20);
 			this->TextBoxAjoutCategAjoutArticle->TabIndex = 38;
 			// 
 			// label8
@@ -885,7 +897,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// TextBoxTVAAjoutArticle
 			// 
 			this->TextBoxTVAAjoutArticle->Location = System::Drawing::Point(458, 82);
-			this->TextBoxTVAAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxTVAAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxTVAAjoutArticle->Name = L"TextBoxTVAAjoutArticle";
 			this->TextBoxTVAAjoutArticle->Size = System::Drawing::Size(38, 20);
 			this->TextBoxTVAAjoutArticle->TabIndex = 36;
@@ -913,7 +925,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// TextBoxPrixAjoutArticle
 			// 
 			this->TextBoxPrixAjoutArticle->Location = System::Drawing::Point(318, 82);
-			this->TextBoxPrixAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxPrixAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxPrixAjoutArticle->Name = L"TextBoxPrixAjoutArticle";
 			this->TextBoxPrixAjoutArticle->Size = System::Drawing::Size(41, 20);
 			this->TextBoxPrixAjoutArticle->TabIndex = 33;
@@ -921,17 +933,17 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// TextBoxSeuilAjoutArticle
 			// 
 			this->TextBoxSeuilAjoutArticle->Location = System::Drawing::Point(413, 82);
-			this->TextBoxSeuilAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxSeuilAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxSeuilAjoutArticle->Name = L"TextBoxSeuilAjoutArticle";
 			this->TextBoxSeuilAjoutArticle->Size = System::Drawing::Size(38, 20);
 			this->TextBoxSeuilAjoutArticle->TabIndex = 32;
 			// 
 			// ButtonAjoutArticle
 			// 
-			this->ButtonAjoutArticle->Location = System::Drawing::Point(253, 122);
-			this->ButtonAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ButtonAjoutArticle->Location = System::Drawing::Point(541, 79);
+			this->ButtonAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonAjoutArticle->Name = L"ButtonAjoutArticle";
-			this->ButtonAjoutArticle->Size = System::Drawing::Size(88, 19);
+			this->ButtonAjoutArticle->Size = System::Drawing::Size(88, 23);
 			this->ButtonAjoutArticle->TabIndex = 31;
 			this->ButtonAjoutArticle->Text = L"Ajouter l\'article";
 			this->ButtonAjoutArticle->UseVisualStyleBackColor = true;
@@ -949,7 +961,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// LabelCategAjoutArticle
 			// 
 			this->LabelCategAjoutArticle->AutoSize = true;
-			this->LabelCategAjoutArticle->Location = System::Drawing::Point(232, 67);
+			this->LabelCategAjoutArticle->Location = System::Drawing::Point(213, 67);
 			this->LabelCategAjoutArticle->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LabelCategAjoutArticle->Name = L"LabelCategAjoutArticle";
 			this->LabelCategAjoutArticle->Size = System::Drawing::Size(52, 13);
@@ -959,7 +971,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// LabelNomAjoutArticle
 			// 
 			this->LabelNomAjoutArticle->AutoSize = true;
-			this->LabelNomAjoutArticle->Location = System::Drawing::Point(120, 65);
+			this->LabelNomAjoutArticle->Location = System::Drawing::Point(101, 67);
 			this->LabelNomAjoutArticle->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LabelNomAjoutArticle->Name = L"LabelNomAjoutArticle";
 			this->LabelNomAjoutArticle->Size = System::Drawing::Size(63, 13);
@@ -969,7 +981,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// TextBoxStockAjoutArticle
 			// 
 			this->TextBoxStockAjoutArticle->Location = System::Drawing::Point(366, 82);
-			this->TextBoxStockAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxStockAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxStockAjoutArticle->Name = L"TextBoxStockAjoutArticle";
 			this->TextBoxStockAjoutArticle->Size = System::Drawing::Size(38, 20);
 			this->TextBoxStockAjoutArticle->TabIndex = 14;
@@ -977,7 +989,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// TextBoxNomAjoutArticle
 			// 
 			this->TextBoxNomAjoutArticle->Location = System::Drawing::Point(93, 82);
-			this->TextBoxNomAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxNomAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxNomAjoutArticle->Name = L"TextBoxNomAjoutArticle";
 			this->TextBoxNomAjoutArticle->Size = System::Drawing::Size(98, 20);
 			this->TextBoxNomAjoutArticle->TabIndex = 12;
@@ -985,7 +997,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// TextBoxCategAjoutArticle
 			// 
 			this->TextBoxCategAjoutArticle->Location = System::Drawing::Point(203, 82);
-			this->TextBoxCategAjoutArticle->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxCategAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxCategAjoutArticle->Name = L"TextBoxCategAjoutArticle";
 			this->TextBoxCategAjoutArticle->Size = System::Drawing::Size(92, 20);
 			this->TextBoxCategAjoutArticle->TabIndex = 13;
@@ -1332,7 +1344,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			this->EcranSupprimerClient->Controls->Add(this->TextBoxPrenomSupprimerClient);
 			this->EcranSupprimerClient->Controls->Add(this->TextBoxNomSupprimerClient);
 			this->EcranSupprimerClient->Location = System::Drawing::Point(0, 27);
-			this->EcranSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->EcranSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->EcranSupprimerClient->Name = L"EcranSupprimerClient";
 			this->EcranSupprimerClient->Size = System::Drawing::Size(1000, 600);
 			this->EcranSupprimerClient->TabIndex = 35;
@@ -1340,7 +1352,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// ButtonSupprimerSupprimerClient
 			// 
 			this->ButtonSupprimerSupprimerClient->Location = System::Drawing::Point(392, 373);
-			this->ButtonSupprimerSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ButtonSupprimerSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonSupprimerSupprimerClient->Name = L"ButtonSupprimerSupprimerClient";
 			this->ButtonSupprimerSupprimerClient->Size = System::Drawing::Size(88, 33);
 			this->ButtonSupprimerSupprimerClient->TabIndex = 35;
@@ -1351,7 +1363,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// TextBoxSupprimerSupprimerClient
 			// 
 			this->TextBoxSupprimerSupprimerClient->Location = System::Drawing::Point(397, 341);
-			this->TextBoxSupprimerSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxSupprimerSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxSupprimerSupprimerClient->Name = L"TextBoxSupprimerSupprimerClient";
 			this->TextBoxSupprimerSupprimerClient->Size = System::Drawing::Size(76, 20);
 			this->TextBoxSupprimerSupprimerClient->TabIndex = 34;
@@ -1370,7 +1382,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// 
 			this->DataGridSupprimerClient->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->DataGridSupprimerClient->Location = System::Drawing::Point(255, 37);
-			this->DataGridSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->DataGridSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->DataGridSupprimerClient->Name = L"DataGridSupprimerClient";
 			this->DataGridSupprimerClient->RowHeadersWidth = 51;
 			this->DataGridSupprimerClient->Size = System::Drawing::Size(466, 238);
@@ -1379,7 +1391,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// ButtonChercherSupprimerClient
 			// 
 			this->ButtonChercherSupprimerClient->Location = System::Drawing::Point(90, 103);
-			this->ButtonChercherSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ButtonChercherSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonChercherSupprimerClient->Name = L"ButtonChercherSupprimerClient";
 			this->ButtonChercherSupprimerClient->Size = System::Drawing::Size(127, 19);
 			this->ButtonChercherSupprimerClient->TabIndex = 31;
@@ -1410,7 +1422,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// TextBoxPrenomSupprimerClient
 			// 
 			this->TextBoxPrenomSupprimerClient->Location = System::Drawing::Point(98, 70);
-			this->TextBoxPrenomSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxPrenomSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxPrenomSupprimerClient->Name = L"TextBoxPrenomSupprimerClient";
 			this->TextBoxPrenomSupprimerClient->Size = System::Drawing::Size(114, 20);
 			this->TextBoxPrenomSupprimerClient->TabIndex = 10;
@@ -1418,7 +1430,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// TextBoxNomSupprimerClient
 			// 
 			this->TextBoxNomSupprimerClient->Location = System::Drawing::Point(98, 49);
-			this->TextBoxNomSupprimerClient->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TextBoxNomSupprimerClient->Margin = System::Windows::Forms::Padding(2);
 			this->TextBoxNomSupprimerClient->Name = L"TextBoxNomSupprimerClient";
 			this->TextBoxNomSupprimerClient->Size = System::Drawing::Size(114, 20);
 			this->TextBoxNomSupprimerClient->TabIndex = 9;
@@ -1483,7 +1495,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->EcranVide->AutoSize = true;
 			this->EcranVide->Location = System::Drawing::Point(0, 22);
-			this->EcranVide->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->EcranVide->Margin = System::Windows::Forms::Padding(2);
 			this->EcranVide->Name = L"EcranVide";
 			this->EcranVide->Size = System::Drawing::Size(1000, 600);
 			this->EcranVide->TabIndex = 35;
@@ -1626,25 +1638,25 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// OngletAjoutCommande
 			// 
 			this->OngletAjoutCommande->Name = L"OngletAjoutCommande";
-			this->OngletAjoutCommande->Size = System::Drawing::Size(180, 22);
+			this->OngletAjoutCommande->Size = System::Drawing::Size(129, 22);
 			this->OngletAjoutCommande->Text = L"Ajouter";
 			// 
 			// OngletModifierCommande
 			// 
 			this->OngletModifierCommande->Name = L"OngletModifierCommande";
-			this->OngletModifierCommande->Size = System::Drawing::Size(180, 22);
+			this->OngletModifierCommande->Size = System::Drawing::Size(129, 22);
 			this->OngletModifierCommande->Text = L"Modifier";
 			// 
 			// OngletSupprimerCommande
 			// 
 			this->OngletSupprimerCommande->Name = L"OngletSupprimerCommande";
-			this->OngletSupprimerCommande->Size = System::Drawing::Size(180, 22);
+			this->OngletSupprimerCommande->Size = System::Drawing::Size(129, 22);
 			this->OngletSupprimerCommande->Text = L"Supprimer";
 			// 
 			// OngletAfficherCommande
 			// 
 			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
-			this->OngletAfficherCommande->Size = System::Drawing::Size(180, 22);
+			this->OngletAfficherCommande->Size = System::Drawing::Size(129, 22);
 			this->OngletAfficherCommande->Text = L"Afficher";
 			// 
 			// EcranAfficherClient
@@ -1818,7 +1830,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// buttonAjoutPersonnel1
 			// 
 			this->buttonAjoutPersonnel1->Location = System::Drawing::Point(262, 343);
-			this->buttonAjoutPersonnel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->buttonAjoutPersonnel1->Margin = System::Windows::Forms::Padding(2);
 			this->buttonAjoutPersonnel1->Name = L"buttonAjoutPersonnel1";
 			this->buttonAjoutPersonnel1->Size = System::Drawing::Size(112, 24);
 			this->buttonAjoutPersonnel1->TabIndex = 32;
@@ -1829,7 +1841,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			// textBoxSuperieur1
 			// 
 			this->textBoxSuperieur1->Location = System::Drawing::Point(221, 173);
-			this->textBoxSuperieur1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBoxSuperieur1->Margin = System::Windows::Forms::Padding(2);
 			this->textBoxSuperieur1->Name = L"textBoxSuperieur1";
 			this->textBoxSuperieur1->Size = System::Drawing::Size(152, 20);
 			this->textBoxSuperieur1->TabIndex = 31;
@@ -2218,7 +2230,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			this->ClientSize = System::Drawing::Size(984, 561);
 			this->Controls->Add(this->EcranConnexion);
 			this->Controls->Add(this->EcranIdle);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MyForm";
 			this->Text = L"Gestionnaire BDD";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -2227,6 +2239,7 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 			this->EcranConnexion->PerformLayout();
 			this->EcranAjoutArticle->ResumeLayout(false);
 			this->EcranAjoutArticle->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridCategAjoutArticle))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridArticleAjoutArticle))->EndInit();
 			this->EcranModifierClient->ResumeLayout(false);
 			this->EcranModifierClient->PerformLayout();
@@ -2348,6 +2361,8 @@ private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 
 	private: System::Void ClickOngletAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranAjoutArticle->BringToFront();
+		DataGridCategAjoutArticle->DataSource = article1.afficherCategAjout(textBox1->Text, textBox2->Text, textBox3->Text);
+		DataGridArticleAjoutArticle->DataSource = article1.afficherArticleAjout(textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickAjoutCategAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
 		article1.creerCateg(TextBoxAjoutCategAjoutArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
