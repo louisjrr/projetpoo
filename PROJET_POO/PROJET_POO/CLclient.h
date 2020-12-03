@@ -1,6 +1,7 @@
 #pragma once
 #include "CL_CAD.h"
 
+
 ref class CLclient
 {
 public:
@@ -26,5 +27,5 @@ private:
     String^ prenomClient;
     String^ adresseLivClient;
     String^ adresseFacClient;
-};
 
+};

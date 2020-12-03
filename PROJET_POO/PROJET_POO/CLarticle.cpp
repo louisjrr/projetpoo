@@ -50,12 +50,41 @@ DataTable^ CLarticle::afficherCategAjout(String^ ip, String^ user, String^ mdp)
     return obj.receiveSQLTable(queryString);
 
 }
-/*
-void CLarticle::modifier(String^, double, int, int, double, String^ adresse_ip, String^ utilisateur, String^ MDP)
+
+void CLarticle::modifierDesignation(String^ id, String^ designation, String^ id_categorie, String^ ip, String^ user, String^ mdp)
 {
-    throw gcnew System::NotImplementedException();
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "UPDATE Article SET designation = '" + designation + "', id_categorie = '" + id_categorie + "' WHERE id_article = '" + id + "';  ";
+    obj.sendSQL(queryString);
 }
-*/
+
+void CLarticle::modifierPrix(String^ id, String^ prix, String^ TVA, String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "UPDATE Article SET prixHT = '" + prix + "', tva = '" + TVA + "' WHERE id_article = '" + id + "';  ";
+    obj.sendSQL(queryString);
+
+}
+
+void CLarticle::modifierStockSeuil(String^ id, String^ stock, String^ seuil, String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "UPDATE Article SET stock = '" + stock + "', seuil = '" + seuil + "' WHERE id_article = '" + id + "';  ";
+    obj.sendSQL(queryString);
+
+}
+
+
+
 void CLarticle::supprimer(String^ id, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;
@@ -67,19 +96,20 @@ void CLarticle::supprimer(String^ id, String^ adresse_ip, String^ utilisateur, S
 
 }
 
-DataTable^ CLarticle::afficherSupprimer(String^ nom, String^ ip, String^ user, String^ mdp)
+DataTable^ CLarticle::recherch(String^ nom, String^ ip, String^ user, String^ mdp)
 {
     CL_CAD obj;
     obj.connect(ip, user, mdp);
     obj.disconnect();
 
-    String^ queryString = "SELECT * from Article WHERE designation = '" + nom + "';";
-    return obj.receiveSQLTable(queryString);
-}
+    if (nom != "") {
+        String^ queryString = "SELECT id_article, designation, nom_categorie, prixHT, stock, seuil, TVA from Article INNER JOIN Categorie WHERE Article.id_categorie = Categorie.id_categorie AND designation = '" + nom + "'; ";
+        return obj.receiveSQLTable(queryString);
+    }
 
-/*
-void CLarticle::afficher(String^, double, int, int, double, String^ adresse_ip, String^ utilisateur, String^ MDP)
-{
-    throw gcnew System::NotImplementedException();
+    else
+    {
+        String^ queryString = "SELECT id_article, designation, nom_categorie, prixHT, stock, seuil, TVA from Article INNER JOIN Categorie WHERE Article.id_categorie = Categorie.id_categorie; ";
+        return obj.receiveSQLTable(queryString);
+    }
 }
-*/
