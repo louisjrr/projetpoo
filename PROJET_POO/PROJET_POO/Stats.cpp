@@ -91,6 +91,6 @@ String^ Stats::sommeClient(String^ id, String^ ip, String^ user, String^ mdp)
     obj.connect(ip, user, mdp);
     obj.disconnect();
 
-    String^ queryString = "SELECT sum(montant) from Paiement inner join Commande on Paiement.id_commande = Commande.id_commande inner join Client on Commande.id_cilent = Client.id_client WHERE Client.id_client = '" + id + "';";
+    String^ queryString = "SELECT sum(montant) from Paiement inner join Commande on Paiement.id_commande = Commande.id_commande inner join Client on Commande.id_client = Client.id_client WHERE Client.id_client = '" + id + "';";
     return obj.receiveSQLString(queryString);
 }
