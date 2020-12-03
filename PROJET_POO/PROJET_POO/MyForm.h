@@ -3410,6 +3410,7 @@ private: System::Windows::Forms::Button^ ButtonValComAccueil;
 	}
 	private: System::Void OngletPasserCommande_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranPasserCommande->BringToFront();
+		dataGridView1->DataSource = commande1.afficherCommande("", textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickOngletModifierArticle(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranModifierArticle->BringToFront();
