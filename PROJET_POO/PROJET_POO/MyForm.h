@@ -949,7 +949,6 @@ private: System::Windows::Forms::TextBox^ TextBoxCouleurAjoutArticle;
 			// EcranConnexion
 			// 
 			this->EcranConnexion->AutoSize = true;
-			this->EcranConnexion->Controls->Add(this->EcranAjoutArticle);
 			this->EcranConnexion->Controls->Add(this->textBox1);
 			this->EcranConnexion->Controls->Add(this->textBox3);
 			this->EcranConnexion->Controls->Add(this->textBox2);
@@ -1908,6 +1907,7 @@ private: System::Windows::Forms::TextBox^ TextBoxCouleurAjoutArticle;
 			this->EcranIdle->Controls->Add(this->EcranModifierArticle);
 			this->EcranIdle->Controls->Add(this->EcranModifierClient);
 			this->EcranIdle->Controls->Add(this->EcranAfficherArticle);
+			this->EcranIdle->Controls->Add(this->EcranAjoutArticle);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Name = L"EcranIdle";
 			this->EcranIdle->Size = System::Drawing::Size(1000, 900);
