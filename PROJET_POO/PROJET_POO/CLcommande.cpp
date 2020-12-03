@@ -16,10 +16,10 @@ String^ CLcommande::reference(String^ id_commande, String^ adresse_ip, String^ u
 
     String^ queryString = "SELECT id_client FROM Commande WHERE Commande.id_commande = '"+id_commande+"';";
     String^ id_client = obj.receiveSQLString(queryString);
-
+    
     queryString = "SELECT prenom_client FROM Client WHERE id_client = '" + id_client + "';";
     String^ _prenom = obj.receiveSQLString(queryString);
-
+    
     queryString = "SELECT nom_client FROM Client WHERE id_client = '" + id_client + "';";
     String^ _nom = obj.receiveSQLString(queryString);
 
