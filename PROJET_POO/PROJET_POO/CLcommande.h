@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "CL_CAD.h"
 using namespace System;
 
 ref class CLcommande
