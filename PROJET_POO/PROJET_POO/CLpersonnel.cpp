@@ -26,7 +26,15 @@ void CLpersonnel::modifier(String^ _nom, String^ _prenom, String^ _superieur, St
 
 void CLpersonnel::supprimer(String^ _nom, String^ _prenom, String^ _superieur, String^ _hireDate, String^ _adresse, String^ ville, String^ cp, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
-    throw gcnew System::NotImplementedException();
+    CL_CAD obj;
+    obj.connect(adresse_ip, utilisateur, MDP);
+    obj.disconnect();
+
+    String^ queryString = "DELETE FROM Adresse WHERE '" + id + "' = id_Personnel OR '" + id + "' = id_client_ADR_LIVRAISON;";
+    obj.sendSQL(queryString);
+
+    queryString = "DELETE FROM Client WHERE '" + id + "' = id_Client;";
+    obj.sendSQL(queryString);
 }
 
 DataTable^ CLpersonnel::afficher(String^ _nom, String^ _prenom, String^ _superieur, String^ _hireDate, String^ _adresse, String^ ville, String^ cp, String^ adresse_ip, String^ utilisateur, String^ MDP)
