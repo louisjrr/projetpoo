@@ -14,19 +14,19 @@ String^ CLcommande::reference(String^ id_commande, String^ adresse_ip, String^ u
     obj.connect(adresse_ip, utilisateur, MDP);
     obj.disconnect();
 
-    String^ queryString = "SELECT id_client FROM Commande WHERE Commande.id_commande = '"+id_commande+"'";
+    String^ queryString = "SELECT id_client FROM Commande WHERE Commande.id_commande = '"+id_commande+"';";
     String^ id_client = obj.receiveSQLString(queryString);
-
-    queryString = "SELECT prenom_client FROM Client WHERE id_client = '" + id_client + ";";
+    
+    queryString = "SELECT prenom_client FROM Client WHERE id_client = '" + id_client + "';";
     String^ _prenom = obj.receiveSQLString(queryString);
-
-    queryString = "SELECT nom_client FROM Client WHERE id_client = '" + id_client + ";";
+    
+    queryString = "SELECT nom_client FROM Client WHERE id_client = '" + id_client + "';";
     String^ _nom = obj.receiveSQLString(queryString);
 
-    queryString = "SELECT datePaiement FROM Commande WHERE id_client = '" + id_client + ";";
+    queryString = "SELECT datePaiement FROM Commande WHERE id_client = '" + id_client + "';";
     String^ _anneeCommande = obj.receiveSQLString(queryString);
 
-    queryString = "SELECT ville FROM Client INNER JOIN Adresse WHERE Adresse.id_client_ADR_LIVRAISON = '" + id_client + ";";
+    queryString = "SELECT ville FROM Client INNER JOIN Adresse WHERE Adresse.id_client_ADR_LIVRAISON = '" + id_client + "';";
     String^ _ville = obj.receiveSQLString(queryString);
 
     _prenom = _prenom->Substring(0,2);
