@@ -6,7 +6,7 @@ CLarticle::CLarticle()
 
 }
 
-void CLarticle::creer(String^ nom, String^ categorie, String^ prix, String^ stock, String^ seuil, String^ tva, String^ ip, String^ user, String^ mdp)
+void CLarticle::creer(String^ nom, String^ categorie, String^ prix, String^ stock, String^ seuil, String^ tva, String^ couleur, String^ ip, String^ user, String^ mdp)
 {
     CL_CAD obj;
     obj.connect(ip, user, mdp);

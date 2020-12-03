@@ -4,7 +4,7 @@ ref class CLarticle
 {
 public:
     CLarticle(void);
-    void creer(String^ nom, String^ categorie, String^ prix, String^ stock, String^ seuil, String^ tva, String^ ip, String^ user, String^ mdp);
+    void creer(String^ nom, String^ categorie, String^ prix, String^ stock, String^ seuil, String^ tva, String^ couleur, String^ ip, String^ user, String^ mdp);
     void creerCateg(String^ categorie, String^ ip, String^ user, String^ mdp);
 
     DataTable^ afficherCategAjout(String^ ip, String^ user, String^ mdp);

@@ -548,6 +548,8 @@ private: System::Windows::Forms::DataGridView^ DataGridAfficherArticle;
 private: System::Windows::Forms::TextBox^ TextBoxNomAfficherArticle;
 private: System::Windows::Forms::Label^ label17;
 private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
+private: System::Windows::Forms::Label^ label16;
+private: System::Windows::Forms::TextBox^ TextBoxCouleurAjoutArticle;
 
 
 
@@ -832,6 +834,8 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->ButtonRecherchSupprimerArticle = (gcnew System::Windows::Forms::Button());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->TextBoxRecherchSupprimerArticle = (gcnew System::Windows::Forms::TextBox());
+			this->TextBoxCouleurAjoutArticle = (gcnew System::Windows::Forms::TextBox());
+			this->label16 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
 			this->EcranAfficherArticle->SuspendLayout();
@@ -945,6 +949,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			// EcranConnexion
 			// 
 			this->EcranConnexion->AutoSize = true;
+			this->EcranConnexion->Controls->Add(this->EcranAjoutArticle);
 			this->EcranConnexion->Controls->Add(this->textBox1);
 			this->EcranConnexion->Controls->Add(this->textBox3);
 			this->EcranConnexion->Controls->Add(this->textBox2);
@@ -1563,6 +1568,8 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->EcranAjoutArticle->AutoSize = true;
+			this->EcranAjoutArticle->Controls->Add(this->label16);
+			this->EcranAjoutArticle->Controls->Add(this->TextBoxCouleurAjoutArticle);
 			this->EcranAjoutArticle->Controls->Add(this->DataGridCategAjoutArticle);
 			this->EcranAjoutArticle->Controls->Add(this->DataGridArticleAjoutArticle);
 			this->EcranAjoutArticle->Controls->Add(this->ButtonAjoutCategAjoutClient);
@@ -1680,7 +1687,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			// 
 			// ButtonAjoutArticle
 			// 
-			this->ButtonAjoutArticle->Location = System::Drawing::Point(541, 79);
+			this->ButtonAjoutArticle->Location = System::Drawing::Point(639, 80);
 			this->ButtonAjoutArticle->Margin = System::Windows::Forms::Padding(2);
 			this->ButtonAjoutArticle->Name = L"ButtonAjoutArticle";
 			this->ButtonAjoutArticle->Size = System::Drawing::Size(88, 23);
@@ -1896,7 +1903,6 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->EcranIdle->Controls->Add(this->EcranAfficherPersonnel);
 			this->EcranIdle->Controls->Add(this->EcranAjoutPersonnel);
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
-			this->EcranIdle->Controls->Add(this->EcranAjoutArticle);
 			this->EcranIdle->Controls->Add(this->EcranSuprimerArticle);
 			this->EcranIdle->Controls->Add(this->EcranSupprimerClient);
 			this->EcranIdle->Controls->Add(this->EcranModifierArticle);
@@ -2008,7 +2014,7 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->MenuOnglet->Location = System::Drawing::Point(0, 0);
 			this->MenuOnglet->Name = L"MenuOnglet";
 			this->MenuOnglet->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->MenuOnglet->Size = System::Drawing::Size(382, 24);
+			this->MenuOnglet->Size = System::Drawing::Size(262, 24);
 			this->MenuOnglet->TabIndex = 33;
 			this->MenuOnglet->Text = L"menuStrip1";
 			// 
@@ -2808,6 +2814,24 @@ private: System::Windows::Forms::Button^ ButtonRecherchAfficherArticle;
 			this->TextBoxRecherchSupprimerArticle->Name = L"TextBoxRecherchSupprimerArticle";
 			this->TextBoxRecherchSupprimerArticle->Size = System::Drawing::Size(114, 20);
 			this->TextBoxRecherchSupprimerArticle->TabIndex = 9;
+			// 
+			// TextBoxCouleurAjoutArticle
+			// 
+			this->TextBoxCouleurAjoutArticle->Location = System::Drawing::Point(522, 82);
+			this->TextBoxCouleurAjoutArticle->Margin = System::Windows::Forms::Padding(2);
+			this->TextBoxCouleurAjoutArticle->Name = L"TextBoxCouleurAjoutArticle";
+			this->TextBoxCouleurAjoutArticle->Size = System::Drawing::Size(92, 20);
+			this->TextBoxCouleurAjoutArticle->TabIndex = 42;
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(548, 67);
+			this->label16->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(43, 13);
+			this->label16->TabIndex = 43;
+			this->label16->Text = L"Couleur";
 			// 
 			// MyForm
 			// 
