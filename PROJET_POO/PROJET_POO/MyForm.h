@@ -2336,6 +2336,7 @@ namespace PROJETPOO {
 			this->EcranIdle->Controls->Add(this->EcranModifierArticle);
 			this->EcranIdle->Controls->Add(this->EcranModifierClient);
 			this->EcranIdle->Controls->Add(this->EcranAfficherArticle);
+			this->EcranIdle->Controls->Add(this->EcranAjoutArticle);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
 			this->EcranIdle->Margin = System::Windows::Forms::Padding(4);
 			this->EcranIdle->Name = L"EcranIdle";
