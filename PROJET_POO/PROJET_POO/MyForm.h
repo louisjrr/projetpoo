@@ -464,6 +464,16 @@ private: System::Windows::Forms::DataGridView^ DataGridArticleAjoutArticle;
 private: System::Windows::Forms::Button^ ButtonAjoutCategAjoutClient;
 private: System::Windows::Forms::TextBox^ TextBoxAjoutCategAjoutArticle;
 private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
+private: System::Windows::Forms::Panel^ EcranSuprimerArticle;
+private: System::Windows::Forms::Button^ ButtonIDSupprimerArticle;
+
+private: System::Windows::Forms::TextBox^ TextBoxIDSupprimerArticle;
+private: System::Windows::Forms::Label^ label9;
+private: System::Windows::Forms::DataGridView^ DataGridSupprimerArticle;
+
+private: System::Windows::Forms::Button^ ButtonRecherchSupprimerArticle;
+private: System::Windows::Forms::Label^ label11;
+private: System::Windows::Forms::TextBox^ TextBoxRecherchSupprimerArticle;
 
 
 
@@ -703,6 +713,14 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			this->TextBoxCpAdrLivClient = (gcnew System::Windows::Forms::TextBox());
 			this->TextBoxAdrAdrLivClient = (gcnew System::Windows::Forms::TextBox());
 			this->TextBoxVilleAdrLivClient = (gcnew System::Windows::Forms::TextBox());
+			this->EcranSuprimerArticle = (gcnew System::Windows::Forms::Panel());
+			this->ButtonIDSupprimerArticle = (gcnew System::Windows::Forms::Button());
+			this->TextBoxIDSupprimerArticle = (gcnew System::Windows::Forms::TextBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->DataGridSupprimerArticle = (gcnew System::Windows::Forms::DataGridView());
+			this->ButtonRecherchSupprimerArticle = (gcnew System::Windows::Forms::Button());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->TextBoxRecherchSupprimerArticle = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->EcranConnexion->SuspendLayout();
 			this->EcranAjoutArticle->SuspendLayout();
@@ -720,6 +738,8 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewAfficherPersonnel))->BeginInit();
 			this->EcranAjoutPersonnel->SuspendLayout();
 			this->EcranAjoutClient->SuspendLayout();
+			this->EcranSuprimerArticle->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridSupprimerArticle))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -1482,6 +1502,7 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			this->EcranIdle->Controls->Add(this->EcranAjoutPersonnel);
 			this->EcranIdle->Controls->Add(this->EcranAjoutClient);
 			this->EcranIdle->Controls->Add(this->EcranAjoutArticle);
+			this->EcranIdle->Controls->Add(this->EcranSuprimerArticle);
 			this->EcranIdle->Controls->Add(this->EcranModifierClient);
 			this->EcranIdle->Controls->Add(this->EcranSupprimerClient);
 			this->EcranIdle->Location = System::Drawing::Point(0, 0);
@@ -1530,26 +1551,27 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			// OngletAjoutArticle
 			// 
 			this->OngletAjoutArticle->Name = L"OngletAjoutArticle";
-			this->OngletAjoutArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutArticle->Size = System::Drawing::Size(180, 22);
 			this->OngletAjoutArticle->Text = L"Ajouter";
 			this->OngletAjoutArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutArticle);
 			// 
 			// OngletModifierArticle
 			// 
 			this->OngletModifierArticle->Name = L"OngletModifierArticle";
-			this->OngletModifierArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierArticle->Size = System::Drawing::Size(180, 22);
 			this->OngletModifierArticle->Text = L"Modifier";
 			// 
 			// OngletSupprimerArticle
 			// 
 			this->OngletSupprimerArticle->Name = L"OngletSupprimerArticle";
-			this->OngletSupprimerArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerArticle->Size = System::Drawing::Size(180, 22);
 			this->OngletSupprimerArticle->Text = L"Supprimer";
+			this->OngletSupprimerArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletSupprimerArticle);
 			// 
 			// OngletAfficherArticle
 			// 
 			this->OngletAfficherArticle->Name = L"OngletAfficherArticle";
-			this->OngletAfficherArticle->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherArticle->Size = System::Drawing::Size(180, 22);
 			this->OngletAfficherArticle->Text = L"Afficher";
 			// 
 			// OngletPersonnel
@@ -2223,6 +2245,92 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			this->TextBoxVilleAdrLivClient->Size = System::Drawing::Size(150, 20);
 			this->TextBoxVilleAdrLivClient->TabIndex = 13;
 			// 
+			// EcranSuprimerArticle
+			// 
+			this->EcranSuprimerArticle->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->EcranSuprimerArticle->AutoSize = true;
+			this->EcranSuprimerArticle->Controls->Add(this->ButtonIDSupprimerArticle);
+			this->EcranSuprimerArticle->Controls->Add(this->TextBoxIDSupprimerArticle);
+			this->EcranSuprimerArticle->Controls->Add(this->label9);
+			this->EcranSuprimerArticle->Controls->Add(this->DataGridSupprimerArticle);
+			this->EcranSuprimerArticle->Controls->Add(this->ButtonRecherchSupprimerArticle);
+			this->EcranSuprimerArticle->Controls->Add(this->label11);
+			this->EcranSuprimerArticle->Controls->Add(this->TextBoxRecherchSupprimerArticle);
+			this->EcranSuprimerArticle->Location = System::Drawing::Point(0, 27);
+			this->EcranSuprimerArticle->Margin = System::Windows::Forms::Padding(2);
+			this->EcranSuprimerArticle->Name = L"EcranSuprimerArticle";
+			this->EcranSuprimerArticle->Size = System::Drawing::Size(1000, 600);
+			this->EcranSuprimerArticle->TabIndex = 38;
+			// 
+			// ButtonIDSupprimerArticle
+			// 
+			this->ButtonIDSupprimerArticle->Location = System::Drawing::Point(554, 468);
+			this->ButtonIDSupprimerArticle->Margin = System::Windows::Forms::Padding(2);
+			this->ButtonIDSupprimerArticle->Name = L"ButtonIDSupprimerArticle";
+			this->ButtonIDSupprimerArticle->Size = System::Drawing::Size(114, 47);
+			this->ButtonIDSupprimerArticle->TabIndex = 35;
+			this->ButtonIDSupprimerArticle->Text = L"Supprimer l\'article";
+			this->ButtonIDSupprimerArticle->UseVisualStyleBackColor = true;
+			this->ButtonIDSupprimerArticle->Click += gcnew System::EventHandler(this, &MyForm::ClickIDSupprimerArticle);
+			// 
+			// TextBoxIDSupprimerArticle
+			// 
+			this->TextBoxIDSupprimerArticle->Location = System::Drawing::Point(575, 437);
+			this->TextBoxIDSupprimerArticle->Margin = System::Windows::Forms::Padding(2);
+			this->TextBoxIDSupprimerArticle->Name = L"TextBoxIDSupprimerArticle";
+			this->TextBoxIDSupprimerArticle->Size = System::Drawing::Size(76, 20);
+			this->TextBoxIDSupprimerArticle->TabIndex = 34;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(554, 419);
+			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(118, 13);
+			this->label9->TabIndex = 33;
+			this->label9->Text = L"ID du client à supprimer";
+			// 
+			// DataGridSupprimerArticle
+			// 
+			this->DataGridSupprimerArticle->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DataGridSupprimerArticle->Location = System::Drawing::Point(241, 37);
+			this->DataGridSupprimerArticle->Margin = System::Windows::Forms::Padding(2);
+			this->DataGridSupprimerArticle->Name = L"DataGridSupprimerArticle";
+			this->DataGridSupprimerArticle->RowHeadersWidth = 51;
+			this->DataGridSupprimerArticle->Size = System::Drawing::Size(709, 364);
+			this->DataGridSupprimerArticle->TabIndex = 32;
+			// 
+			// ButtonRecherchSupprimerArticle
+			// 
+			this->ButtonRecherchSupprimerArticle->Location = System::Drawing::Point(58, 106);
+			this->ButtonRecherchSupprimerArticle->Margin = System::Windows::Forms::Padding(2);
+			this->ButtonRecherchSupprimerArticle->Name = L"ButtonRecherchSupprimerArticle";
+			this->ButtonRecherchSupprimerArticle->Size = System::Drawing::Size(134, 35);
+			this->ButtonRecherchSupprimerArticle->TabIndex = 31;
+			this->ButtonRecherchSupprimerArticle->Text = L"Chercher parmis les articles";
+			this->ButtonRecherchSupprimerArticle->UseVisualStyleBackColor = true;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(91, 59);
+			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(63, 13);
+			this->label11->TabIndex = 18;
+			this->label11->Text = L"Désignation";
+			// 
+			// TextBoxRecherchSupprimerArticle
+			// 
+			this->TextBoxRecherchSupprimerArticle->Location = System::Drawing::Point(66, 79);
+			this->TextBoxRecherchSupprimerArticle->Margin = System::Windows::Forms::Padding(2);
+			this->TextBoxRecherchSupprimerArticle->Name = L"TextBoxRecherchSupprimerArticle";
+			this->TextBoxRecherchSupprimerArticle->Size = System::Drawing::Size(114, 20);
+			this->TextBoxRecherchSupprimerArticle->TabIndex = 9;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -2263,6 +2371,9 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 			this->EcranAjoutPersonnel->PerformLayout();
 			this->EcranAjoutClient->ResumeLayout(false);
 			this->EcranAjoutClient->PerformLayout();
+			this->EcranSuprimerArticle->ResumeLayout(false);
+			this->EcranSuprimerArticle->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridSupprimerArticle))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -2364,15 +2475,26 @@ private: System::Windows::Forms::DataGridView^ DataGridCategAjoutArticle;
 	private: System::Void ClickOngletAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
 		this->EcranAjoutArticle->BringToFront();
 		DataGridCategAjoutArticle->DataSource = article1.afficherCategAjout(textBox1->Text, textBox2->Text, textBox3->Text);
-		DataGridArticleAjoutArticle->DataSource = article1.afficherArticleAjout(textBox1->Text, textBox2->Text, textBox3->Text);
+		DataGridArticleAjoutArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickAjoutCategAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
 		article1.creerCateg(TextBoxAjoutCategAjoutArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("Catégorie ajoutée !");
+		DataGridCategAjoutArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 	private: System::Void ClickAjoutArticleAjoutArticle(System::Object^ sender, System::EventArgs^ e) {
 		article1.creer(TextBoxNomAjoutArticle->Text, TextBoxCategAjoutArticle->Text, TextBoxPrixAjoutArticle->Text, TextBoxStockAjoutArticle->Text, TextBoxSeuilAjoutArticle->Text, TextBoxTVAAjoutArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("Article ajouté !");
+		DataGridArticleAjoutArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
+	}
+	private: System::Void ClickOngletSupprimerArticle(System::Object^ sender, System::EventArgs^ e) {
+		this->EcranSuprimerArticle->BringToFront();
+		DataGridSupprimerArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
+	}
+	private: System::Void ClickIDSupprimerArticle(System::Object^ sender, System::EventArgs^ e) {
+		article1.supprimer(TextBoxIDSupprimerArticle->Text, textBox1->Text, textBox2->Text, textBox3->Text);
+		MessageBox::Show("Article supprimé !");
+		DataGridSupprimerArticle->DataSource = article1.afficherArticle(textBox1->Text, textBox2->Text, textBox3->Text);
 	}
 };
 }

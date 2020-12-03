@@ -28,13 +28,13 @@ void CLarticle::creerCateg(String^ nom, String^ ip, String^ user, String^ mdp)
 
 }
 
-DataTable^ CLarticle::afficherArticleAjout(String^ ip, String^ user, String^ mdp)
+DataTable^ CLarticle::afficherArticle(String^ ip, String^ user, String^ mdp)
 {
     CL_CAD obj;
     obj.connect(ip, user, mdp);
     obj.disconnect();
 
-    String^ queryString = "SELECT designation, nom_categorie, prixHT, stock, seuil, TVA from Article INNER JOIN Categorie WHERE Article.id_categorie = Categorie.id_categorie; ";
+    String^ queryString = "SELECT id_article, designation, nom_categorie, prixHT, stock, seuil, TVA from Article INNER JOIN Categorie WHERE Article.id_categorie = Categorie.id_categorie; ";
     return obj.receiveSQLTable(queryString);
 
 }
@@ -55,12 +55,18 @@ void CLarticle::modifier(String^, double, int, int, double, String^ adresse_ip, 
 {
     throw gcnew System::NotImplementedException();
 }
-
-void CLarticle::suprimer(String^, double, int, int, double, String^ adresse_ip, String^ utilisateur, String^ MDP)
+*/
+void CLarticle::supprimer(String^ id, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
-    throw gcnew System::NotImplementedException();
-}
+    CL_CAD obj;
+    obj.connect(adresse_ip, utilisateur, MDP);
+    obj.disconnect();
 
+    String^ queryString = "DELETE FROM Article WHERE '" + id + "' = id_article;";
+    obj.sendSQL(queryString);
+
+}
+/*
 void CLarticle::afficher(String^, double, int, int, double, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     throw gcnew System::NotImplementedException();
