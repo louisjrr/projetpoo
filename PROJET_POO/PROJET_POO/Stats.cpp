@@ -83,5 +83,14 @@ String^ Stats::simulAchat(String^ Marge, String^ TVA, String^ ip, String^ user, 
         String^ queryString = "SELECT (SUM((prixHT * ((100-tva-" + TVA + ")/100)) * ((100+" + Marge + ")/100) * stock)) from Article;";
         return obj.receiveSQLString(queryString);
     }
+}
 
+String^ Stats::sommeClient(String^ id, String^ ip, String^ user, String^ mdp)
+{
+    CL_CAD obj;
+    obj.connect(ip, user, mdp);
+    obj.disconnect();
+
+    String^ queryString = "SELECT sum(montant) from Paiement inner join Commande on Paiement.id_commande = Commande.id_commande inner join Client on Commande.id_cilent = Client.id_client WHERE Client.id_client = '" + id + "';";
+    return obj.receiveSQLString(queryString);
 }
