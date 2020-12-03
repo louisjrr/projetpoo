@@ -14,7 +14,7 @@ String^ CLcommande::reference(String^ id_commande, String^ adresse_ip, String^ u
     obj.connect(adresse_ip, utilisateur, MDP);
     obj.disconnect();
 
-    String^ queryString = "SELECT id_client FROM Client INNER JOIN Commande WHERE Commande.id_commande = '"+id_commande+"'";
+    String^ queryString = "SELECT id_client FROM Commande WHERE Commande.id_commande = '"+id_commande+"'";
     String^ id_client = obj.receiveSQLString(queryString);
 
     queryString = "SELECT prenom_client FROM Client WHERE id_client = '" + id_client + ";";
@@ -86,12 +86,12 @@ DataTable^ CLcommande::afficherCommande(String^ id_commande, String^ adresse_ip,
     obj.connect(adresse_ip, utilisateur, MDP);
     obj.disconnect();
 
-    // if (id_commande == "")
-    // {
-    String^ queryString = "SELECT * FROM Commande INNER JOIN Paiement WHERE Paiement.id_commande = Commande.id_commande;";
-    DataTable^ listeCommande = obj.receiveSQLTable(queryString);
-    return listeCommande;
-    //}
+     if (id_commande == "")
+     {
+       String^ queryString = "SELECT * FROM Commande INNER JOIN Paiement WHERE Paiement.id_commande = Commande.id_commande;";
+       DataTable^ listeCommande = obj.receiveSQLTable(queryString);
+       return listeCommande;
+     }
 }
 
 
