@@ -390,7 +390,7 @@ namespace PROJETPOO {
 
 	private: System::Windows::Forms::ToolStripMenuItem^ OngletModifierCommande;
 	private: System::Windows::Forms::ToolStripMenuItem^ OngletSupprimerCommande;
-	private: System::Windows::Forms::ToolStripMenuItem^ OngletAfficherCommande;
+
 
 
 
@@ -789,7 +789,6 @@ private: System::Windows::Forms::Button^ button2;
 			this->OngletPasserCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->OngletModifierCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->OngletSupprimerCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->OngletAfficherCommande = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->EcranAfficherArticle = (gcnew System::Windows::Forms::Panel());
 			this->DataGridAfficherArticle = (gcnew System::Windows::Forms::DataGridView());
 			this->TextBoxNomAfficherArticle = (gcnew System::Windows::Forms::TextBox());
@@ -1708,26 +1707,29 @@ private: System::Windows::Forms::Button^ button2;
 			// OngletAjoutPersonnel
 			// 
 			this->OngletAjoutPersonnel->Name = L"OngletAjoutPersonnel";
-			this->OngletAjoutPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletAjoutPersonnel->Size = System::Drawing::Size(180, 22);
 			this->OngletAjoutPersonnel->Text = L"Ajouter";
 			this->OngletAjoutPersonnel->Click += gcnew System::EventHandler(this, &MyForm::ClickOngletAjoutPersonnel);
 			// 
 			// OngletModifierPersonnel
 			// 
+			this->OngletModifierPersonnel->BackColor = System::Drawing::Color::Red;
 			this->OngletModifierPersonnel->Name = L"OngletModifierPersonnel";
-			this->OngletModifierPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletModifierPersonnel->Size = System::Drawing::Size(180, 22);
 			this->OngletModifierPersonnel->Text = L"Modifier";
 			// 
 			// OngletSupprimerPersonnel
 			// 
+			this->OngletSupprimerPersonnel->BackColor = System::Drawing::Color::Red;
 			this->OngletSupprimerPersonnel->Name = L"OngletSupprimerPersonnel";
-			this->OngletSupprimerPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletSupprimerPersonnel->Size = System::Drawing::Size(180, 22);
 			this->OngletSupprimerPersonnel->Text = L"Supprimer";
 			// 
 			// OngletAfficherPersonnel
 			// 
+			this->OngletAfficherPersonnel->BackColor = System::Drawing::Color::Yellow;
 			this->OngletAfficherPersonnel->Name = L"OngletAfficherPersonnel";
-			this->OngletAfficherPersonnel->Size = System::Drawing::Size(129, 22);
+			this->OngletAfficherPersonnel->Size = System::Drawing::Size(180, 22);
 			this->OngletAfficherPersonnel->Text = L"Afficher";
 			this->OngletAfficherPersonnel->Click += gcnew System::EventHandler(this, &MyForm::OngletAfficherPersonnel_Click);
 			// 
@@ -1771,9 +1773,9 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// OngletCommande
 			// 
-			this->OngletCommande->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+			this->OngletCommande->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->OngletPasserCommande,
-					this->OngletModifierCommande, this->OngletSupprimerCommande, this->OngletAfficherCommande
+					this->OngletModifierCommande, this->OngletSupprimerCommande
 			});
 			this->OngletCommande->Name = L"OngletCommande";
 			this->OngletCommande->Size = System::Drawing::Size(82, 20);
@@ -1781,28 +1783,25 @@ private: System::Windows::Forms::Button^ button2;
 			// 
 			// OngletPasserCommande
 			// 
+			this->OngletPasserCommande->BackColor = System::Drawing::Color::Yellow;
 			this->OngletPasserCommande->Name = L"OngletPasserCommande";
-			this->OngletPasserCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletPasserCommande->Size = System::Drawing::Size(180, 22);
 			this->OngletPasserCommande->Text = L"Passer commande";
 			this->OngletPasserCommande->Click += gcnew System::EventHandler(this, &MyForm::OngletPasserCommande_Click);
 			// 
 			// OngletModifierCommande
 			// 
+			this->OngletModifierCommande->BackColor = System::Drawing::Color::Red;
 			this->OngletModifierCommande->Name = L"OngletModifierCommande";
-			this->OngletModifierCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletModifierCommande->Size = System::Drawing::Size(180, 22);
 			this->OngletModifierCommande->Text = L"Modifier";
 			// 
 			// OngletSupprimerCommande
 			// 
+			this->OngletSupprimerCommande->BackColor = System::Drawing::Color::Red;
 			this->OngletSupprimerCommande->Name = L"OngletSupprimerCommande";
-			this->OngletSupprimerCommande->Size = System::Drawing::Size(171, 22);
+			this->OngletSupprimerCommande->Size = System::Drawing::Size(180, 22);
 			this->OngletSupprimerCommande->Text = L"Supprimer";
-			// 
-			// OngletAfficherCommande
-			// 
-			this->OngletAfficherCommande->Name = L"OngletAfficherCommande";
-			this->OngletAfficherCommande->Size = System::Drawing::Size(171, 22);
-			this->OngletAfficherCommande->Text = L"Afficher";
 			// 
 			// EcranAfficherArticle
 			// 
