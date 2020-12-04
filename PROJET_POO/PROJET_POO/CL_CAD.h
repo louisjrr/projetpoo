@@ -33,6 +33,5 @@ public:
 	void sendSQL(String^);
 	String^ receiveSQLString(String^);
 	DataTable^ receiveSQLTable(String^);
-	
-
 };
+
