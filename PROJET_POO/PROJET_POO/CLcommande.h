@@ -11,4 +11,3 @@ public:
 	void passerCommande(String^, String^, String^, int, String^, String^, String^, String^, String^, String^, String^, String^);
 	DataTable^ afficherCommande(String^, String^, String^, String^);
 };
-
