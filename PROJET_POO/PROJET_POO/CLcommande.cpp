@@ -74,10 +74,8 @@ void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String
     queryString = "SELECT id_mdp FROM MoyenDePaiement WHERE nom_mdp = '"+MoyenDePaiement+"';";
     String^ id_mdp = obj.receiveSQLString(queryString);
 
-    queryString = "SELECT MAX(id_mdp) FROM MoyenDePaiement;";
-    String^ id_MoyenDePaiement = obj.receiveSQLString(queryString);
 
-    queryString = "INSERT INTO Paiement(montant, nb_paiement, id_commande, id_mdp) VALUES ('" + totalTTC + "', 1, '" + id_commande + "', '" + id_MoyenDePaiement + "');";
+    queryString = "INSERT INTO Paiement(montant, nb_paiement, id_commande, id_mdp) VALUES ('" + totalTTC + "', 1, '" + id_commande + "', '" + id_mdp + "');";
     obj.sendSQL(queryString);
 }
 
