@@ -622,6 +622,7 @@ private: System::Windows::Forms::Button^ button1;
 private: System::Windows::Forms::Button^ ButtonSommeClientAccueil;
 private: System::Windows::Forms::Label^ label16;
 private: System::Windows::Forms::TextBox^ TextBoxIDAccueil;
+private: System::Windows::Forms::Button^ button2;
 
 
 
@@ -716,6 +717,7 @@ private: System::Windows::Forms::TextBox^ TextBoxIDAccueil;
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->EcranConnexion = (gcnew System::Windows::Forms::Panel());
 			this->EcranVide = (gcnew System::Windows::Forms::Panel());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->ButtonSommeClientAccueil = (gcnew System::Windows::Forms::Button());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->TextBoxIDAccueil = (gcnew System::Windows::Forms::TextBox());
@@ -1085,6 +1087,7 @@ private: System::Windows::Forms::TextBox^ TextBoxIDAccueil;
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->EcranVide->AutoSize = true;
+			this->EcranVide->Controls->Add(this->button2);
 			this->EcranVide->Controls->Add(this->ButtonSommeClientAccueil);
 			this->EcranVide->Controls->Add(this->label16);
 			this->EcranVide->Controls->Add(this->TextBoxIDAccueil);
@@ -1103,6 +1106,16 @@ private: System::Windows::Forms::TextBox^ TextBoxIDAccueil;
 			this->EcranVide->Name = L"EcranVide";
 			this->EcranVide->Size = System::Drawing::Size(1000, 600);
 			this->EcranVide->TabIndex = 35;
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(764, 355);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(131, 61);
+			this->button2->TabIndex = 19;
+			this->button2->Text = L"Afficher le montant d\'un panier moyen";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::ClickPanierMoyenAccueil);
 			// 
 			// ButtonSommeClientAccueil
 			// 
@@ -1213,9 +1226,9 @@ private: System::Windows::Forms::TextBox^ TextBoxIDAccueil;
 			// 
 			// ButtonStockSeuilAccueil
 			// 
-			this->ButtonStockSeuilAccueil->Location = System::Drawing::Point(578, 389);
+			this->ButtonStockSeuilAccueil->Location = System::Drawing::Point(578, 355);
 			this->ButtonStockSeuilAccueil->Name = L"ButtonStockSeuilAccueil";
-			this->ButtonStockSeuilAccueil->Size = System::Drawing::Size(131, 61);
+			this->ButtonStockSeuilAccueil->Size = System::Drawing::Size(128, 61);
 			this->ButtonStockSeuilAccueil->TabIndex = 0;
 			this->ButtonStockSeuilAccueil->Text = L"Afficher les articles sous le seuil de stock";
 			this->ButtonStockSeuilAccueil->UseVisualStyleBackColor = true;
@@ -3722,6 +3735,9 @@ private: System::Windows::Forms::TextBox^ TextBoxIDAccueil;
 	private: System::Void ClickSommeClientAccueil(System::Object^ sender, System::EventArgs^ e) {
 		MessageBox::Show("La somme total des achats de ce client est de : " + stat1.sommeClient(TextBoxIDAccueil->Text ,textBox1->Text, textBox2->Text, textBox3->Text) + " €");
 		TextBoxIDAccueil->Text = "";
+	}
+	private: System::Void ClickPanierMoyenAccueil(System::Object^ sender, System::EventArgs^ e) {
+		MessageBox::Show("Le montant moyen d'un panier est de : " + stat1.moyennePanier(textBox1->Text, textBox2->Text, textBox3->Text) + " €");
 	}
 };
 }
