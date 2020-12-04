@@ -20,13 +20,6 @@ public:
     void modifierADRFact(String^ id, String^ adresse, String^ ville, String^ cp, String^ ip, String^ user, String^ mdp);
 
     void supprimer(String^ id, String^ ip, String^ user, String^ mdp);
-private:
-    String^ birthDate;
-    String^ firstDate;
-    String^ nomClient;
-    String^ prenomClient;
-    String^ adresseLivClient;
-    String^ adresseFacClient;
 
 };
 

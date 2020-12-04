@@ -18,12 +18,6 @@ public:
     void modifierStockSeuil(String^ id, String^ stock, String^ seuil, String^ ip, String^ user, String^ mdp);
     
     void supprimer(String^ id, String^ ip, String^ user, String^ mdp);
-    
-private:
-    double prixHT;
-    String^ designation;
-    int stock;
-    int seuil;
-    double TVA;
+
 };
 
