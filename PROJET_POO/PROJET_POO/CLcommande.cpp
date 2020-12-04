@@ -52,17 +52,18 @@ void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String
     queryString = "SELECT prixHT FROM Article WHERE id_article = '"+id_article+"'";
     String^ prixHT = obj.receiveSQLString(queryString);
 
-    double totalHT = Convert::ToDouble(prixHT) * Convert::ToDouble(qte);
+    //double totalHT = Convert::ToDouble(prixHT) * Convert::ToInt32(qte);
+    double totalHT = 4;
 
     queryString = "SELECT tva FROM Article WHERE id_article = '" + id_article + "'";;
     String^ tva = obj.receiveSQLString(queryString);
 
     double totalTVA = Convert::ToDouble(tva) * qte;
 
-    //float totalTTC = totalHT + (100+totalTVA)/100;
-    double totalTTC = Convert::ToDouble(prixHT) + (Convert::ToDouble(prixHT) * Convert::ToDouble(tva) / 100) * Convert::ToDouble(qte);
+    //float totalTTC = totalHT * (100+totalTVA)/100;
+    double totalTTC = 4;
 
-    queryString = "INSERT INTO Commande(dateLivraison, dateEmission, datePaiement, dateSolde, totalHT, totalTVA, totalTTC, id_client) VALUES ('"+ dateLivraison + "', '" + dateEmission + "', '" + datePaiement + "', '" + dateSolde + "', '" + totalHT + "', '" + totalTVA + "', '" +totalTTC+"', '"+id_client+"'); ";
+    queryString = "INSERT INTO Commande(dateLivraison, dateEmission, datePaiement, dateSolde, totalHT, totalTVA, totalTTC, id_client) VALUES ('"+ dateLivraison + "', '" + dateEmission + "', '" + datePaiement + "', '" + dateSolde + "', '" +  Convert::ToDouble(totalHT) +"', '" + totalTVA + "', '" + Convert::ToDouble(totalTTC) +"', '"+id_client+"'); ";
     obj.sendSQL(queryString);
 
     queryString = "SELECT MAX(id_commande) FROM Commande;";
