@@ -52,14 +52,15 @@ void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String
     queryString = "SELECT prixHT FROM Article WHERE id_article = '"+id_article+"'";
     String^ prixHT = obj.receiveSQLString(queryString);
 
-    double totalHT = Convert::ToDouble(prixHT) * qte;
+    double totalHT = Convert::ToDouble(prixHT) * Convert::ToDouble(qte);
 
     queryString = "SELECT tva FROM Article WHERE id_article = '" + id_article + "'";;
     String^ tva = obj.receiveSQLString(queryString);
 
     double totalTVA = Convert::ToDouble(tva) * qte;
 
-    double totalTTC = totalHT / totalTVA;
+    //float totalTTC = totalHT + (100+totalTVA)/100;
+    double totalTTC = Convert::ToDouble(prixHT) + (Convert::ToDouble(prixHT) * Convert::ToDouble(tva) / 100) * Convert::ToDouble(qte);
 
     queryString = "INSERT INTO Commande(dateLivraison, dateEmission, datePaiement, dateSolde, totalHT, totalTVA, totalTTC, id_client) VALUES ('"+ dateLivraison + "', '" + dateEmission + "', '" + datePaiement + "', '" + dateSolde + "', '" + totalHT + "', '" + totalTVA + "', '" +totalTTC+"', '"+id_client+"'); ";
     obj.sendSQL(queryString);
@@ -88,7 +89,7 @@ DataTable^ CLcommande::afficherCommande(String^ id_commande, String^ adresse_ip,
 
      if (id_commande == "")
      {
-       String^ queryString = "SELECT Commande.id_commande, Commande.id_client, Client.nom_client, Client.prenom_client, Article.designation, COMPOSER.quantite,  Paiement.montant, MoyenDePaiement.nom_mdp, Commande.datePaiement, Commande.dateSolde, Commande.dateEmission, Commande.dateLivraison from Commande inner join Client on Commande.id_client = Client.id_client inner join Paiement on Paiement.id_commande = Commande.id_commande inner join MoyenDePaiement on Paiement.id_mdp = MoyenDePaiement.id_mdp inner join COMPOSER on Commande.id_commande = COMPOSER.id_commande inner join Article on COMPOSER.id_article = Article.id_article ;";
+       String^ queryString = "SELECT Commande.id_commande, Commande.id_client, Client.nom_client, Client.prenom_client, Article.designation, COMPOSER.quantite,  Commande.totalTTC, MoyenDePaiement.nom_mdp, Commande.datePaiement, Commande.dateSolde, Commande.dateEmission, Commande.dateLivraison from Commande inner join Client on Commande.id_client = Client.id_client inner join Paiement on Paiement.id_commande = Commande.id_commande inner join MoyenDePaiement on Paiement.id_mdp = MoyenDePaiement.id_mdp inner join COMPOSER on Commande.id_commande = COMPOSER.id_commande inner join Article on COMPOSER.id_article = Article.id_article ;";
        DataTable^ listeCommande = obj.receiveSQLTable(queryString);
        return listeCommande;
      }
