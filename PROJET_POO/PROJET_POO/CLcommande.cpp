@@ -92,6 +92,12 @@ DataTable^ CLcommande::afficherCommande(String^ id_commande, String^ adresse_ip,
        DataTable^ listeCommande = obj.receiveSQLTable(queryString);
        return listeCommande;
      }
+     else
+     {
+         String^ queryString = "SELECT Commande.id_commande, Commande.id_client, Client.nom_client, Client.prenom_client, Article.designation, COMPOSER.quantite,  Commande.totalTTC, MoyenDePaiement.nom_mdp, Commande.datePaiement, Commande.dateSolde, Commande.dateEmission, Commande.dateLivraison from Commande inner join Client on Commande.id_client = Client.id_client inner join Paiement on Paiement.id_commande = '"+id_commande+"' inner join MoyenDePaiement on Paiement.id_mdp = MoyenDePaiement.id_mdp inner join COMPOSER on Commande.id_commande = '"+id_commande+"' inner join Article on COMPOSER.id_article = Article.id_article ;";
+         DataTable^ listeCommande = obj.receiveSQLTable(queryString);
+         return listeCommande;
+     }
 }
 
 
