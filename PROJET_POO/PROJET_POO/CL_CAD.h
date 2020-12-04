@@ -16,10 +16,6 @@ private:
 
 	String^ connectionString;
 	MySqlConnection^ connectionBDD;
-	String^ rq_sql;
-	SqlCommand^ CMD;
-	SqlDataAdapter^ DA;
-	DataSet^ DS;
 
 public:
 
