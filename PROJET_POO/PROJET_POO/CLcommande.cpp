@@ -14,12 +14,12 @@ String^ CLcommande::reference(String^ id_commande, String^ adresse_ip, String^ u
     obj.connect(adresse_ip, utilisateur, MDP);
     obj.disconnect();
 
-    String^ queryString = "SELECT id_client FROM Commande WHERE Commande.id_commande = '"+id_commande+"';";
+    String^ queryString = "SELECT id_client FROM Commande WHERE Commande.id_commande = '" + id_commande + "';";
     String^ id_client = obj.receiveSQLString(queryString);
-    
+
     queryString = "SELECT prenom_client FROM Client WHERE id_client = '" + id_client + "';";
     String^ _prenom = obj.receiveSQLString(queryString);
-    
+
     queryString = "SELECT nom_client FROM Client WHERE id_client = '" + id_client + "';";
     String^ _nom = obj.receiveSQLString(queryString);
 
@@ -29,7 +29,7 @@ String^ CLcommande::reference(String^ id_commande, String^ adresse_ip, String^ u
     queryString = "SELECT ville FROM Client INNER JOIN Adresse WHERE Adresse.id_client_ADR_LIVRAISON = '" + id_client + "';";
     String^ _ville = obj.receiveSQLString(queryString);
 
-    _prenom = _prenom->Substring(0,2);
+    _prenom = _prenom->Substring(0, 2);
     _nom = _nom->Substring(0, 2);
     _anneeCommande = _anneeCommande->Substring(0, 2);
     _ville = _ville->Substring(0, 3);
@@ -37,7 +37,7 @@ String^ CLcommande::reference(String^ id_commande, String^ adresse_ip, String^ u
     return ref;
 }
 
-void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String^ designation, int qte, String^ dateLivraison, String^ dateEmission, String^ datePaiement, String^ dateSolde, String^ MoyenDePaiement, String^ adresse_ip, String^ utilisateur, String^ MDP)
+void CLcommande::passerCommande(String^ nom_client, String^ prenom_client, String^ designation, int qte, String^ dateLivraison, String^ dateEmission, String^ datePaiement, String^ dateSolde, String^ MoyenDePaiement, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;
     obj.connect(adresse_ip, utilisateur, MDP);
@@ -49,7 +49,7 @@ void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String
     queryString = "SELECT id_article FROM Article WHERE designation = '" + designation + "';";
     String^ id_article = obj.receiveSQLString(queryString);
 
-    queryString = "SELECT prixHT FROM Article WHERE id_article = '"+id_article+"'";
+    queryString = "SELECT prixHT FROM Article WHERE id_article = '" + id_article + "'";
     String^ prixHT = obj.receiveSQLString(queryString);
 
     //double totalHT = Convert::ToDouble(prixHT) * Convert::ToInt32(qte);
@@ -63,7 +63,7 @@ void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String
     //float totalTTC = totalHT * (100+totalTVA)/100;
     double totalTTC = 4;
 
-    queryString = "INSERT INTO Commande(dateLivraison, dateEmission, datePaiement, dateSolde, totalHT, totalTVA, totalTTC, id_client) VALUES ('"+ dateLivraison + "', '" + dateEmission + "', '" + datePaiement + "', '" + dateSolde + "', '" +  Convert::ToDouble(totalHT) +"', '" + totalTVA + "', '" + Convert::ToDouble(totalTTC) +"', '"+id_client+"'); ";
+    queryString = "INSERT INTO Commande(dateLivraison, dateEmission, datePaiement, dateSolde, totalHT, totalTVA, totalTTC, id_client) VALUES ('" + dateLivraison + "', '" + dateEmission + "', '" + datePaiement + "', '" + dateSolde + "', '" + Convert::ToDouble(totalHT) + "', '" + totalTVA + "', '" + Convert::ToDouble(totalTTC) + "', '" + id_client + "'); ";
     obj.sendSQL(queryString);
 
     queryString = "SELECT MAX(id_commande) FROM Commande;";
@@ -72,7 +72,7 @@ void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String
     queryString = "INSERT INTO COMPOSER(id_article, id_commande, quantite) VALUES ('" + id_article + "', '" + id_commande + "', '" + qte + "');";
     obj.sendSQL(queryString);
 
-    queryString = "SELECT id_mdp FROM MoyenDePaiement WHERE nom_mdp = '"+MoyenDePaiement+"';";
+    queryString = "SELECT id_mdp FROM MoyenDePaiement WHERE nom_mdp = '" + MoyenDePaiement + "';";
     String^ id_mdp = obj.receiveSQLString(queryString);
 
 
@@ -86,12 +86,12 @@ DataTable^ CLcommande::afficherCommande(String^ id_commande, String^ adresse_ip,
     obj.connect(adresse_ip, utilisateur, MDP);
     obj.disconnect();
 
-     if (id_commande == "")
-     {
-       String^ queryString = "SELECT Commande.id_commande, Commande.id_client, Client.nom_client, Client.prenom_client, Article.designation, COMPOSER.quantite,  Commande.totalTTC, MoyenDePaiement.nom_mdp, Commande.datePaiement, Commande.dateSolde, Commande.dateEmission, Commande.dateLivraison from Commande inner join Client on Commande.id_client = Client.id_client inner join Paiement on Paiement.id_commande = Commande.id_commande inner join MoyenDePaiement on Paiement.id_mdp = MoyenDePaiement.id_mdp inner join COMPOSER on Commande.id_commande = COMPOSER.id_commande inner join Article on COMPOSER.id_article = Article.id_article ;";
-       DataTable^ listeCommande = obj.receiveSQLTable(queryString);
-       return listeCommande;
-     }
+    if (id_commande == "")
+    {
+        String^ queryString = "SELECT Commande.id_commande, Commande.id_client, Client.nom_client, Client.prenom_client, Article.designation, COMPOSER.quantite,  Commande.totalTTC, MoyenDePaiement.nom_mdp, Commande.datePaiement, Commande.dateSolde, Commande.dateEmission, Commande.dateLivraison from Commande inner join Client on Commande.id_client = Client.id_client inner join Paiement on Paiement.id_commande = Commande.id_commande inner join MoyenDePaiement on Paiement.id_mdp = MoyenDePaiement.id_mdp inner join COMPOSER on Commande.id_commande = COMPOSER.id_commande inner join Article on COMPOSER.id_article = Article.id_article ;";
+        DataTable^ listeCommande = obj.receiveSQLTable(queryString);
+        return listeCommande;
+    }
 }
 
 
