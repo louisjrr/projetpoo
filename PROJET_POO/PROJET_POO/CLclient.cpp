@@ -7,6 +7,30 @@ CLclient::CLclient()
 {
 }
 
+// tentative d'utilisation d'accesseur et de mutateur pour recuperer les identifiants de connexion
+/*
+void CL_CAD::setIP(String^ ip)
+{
+    adresse_ip = ip;
+}
+
+void CL_CAD::setUtilisateur(String^ user)
+{
+    utilisateur = user;
+}
+
+void CL_CAD::setMDP(String^ mdp)
+{
+    MDP = mdp;
+}
+
+String^ CL_CAD::getIP()
+{
+    return adresse_ip;
+}
+*/
+//
+
 void CLclient::creer(String^ _nom, String^ _prenom, String^ _birthDate, String^ _adresseLiv, String^ _villeLiv, String^ _cpLiv, String^ _adresseFac, String^ _villeFac, String^ _cpFac, String^ adresse_ip, String^ utilisateur, String^ MDP)
 {
     CL_CAD obj;

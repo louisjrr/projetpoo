@@ -18,6 +18,9 @@ private:
 	MySqlConnection^ connectionBDD;
 
 public:
+	String^ getIP();
+	String^ getUtilisateur();
+	String^ getMDP();
 
 	void setIP(String^);
 	void setUtilisateur(String^);

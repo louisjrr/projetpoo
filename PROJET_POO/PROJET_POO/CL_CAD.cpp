@@ -1,6 +1,9 @@
 #include "CL_CAD.h"
 
-
+String^ CL_CAD::getIP()
+{
+	return adresse_ip;
+}
 
 void CL_CAD::setIP(String^ ip)
 {
