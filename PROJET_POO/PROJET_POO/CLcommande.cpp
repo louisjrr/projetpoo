@@ -71,8 +71,8 @@ void CLcommande::passerCommande(String^nom_client, String^ prenom_client, String
     queryString = "INSERT INTO COMPOSER(id_article, id_commande, quantite) VALUES ('" + id_article + "', '" + id_commande + "', '" + qte + "');";
     obj.sendSQL(queryString);
 
-    queryString = "INSERT INTO MoyenDePaiement(nom_mdp) VALUE ('" + MoyenDePaiement + "');";
-    obj.sendSQL(queryString);
+    queryString = "SELECT id_mdp FROM MoyenDePaiement WHERE nom_mdp = '"+MoyenDePaiement+"';";
+    String^ id_mdp = obj.receiveSQLString(queryString);
 
     queryString = "SELECT MAX(id_mdp) FROM MoyenDePaiement;";
     String^ id_MoyenDePaiement = obj.receiveSQLString(queryString);
