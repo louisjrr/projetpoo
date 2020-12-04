@@ -70,7 +70,5 @@ DataTable^ CL_CAD::receiveSQLTable(String^ query)
 	connectionBDD->Close();
 
 	return Table;
-
-
 }
 
