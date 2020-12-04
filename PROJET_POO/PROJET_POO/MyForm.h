@@ -3682,6 +3682,7 @@ private: System::Windows::Forms::Button^ button2;
 	}
 	private: System::Void buttonValiderPasserCommande_Click(System::Object^ sender, System::EventArgs^ e) {
 		commande1.passerCommande(textBoxNomPasserCommande->Text, textBoxPrenomPasserCommande->Text, textBoxDesignationPasserCommande->Text, Convert::ToInt16(textBoxQtePasserCommande->Text), textBoxAnneLivraisonPasserCommande->Text + "-" + textBoxMoisLivraisonPasserCommande->Text + "-" + textBoxJourLivraisonPasserCommande->Text, textBoxAnneDateEmissionPasserCommande->Text + "-" + textBoxMoisDateEmissionPasserCommande->Text + "-" + textBoxJourDateEmissionPasserCommande->Text, textBoxAnneeDatePaiementPasserCommande->Text + "-" + textBoxMoisDatePaiementPasserCommande->Text + "-" + textBoxJourDatePaiementPasserCommande->Text, textBoxAnneeDateSoldePasserCommande->Text + "-" + textBoxMoisDateSoldePasserCommande->Text + "-" + textBoxJourDateSoldePasserCommande->Text,textBoxMoyenDePaiementPasserCommande->Text ,textBox1->Text, textBox2->Text, textBox3->Text);
+		dataGridView1->DataSource = commande1.afficherCommande("", textBox1->Text, textBox2->Text, textBox3->Text);
 		MessageBox::Show("La commande à été passé !");
 		textBoxNomPasserCommande->Text = "";
 		textBoxPrenomPasserCommande->Text = "";
